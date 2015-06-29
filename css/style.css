@@ -73,6 +73,7 @@ footer {
 	text-align:center;
 	padding: 2px;
     float: left;
+	margin-top: 5px;
 }
 
 footer p {
@@ -94,4 +95,90 @@ footer p {
 	float: left;
 	font-weight: bolder;
 	height: 55px;
+}
+
+/* ==========================================================================================================================*/
+/* ==================================================== REGISTRO USUARIO ====================================================*/
+/* ==========================================================================================================================*/
+
+.contenedorRegistroUsuario {
+	width: 100%;
+	height: 600px;
+	border-radius: 8px;
+	background-color: #5b9bd5;
+}
+
+.subcontenedor {
+	width: 1021px;
+	height:574px;
+	margin: 13px;
+	background-color:white;
+	float: left;
+	border-radius: 5px;
+}
+
+.divTitulo {
+	width: 75%;
+	background-color: #5b9bd5;
+	border-radius: 50px;
+	color: white;
+	margin-left: 120px;
+	text-align: center;
+	margin-top: 10px;
+	height: 30px;
+	padding-top: 5px;
+	font-size: 20px;
+	font-weight: bolder;
+}
+
+fieldset {
+	margin: 15px;
+	border:2px solid #5b9bd5;
+	border-radius: 5px;
+	padding: 15px 30px;
+}
+
+legend {
+	color: black;
+}
+
+.etiquetas {
+	border-radius: 5px 0px 0px 5px;
+	background: #5b9bd5;
+	margin: 5px 0px 5px 5px;
+	float: left;
+	width: 150px;
+	padding-top: 5px;
+	padding-bottom: 4px;
+	padding-left: 10px;
+	font-weight: bolder;
+	text-align: left;
+	font-family:'Times New Roman', Times, serif;
+	font-size: 16px;
+	color: white;
+}
+
+.cajaTexto {
+	border: 2px solid #5b9bd5;
+	margin: 5px 0px;
+	height: 21px;
+	border-radius: 0px 5px 5px 0px;
+}
+
+.divBotones {
+	 float: right;
+	 width: 100%;
+	 margin: 5px;
+	 padding-right: 5px;
+}
+
+.divBotones button {
+	background: #5b9bd5;
+	border-radius: 5px;
+	margin-right: 5px;
+	float: right;
+	color: white;
+	width: 120px;
+	height: 30px;
+	border: none;
 }

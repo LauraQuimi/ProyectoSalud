@@ -1,0 +1,97 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	margin: 5px 150px;
+}
+
+#arco {
+	style="width: 100%;
+	height: 200px;
+	border-bottom-left-radius: 50% 100%;
+	border-bottom-right-radius: 50% 100%;
+	background-color: #5b9bd5;
+	/*background-image: -moz-linear-gradient(top, #B0C4DE 20%, #5b9bd5 80%);
+	background-image: -ms-linear-gradient(top, #B0C4DE 20%, #5b9bd5 80%);
+	background-image: -webkit-gradient(top, 0 0, 0 100%, from(#B0C4DE) 20%, to(#5b9bd5) 80%);
+	background-image: -webkit-linear-gradient(top, #B0C4DE 20%, #5b9bd5 80%);
+	background-image: -o-linear-gradient(top, #B0C4DE 20%, #5b9bd5 80%);
+	background-image: linear-gradient(top, #B0C4DE 20%, #5b9bd5 80%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#B0C4DE' 20%, endColorstr='#5b9bd5' 80%, GradientType=0);*/
+	border: none;"
+}
+
+#divLogoMenu {
+	width: 125px;
+	height: 125px;
+	margin-left: 467px;
+	margin-top: 40px;
+	float: left;
+}
+
+#menu {
+	width: 100%;
+	height: 300px;
+}
+
+.contenedor {
+	margin-left:100px;
+	margin-top:50px;
+	float: left;
+	width: 200px;
+	height: 285px;
+}
+
+.circulo {
+	width: 200px;
+	height: 200px;
+	background-color: #2E8B57;
+	border-radius: 50%;
+	float:left;
+}
+
+.icono {
+	height: 120px;
+	width: 120px;
+	margin: 10px;
+}
+
+footer {
+	width: 100%;
+	height: 30px;
+	border-radius: 8px;
+	background-color: #5b9bd5;
+	/*background-image: -moz-linear-gradient(top, #B0C4DE 20%, #5b9bd5 80%);
+	background-image: -ms-linear-gradient(top, #B0C4DE 20%, #5b9bd5 80%);
+	background-image: -webkit-gradient(top, 0 0, 0 100%, from(#B0C4DE) 20%, to(#5b9bd5) 80%);
+	background-image: -webkit-linear-gradient(top, #B0C4DE 20%, #5b9bd5 80%);
+	background-image: -o-linear-gradient(top, #B0C4DE 20%, #5b9bd5 80%);
+	background-image: linear-gradient(top, #B0C4DE 20%, #5b9bd5 80%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#B0C4DE' 20%, endColorstr='#5b9bd5' 80%, GradientType=0);*/
+	border: 3px groove #41719c;
+	color: white;
+	text-align:center;
+	padding: 2px;
+    float: left;
+}
+
+footer p {
+	margin-top: 8px;
+}
+
+.iconosOpciones {
+	margin-top: 30px;
+	margin-left: 30px;
+	float: left;
+}
+
+.textoOpciones {
+	font-family: "Times New Roman";
+	text-align: center;
+	width: 200px;
+	font-size: 25px;
+	color: #4472c4;
+	float: left;
+	font-weight: bolder;
+	height: 55px;
+}

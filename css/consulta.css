@@ -101,16 +101,16 @@ footer p {
 /* ==================================================== REGISTRO USUARIO ====================================================*/
 /* ==========================================================================================================================*/
 
-.contenedorRegistroUsuario {
+.contenedorConsultaUsuario {
 	width: 100%;
-	height: 900px;
+	height: 600px;
 	border-radius: 8px;
 	background-color: #5b9bd5;
 }
 
 .subcontenedor {
 	width: 1021px;
-	height:870px;
+	height:574px;
 	margin: 13px;
 	background-color:white;
 	float: left;
@@ -132,6 +132,7 @@ footer p {
 }
 
 fieldset {
+	width: auto;
 	margin: 15px;
 	border:2px solid #5b9bd5;
 	border-radius: 5px;
@@ -167,7 +168,7 @@ legend {
 
 .divBotones {
 	 float: right;
-	 width: 100%;
+	 width: 20%;
 	 margin: 5px;
 	 padding-right: 5px;
 }

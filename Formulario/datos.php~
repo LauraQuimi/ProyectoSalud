@@ -1,0 +1,14 @@
+<?php
+$nombre = $_POST['Nombre'];
+$parcial = $_POST['Parcial'];
+$final = $_POST['Final'];
+$mejoramiento = $_POST['Mejoramiento'];
+
+ 
+
+ echo "Usuario " . $nombre . "  parcial ". $parcial;
+
+
+
+
+?>

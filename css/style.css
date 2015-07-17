@@ -182,3 +182,33 @@ legend {
 	height: 30px;
 	border: none;
 }
+
+/* === Historial de la Presion ============================================*/
+
+table{
+    width:900px;
+    border: blue 1px solid;
+}
+
+th, td
+{
+    border: 1;
+}
+ 
+th
+{
+ background-color: #5b9bd5;
+ color: white;
+}
+
+tr:nth-of-type(even)
+{
+ background-color: #F3F3F3;
+}
+
+tr:nth-of-type(odd)
+{
+ background-color: #ddd;
+}
+
+

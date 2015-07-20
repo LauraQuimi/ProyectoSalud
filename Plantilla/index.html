@@ -30,6 +30,7 @@
         <script src="js/jqBootstrapValidation.js"></script>
         <script src="js/modernizr.custom.js"></script>
         <script src="js/script.js"></script>
+        <script src="js/funciones.js"></script>
 
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -1134,10 +1135,10 @@
                             <h3>Registro de Usuario</h3>
                            <!-- <p>Seleccione tipo de usuario</p>-->
                             <div class="form-group caja">
-                                <select class="form-control combo" id="cbxTipoUsuario">
-                                    <option value="0">-- Seleccione su tipo de usuario --</option>
-                                    <option value="1">Paciente</option>
-                                    <option value="2">Médico</option>
+                                <select class="form-control combo" id="cbxTipoUsuario" onchange="javascript:cambiarDiv()">
+                                    <option value="">-- Seleccione su tipo de usuario --</option>
+                                    <option value="0">Paciente</option>
+                                    <option value="1">Médico</option>
                                 </select>
                                 <p class="help-block text-danger"></p>
                             </div>
@@ -1162,10 +1163,10 @@
                                         <div class="form-group fila">
                                             <div class="col-md-6">
                                                 <select class="form-control combo" id="cbxIdentificacionPac" required data-validation-required-message="Seleccione el tipo de identificación.">
-                                                    <option value="0">-- Seleccione su tipo de identificación --</option>
-                                                    <option value="1">Cédula</option>
-                                                    <option value="2">Pasaporte</option>
-                                                    <option value="3">Nro. de historia clínica</option>
+                                                    <option value="">-- Seleccione su tipo de identificación --</option>
+                                                    <option value="0">Cédula</option>
+                                                    <option value="1">Pasaporte</option>
+                                                    <option value="2">Nro. de historia clínica</option>
                                                 </select>
                                                 <p class="help-block text-danger"></p>
                                             </div>
@@ -1254,7 +1255,7 @@
                             </form>
                         </div>
                     </div>
-                    <div class="row" id="divMediko" style="display: inline;">
+                    <div class="row" id="divMediko" style="display: none;">
                         <div class="col-md-12">
                             <form id="PacienteForm" novalidate>
                                 <div class="row" style="margin-bottom: 15px;">
@@ -1273,9 +1274,9 @@
                                         <div class="form-group fila">
                                             <div class="col-md-6">
                                                 <select class="form-control combo" id="cbxIdentificacionMed" required data-validation-required-message="Seleccione el tipo de identificación.">
-                                                    <option value="0">-- Seleccione su tipo de identificación --</option>
-                                                    <option value="1">Cédula</option>
-                                                    <option value="2">Pasaporte</option>
+                                                    <option value="">-- Seleccione su tipo de identificación --</option>
+                                                    <option value="0">Cédula</option>
+                                                    <option value="1">Pasaporte</option>
                                                 </select>
                                                 <p class="help-block text-danger"></p>
                                             </div>
@@ -1330,7 +1331,7 @@
                                         
                                     </fieldset>
                                 </div>
-                                <div class="row">
+                                <div class="row" style="margin-bottom: 15px;">
                                     <fieldset class="grupo">
                                         <legend>Datos Profesionales</legend>
                                         <div class="form-group fila">
@@ -1358,12 +1359,12 @@
                                         <div class="form-group fila">
                                             <div class="col-md-6">
                                                 <select class="form-control combo" id="cbxInstitucionMed" required data-validation-required-message="Seleccione el tipo de institución.">
-                                                    <option value="0">-- Seleccione tipo de institución --</option>
-                                                    <option value="1">Institución pública</option>
-                                                    <option value="2">Institución privada</option>
-                                                    <option value="3">Clínica</option>
+                                                    <option value="">-- Seleccione tipo de institución --</option>
+                                                    <option value="0">Institución pública</option>
+                                                    <option value="1">Institución privada</option>
+                                                    <option value="2">Clínica</option>
                                                 </select>
-                                                <p class="help-block text-danger"></p
+                                                <p class="help-block text-danger"></p>
                                             </div>
                                             <div class="col-md-6">
                                                 <input type="text" class="form-control" placeholder="Nombre de institución *" id="txtInstitucionMed" required data-validation-required-message="Por favor ingresa el nombre de la institución.">

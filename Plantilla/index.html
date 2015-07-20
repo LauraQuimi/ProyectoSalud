@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Elevator - Multipurpose Bootstrap Theme</title>
+        <title>Social Heart</title>
         <!-- Bootstrap Core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <!-- Font Awesome CSS -->
@@ -18,7 +18,9 @@
         <link href="css/style.css" rel="stylesheet">
         <!-- Custom Fonts -->
         <link href="css/family-lobster.css" rel="stylesheet">
-        <link href="css/StyleSheet.css" rel="stylesheet">
+        <link href="css/estilo.css" rel="stylesheet">
+        <link href="css/font-awesome-4.3.0/css/font-awesome.css" rel="stylesheet">
+        <link href="css/font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
         <!-- Template js -->
         <script src="js/jquery-2.1.1.min.js"></script>
@@ -139,7 +141,7 @@
                     <div class="col-md-3">
                         
                         <div class="menu-item light-red">
-                            <a href="#contact-modal" data-toggle="modal">
+                            <a href="#registro-modal" data-toggle="modal">
                                 <i class="fa fa-book"></i>
                                 <p>Regístrate</p>
                             </a>
@@ -574,7 +576,7 @@
                 
             </div>
         </div>
-        <!-- End About Us Section -->
+        <!-- Fin Sección Acerca De... -->
         
         <!-- Start Service Section -->
         <div class="section-modal modal fade" id="service-modal" tabindex="-1" role="dialog" aria-hidden="true">
@@ -1020,7 +1022,7 @@
                 
             </div>
         </div>
-        <!-- End Latest News Section -->
+        <!-- Fin Sección Tips -->
         
         <!-- Inicio Sección Contáctanos -->
         <div class="section-modal modal fade contact" id="contactanos-modal" tabindex="-1" role="dialog" aria-hidden="true">
@@ -1114,10 +1116,10 @@
                 
             </div>
         </div>
-        <!-- End Contact Section -->
+        <!-- Fin Sección Contáctanos -->
         
-        <!-- Start Testimonial Section -->
-        <div class="section-modal modal fade contact" id="testimonial-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <!-- Inicio Sección Registros -->
+        <div class="section-modal modal fade contact" id="registro-modal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal">
                     <div class="lr">
@@ -1129,59 +1131,271 @@
                 <div class="container">
                     <div class="row">
                         <div class="section-title text-center">
-                            <h3>Client's Speech About Us</h3>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate</p>
+                            <h3>Registro de Usuario</h3>
+                           <!-- <p>Seleccione tipo de usuario</p>-->
+                            <div class="form-group caja">
+                                <select class="form-control combo" id="cbxTipoUsuario">
+                                    <option value="0">-- Seleccione su tipo de usuario --</option>
+                                    <option value="1">Paciente</option>
+                                    <option value="2">Médico</option>
+                                </select>
+                                <p class="help-block text-danger"></p>
+                            </div>
                         </div>
                     </div>
-                    <div class="row">
-                        
-                        <div class="col-md-6">
-                            <div class="testimonial">
-                                <img src="img/manage-1.png" class="img-responsive" alt="...">
-                                <h4>John Doe</h4>
-                                <div class="speech">
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                    <div class="row" id="divPaciente" style="display: none;">
+                        <div class="col-md-12">
+                            <form id="PacienteForm" novalidate>
+                                <div class="row" style="margin-bottom: 15px;">
+                                    <fieldset class="grupo">
+                                        <legend>Datos Personales</legend>
+                                        <div class="form-group fila">
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Nombres *" id="txtNombrePac" required data-validation-required-message="Por favor ingresa tu nombre.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Apellidos *" id="txtApellidoPac" required data-validation-required-message="Por favor ingresa tu apellido.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group fila">
+                                            <div class="col-md-6">
+                                                <select class="form-control combo" id="cbxIdentificacionPac" required data-validation-required-message="Seleccione el tipo de identificación.">
+                                                    <option value="0">-- Seleccione su tipo de identificación --</option>
+                                                    <option value="1">Cédula</option>
+                                                    <option value="2">Pasaporte</option>
+                                                    <option value="3">Nro. de historia clínica</option>
+                                                </select>
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Número de identificación *" id="txtIdentificacionPac" required data-validation-required-message="Por favor ingresa tu apellido.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group fila" style="height: 109px;">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input type="date" class="form-control" id="dtpFecNacPac" required data-validation-required-message="Por favor ingresa tu fecha de nacimiento.">
+                                                    <p class="help-block text-danger"></p>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="email" class="form-control" placeholder="Email *" id="txtEmailPac" required data-validation-required-message="Por favor ingresa tu email.">
+                                                    <p class="help-block text-danger"></p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <fieldset class="grupo">
+                                                    <legend style="margin-bottom:2px;">Género sexual</legend>
+                                                    <input type="radio" name="genero" id="rdbMasculinoPac" value="Masculino">
+                                                    <label for="rdbMasculinoPac">
+                                                        <span class="fa-stack">
+                                                            <i class="fa fa-circle-o fa-stack-1x"></i>
+                                                            <i class="fa fa-circle fa-stack-1x"></i>
+                                                        </span>
+                                                        Masculino
+                                                    </label><br>
+                                                    <input type="radio" name="genero" id="rdbFemeninoPac" value="Femenino">
+                                                    <label for="rdbFemeninoPac">
+                                                        <span class="fa-stack">
+                                                            <i class="fa fa-circle-o fa-stack-1x"></i>
+                                                            <i class="fa fa-circle fa-stack-1x"></i>
+                                                        </span>
+                                                        Femenino
+                                                    </label>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                        <div class="form-group fila">
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Usuario *" id="txtUserPac" required data-validation-required-message="Por favor ingresa tu usuario.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="password" class="form-control" placeholder="Contraseña *" id="txtPasswordPac" required data-validation-required-message="Por favor ingresa tu contraseña.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </div>
+                                        
+                                    </fieldset>
                                 </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-6">
-                            <div class="testimonial">
-                                <img src="img/manage-2.png" class="img-responsive" alt="...">
-                                <h4>John Doe</h4>
-                                <div class="speech">
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                                <div class="row">
+                                    <fieldset class="grupo">
+                                        <legend>Datos de Contacto</legend>
+                                        <div class="form-group fila">
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Nombres *" id="txtNombreCon" required data-validation-required-message="Por favor ingresa el nombre de tu contacto.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Apellidos *" id="txtApellidoCon" required data-validation-required-message="Por favor ingresa el apellido de tu contacto.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group fila">
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Celular *" id="txtCelularCon" required data-validation-required-message="Por favor ingresa el celular de tu contacto.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Email *" id="txtEmailCon" required data-validation-required-message="Por favor ingresa el email de tu contacto.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </div>
+                                        
+                                    </fieldset>
+                                    <div class="clearfix"></div>
+                                    <div class="col-lg-12 text-center">
+                                        <div id="success"></div>
+                                        <button type="submit" class="btn btn-primary">REGISTRAR</button>
+                                    </div>
                                 </div>
-                            </div>
+                            </form>
                         </div>
-                        
-                        <div class="col-md-6">
-                            <div class="testimonial">
-                                <img src="img/manage-3.png" class="img-responsive" alt="...">
-                                <h4>John Doe</h4>
-                                <div class="speech">
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                    </div>
+                    <div class="row" id="divMediko" style="display: inline;">
+                        <div class="col-md-12">
+                            <form id="PacienteForm" novalidate>
+                                <div class="row" style="margin-bottom: 15px;">
+                                    <fieldset class="grupo">
+                                        <legend>Datos Personales</legend>
+                                        <div class="form-group fila">
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Nombres *" id="txtNombreMed" required data-validation-required-message="Por favor ingresa tu nombre.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Apellidos *" id="txtApellidoMed" required data-validation-required-message="Por favor ingresa tu apellido.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group fila">
+                                            <div class="col-md-6">
+                                                <select class="form-control combo" id="cbxIdentificacionMed" required data-validation-required-message="Seleccione el tipo de identificación.">
+                                                    <option value="0">-- Seleccione su tipo de identificación --</option>
+                                                    <option value="1">Cédula</option>
+                                                    <option value="2">Pasaporte</option>
+                                                </select>
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Número de identificación *" id="txtIdentificacionMed" required data-validation-required-message="Por favor ingresa tu apellido.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group fila" style="height: 109px;">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input type="date" class="form-control" id="dtpFecNacMed" required data-validation-required-message="Por favor ingresa tu fecha de nacimiento.">
+                                                    <p class="help-block text-danger"></p>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="email" class="form-control" placeholder="Email *" id="txtEmailMed" required data-validation-required-message="Por favor ingresa tu email.">
+                                                    <p class="help-block text-danger"></p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <fieldset class="grupo">
+                                                    <legend style="margin-bottom:2px;">Género sexual</legend>
+                                                    <input type="radio" name="genero" id="rdbMasculinoMed" value="Masculino">
+                                                    <label for="rdbMasculinoMed">
+                                                        <span class="fa-stack">
+                                                            <i class="fa fa-circle-o fa-stack-1x"></i>
+                                                            <i class="fa fa-circle fa-stack-1x"></i>
+                                                        </span>
+                                                        Masculino
+                                                    </label><br>
+                                                    <input type="radio" name="genero" id="rdbFemeninoMed" value="Femenino">
+                                                    <label for="rdbFemeninoMed">
+                                                        <span class="fa-stack">
+                                                            <i class="fa fa-circle-o fa-stack-1x"></i>
+                                                            <i class="fa fa-circle fa-stack-1x"></i>
+                                                        </span>
+                                                        Femenino
+                                                    </label>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                        <div class="form-group fila">
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Usuario *" id="txtUserMed" required data-validation-required-message="Por favor ingresa tu usuario.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="password" class="form-control" placeholder="Contraseña *" id="txtPasswordMed" required data-validation-required-message="Por favor ingresa tu contraseña.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </div>
+                                        
+                                    </fieldset>
                                 </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-6">
-                            <div class="testimonial">
-                                <img src="img/manage-4.png" class="img-responsive" alt="...">
-                                <h4>John Doe</h4>
-                                <div class="speech">
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                                <div class="row">
+                                    <fieldset class="grupo">
+                                        <legend>Datos Profesionales</legend>
+                                        <div class="form-group fila">
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Universidad *" id="txtUniversidadMed" required data-validation-required-message="Por favor ingresa el nombre de tu contacto.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Título obtenido *" id="txtTituloMed" required data-validation-required-message="Por favor ingresa el apellido de tu contacto.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group fila">
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Año de graduación *" id="txtAnioGraduacion" required data-validation-required-message="Por favor ingresa el celular de tu contacto.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </div>
+                                        
+                                    </fieldset>
                                 </div>
-                            </div>
+                                <div class="row">
+                                    <fieldset class="grupo">
+                                        <legend>Datos Laborales</legend>
+                                        <div class="form-group fila">
+                                            <div class="col-md-6">
+                                                <select class="form-control combo" id="cbxInstitucionMed" required data-validation-required-message="Seleccione el tipo de institución.">
+                                                    <option value="0">-- Seleccione tipo de institución --</option>
+                                                    <option value="1">Institución pública</option>
+                                                    <option value="2">Institución privada</option>
+                                                    <option value="3">Clínica</option>
+                                                </select>
+                                                <p class="help-block text-danger"></p
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Nombre de institución *" id="txtInstitucionMed" required data-validation-required-message="Por favor ingresa el nombre de la institución.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group fila">
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Área de trabajo *" id="txtAreaMed" required data-validation-required-message="Por favor ingresa el área de trabajo.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Año de ingreso *" id="txtAnioIngresoMed" required data-validation-required-message="Por favor registra el año de ingreso.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </div>
+                                        
+                                    </fieldset>
+                                    <div class="clearfix"></div>
+                                    <div class="col-lg-12 text-center">
+                                        <div id="success"></div>
+                                        <button type="submit" class="btn btn-primary">REGISTRAR</button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                        
-                    </div><!--/.row -->
-                    
+                    </div>
                 </div>
                 
             </div>
         </div>
-        <!-- End Testimonial Section -->
+        <!-- Fin Sección Registros -->
         
     </body>
     

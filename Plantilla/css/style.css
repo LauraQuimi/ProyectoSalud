@@ -883,7 +883,7 @@ and (max-width : 991px) {
 }
 
 .contact .form-group input.form-control {
-    height: auto;
+    height: 35px;
 }
 
 .contact .form-group textarea.form-control {

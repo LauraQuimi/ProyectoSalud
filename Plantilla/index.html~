@@ -71,7 +71,7 @@
                         </div>
                         
                         <div class="menu-item light-red">
-                            <a href="#historial-modal" data-toggle="modal">
+                            <a href="#about-modal" data-toggle="modal">
                                 <i class="fa fa-user"></i>
                                 <p>Pacientes</p>
                             </a>

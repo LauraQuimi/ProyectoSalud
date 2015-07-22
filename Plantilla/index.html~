@@ -64,10 +64,10 @@
                     <div class="col-md-3">
                         
                         <div class="menu-item blue">
-                            <!--a href="#feature-modal" data-toggle="modal"-->
+                            
                                 <i class="fa fa-power-off"></i>
                                 <p id="pLog" onclick="window.open('login.html','nuevaVentana','width=300, height=400')">Iniciar Sesión</p>
-                            </a>
+                            
                         </div>
                         
                         <div class="menu-item light-red">

@@ -60,15 +60,10 @@
         <div class="mainbody-section text-center">
             <div class="container">
                 <div class="row">
-                    
                     <div class="col-md-3">
-                        
                         <div class="menu-item blue">
-<<<<<<< HEAD
                             <!--a href="#feature-modal" data-toggle="modal"-->
-=======
                             <a href="#login-modal" data-toggle="modal">
->>>>>>> 82ed0fa2c56bf6db0ac28d7f686db09c92957af6
                                 <i class="fa fa-power-off"></i>
                                 <p id="pLog" onclick="window.open('login.html','nuevaVentana','width=300, height=400')">Iniciar Sesión</p>
                             </a>
@@ -122,7 +117,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="menu-item green">
-                                    <a href="#portfolio-modal" data-toggle="modal">
+                                    <a href="#consulta-modal" data-toggle="modal">
                                         <i class="fa fa-search"></i>
                                         <p>Consulta</p>
                                     </a>
@@ -1521,6 +1516,98 @@
             </div>
         </div>
         <!-- Fin Sección Historial Paciente -->
+
+<!-- Inicio Sección Consulta -->
+        <div class="section-modal modal fade contact" id="consulta-modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title text-center">
+                            <h3>Consulta de Pacientes</h3>
+                           <!-- <p>Seleccione tipo de usuario</p>-->
+                            <div class="form-group caja">
+                                <select class="form-control combo" id="cbxTipoConsulta" onchange="javascript:cambiarDivTipoConsulta()">
+                                    <option value="">-- Seleccione el tipo de Consulta --</option>
+                                    <option value="0">Personal / Número de Paciente</option>
+                                    <option value="1">Rango de Edades</option>
+                                </select>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" id="divConsultaPersonal" style="display: none;">
+                        <div class="col-md-12">
+                            <form id="PacienteForm" novalidate>
+                                <div class="row" style="margin-bottom: 15px;">
+                                    <fieldset class="grupo">
+                                        <legend>Nombre / Número de Paciente</legend>
+                                        <div class="form-group fila">
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Nombres *" id="txtNombrePac" required data-validation-required-message="Ingresar nombre o numero de paciente">                                                
+                                            </div>
+					    <div class="col-lg-12 text-center">
+                                            <div id="success"></div>
+                                                <button type="submit" class="btn btn-primary">CONSULTAR</button>
+                                            </div>                                       
+                                    </fieldset>
+                                </div>
+                            </form>    
+                        </div>
+                    </div>
+                    <div class="row" id="divConsultaRango" style="display: none;">
+                        <div class="col-md-12">
+                            <form id="PacienteForm" novalidate>
+                                <div class="row" style="margin-bottom: 15px;">
+                                    <fieldset class="grupo">
+                                        <legend>Escoja una opción</legend>
+                                        <div class="form-group fila">
+                                            <input type="radio" name="rango" id="rdbJuventud" value="00 - 30 años">
+                                            <label for="rdbJuventud">
+                                                <span class="fa-stack">
+                                                    <i class="fa fa-circle-o fa-stack-1x"></i>
+                                                    <i class="fa fa-circle fa-stack-1x"></i>
+                                                </span>
+                                                00 - 30 años
+                                            </label><br>
+                                            <input type="radio" name="rango" id="rdbAdultez" value="31 - 60 años">
+                                            <label for="rdbAdultez">
+                                                <span class="fa-stack">
+                                                    <i class="fa fa-circle-o fa-stack-1x"></i>
+                                                    <i class="fa fa-circle fa-stack-1x"></i>
+                                                </span>
+                                                31 - 60 años
+                                            </label><br>
+					    <input type="radio" name="rango" id="rdbVejez" value="61 - ?? años">
+                                            <label for="rdbVejez">
+                                                <span class="fa-stack">
+                                                    <i class="fa fa-circle-o fa-stack-1x"></i>
+                                                    <i class="fa fa-circle fa-stack-1x"></i>
+                                                </span>
+                                                61 - ?? años
+                                            </label>                                                
+                                        </div>
+                                        <div class="col-lg-12 text-center">
+                                            <div id="success"></div>
+                                            <button type="submit" class="btn btn-primary">CONSULTAR</button>
+                                        </div>
+				    </fieldset>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- Fin Sección Consultas -->
+
 
         
     </body>

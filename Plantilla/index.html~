@@ -61,8 +61,6 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">
-<<<<<<< HEAD
-                        
                         <div class="form-group" id="btnLogin" style="display:inline;">
                             <div class="menu-item blue">
                                 <a href="#login-modal" data-toggle="modal">
@@ -70,14 +68,6 @@
                                     <p id="pLog">Iniciar Sesión</p>
                                 </a>
                             </div>
-=======
-                        <div class="menu-item blue" id="btnLogin" style="display:inline;">
-                            <a href="#login-modal" data-toggle="modal">
-                                <i class="fa fa-user"></i>
-                                <!--p id="pLog" onclick="window.open('login.html','nuevaVentana','width=300, height=400')">Iniciar Sesión</p-->
-                            	<p id="pLog">Iniciar Sesión</p>
-			    </a>
->>>>>>> origin/master
                         </div>
                         
                         <div class="form-group" id="btnLogout" style="display:none;">
@@ -100,7 +90,7 @@
                         
                         <div class="form-group" id="btnControl" style="display:none">
                             <div class="menu-item color responsive">
-                                <a data-toggle="modal">
+                                <a href="#RitmoCardiaco-modal" data-toggle="modal">
                                     <i class="fa fa-heart-o"></i>
                                     <p>Control</p>
                                 </a>
@@ -217,14 +207,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="container">
+                <div class="container"><!--
 <<<<<<< HEAD
                     <div class="row" id="divLogin">
                         <div class="col-md-12">
                             <form id="Login" novalidate>
                                 <div class="row" style="margin-bottom: 15px;">
                                     <!--fieldset class="grupo">
-                                        <legend>INICIO SESIÓN</legend-->
+                                        <legend>INICIO SESIÓN</legend
                                         <div class="form-group fila">
                                             <div class="col-md-12 text-center">
 						<label>USUARIO:                                                
@@ -238,13 +228,13 @@
 						<button type="submit" class="btn btn-primary">LOGIN</button>
                                             </div> 
 					</div>                                      
-                                    <!--/fieldset-->
+                                    <!--/fieldset
                                 </div>
                             </form>    
                         </div>
                     </div>                    
                 </div>                
-=======
+=======-->
                     <div class="row">
                         <div class="section-title text-center">
                             <h3>BIENVENIDO</h3>
@@ -281,7 +271,6 @@
                     </div>
                 </div>
                 
->>>>>>> a8667f6b403bc1eaef6a4121281ea12f2d36182f
             </div>
         </div>
         <!-- Fin Sección Login -->
@@ -540,7 +529,7 @@
 
                                 <!-- Progress Bar
                                 <div class="skill">
-                                    <p>Extension</p>          
+                                    <p>Extension</p>          RitmoCardiaco-modal
                                     <div class="progress">         
                                         <div class="progress-bar" role="progressbar"  data-percentage="70">
                                             <span class="progress-bar-span" >70%</span>
@@ -1388,14 +1377,612 @@
                                                 <input type="text" class="form-control" placeholder="Área de trabajo *" id="txtAreaMed" required data-validation-required-message="Por favor ingresa el área de trabajo.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
-                                            <div class="col-md-6">
+                                      <!-- Inicio Graficar Ritmo cardiaco -->
+        <div class="section-modal modal fade contact" id="RitmoCardiaco-modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title text-center">
+                            <h3>Ritmo Cardiaco</h3>
+                           <!-- <p>Seleccione tipo de usuario</p>-->
+                            <div class="form-group caja">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form id="ConsultarContactosForm" novalidate>
+                                <div class="row" style="margin-bottom: 15px;">
+                                    <fieldset class="grupo">
+                                        <legend>Buscar</legend>
+                                        <div class="form-group fila">
+                                                                                					<div class="col-md-6">
+						<label class="etiquetas">Buscar por Apellidos: </label>                                                
+ 						<input type="text" class="form-control" placeholder="Apellidos *" id="txtApellidoPac" required data-validation-required-message="Por favor ingresa tu apellido.">
+                                                <p class="help-block text-danger"></p>
+                                          
+
+ 					</div>
+
+				      <div class="col-md-6">
+        	                       <div class="col-lg-12 text-right">
+                                          <div id="success"></div>
+                                        <button type="submit" class="btn btn-primary">Aceptar</button>
+                                     </div>
+        			    </div>  
+
+  
+			https://github.com/LauraQuimi/ProyectoSalud.git	<div class="col-md-6">
+					<label class="etiquetas">Edad: </label>                                                
+ 					<input type="text" class="form-control" placeholder="Edad *" id="txtEdadPac" required data-validation-required-message=".">
+                                                <p class="help-block text-danger"></p>
+                                          
+
+  				    </div>
+
+         			</div>  
+
+                                <div class="row">
+
+				</div>
+<!---Adicionar tabla --->
+
+                                  
+                                <div class="row">
+     <!---                               <fieldset class="grupo">-->
+
+                                <fieldset >
+                                         	
+                			<div style="float: left; padding:20px; ">
+                    
+					<table border=1>
+  		 			<tr>
+     		  			<th width=350>Apellido</td>
+		  			<th width=300>Nombre</td>
+		  			<th width=500>Contacto</td>
+  	          			</tr>
+    	          			<tr>
+      	  	    			<td>      </td>
+		   			 <td>      </td>
+		    			<td>      </td>
+		 			 </tr>
+      	  	  
+    	         			<tr>
+      	  	 			 <td>      </td>
+		 			 <td>      </td>
+		 			 <td>      </td>
+     	      				</tr>
+		
+					<tr>
+      	  				  <td>      </td>
+					  <td>      </td>
+ 					 <td>      </td>
+
+    					</tr>
+		
+					<tr>
+      	  				  <td>      </td>
+					  <td>      </td>
+ 					 <td>      </td>
+	
+    					</tr>
+				</table>                 
+	
+                		</div>
+                  
+                                    </fieldset>
+                                </div>
+
+  </fieldset>
+                                </div>   <!-- Fin Busqueda Contacto -->
+ 
+
+        		 <div class="row" style="margin-bottom: 15px;">
+	                       <fieldset class="grupo">
+                                <legend>Ritmo Cardiaco</legend>
+                                 <div class="form-group fila">
+                                                                                
+                                  <div class="col-md-6">
+                	            <div class="latest-post">
+                	                <img src="img/cardiograma60.png" class="img-responsive" alt="">
+                                <h4><a href="#"> </a></h4>
+                                
+                                
+                	            </div>
+	                        </div>
+
+                        
+			  <div class="col-md-6">
+                            <div class="latest-post">
+       
+      				<div style="float: padding:20px">
+	
+	   		 <table border=1>
+	  		   <tr>
+	     		   <th width=400>Fecha</td>
+	     		   <th width=400>Presion</td>
+	                   </tr>
+	    	           <tr>
+	      	  	    <td>      </td>
+			    <td>      </td>
+			   </tr>
+      	  	  
+	    	           <tr>
+	      	  	   <td>      </td>
+			   <td>      </td>
+		           </tr>
+		
+			  <tr>
+	      	  	   <td>      </td>
+			   <td>      </td>
+		          </tr>
+		
+			  <tr>
+      	  		    <td>      </td>
+		 	     <td>      </td>
+			     </tr>
+			     </table>                 
+
+                            </div>
+                                
+                                
+                            </div>
+                        </div>
+                        
+                              </div>      
+                               </fieldset>
+                          </div>      <!-- Graficar Ritmo Cardiaco -->
+
+             
+	               </form>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- Fin Sección Graficar Ritmo Cardiaco -->
+
+ <!-- Inicio Graficar Ritmo cardiaco -->
+        <div class="section-modal modal fade contact" id="RitmoCardiacoI-modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title text-center">
+                            <h3>Ritmo Cardiaco</h3>
+                           <!-- <p>Seleccione tipo de usuario</p>-->
+                            <div class="form-group caja">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form id="ConsultarContactosForm" novalidate>
+                                <div class="row" style="margin-bottom: 15px;">
+                                    <fieldset class="grupo">
+                                        <legend>Datos Personales</legend>
+                                        <div class="form-group fila">
+                                                                                	<div class="col-md-6">
+		<label class="etiquetas">Apellidos: </label>                                                
+ 		<input type="text" class="form-control" placeholder="Apellidos *" id="txtApellidoPac" required data-validation-required-message="Por favor ingresa tu apellido.">
+                                                <p class="help-block text-danger"></p>
+                                          
+
+  	</div>
+
+		<div class="col-md-6">
+		<label class="etiquetas">Edad: </label>                                                
+ 		<input type="text" class="form-control" placeholder="Edad *" id="txtEdadPac" required data-validation-required-message=".">
+                                                <p class="help-block text-danger"></p>
+                                          
+
+  	</div>
+
+         </div>  
+
+    
+                                  
+                                <div class="row">
+
+</div>
+<!---Adicionar tabla --->
+
+                                  
+                                <div class="row">
+     <!---                               <fieldset class="grupo">-->
+
+                  </fieldset>
+                                </div>   <!-- Fin Busqueda Contacto -->
+ 
+
+        		 <div class="row" style="margin-bottom: 15px;">
+	                       <fieldset class="grupo">
+                                <legend>Ritmo Cardiaco</legend>
+                                 <div class="form-group fila">
+                                                                                
+                                  <div class="col-md-6">
+                            <div class="latest-post">
+                                <img src="img/cardiograma60.png" class="img-responsive" alt="">
+                                <h4><a href="#"> </a></h4>
+                                
+                                
+                            </div>
+                        </div>
+</br>
+                        
+  <div class="col-md-6">
+                            <div class="latest-post">
+       
+      <div style="float: width: 800; padding:20px">
+
+   		 <table border=1>
+  		 <tr>
+     		  <th width=400>Fecha</td>
+     		  <th width=400>Presion</td>
+                 </tr>
+    	          <tr>
+      	  	    <td>      </td>
+		    <td>      </td>
+		  </tr>
+      	  	  
+    	         <tr>
+      	  	  <td>      </td>
+		  <td>      </td>
+	      </tr>
+		
+		<tr>
+      	  	  <td>      </td>
+		  <td>      </td>
+	       </tr>
+		
+<tr>
+      	  	  <td>      </td>
+		  <td>      </td>
+		</tr>
+		</table>                 
+
+                            </div>
+                                
+                                
+                            </div>
+                        </div>
+                        
+          
+                                </div>      
+                               </fieldset>
+                          </div>
+             
+	               </form>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- Fin Sección Registros Contacto -->
+             <div class="col-md-6">
                                                 <input type="text" class="form-control" placeholder="Año de ingreso *" id="txtAnioIngresoMed" required data-validation-required-message="Por favor registra el año de ingreso.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                         </div>
                                         
                                     </fieldset>
-                                    <div class="clearfix"></div>
+                                    <d<!-- Inicio Graficar Ritmo cardiaco -->
+        <div class="section-modal modal fade contact" id="RitmoCardiaco-modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title text-center">
+                            <h3>Ritmo Cardiaco</h3>
+                           <!-- <p>Seleccione tipo de usuario</p>-->
+                            <div class="form-group caja">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form id="ConsultarContactosForm" novalidate>
+                                <div class="row" style="margin-bottom: 15px;">
+                                    <fieldset class="grupo">
+                                        <legend>Buscar</legend>
+                                        <div class="form-group fila">
+                                                                                					<div class="col-md-6">
+						<label class="etiquetas">Buscar por Apellidos: </label>                                                
+ 						<input type="text" class="form-control" placeholder="Apellidos *" id="txtApellidoPac" required data-validation-required-message="Por favor ingresa tu apellido.">
+                                                <p class="help-block text-danger"></p>
+                                          
+
+ 					</div>
+
+				      <div class="col-md-6">
+        	                       <div class="col-lg-12 text-right">
+                                          <div id="success"></div>
+                                        <button type="submit" class="btn btn-primary">Aceptar</button>
+                                     </div>
+        			    </div>  
+
+  
+			https://github.com/LauraQuimi/ProyectoSalud.git	<div class="col-md-6">
+					<label class="etiquetas">Edad: </label>                                                
+ 					<input type="text" class="form-control" placeholder="Edad *" id="txtEdadPac" required data-validation-required-message=".">
+                                                <p class="help-block text-danger"></p>
+                                          
+
+  				    </div>
+
+         			</div>  
+
+                                <div class="row">
+
+				</div>
+<!---Adicionar tabla --->
+
+                                  
+                                <div class="row">
+     <!---                               <fieldset class="grupo">-->
+
+                                <fieldset >
+                                         	
+                			<div style="float: left; padding:20px; ">
+                    
+					<table border=1>
+  		 			<tr>
+     		  			<th width=350>Apellido</td>
+		  			<th width=300>Nombre</td>
+		  			<th width=500>Contacto</td>
+  	          			</tr>
+    	          			<tr>
+      	  	    			<td>      </td>
+		   			 <td>      </td>
+		    			<td>      </td>
+		 			 </tr>
+      	  	  
+    	         			<tr>
+      	  	 			 <td>      </td>
+		 			 <td>      </td>
+		 			 <td>      </td>
+     	      				</tr>
+		
+					<tr>
+      	  				  <td>      </td>
+					  <td>      </td>
+ 					 <td>      </td>
+
+    					</tr>
+		
+					<tr>
+      	  				  <td>      </td>
+					  <td>      </td>
+ 					 <td>      </td>
+	
+    					</tr>
+				</table>                 
+	
+                		</div>
+                  
+                                    </fieldset>
+                                </div>
+
+  </fieldset>
+                                </div>   <!-- Fin Busqueda Contacto -->
+ 
+
+        		 <div class="row" style="margin-bottom: 15px;">
+	                       <fieldset class="grupo">
+                                <legend>Ritmo Cardiaco</legend>
+                                 <div class="form-group fila">
+                                                                                
+                                  <div class="col-md-6">
+                	            <div class="latest-post">
+                	                <img src="img/cardiograma60.png" class="img-responsive" alt="">
+                                <h4><a href="#"> </a></h4>
+                                
+                                
+                	            </div>
+	                        </div>
+
+                        
+			  <div class="col-md-6">
+                            <div class="latest-post">
+       
+      				<div style="float: padding:20px">
+	
+	   		 <table border=1>
+	  		   <tr>
+	     		   <th width=400>Fecha</td>
+	     		   <th width=400>Presion</td>
+	                   </tr>
+	    	           <tr>
+	      	  	    <td>      </td>
+			    <td>      </td>
+			   </tr>
+      	  	  
+	    	           <tr>
+	      	  	   <td>      </td>
+			   <td>      </td>
+		           </tr>
+		
+			  <tr>
+	      	  	   <td>      </td>
+			   <td>      </td>
+		          </tr>
+		
+			  <tr>
+      	  		    <td>      </td>
+		 	     <td>      </td>
+			     </tr>
+			     </table>                 
+
+                            </div>
+                                
+                                
+                            </div>
+                        </div>
+                        
+                              </div>      
+                               </fieldset>
+                          </div>      <!-- Graficar Ritmo Cardiaco -->
+
+             
+	               </form>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- Fin Sección Graficar Ritmo Cardiaco -->
+
+ <!-- Inicio Graficar Ritmo cardiaco -->
+        <div class="section-modal modal fade contact" id="RitmoCardiacoI-modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title text-center">
+                            <h3>Ritmo Cardiaco</h3>
+                           <!-- <p>Seleccione tipo de usuario</p>-->
+                            <div class="form-group caja">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form id="ConsultarContactosForm" novalidate>
+                                <div class="row" style="margin-bottom: 15px;">
+                                    <fieldset class="grupo">
+                                        <legend>Datos Personales</legend>
+                                        <div class="form-group fila">
+                                                                                	<div class="col-md-6">
+		<label class="etiquetas">Apellidos: </label>                                                
+ 		<input type="text" class="form-control" placeholder="Apellidos *" id="txtApellidoPac" required data-validation-required-message="Por favor ingresa tu apellido.">
+                                                <p class="help-block text-danger"></p>
+                                          
+
+  	</div>
+
+		<div class="col-md-6">
+		<label class="etiquetas">Edad: </label>                                                
+ 		<input type="text" class="form-control" placeholder="Edad *" id="txtEdadPac" required data-validation-required-message=".">
+                                                <p class="help-block text-danger"></p>
+                                          
+
+  	</div>
+
+         </div>  
+
+    
+                                  
+                                <div class="row">
+
+</div>
+<!---Adicionar tabla --->
+
+                                  
+                                <div class="row">
+     <!---                               <fieldset class="grupo">-->
+
+                  </fieldset>
+                                </div>   <!-- Fin Busqueda Contacto -->
+ 
+
+        		 <div class="row" style="margin-bottom: 15px;">
+	                       <fieldset class="grupo">
+                                <legend>Ritmo Cardiaco</legend>
+                                 <div class="form-group fila">
+                                                                                
+                                  <div class="col-md-6">
+                            <div class="latest-post">
+                                <img src="img/cardiograma60.png" class="img-responsive" alt="">
+                                <h4><a href="#"> </a></h4>
+                                
+                                
+                            </div>
+                        </div>
+</br>
+                        
+  <div class="col-md-6">
+                            <div class="latest-post">
+       
+      <div style="float: width: 800; padding:20px">
+
+   		 <table border=1>
+  		 <tr>
+     		  <th width=400>Fecha</td>
+     		  <th width=400>Presion</td>
+                 </tr>
+    	          <tr>
+      	  	    <td>      </td>
+		    <td>      </td>
+		  </tr>
+      	  	  
+    	         <tr>
+      	  	  <td>      </td>
+		  <td>      </td>
+	      </tr>
+		
+		<tr>
+      	  	  <td>      </td>
+		  <td>      </td>
+	       </tr>
+		
+<tr>
+      	  	  <td>      </td>
+		  <td>      </td>
+		</tr>
+		</table>                 
+
+                            </div>
+                                
+                                
+                            </div>
+                        </div>
+                        
+          
+                                </div>      
+                               </fieldset>
+                          </div>
+             
+	               </form>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- Fin Sección Registros Contacto -->
+       iv class="clearfix"></div>
                                     <div class="col-lg-12 text-center">
                                         <div id="success"></div>
                                         <button type="submit" class="btn btn-primary">REGISTRAR</button>
@@ -1477,7 +2064,306 @@
                                                         <th style="width: 15%;">Fecha</td>
                                                         <th style="width: 20%;">Presion</td>
                                                         <th style="width: 25%;">Observaciones</td>
-                                                        <th style="width: 40%;">Detalle</td>
+                                     <!-- Inicio Graficar Ritmo cardiaco -->
+        <div class="section-modal modal fade contact" id="RitmoCardiaco-modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title text-center">
+                            <h3>Ritmo Cardiaco</h3>
+                           <!-- <p>Seleccione tipo de usuario</p>-->
+                            <div class="form-group caja">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form id="ConsultarContactosForm" novalidate>
+                                <div class="row" style="margin-bottom: 15px;">
+                                    <fieldset class="grupo">
+                                        <legend>Buscar</legend>
+                                        <div class="form-group fila">
+                                                                                					<div class="col-md-6">
+						<label class="etiquetas">Buscar por Apellidos: </label>                                                
+ 						<input type="text" class="form-control" placeholder="Apellidos *" id="txtApellidoPac" required data-validation-required-message="Por favor ingresa tu apellido.">
+                                                <p class="help-block text-danger"></p>
+                                          
+
+ 					</div>
+
+				      <div class="col-md-6">
+        	                       <div class="col-lg-12 text-right">
+                                          <div id="success"></div>
+                                        <button type="submit" class="btn btn-primary">Aceptar</button>
+                                     </div>
+        			    </div>  
+
+  
+			https://github.com/LauraQuimi/ProyectoSalud.git	<div class="col-md-6">
+					<label class="etiquetas">Edad: </label>                                                
+ 					<input type="text" class="form-control" placeholder="Edad *" id="txtEdadPac" required data-validation-required-message=".">
+                                                <p class="help-block text-danger"></p>
+                                          
+
+  				    </div>
+
+         			</div>  
+
+                                <div class="row">
+
+				</div>
+<!---Adicionar tabla --->
+
+                                  
+                                <div class="row">
+     <!---                               <fieldset class="grupo">-->
+
+                                <fieldset >
+                                         	
+                			<div style="float: left; padding:20px; ">
+                    
+					<table border=1>
+  		 			<tr>
+     		  			<th width=350>Apellido</td>
+		  			<th width=300>Nombre</td>
+		  			<th width=500>Contacto</td>
+  	          			</tr>
+    	          			<tr>
+      	  	    			<td>      </td>
+		   			 <td>      </td>
+		    			<td>      </td>
+		 			 </tr>
+      	  	  
+    	         			<tr>
+      	  	 			 <td>      </td>
+		 			 <td>      </td>
+		 			 <td>      </td>
+     	      				</tr>
+		
+					<tr>
+      	  				  <td>      </td>
+					  <td>      </td>
+ 					 <td>      </td>
+
+    					</tr>
+		
+					<tr>
+      	  				  <td>      </td>
+					  <td>      </td>
+ 					 <td>      </td>
+	
+    					</tr>
+				</table>                 
+	
+                		</div>
+                  
+                                    </fieldset>
+                                </div>
+
+  </fieldset>
+                                </div>   <!-- Fin Busqueda Contacto -->
+ 
+
+        		 <div class="row" style="margin-bottom: 15px;">
+	                       <fieldset class="grupo">
+                                <legend>Ritmo Cardiaco</legend>
+                                 <div class="form-group fila">
+                                                                                
+                                  <div class="col-md-6">
+                	            <div class="latest-post">
+                	                <img src="img/cardiograma60.png" class="img-responsive" alt="">
+                                <h4><a href="#"> </a></h4>
+                                
+                                
+                	            </div>
+	                        </div>
+
+                        
+			  <div class="col-md-6">
+                            <div class="latest-post">
+       
+      				<div style="float: padding:20px">
+	
+	   		 <table border=1>
+	  		   <tr>
+	     		   <th width=400>Fecha</td>
+	     		   <th width=400>Presion</td>
+	                   </tr>
+	    	           <tr>
+	      	  	    <td>      </td>
+			    <td>      </td>
+			   </tr>
+      	  	  
+	    	           <tr>
+	      	  	   <td>      </td>
+			   <td>      </td>
+		           </tr>
+		
+			  <tr>
+	      	  	   <td>      </td>
+			   <td>      </td>
+		          </tr>
+		
+			  <tr>
+      	  		    <td>      </td>
+		 	     <td>      </td>
+			     </tr>
+			     </table>                 
+
+                            </div>
+                                
+                                
+                            </div>
+                        </div>
+                        
+                              </div>      
+                               </fieldset>
+                          </div>      <!-- Graficar Ritmo Cardiaco -->
+
+             
+	               </form>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- Fin Sección Graficar Ritmo Cardiaco -->
+
+ <!-- Inicio Graficar Ritmo cardiaco -->
+        <div class="section-modal modal fade contact" id="RitmoCardiacoI-modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title text-center">
+                            <h3>Ritmo Cardiaco</h3>
+                           <!-- <p>Seleccione tipo de usuario</p>-->
+                            <div class="form-group caja">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form id="ConsultarContactosForm" novalidate>
+                                <div class="row" style="margin-bottom: 15px;">
+                                    <fieldset class="grupo">
+                                        <legend>Datos Personales</legend>
+                                        <div class="form-group fila">
+                                                                                	<div class="col-md-6">
+		<label class="etiquetas">Apellidos: </label>                                                
+ 		<input type="text" class="form-control" placeholder="Apellidos *" id="txtApellidoPac" required data-validation-required-message="Por favor ingresa tu apellido.">
+                                                <p class="help-block text-danger"></p>
+                                          
+
+  	</div>
+
+		<div class="col-md-6">
+		<label class="etiquetas">Edad: </label>                                                
+ 		<input type="text" class="form-control" placeholder="Edad *" id="txtEdadPac" required data-validation-required-message=".">
+                                                <p class="help-block text-danger"></p>
+                                          
+
+  	</div>
+
+         </div>  
+
+    
+                                  
+                                <div class="row">
+
+</div>
+<!---Adicionar tabla --->
+
+                                  
+                                <div class="row">
+     <!---                               <fieldset class="grupo">-->
+
+                  </fieldset>
+                                </div>   <!-- Fin Busqueda Contacto -->
+ 
+
+        		 <div class="row" style="margin-bottom: 15px;">
+	                       <fieldset class="grupo">
+                                <legend>Ritmo Cardiaco</legend>
+                                 <div class="form-group fila">
+                                                                                
+                                  <div class="col-md-6">
+                            <div class="latest-post">
+                                <img src="img/cardiograma60.png" class="img-responsive" alt="">
+                                <h4><a href="#"> </a></h4>
+                                
+                                
+                            </div>
+                        </div>
+</br>
+                        
+  <div class="col-md-6">
+                            <div class="latest-post">
+       
+      <div style="float: width: 800; padding:20px">
+
+   		 <table border=1>
+  		 <tr>
+     		  <th width=400>Fecha</td>
+     		  <th width=400>Presion</td>
+                 </tr>
+    	          <tr>
+      	  	    <td>      </td>
+		    <td>      </td>
+		  </tr>
+      	  	  
+    	         <tr>
+      	  	  <td>      </td>
+		  <td>      </td>
+	      </tr>
+		
+		<tr>
+      	  	  <td>      </td>
+		  <td>      </td>
+	       </tr>
+		
+<tr>
+      	  	  <td>      </td>
+		  <td>      </td>
+		</tr>
+		</table>                 
+
+                            </div>
+                                
+                                
+                            </div>
+                        </div>
+                        
+          
+                                </div>      
+                               </fieldset>
+                          </div>
+             
+	               </form>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- Fin Sección Registros Contacto -->
+                          <th style="width: 40%;">Detalle</td>
                                                     </tr>
                                                 </thead>
                                                 <tbody style="border: 1px solid #FF432E;">
@@ -1510,6 +2396,7 @@
                                         </div>
                   
                                     </fieldset>
+                                <div class="row" style="margin-bottom: 15px;">
                                 </div>
                             </form>
                         </div>
@@ -1557,7 +2444,306 @@
                                             </div>
 					    <div class="col-lg-12 text-center">
                                             <div id="success"></div>
-                                                <button type="submit" class="btn btn-primary">CONSULTAR</button>
+                                                <button type="submit" class="btn btn-primary">CONSULTAR</button><!-- Inicio Graficar Ritmo cardiaco -->
+        <div class="section-modal modal fade contact" id="RitmoCardiaco-modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title text-center">
+                            <h3>Ritmo Cardiaco</h3>
+                           <!-- <p>Seleccione tipo de usuario</p>-->
+                            <div class="form-group caja">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form id="ConsultarContactosForm" novalidate>
+                                <div class="row" style="margin-bottom: 15px;">
+                                    <fieldset class="grupo">
+                                        <legend>Buscar</legend>
+                                        <div class="form-group fila">
+                                                                                					<div class="col-md-6">
+						<label class="etiquetas">Buscar por Apellidos: </label>                                                
+ 						<input type="text" class="form-control" placeholder="Apellidos *" id="txtApellidoPac" required data-validation-required-message="Por favor ingresa tu apellido.">
+                                                <p class="help-block text-danger"></p>
+                                          
+
+ 					</div>
+
+				      <div class="col-md-6">
+        	                       <div class="col-lg-12 text-right">
+                                          <div id="success"></div>
+                                        <button type="submit" class="btn btn-primary">Aceptar</button>
+                                     </div>
+        			    </div>  
+
+  
+			https://github.com/LauraQuimi/ProyectoSalud.git	<div class="col-md-6">
+					<label class="etiquetas">Edad: </label>                                                
+ 					<input type="text" class="form-control" placeholder="Edad *" id="txtEdadPac" required data-validation-required-message=".">
+                                                <p class="help-block text-danger"></p>
+                                          
+
+  				    </div>
+
+         			</div>  
+
+                                <div class="row">
+
+				</div>
+<!---Adicionar tabla --->
+
+                                  
+                                <div class="row">
+     <!---                               <fieldset class="grupo">-->
+
+                                <fieldset >
+                                         	
+                			<div style="float: left; padding:20px; ">
+                    
+					<table border=1>
+  		 			<tr>
+     		  			<th width=350>Apellido</td>
+		  			<th width=300>Nombre</td>
+		  			<th width=500>Contacto</td>
+  	          			</tr>
+    	          			<tr>
+      	  	    			<td>      </td>
+		   			 <td>      </td>
+		    			<td>      </td>
+		 			 </tr>
+      	  	  
+    	         			<tr>
+      	  	 			 <td>      </td>
+		 			 <td>      </td>
+		 			 <td>      </td>
+     	      				</tr>
+		
+					<tr>
+      	  				  <td>      </td>
+					  <td>      </td>
+ 					 <td>      </td>
+
+    					</tr>
+		
+					<tr>
+      	  				  <td>      </td>
+					  <td>      </td>
+ 					 <td>      </td>
+	
+    					</tr>
+				</table>                 
+	
+                		</div>
+                  
+                                    </fieldset>
+                                </div>
+
+  </fieldset>
+                                </div>   <!-- Fin Busqueda Contacto -->
+ 
+
+        		 <div class="row" style="margin-bottom: 15px;">
+	                       <fieldset class="grupo">
+                                <legend>Ritmo Cardiaco</legend>
+                                 <div class="form-group fila">
+                                                                                
+                                  <div class="col-md-6">
+                	            <div class="latest-post">
+                	                <img src="img/cardiograma60.png" class="img-responsive" alt="">
+                                <h4><a href="#"> </a></h4>
+                                
+                                
+                	            </div>
+	                        </div>
+
+                        
+			  <div class="col-md-6">
+                            <div class="latest-post">
+       
+      				<div style="float: padding:20px">
+	
+	   		 <table border=1>
+	  		   <tr>
+	     		   <th width=400>Fecha</td>
+	     		   <th width=400>Presion</td>
+	                   </tr>
+	    	           <tr>
+	      	  	    <td>      </td>
+			    <td>      </td>
+			   </tr>
+      	  	  
+	    	           <tr>
+	      	  	   <td>      </td>
+			   <td>      </td>
+		           </tr>
+		
+			  <tr>
+	      	  	   <td>      </td>
+			   <td>      </td>
+		          </tr>
+		
+			  <tr>
+      	  		    <td>      </td>
+		 	     <td>      </td>
+			     </tr>
+			     </table>                 
+
+                            </div>
+                                
+                                
+                            </div>
+                        </div>
+                        
+                              </div>      
+                               </fieldset>
+                          </div>      <!-- Graficar Ritmo Cardiaco -->
+
+             
+	               </form>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- Fin Sección Graficar Ritmo Cardiaco -->
+
+ <!-- Inicio Graficar Ritmo cardiaco -->
+        <div class="section-modal modal fade contact" id="RitmoCardiacoI-modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title text-center">
+                            <h3>Ritmo Cardiaco</h3>
+                           <!-- <p>Seleccione tipo de usuario</p>-->
+                            <div class="form-group caja">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form id="ConsultarContactosForm" novalidate>
+                                <div class="row" style="margin-bottom: 15px;">
+                                    <fieldset class="grupo">
+                                        <legend>Datos Personales</legend>
+                                        <div class="form-group fila">
+                                                                                	<div class="col-md-6">
+		<label class="etiquetas">Apellidos: </label>                                                
+ 		<input type="text" class="form-control" placeholder="Apellidos *" id="txtApellidoPac" required data-validation-required-message="Por favor ingresa tu apellido.">
+                                                <p class="help-block text-danger"></p>
+                                          
+
+  	</div>
+
+		<div class="col-md-6">
+		<label class="etiquetas">Edad: </label>                                                
+ 		<input type="text" class="form-control" placeholder="Edad *" id="txtEdadPac" required data-validation-required-message=".">
+                                                <p class="help-block text-danger"></p>
+                                          
+
+  	</div>
+
+         </div>  
+
+    
+                                  
+                                <div class="row">
+
+</div>
+<!---Adicionar tabla --->
+
+                                  
+                                <div class="row">
+     <!---                               <fieldset class="grupo">-->
+
+                  </fieldset>
+                                </div>   <!-- Fin Busqueda Contacto -->
+ 
+
+        		 <div class="row" style="margin-bottom: 15px;">
+	                       <fieldset class="grupo">
+                                <legend>Ritmo Cardiaco</legend>
+                                 <div class="form-group fila">
+                                                                                
+                                  <div class="col-md-6">
+                            <div class="latest-post">
+                                <img src="img/cardiograma60.png" class="img-responsive" alt="">
+                                <h4><a href="#"> </a></h4>
+                                
+                                
+                            </div>
+                        </div>
+</br>
+                        
+  <div class="col-md-6">
+                            <div class="latest-post">
+       
+      <div style="float: width: 800; padding:20px">
+
+   		 <table border=1>
+  		 <tr>
+     		  <th width=400>Fecha</td>
+     		  <th width=400>Presion</td>
+                 </tr>
+    	          <tr>
+      	  	    <td>      </td>
+		    <td>      </td>
+		  </tr>
+      	  	  
+    	         <tr>
+      	  	  <td>      </td>
+		  <td>      </td>
+	      </tr>
+		
+		<tr>
+      	  	  <td>      </td>
+		  <td>      </td>
+	       </tr>
+		
+<tr>
+      	  	  <td>      </td>
+		  <td>      </td>
+		</tr>
+		</table>                 
+
+                            </div>
+                                
+                                
+                            </div>
+                        </div>
+                        
+          
+                                </div>      
+                               </fieldset>
+                          </div>
+             
+	               </form>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- Fin Sección Registros Contacto -->
+       
                                             </div>                                       
                                     </fieldset>
                                 </div>
@@ -1610,6 +2796,307 @@
             </div>
         </div>
         <!-- Fin Sección Consultas -->
+
+<!-- Inicio Graficar Ritmo cardiaco -->
+        <div class="section-modal modal fade contact" id="RitmoCardiaco-modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title text-center">
+                            <h3>Ritmo Cardiaco</h3>
+                           <!-- <p>Seleccione tipo de usuario</p>-->
+                            <div class="form-group caja">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form id="ConsultarContactosForm" novalidate>
+                                <div class="row" style="margin-bottom: 15px;">
+                                    <fieldset class="grupo">
+                                        <legend>Buscar</legend>
+                                        <div class="form-group fila">
+                                                                                					<div class="col-md-6">
+						<label class="etiquetas">Buscar por Apellidos: </label>                                                
+ 						<input type="text" class="form-control" placeholder="Apellidos *" id="txtApellidoPac" required data-validation-required-message="Por favor ingresa tu apellido.">
+                                                <p class="help-block text-danger"></p>
+                                          
+
+ 					</div>
+
+				      <div class="col-md-6">
+        	                       <div class="col-lg-12 text-right">
+                                          <div id="success"></div>
+                                        <button type="submit" class="btn btn-primary">Aceptar</button>
+                                     </div>
+        			    </div>  
+
+  
+			https://github.com/LauraQuimi/ProyectoSalud.git	<div class="col-md-6">
+					<label class="etiquetas">Edad: </label>                                                
+ 					<input type="text" class="form-control" placeholder="Edad *" id="txtEdadPac" required data-validation-required-message=".">
+                                                <p class="help-block text-danger"></p>
+                                          
+
+  				    </div>
+
+         			</div>  
+
+                                <div class="row">
+
+				</div>
+<!---Adicionar tabla --->
+
+                                  
+                                <div class="row">
+     <!---                               <fieldset class="grupo">-->
+
+                                <fieldset >
+                                         	
+                			<div style="float: left; padding:20px; ">
+                    
+					<table border=1>
+  		 			<tr>
+     		  			<th width=350>Apellido</td>
+		  			<th width=300>Nombre</td>
+		  			<th width=500>Contacto</td>
+  	          			</tr>
+    	          			<tr>
+      	  	    			<td>      </td>
+		   			 <td>      </td>
+		    			<td>      </td>
+		 			 </tr>
+      	  	  
+    	         			<tr>
+      	  	 			 <td>      </td>
+		 			 <td>      </td>
+		 			 <td>      </td>
+     	      				</tr>
+		
+					<tr>
+      	  				  <td>      </td>
+					  <td>      </td>
+ 					 <td>      </td>
+
+    					</tr>
+		
+					<tr>
+      	  				  <td>      </td>
+					  <td>      </td>
+ 					 <td>      </td>
+	
+    					</tr>
+				</table>                 
+	
+                		</div>
+                  
+                                    </fieldset>
+                                </div>
+
+  </fieldset>
+                                </div>   <!-- Fin Busqueda Contacto -->
+ 
+
+        		 <div class="row" style="margin-bottom: 15px;">
+	                       <fieldset class="grupo">
+                                <legend>Ritmo Cardiaco</legend>
+                                 <div class="form-group fila">
+                                                                                
+                                  <div class="col-md-6">
+                	            <div class="latest-post">
+                	                <img src="img/cardiograma60.png" class="img-responsive" alt="">
+                                <h4><a href="#"> </a></h4>
+                                
+                                
+                	            </div>
+	                        </div>
+
+                        
+			  <div class="col-md-6">
+                            <div class="latest-post">
+       
+      				<div style="float: padding:20px">
+	
+	   		 <table border=1>
+	  		   <tr>
+	     		   <th width=400>Fecha</td>
+	     		   <th width=400>Presion</td>
+	                   </tr>
+	    	           <tr>
+	      	  	    <td>      </td>
+			    <td>      </td>
+			   </tr>
+      	  	  
+	    	           <tr>
+	      	  	   <td>      </td>
+			   <td>      </td>
+		           </tr>
+		
+			  <tr>
+	      	  	   <td>      </td>
+			   <td>      </td>
+		          </tr>
+		
+			  <tr>
+      	  		    <td>      </td>
+		 	     <td>      </td>
+			     </tr>
+			     </table>                 
+
+                            </div>
+                                
+                                
+                            </div>
+                        </div>
+                        
+                              </div>      
+                               </fieldset>
+                          </div>      <!-- Graficar Ritmo Cardiaco -->
+
+             
+	               </form>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- Fin Sección Graficar Ritmo Cardiaco -->
+
+ <!-- Inicio Graficar Ritmo cardiaco -->
+        <div class="section-modal modal fade contact" id="RitmoCardiacoI-modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title text-center">
+                            <h3>Ritmo Cardiaco</h3>
+                           <!-- <p>Seleccione tipo de usuario</p>-->
+                            <div class="form-group caja">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form id="ConsultarContactosForm" novalidate>
+                                <div class="row" style="margin-bottom: 15px;">
+                                    <fieldset class="grupo">
+                                        <legend>Datos Personales</legend>
+                                        <div class="form-group fila">
+                                                                                	<div class="col-md-6">
+		<label class="etiquetas">Apellidos: </label>                                                
+ 		<input type="text" class="form-control" placeholder="Apellidos *" id="txtApellidoPac" required data-validation-required-message="Por favor ingresa tu apellido.">
+                                                <p class="help-block text-danger"></p>
+                                          
+
+  	</div>
+
+		<div class="col-md-6">
+		<label class="etiquetas">Edad: </label>                                                
+ 		<input type="text" class="form-control" placeholder="Edad *" id="txtEdadPac" required data-validation-required-message=".">
+                                                <p class="help-block text-danger"></p>
+                                          
+
+  	</div>
+
+         </div>  
+
+    
+                                  
+                                <div class="row">
+
+</div>
+<!---Adicionar tabla --->
+
+                                  
+                                <div class="row">
+     <!---                               <fieldset class="grupo">-->
+
+                  </fieldset>
+                                </div>   <!-- Fin Busqueda Contacto -->
+ 
+
+        		 <div class="row" style="margin-bottom: 15px;">
+	                       <fieldset class="grupo">
+                                <legend>Ritmo Cardiaco</legend>
+                                 <div class="form-group fila">
+                                                                                
+                                  <div class="col-md-6">
+                            <div class="latest-post">
+                                <img src="img/cardiograma60.png" class="img-responsive" alt="">
+                                <h4><a href="#"> </a></h4>
+                                
+                                
+                            </div>
+                        </div>
+</br>
+                        
+  <div class="col-md-6">
+                            <div class="latest-post">
+       
+      <div style="float: width: 800; padding:20px">
+
+   		 <table border=1>
+  		 <tr>
+     		  <th width=400>Fecha</td>
+     		  <th width=400>Presion</td>
+                 </tr>
+    	          <tr>
+      	  	    <td>      </td>
+		    <td>      </td>
+		  </tr>
+      	  	  
+    	         <tr>
+      	  	  <td>      </td>
+		  <td>      </td>
+	      </tr>
+		
+		<tr>
+      	  	  <td>      </td>
+		  <td>      </td>
+	       </tr>
+		
+<tr>
+      	  	  <td>      </td>
+		  <td>      </td>
+		</tr>
+		</table>                 
+
+                            </div>
+                                
+                                
+                            </div>
+                        </div>
+                        
+          
+                                </div>      
+                               </fieldset>
+                          </div>
+             
+	               </form>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- Fin Sección Registros Contacto -->
+       
         
     </body>
     

@@ -39,12 +39,13 @@ function login() {
             $("#btnLogout").css("display", "inline");
             $("#btnPacientes").css("display", "inline");
             $("#btnControl").css("display", "inline");
-            $("#btnConsultas").css("display", "inline");
+            $("#btnConsulta").css("display", "inline");
             $("#btnTips").css("display", "inline");
             $("#btnRegistrate").css("display", "inline");
-            $("#btnRegis").css("display", "inline");
             $("#btnContactanos").css("display", "inline");
             $("#btnAcerca").css("display", "inline");
+            $("#txtUsuario").val("");
+            $("#txtPassword").val("");
         }else{
             alert("Contraseña incorrecta");
             $("#txtUsuario").focus();
@@ -53,4 +54,16 @@ function login() {
         alert("Usuario incorrecto");
         $("#txtUsuario").focus();
     }
+}
+
+function logout() {
+    $("#btnLogin").css("display", "inline");
+    $("#btnLogout").css("display", "none");
+    $("#btnPacientes").css("display", "none");
+    $("#btnControl").css("display", "none");
+    $("#btnConsulta").css("display", "none");
+    $("#btnTips").css("display", "none");
+    $("#btnRegistrate").css("display", "inline");
+    $("#btnContactanos").css("display", "none");
+    $("#btnAcerca").css("display", "none");
 }

@@ -64,9 +64,10 @@
                         <div class="menu-item blue">
                             <!--a href="#feature-modal" data-toggle="modal"-->
                             <a href="#login-modal" data-toggle="modal">
-                                <i class="fa fa-power-off"></i>
-                                <p id="pLog" onclick="window.open('login.html','nuevaVentana','width=300, height=400')">Iniciar Sesión</p>
-                            </a>
+                                <i class="fa fa-user"></i>
+                                <!--p id="pLog" onclick="window.open('login.html','nuevaVentana','width=300, height=400')">Iniciar Sesión</p-->
+                            	<p id="pLog">Iniciar Sesión</p>
+			    </a>
                         </div>
                         
                         <div class="menu-item light-red">
@@ -185,98 +186,40 @@
         <!-- End Copyright Section -->
         
         <!-- Inicio Sección Login -->
-        <div class="section-modal modal fade" id="login-modal" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-content inicio">
+        <div class="section-modal modal fade contact" id="login-modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal">
                     <div class="lr">
                         <div class="rl">
                         </div>
                     </div>
                 </div>
-                
                 <div class="container">
-                    <div class="row">
-                        <div class="section-title text-center">
-                            <h3>Our Awesome Feature</h3>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate</p>
+                    <div class="row" id="divLogin">
+                        <div class="col-md-12">
+                            <form id="Login" novalidate>
+                                <div class="row" style="margin-bottom: 15px;">
+                                    
+                                        <legend>INICIO SESIÓN</legend>
+                                        <div class="form-group fila">
+                                            <div class="col-md-12 text-center">
+						<label>USUARIO:                                                
+						<input type="text" class="form-control" placeholder="Users *" id="txtUser" required data-validation-required-message="Inserte el Usuario"></label></br>
+						<label>PASSWORD:                                                
+						<input type="password" class="form-control" placeholder="Password *" id="txtPassword" required data-validation-required-message="Inserte la Contraseña"></label>                                                 
+                                            </div>
+					    <div class="col-lg-12 text-center">
+                                            <div id="success"></div>
+                                                <button type="submit" class="btn btn-primary">CANCELAR</button>
+						<button type="submit" class="btn btn-primary">LOGIN</button>
+                                            </div> 
+					</div>                                      
+                                   
+                                </div>
+                            </form>    
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3 col-sm-6 col-xs-12">
-                            <div class="feature">
-                                <i class="fa fa-magic"></i>
-                                <div class="feature-content">
-                                    <h4>Web Design</h4>
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
-                                </div>
-                            </div>
-                        </div><!-- /.col-md-3 -->
-                        <div class="col-md-3 col-sm-6 col-xs-12">
-                            <div class="feature">
-                                <i class="fa fa-gift"></i>
-                                <div class="feature-content">
-                                    <h4>Graphics Design</h4>
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
-                                </div>
-                            </div>
-                        </div><!-- /.col-md-3 -->
-                        <div class="col-md-3 col-sm-6 col-xs-12">
-                            <div class="feature">
-                                <i class="fa fa-wordpress"></i>
-                                <div class="feature-content">
-                                    <h4>Wordpress Theme</h4>
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
-                                </div>
-                            </div>
-                        </div><!-- /.col-md-3 -->
-                        <div class="col-md-3 col-sm-6 col-xs-12">
-                            <div class="feature">
-                                <i class="fa fa-plug"></i>
-                                <div class="feature-content">
-                                    <h4>Wordpress Plugin</h4>
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
-                                </div>
-                            </div>
-                        </div><!-- /.col-md-3 -->
-                        <div class="col-md-3 col-sm-6 col-xs-12">
-                            <div class="feature">
-                                <i class="fa fa-joomla"></i>
-                                <div class="feature-content">
-                                    <h4>Joomla Template</h4>
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
-                                </div>
-                            </div>
-                        </div><!-- /.col-md-3 -->
-                        <div class="col-md-3 col-sm-6 col-xs-12">
-                            <div class="feature">
-                                <i class="fa fa-cube"></i>
-                                <div class="feature-content">
-                                    <h4>Joomla Extension</h4>
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
-                                </div>
-                            </div>
-                        </div><!-- /.col-md-3 -->
-                        <div class="col-md-3 col-sm-6 col-xs-12">
-                            <div class="feature">
-                                <i class="fa fa-css3"></i>
-                                <div class="feature-content">
-                                    <h4>HTML 5 & CSS3</h4>
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
-                                </div>
-                            </div>
-                        </div><!-- /.col-md-3 -->
-                        <div class="col-md-3 col-sm-6 col-xs-12">
-                            <div class="feature">
-                                <i class="fa fa-android"></i>
-                                <div class="feature-content">
-                                    <h4>Android Apps</h4>
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
-                                </div>
-                            </div>
-                        </div><!-- /.col-md-3 -->
-                    </div><!-- /.row -->
-                </div>
-                
+                    </div>                    
+                </div>                
             </div>
         </div>
         <!-- Fin Sección Login -->

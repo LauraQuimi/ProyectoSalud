@@ -61,33 +61,50 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">
+<<<<<<< HEAD
+                        
+                        <div class="form-group" id="btnLogin" style="display:inline;">
+                            <div class="menu-item blue">
+                                <a href="#login-modal" data-toggle="modal">
+                                    <i class="fa fa-sign-in"></i>
+                                    <p id="pLog">Iniciar Sesión</p>
+                                </a>
+                            </div>
+=======
                         <div class="menu-item blue" id="btnLogin" style="display:inline;">
                             <a href="#login-modal" data-toggle="modal">
                                 <i class="fa fa-user"></i>
                                 <!--p id="pLog" onclick="window.open('login.html','nuevaVentana','width=300, height=400')">Iniciar Sesión</p-->
                             	<p id="pLog">Iniciar Sesión</p>
 			    </a>
+>>>>>>> origin/master
                         </div>
                         
-                        <div class="menu-item blue" id="btnLogout" style="display:none;">
-                            <a href="#login-modal" data-toggle="modal">
-                                <i class="fa fa-power-off"></i>
-                                <p id="pLog" onclick="window.open('login.html','nuevaVentana','width=300, height=400')">Cerrar Sesión</p>
-                            </a>
+                        <div class="form-group" id="btnLogout" style="display:none;">
+                            <div class="menu-item blue">
+                                <a href="#login-modal" data-toggle="modal" onclick="javascript:logout()">
+                                    <i class="fa fa-sign-out"></i>
+                                    <p id="pLog">Cerrar Sesión</p>
+                                </a>
+                            </div>
                         </div>
                         
-                        <div class="menu-item light-red" id="btnPacientes" style="display:none">
-                            <a href="#historial-modal" data-toggle="modal">
-                                <i class="fa fa-user"></i>
-                                <p>Pacientes</p>
-                            </a>
+                        <div class="form-group" id="btnPacientes" style="display:none">    
+                            <div class="menu-item light-red">
+                                <a href="#historial-modal" data-toggle="modal">
+                                    <i class="fa fa-user"></i>
+                                    <p>Pacientes</p>
+                                </a>
+                            </div>
                         </div>
                         
-                        <div class="menu-item color responsive" id="btnControl" style="display:none">
-                            <a href="#service-modal" data-toggle="modal">
-                                <i class="fa fa-heart-o"></i>
-                                <p>Control</p>
-                            </a>
+                        <div class="form-group" id="btnControl" style="display:none">
+                            <div class="menu-item color responsive">
+                                <a data-toggle="modal">
+                                    <i class="fa fa-heart-o"></i>
+                                    <p>Control</p>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     
@@ -124,17 +141,15 @@
                         <div class="row">
                             <div class="col-md-6" id="btnConsulta" style="display:none">
                                 <div class="menu-item green">
-                                    <a href="#consulta-modal" data-toggle="modal" style="display:inline;">
+                                    <a href="#consulta-modal" data-toggle="modal">
                                         <i class="fa fa-search"></i>
                                         <p>Consulta</p>
                                     </a>
                                 </div>
                             </div>
-                        
-                        
                             
                             <div class="col-md-6" id="btnTips" style="display:none">
-                                <div class="menu-item light-orange responsive-2" style="display:inline;">
+                                <div class="menu-item light-orange responsive-2">
                                     <a href="#tips-modal" data-toggle="modal">
                                         <i class="fa fa-medkit"></i>
                                         <p>Tips de Salud</p>
@@ -148,27 +163,33 @@
                     
                     <div class="col-md-3">
                         
-                        <div class="menu-item light-red" id="btnRegistrate" style="display:inline">
-                            <a href="#registro-modal" data-toggle="modal">
-                                <i class="fa fa-book"></i>
-                                <p>Regístrate</p>
-                            </a>
+                        <div class="form-group" id="btnRegistrate" style="display:inline">
+                            <div class="menu-item light-red">
+                                <a href="#registro-modal" data-toggle="modal">
+                                    <i class="fa fa-book"></i>
+                                    <p>Regístrate</p>
+                                </a>
+                            </div>
                         </div>
                         
-                        <div class="menu-item color" id="btnContactanos" style="display:none">
-                            <a href="#contactanos-modal" data-toggle="modal">
-                                <i class="fa fa-envelope-o"></i>
-                                <p>Contáctenos</p>
-                            </a>
+                        <div class="form-group" id="btnContactanos" style="display:none">
+                            <div class="menu-item color">
+                                <a href="#contactanos-modal" data-toggle="modal">
+                                    <i class="fa fa-envelope-o"></i>
+                                    <p>Contáctenos</p>
+                                </a>
+                            </div>
                         </div>
                         
-                        <div class="menu-item blue"  id="btnAcerca" style="display:none">
-                            <a href="#acerca-modal" data-toggle="modal">
-                                <i class="fa fa-users"></i>
-                                <p>Acerca de...</p>
-                            </a>
+                        <div class="form-group" id="btnAcerca" style="display:none">
+                            <div class="menu-item blue">
+                                <a href="#acerca-modal" data-toggle="modal">
+                                    <i class="fa fa-users"></i>
+                                    <p>Acerca de...</p>
+                                </a>
+                            </div>
                         </div>
-                        
+                            
                     </div>
                 </div>
             </div>
@@ -247,7 +268,7 @@
                                         <div class="col-lg-12 text-center">
                                             <button type="button" class="btn btn-primary" style="float:left; margin: 0px 10px 0px 120px; width: 120px;" data-dismiss="modal">Cancelar</button>
                                             <!--<div id="success"></div>-->
-                                            <button type="submit" class="btn btn-primary" style="margin: 0px; float:left" onclick="javascript:login()">Iniciar Sesión</button>
+                                            <button type="submit" class="btn btn-primary" style="margin: 0px; float:left" onclick="javascript:login()" data-dismiss="modal">Iniciar Sesión</button>
                                         </div>
                                     </div>
                                     <div class="col-md-6" style="margin-top: -100px;">
@@ -1448,47 +1469,45 @@
                                 </div>
                                 <div class="row">
                                     <fieldset class="grupo">
-                                                                      	<legend>Movimientos</legend>
-                <div style="float: left; margin-right: 20px;">
-                    
-		<table border=1>
-  		 <tr>
-     		  <th width=300>Fecha</td>
-     		  <th width=300>Presion</td>
-      		  <th width=600>Observaciones</td>
-      		  <th width=500>Detalle</td>
-  	          </tr>
-    	          <tr>
-      	  	  <td>      </td>
-		  <td>      </td>
-      		  <td>      </td>
-		  <td>      </td>
-     	         </tr>
-		
-		 <tr>
-	 	  <td>      </td>
-		  <td>      </td>
-      		  <td>      </td>
-		  <td>      </td>      		
-    		 </tr>
-
-    	      <tr>
-      		<td>      </td>
-		<td>      </td>
-      		<td>      </td>
-		<td>      </td>
-     	      </tr>
-		
-		<tr>
-		<td>      </td>
-		<td>      </td>
-      		<td>      </td>
-		<td>      </td>      		
-    		</tr>
-		
-		</table>                 
-
-                </div>
+                                        <legend>Movimientos</legend>
+                                        <div style="float: left; margin-right: 20px; width: 100%;">
+                                            <table style="width: 100%; border: 1px solid #FF432E;">
+                                                <thead style="background:#FF432E;">
+                                                    <tr>
+                                                        <th style="width: 15%;">Fecha</td>
+                                                        <th style="width: 20%;">Presion</td>
+                                                        <th style="width: 25%;">Observaciones</td>
+                                                        <th style="width: 40%;">Detalle</td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody style="border: 1px solid #FF432E;">
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
                   
                                     </fieldset>
                                 </div>

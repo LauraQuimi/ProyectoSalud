@@ -61,22 +61,28 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">
-                        <div class="menu-item blue">
-                            <!--a href="#feature-modal" data-toggle="modal"-->
+                        <div class="menu-item blue" id="btnLogin" style="display:inline;">
                             <a href="#login-modal" data-toggle="modal">
                                 <i class="fa fa-power-off"></i>
                                 <p id="pLog" onclick="window.open('login.html','nuevaVentana','width=300, height=400')">Iniciar Sesión</p>
                             </a>
                         </div>
                         
-                        <div class="menu-item light-red">
+                        <div class="menu-item blue" id="btnLogout" style="display:none;">
+                            <a href="#login-modal" data-toggle="modal">
+                                <i class="fa fa-power-off"></i>
+                                <p id="pLog" onclick="window.open('login.html','nuevaVentana','width=300, height=400')">Cerrar Sesión</p>
+                            </a>
+                        </div>
+                        
+                        <div class="menu-item light-red" id="btnPacientes" style="display:none">
                             <a href="#historial-modal" data-toggle="modal">
                                 <i class="fa fa-user"></i>
                                 <p>Pacientes</p>
                             </a>
                         </div>
                         
-                        <div class="menu-item color responsive">
+                        <div class="menu-item color responsive" id="btnControl" style="display:none">
                             <a href="#service-modal" data-toggle="modal">
                                 <i class="fa fa-heart-o"></i>
                                 <p>Control</p>
@@ -115,9 +121,9 @@
                         <!-- Start Carousel Section -->
                         
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-6" id="btnConsulta" style="display:none">
                                 <div class="menu-item green">
-                                    <a href="#consulta-modal" data-toggle="modal">
+                                    <a href="#consulta-modal" data-toggle="modal" style="display:inline;">
                                         <i class="fa fa-search"></i>
                                         <p>Consulta</p>
                                     </a>
@@ -126,8 +132,8 @@
                         
                         
                             
-                            <div class="col-md-6">
-                                <div class="menu-item light-orange responsive-2">
+                            <div class="col-md-6" id="btnTips" style="display:none">
+                                <div class="menu-item light-orange responsive-2" style="display:inline;">
                                     <a href="#tips-modal" data-toggle="modal">
                                         <i class="fa fa-medkit"></i>
                                         <p>Tips de Salud</p>
@@ -141,25 +147,21 @@
                     
                     <div class="col-md-3">
                         
-                        <div class="menu-item light-red">
+                        <div class="menu-item light-red" id="btnRegistrate" style="display:inline">
                             <a href="#registro-modal" data-toggle="modal">
                                 <i class="fa fa-book"></i>
                                 <p>Regístrate</p>
                             </a>
                         </div>
                         
-                        <div class="menu-item color">
-                            <!--<a href="#testimonial-modal" data-toggle="modal">
-                                <i class="fa fa-comment-o"></i>
-                                <p>Testimonial</p>
-                            </a>-->
+                        <div class="menu-item color" id="btnContactanos" style="display:none">
                             <a href="#contactanos-modal" data-toggle="modal">
                                 <i class="fa fa-envelope-o"></i>
                                 <p>Contáctenos</p>
                             </a>
                         </div>
                         
-                        <div class="menu-item blue">
+                        <div class="menu-item blue"  id="btnAcerca" style="display:none">
                             <a href="#acerca-modal" data-toggle="modal">
                                 <i class="fa fa-users"></i>
                                 <p>Acerca de...</p>
@@ -197,84 +199,38 @@
                 <div class="container">
                     <div class="row">
                         <div class="section-title text-center">
-                            <h3>Our Awesome Feature</h3>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate</p>
+                            <h3>BIENVENIDO</h3>
+                            <p>Por favor ingrese su usuario y contraseña</p>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-3 col-sm-6 col-xs-12">
-                            <div class="feature">
-                                <i class="fa fa-magic"></i>
-                                <div class="feature-content">
-                                    <h4>Web Design</h4>
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
+                    
+                    <div class="row" style="padding-top: 80px;">
+                        <div class="col-md-12">
+                            <form name="sentMessage" id="contactForm" novalidate>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Usuario *" id="txtUsuario" required data-validation-required-message="Por favor ingresa tu nombre.">
+                                            <p class="help-block text-danger"></p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" placeholder="contraseña *" id="txtPassword" required data-validation-required-message="Por favor ingresa tu email.">
+                                            <p class="help-block text-danger"></p>
+                                        </div>
+                                        <div class="col-lg-12 text-center">
+                                            <button type="button" class="btn btn-primary" style="float:left; margin: 0px 10px 0px 120px; width: 120px;" data-dismiss="modal">Cancelar</button>
+                                            <!--<div id="success"></div>-->
+                                            <button type="submit" class="btn btn-primary" style="margin: 0px; float:left" onclick="javascript:login()">Iniciar Sesión</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6" style="margin-top: -100px;">
+                                        <img src="img/login-img.png" class="img-responsive" alt="...">
+                                    </div>
+                                    <div class="clearfix"></div>
                                 </div>
-                            </div>
-                        </div><!-- /.col-md-3 -->
-                        <div class="col-md-3 col-sm-6 col-xs-12">
-                            <div class="feature">
-                                <i class="fa fa-gift"></i>
-                                <div class="feature-content">
-                                    <h4>Graphics Design</h4>
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
-                                </div>
-                            </div>
-                        </div><!-- /.col-md-3 -->
-                        <div class="col-md-3 col-sm-6 col-xs-12">
-                            <div class="feature">
-                                <i class="fa fa-wordpress"></i>
-                                <div class="feature-content">
-                                    <h4>Wordpress Theme</h4>
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
-                                </div>
-                            </div>
-                        </div><!-- /.col-md-3 -->
-                        <div class="col-md-3 col-sm-6 col-xs-12">
-                            <div class="feature">
-                                <i class="fa fa-plug"></i>
-                                <div class="feature-content">
-                                    <h4>Wordpress Plugin</h4>
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
-                                </div>
-                            </div>
-                        </div><!-- /.col-md-3 -->
-                        <div class="col-md-3 col-sm-6 col-xs-12">
-                            <div class="feature">
-                                <i class="fa fa-joomla"></i>
-                                <div class="feature-content">
-                                    <h4>Joomla Template</h4>
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
-                                </div>
-                            </div>
-                        </div><!-- /.col-md-3 -->
-                        <div class="col-md-3 col-sm-6 col-xs-12">
-                            <div class="feature">
-                                <i class="fa fa-cube"></i>
-                                <div class="feature-content">
-                                    <h4>Joomla Extension</h4>
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
-                                </div>
-                            </div>
-                        </div><!-- /.col-md-3 -->
-                        <div class="col-md-3 col-sm-6 col-xs-12">
-                            <div class="feature">
-                                <i class="fa fa-css3"></i>
-                                <div class="feature-content">
-                                    <h4>HTML 5 & CSS3</h4>
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
-                                </div>
-                            </div>
-                        </div><!-- /.col-md-3 -->
-                        <div class="col-md-3 col-sm-6 col-xs-12">
-                            <div class="feature">
-                                <i class="fa fa-android"></i>
-                                <div class="feature-content">
-                                    <h4>Android Apps</h4>
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
-                                </div>
-                            </div>
-                        </div><!-- /.col-md-3 -->
-                    </div><!-- /.row -->
+                            </form>
+                        </div>
+                    </div>
                 </div>
                 
             </div>
@@ -1405,7 +1361,7 @@
         </div>
         <!-- Fin Sección Registros -->
 
-   <!-- Inicio Historial Clinico -->
+        <!-- Inicio Historial Clinico -->
         <div class="section-modal modal fade contact" id="historial-modal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal">
@@ -1517,7 +1473,7 @@
         </div>
         <!-- Fin Sección Historial Paciente -->
 
-<!-- Inicio Sección Consulta -->
+        <!-- Inicio Sección Consulta -->
         <div class="section-modal modal fade contact" id="consulta-modal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal">
@@ -1607,8 +1563,6 @@
             </div>
         </div>
         <!-- Fin Sección Consultas -->
-
-
         
     </body>
     

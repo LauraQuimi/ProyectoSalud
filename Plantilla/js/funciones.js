@@ -29,3 +29,28 @@ function cambiarDivTipoConsulta() {
         $("#divConsultaRango").css("display", "none");
     }
 }
+
+function login() {
+    var user = $("#txtUsuario").val();
+    var pass = $("#txtPassword").val();
+    if(user === "fedaloor"){
+        if(pass === "espol"){
+            $("#btnLogin").css("display", "none");
+            $("#btnLogout").css("display", "inline");
+            $("#btnPacientes").css("display", "inline");
+            $("#btnControl").css("display", "inline");
+            $("#btnConsultas").css("display", "inline");
+            $("#btnTips").css("display", "inline");
+            $("#btnRegistrate").css("display", "inline");
+            $("#btnRegis").css("display", "inline");
+            $("#btnContactanos").css("display", "inline");
+            $("#btnAcerca").css("display", "inline");
+        }else{
+            alert("Contraseña incorrecta");
+            $("#txtUsuario").focus();
+        }
+    }else{
+        alert("Usuario incorrecto");
+        $("#txtUsuario").focus();
+    }
+}

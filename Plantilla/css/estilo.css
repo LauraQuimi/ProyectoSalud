@@ -1,0 +1,65 @@
+.caja {
+    width: 50%;
+    height: 35px;
+    margin-left: 293px;
+    margin-bottom: 5px;
+}
+
+.grupo {
+    border: 1px solid #FF432E;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.grupo legend {
+    background: #FF432E;
+    color: white;
+    margin-left: 10px;
+    border-radius: 4px;
+    width: auto;
+    padding: 0px 3px;
+}
+
+/*Hidding the radiobuttons*/
+input[type="radio"], input[type="checkbox"] {
+	display: none;
+}
+/*Styling background*/
+label i: first-child {
+	color: gray;
+}
+/*Hidding the "check" status of inputs*/
+input[type="radio"] + label .fa-circle,
+input[type="checkbox"] + label .fa-check {
+	display: none;
+}
+/*Styling the "check" status*/
+input[type="radio"]:checked + label .fa-circle,
+input[type="checkbox"]:checked + label .fa-check {
+	display: block;
+	color: #FF432E;
+}
+/*Styling checkboxes*/
+input[type="checkbox"]:checked label .fa-check {
+	position: relative;
+	left: .125em;
+	bottom: .125em;
+}
+/*Styling radiobuttons*/
+input[type="radio"]:checked + label .fa-circle-o {
+	display: none;
+}
+
+
+
+.fila {
+    height: 42px;
+}
+
+.combo {
+    height: 42px;
+}
+
+.inicio {
+    background: transparent;
+}

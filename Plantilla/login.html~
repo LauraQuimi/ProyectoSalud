@@ -1,0 +1,36 @@
+    <html xmlns="http://www.w3.org/1999/xhtml" >
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title> LOGIN</title>
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="login.js"></script>
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
+	<link type="text/css" rel="stylesheet" href="login.css" />    
+    <body>
+	<a id="modal_trigger" href="#modal" class="btn">Click here to Login or register</a>
+		
+<div class="user_login">
+    <form>
+        <label>Email / Username</label> <input type="text"><br>
+        <label>Password</label> <input type="password"><br>
+ 
+        <div class="checkbox">
+            <input id="remember" type="checkbox"> <label for=
+            "remember">Remember me on this computer</label>
+        </div>
+ 
+        <div class="action_btns">
+            <div class="one_half">
+                <a class="btn back_btn" href="#">Back</a>
+            </div>
+ 
+            <div class="one_half last">
+                <a class="btn btn_red" href="#">Login</a>
+            </div>
+        </div>
+    </form>
+    
+    <a class="forgot_password" href="#">Forgot password?</a>
+</div>
+    </body>
+    </html>

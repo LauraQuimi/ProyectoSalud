@@ -1,0 +1,29 @@
+#form{
+ width: 470px;
+ height: auto;
+ margin: 0 auto;
+ padding: 0 1%;
+ box-shadow: 5px 5px 0 #AAA;
+ border-radius: 5px;
+}
+body{
+ font-family: "Open Sans", Arial, sans-serif;
+ font-size: 14px;
+ font-weight: 350;
+ color: #333;
+}
+input{
+ width: 25%;
+ height: 30px;
+ font: 300 24px "Open Sans", Arial, sans-serif;
+}
+input[type=submit]{
+ background-color:#CCCCCC;
+ height:50px;
+ width:98%;
+ border:none;
+ font-weight:400;
+ letter-spacing:2px;
+ color:#FFFFFF;
+}
+

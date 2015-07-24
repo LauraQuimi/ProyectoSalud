@@ -1,0 +1,31 @@
+function cambiarDiv() {
+    var tipo = $("#cbxTipoUsuario").val();
+    if (tipo === '0') {
+        $("#divPaciente").css("display", "inline");
+        $("#divMediko").css("display", "none");
+    }
+    else if (tipo === '1') {
+        $("#divPaciente").css("display", "none");
+        $("#divMediko").css("display", "inline");
+    }
+    else {
+        $("#divPaciente").css("display", "none");
+        $("#divMediko").css("display", "none");
+    }
+}
+
+function cambiarDivTipoConsulta() {
+    var tipo = $("#cbxTipoConsulta").val();
+    if (tipo === '0') {
+        $("#divConsultaPersonal").css("display", "inline");
+        $("#divConsultaRango").css("display", "none");
+    }
+    else if (tipo === '1') {
+        $("#divConsultaPersonal").css("display", "none");
+        $("#divConsultaRango").css("display", "inline");
+    }
+    else {
+        $("#divConsultaPersonal").css("display", "none");
+        $("#divConsultaRango").css("display", "none");
+    }
+}

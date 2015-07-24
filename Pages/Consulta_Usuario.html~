@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Consultar Usuario - Web Heart</title>
+<link rel="stylesheet" href="../css/consulta.css" />
+</head>
+
+<body>
+	<section class="contenedorRegistroUsuario">
+    	<section class="subcontenedor">
+        	<div class="divTitulo">
+            	CONSULTA DE USUARIOS
+            </div>
+        	<fieldset>
+            	<legend>Fitro de Búsqueda</legend>
+                <div style="float: left; width: 350px; margin-right: 20px;">
+                    <br /><br />
+		    <label class="etiquetas">Seleccione: </label>
+		    <SELECT>
+			<OPTION Value="">--- No Seleccionado ---</OPTION>
+			<OPTION Value="">                       </OPTION>
+			<OPTION Value="">                       </OPTION>
+			<OPTION Value="">                       </OPTION>
+			<OPTION Value="">                       </OPTION>
+		    </SELECT>
+		</div>
+		<div style="float: left; width: 300px; margin-right: 20px;">
+                    <fieldset>
+                	<legend>Rango</legend>
+                        <input type="radio" name="rango" checked="checked" />0 - 30<br />
+                        <input type="radio" name="rango" />30 - 60<br />
+		        <input type="radio" name="rango" />+60
+                    </fieldset>
+		 </div>   
+		 <div class="divBotones">
+            		    <button type="button" value="Consultar" style="margin-right:5px;"><span>Consultar</span></button>
+                	    <br />
+			    <button type="button" value="Salir"><span>Salir</span></button>
+            	 </div>
+                               
+            </fieldset>
+            <fieldset>
+            	<legend>Datos Encontrados</legend>
+                <div style="float: left; width: 719px; margin-right: 20px;">
+                   
+                </div>
+            </fieldset>
+            
+        </section>
+    </section>
+    <footer>
+     	<p> &copy; 2015 - Web Solutions S.A. Todos los derechos reservados</tfoot>
+    </footer>
+</body>
+</html>

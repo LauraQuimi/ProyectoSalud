@@ -1,0 +1,533 @@
+    1  exit
+    2  terminal
+    3  exit
+    4  man cp
+    5  clear
+    6  pwd
+    7  ls
+    8  ls -all
+    9  pwd
+   10  ls
+   11  ls -all 
+   12  man ls
+   13  sudo init 0
+   14  ls -l 
+   15  gedit clase
+   16  q
+   17  ls
+   18  ls -l
+   19  cd downloads
+   20  cd /
+   21  cd downloads
+   22  cd..
+   23  cd /
+   24  ls
+   25  cd..
+   26  pwd
+   27  cd..
+   28  cd 
+   29  pwd
+   30  ls
+   31  cd Downloads
+   32  ls
+   33  cp clase ../clase
+   34  l
+   35  rm clase
+   36  ls
+   37  cat /var/log/syslog
+   38  ls
+   39  clear
+   40  ls
+   41  cat /var/log/syslog
+   42  tail -20 /var/log/syslog 
+   43  tail -5 /var/log/syslog 
+   44  ls
+   45  cat prueba.htm
+   46  gedit prueba.htm
+   47  ls -all
+   48  chown root prueba.htm
+   49  sudo chown root prueba.htm
+   50  l
+   51  ls -all
+   52  hostname
+   53  cd 
+   54  cd /
+   55  cd 
+   56  pws
+   57  pwd
+   58  cd
+   59  gedit archivo1
+   60  ls
+   61  gedit archivo2
+   62  ls
+   63  cp archivo1 downloads
+   64  ls
+   65  cp archivo1 Downloads
+   66  mv archivo2 Downloads
+   67  ls
+   68  ls Downloads
+   69  echo "archivo3">archivo3
+   70  ls
+   71  ls Downloads
+   72  ls
+   73  get scrip1.txt
+   74  gedit script
+   75  ls
+   76  ls -all
+   77  sudo chmod 777 script
+   78  ls -all
+   79  rename script script.sh
+   80  mv script script.sh
+   81  ls 
+   82  rm archivo1
+   83  rm archivo3
+   84  cd Downloads
+   85  l
+   86  rm archivo1
+   87  rm archivo2
+   88  gedit script.sh
+   89  cd ..
+   90  ls
+   91  gedit script.sh
+   92  sh script.sh
+   93  ls -all
+   94  ls
+   95  ls Downloads
+   96  exit
+   97  who am i
+   98  pwd
+   99  man cp
+  100  ls -l
+  101  gedit prueba
+  102  nano prueba
+  103  cat archivo1.txt
+  104  more script.sh
+  105  chown clase
+  106  ls -l
+  107  chown
+  108  ls
+  109  ls -all
+  110  pwd
+  111  ñ
+  112  find prueba.html
+  113  clear
+  114  pwd
+  115  ls
+  116  sudo apt-get install apache2
+  117  ls
+  118  ifconfig
+  119  ping 172.19.38.202
+  120  ifconfig
+  121  l
+  122  ls -all
+  123  cd ..
+  124  ls -all
+  125  cd html
+  126  ls -all
+  127  chmod 646 index.html
+  128  cd ..
+  129  sudo chmod 646 html
+  130  ls -l
+  131  ls -all
+  132  cd 
+  133  ls -s
+  134  cd Downloads
+  135  ls -all
+  136  cat prueba.htm
+  137  ls -all
+  138  cp prueba.htm /var/www/
+  139  cp prueba.htm /var/www/html/prueba.htm
+  140  pwd
+  141  cd /var/www
+  142  ls -all
+  143  sudo chown 666 html
+  144  sudo chown 777 html
+  145  cd html
+  146  ls
+  147  cd html
+  148  pwd
+  149  ls -all
+  150  sudo chmod 777 html
+  151  sudo chown root html
+  152  ls -all
+  153  cd html
+  154  cd /
+  155  pwd
+  156  ls -all
+  157  cd /
+  158  ls -all
+  159  cd /home/estudiante
+  160  ls -all
+  161  cd Downloads
+  162  ls -ll
+  163  cp prueba.htm /var/www/htm
+  164  cp prueba.htm /var/www/html/cp prueba.htm
+  165  cp prueba.htm /var/www/html/prueba.htm
+  166  cd /var/www/html
+  167  ls -all
+  168  exit
+  169  ifconfig
+  170  echo "hola mundo">>index.htm
+  171  echo "hola mundo"
+  172  more index.htm
+  173  firefox index.htm
+  174  nombre=jose
+  175  echo $nombre
+  176  echo "$(nombre) perez"
+  177  echo "#(nombre) perez"
+  178  echo "$nombre perez"
+  179  hostname
+  180  path
+  181  $PATH
+  182  echo $home
+  183  echo $HOME
+  184  exit
+  185  cat>taller3.sh
+  186  gedit taller3.sh
+  187  ls -all
+  188  ./taller3.sh
+  189  pwd
+  190  l
+  191  ls -l
+  192  gedit taller3.sh
+  193  pwd
+  194  gedit taller3.sh
+  195  cp www.linuxtotal.com.mx /var/www/htm
+  196  ls -all
+  197  cp www.linuxtotal.com.mx /var/www/htm/www.linuxtotal.com.mx
+  198  exit
+  199  historial>hist
+  200  historial
+  201  historial 5
+  202  history>histo
+  203  mor histo
+  204  cat histo
+  205  cp histo /home/destop
+  206  exit
+  207  pwd
+  208  ls -l
+  209  ping www.espol.edu.ec
+  210  ping 8.8.8.8
+  211  ping www.espol.edu.ec
+  212  ping www.heroku.com
+  213  exit
+  214  pwd
+  215  cd downloads
+  216  pwd
+  217  l
+  218  ls -all
+  219  gedit quimi_taller3.sh
+  220  nano quimi_taller3.sh
+  221  pwd
+  222  more quimi_taller3.sh
+  223  ls -all
+  224  sudo chmod 777 Quimi_taller3.sh
+  225  ls -all
+  226  cat Quimi_taller3.sh
+  227  ./Quimi_taller3.sh
+  228  pwd
+  229  ls -l
+  230  cd /var/www/html
+  231  pwd
+  232  ls
+  233  rm index.html
+  234  cd /
+  235  pwd
+  236  cd ..
+  237  pwd
+  238  cd 
+  239  pwd
+  240  ./Quimi_taller3.sh
+  241  pwd
+  242  ls -l Q*
+  243  cp Quimi_taller3.sh QuimiTaller3.sh
+  244  ls -l
+  245  ./QuimiTaller3.sh
+  246  pwd
+  247  l
+  248  rm index.html
+  249  rm index.html.1
+  250  rm index.html.2
+  251  rm index.html.3
+  252  cd /var/www/html
+  253  ls -ll
+  254  rm index.html
+  255  cd /
+  256  cd
+  257  cd..
+  258  cd ..
+  259  pwd
+  260  cd estudiante
+  261  pwd
+  262  l
+  263  ./QuimiTaller3.sh
+  264  cat QuimiTaller3.sh
+  265  cd /var/www/html
+  266  pwd
+  267  l
+  268  ls -l
+  269  ls -all
+  270  pwd
+  271  gzip -c index.html>resultado.tar.gz
+  272  ls -all
+  273  rm resultado.tar.gz
+  274  pwd
+  275  cd /
+  276  pwd
+  277  cd home
+  278  pwd
+  279  l
+  280  ls -l
+  281  cd estudiante
+  282  pwd
+  283  l
+  284  rm resultado.tar.gz
+  285  ls -all
+  286  ./QuimiTaller3.sh
+  287  pwd
+  288  ls -ll
+  289  pwd
+  290  sudo apt-get install -y git-core
+  291  which git
+  292  sudo apt-get install ssh openssh-client
+  293  ssh-keygen -t rsa
+  294  cd 
+  295  pwd
+  296  cd .ssh
+  297  ls -all
+  298  more id_rsa.pub
+  299  cd ..
+  300  cd
+  301  cd 
+  302  cd ..
+  303  pwd
+  304  cd estudiante
+  305  pwd
+  306  wget -qO -https://toolbelt.heroku.com/install-ubuntu.sh | sh
+  307  wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | [Csh 
+  308  wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+  309  ls 
+  310  wget https://toolbelt.heroku.com/install-ubuntu.sh 
+  311  more install-ubuntu.sh 
+  312  heroku login
+  313  heroku keys:add
+  314  cd /var/www
+  315  cd html
+  316  pwd
+  317  mkdir prueba
+  318  ls -all
+  319  cd prueba
+  320  nano index.php
+  321  more index.php
+  322  git idil
+  323  git init
+  324  git add .
+  325  git status
+  326  git commint -m "hola mundo"
+  327  git config -global user.email laura_quimi@hotmail.com
+  328  git config --global user.email laura_quimi@hotmail.com
+  329  git config --global user.name Laura
+  330  git commint -m "hola mundo"
+  331  git commit -m "hola mundo"
+  332  heroku create
+  333  ls -all
+  334  git push keroku master
+  335  git push heroku master
+  336  cp histo /home/destop
+  337  hist
+  338  history>histo
+  339  more histo
+  340  ls -all
+  341  more histo
+  342  history>histo_junio17
+  343  more histo_junio17
+  344  cd /var/www/html
+  345  git clone https://github.com/LauraQuimi/PSW2015.git
+  346  ls 
+  347  ls -all
+  348  cd psw2015
+  349  cd PSW2015
+  350  ls -all
+  351  cd ..
+  352  ls -all
+  353  cd prueba
+  354  ls -all
+  355  git status
+  356  cd ..
+  357  pwd
+  358  cd prueba
+  359  ls
+  360  rm histo
+  361  pwd
+  362  ls -l
+  363  cd ..
+  364  ls -all
+  365  cd PSW2015
+  366  ls -all
+  367  git status
+  368  git commit -m "archivo index"
+  369  git add index.php 
+  370  git status
+  371  git commit -m "archivo index"
+  372  git status
+  373  git pull 
+  374  git push
+  375  cd ..
+  376  pwd
+  377  ls -s
+  378  git clone https://github.com/LauraQuimi/ProyectoSalud.git
+  379  ls -all
+  380  cd ProyectoSalud
+  381  ls 
+  382  touch laura
+  383  git status
+  384  git add
+  385  git commit -m "archivo laura"
+  386  git add laura
+  387  git commit -m "archivo laura"
+  388  git pull 
+  389  git status
+  390  git commit -m "merge de error"
+  391  git pull 
+  392  git push
+  393  git pull
+  394  tough ejemplo2
+  395  touch ejemplo2
+  396  git add ejemplo2
+  397  git commit -m "ejemplo2"
+  398  git pull 
+  399  git push
+  400  cd /
+  401  pwd
+  402  history>junio17a
+  403  history>histo_junio17a
+  404  cd /www
+  405  cd /var/www
+  406  cd html
+  407  pwd
+  408  ls -a
+  409  history>hist_junio17a
+  410  pwd
+  411  ls -all
+  412  cd /var/www/html
+  413  git pull
+  414  ls -all
+  415  cd ProyectoSalud
+  416  l
+  417  git pull
+  418  git status
+  419  cd /etc
+  420  pwd
+  421  ls -all
+  422  ls -all |more
+  423  ls g*
+  424  nano gitconfig
+  425  gitlock
+  426  gitlook
+  427  gitlock
+  428  exit
+  429  sudo apt-get install gitk
+  430  cd /var/www/html
+  431  ls -all
+  432  cd ProyectoSalud
+  433  gitk
+  434  git status
+  435  git remote -v
+  436  ls -all
+  437  history | grep heroku
+  438  cd ..
+  439  ls 
+  440  cd prueba
+  441  heroku open
+  442  git remote -v
+  443  cd ..
+  444  cd ProyectoSalud
+  445  git remote add heroku https://git.heroku.com/still-castle-1654.git
+  446  git remote -v
+  447  git push
+  448  git push heroku
+  449  git pull
+  450  git push heroku
+  451  git remote -v
+  452  git master heroku
+  453  git heroku master
+  454  git remote -v
+  455  get status
+  456  git status
+  457  git add .
+  458  git status
+  459  git pull
+  460  git push heroku master
+  461  git pull heroku master
+  462  nano index.php 
+  463  git status
+  464  git add index.php 
+  465  git commit -m "fix de index en heroku index de laura"
+  466  git status
+  467  git push heroku master
+  468  heroku open
+  469  git tag -a 1 -m "version inicial"
+  470  git put origen v.01
+  471  git branch pruebas
+  472  git push pruebas
+  473  git branch LauraPrueba
+  474  git push origen LauraPrueba
+  475  git push origin LauraPrueba
+  476  git checkout LauraPrueba
+  477  touch contactos
+  478  git add contactos
+  479  git commit -m "contactos"
+  480  git pull origin LauraPrueba
+  481  git push origin LauraPrueba
+  482  git checkout master
+  483  git merge LauraPrueba
+  484  git push origin master
+  485  git pull origin master
+  486  git commit -m "merge laura"
+  487  git push origin master
+  488  exit
+  489  cd /var/www/html
+  490  pwd
+  491  ls -all
+  492  cd prueba
+  493  pwd
+  494  ls -all
+  495  touch .gitignore
+  496  nano .gitignore
+  497  history>junio18
+  498  more junio18
+  499  history>junio18a
+  500  pwd
+  501  cd ProyectoSalud
+  502  cd /var/www/html
+  503  cd ProyectoSalud
+  504  git status
+  505  git remote -v
+  506  exit
+  507  history >julio2
+  508  more julio2
+  509  exit
+  510  cd /var/www/html
+  511  pwd
+  512  ls -all
+  513  cd ProyectoSalud/
+  514* 
+  515  ls -all
+  516  cd Plantilla
+  517  ls
+  518  ls -all
+  519  cd css
+  520  ls -all
+  521  cd ..
+  522  l
+  523  ls -all
+  524  cd img
+  525  ls -all
+  526  cd ..
+  527  ls -all
+  528  git pull
+  529  sudo apt-get install php5
+  530  sudo service restart apache
+  531  sudo services restart apache
+  532  sudo /etc/init.d/apache2 restart
+  533  history>julio15-13-21

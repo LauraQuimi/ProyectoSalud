@@ -978,7 +978,7 @@ tr
 
 th
 {
- background-color: #FF432E;
+ background-color: #FF4000;
  color: white;
     text-align: center;
 }

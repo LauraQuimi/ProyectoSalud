@@ -61,8 +61,6 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">
-<<<<<<< HEAD
-                        
                         <div class="form-group" id="btnLogin" style="display:inline;">
                             <div class="menu-item blue">
                                 <a href="#login-modal" data-toggle="modal">
@@ -70,19 +68,11 @@
                                     <p id="pLog">Iniciar Sesión</p>
                                 </a>
                             </div>
-=======
-                        <div class="menu-item blue" id="btnLogin" style="display:inline;">
-                            <a href="#login-modal" data-toggle="modal">
-                                <i class="fa fa-user"></i>
-                                <!--p id="pLog" onclick="window.open('login.html','nuevaVentana','width=300, height=400')">Iniciar Sesión</p-->
-                            	<p id="pLog">Iniciar Sesión</p>
-			    </a>
->>>>>>> origin/master
                         </div>
                         
                         <div class="form-group" id="btnLogout" style="display:none;">
                             <div class="menu-item blue">
-                                <a href="#login-modal" data-toggle="modal" onclick="javascript:logout()">
+                                <a onclick="javascript:logout()">
                                     <i class="fa fa-sign-out"></i>
                                     <p id="pLog">Cerrar Sesión</p>
                                 </a>
@@ -100,7 +90,7 @@
                         
                         <div class="form-group" id="btnControl" style="display:none">
                             <div class="menu-item color responsive">
-                                <a data-toggle="modal">
+                                <a href="#RitmoCardiaco-modal" data-toggle="modal">
                                     <i class="fa fa-heart-o"></i>
                                     <p>Control</p>
                                 </a>
@@ -217,14 +207,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="container">
+                <div class="container"><!--
 <<<<<<< HEAD
                     <div class="row" id="divLogin">
                         <div class="col-md-12">
                             <form id="Login" novalidate>
                                 <div class="row" style="margin-bottom: 15px;">
                                     <!--fieldset class="grupo">
-                                        <legend>INICIO SESIÓN</legend-->
+                                        <legend>INICIO SESIÓN</legend
                                         <div class="form-group fila">
                                             <div class="col-md-12 text-center">
 						<label>USUARIO:                                                
@@ -238,13 +228,13 @@
 						<button type="submit" class="btn btn-primary">LOGIN</button>
                                             </div> 
 					</div>                                      
-                                    <!--/fieldset-->
+                                    <!--/fieldset
                                 </div>
                             </form>    
                         </div>
                     </div>                    
                 </div>                
-=======
+=======-->
                     <div class="row">
                         <div class="section-title text-center">
                             <h3>BIENVENIDO</h3>
@@ -281,7 +271,6 @@
                     </div>
                 </div>
                 
->>>>>>> a8667f6b403bc1eaef6a4121281ea12f2d36182f
             </div>
         </div>
         <!-- Fin Sección Login -->
@@ -1611,6 +1600,409 @@
         </div>
         <!-- Fin Sección Consultas -->
         
+           <!-- Inicio Registrar Contacto -->
+        <div class="section-modal modal fade contact" id="registrar-contacto-modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title text-center">
+                            <h3>Consultar Contacto</h3>
+                           <!-- <p>Seleccione tipo de usuario</p>-->
+                            <div class="form-group caja">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form id="ConsultarContactosForm" novalidate>
+                                <div class="row" style="margin-bottom: 15px;">
+                                    <fieldset class="grupo">
+                                        <legend>Buscar</legend>
+                                        <div class="form-group fila">
+                                                                                <div class="col-md-6">
+<label class="etiquetas">Buscar por Apellidos: </label>                                                
+ <input type="text" class="form-control" placeholder="Apellidos *" id="txtApellidoPac" required data-validation-required-message="Por favor ingresa tu apellido.">
+                                                <p class="help-block text-danger"></p>
+                                          
+
+  </div>
+
+<div class="col-md-6">
+                                    <div class="col-lg-12 text-right">
+                                        <div id="success"></div>
+                                        <button type="submit" class="btn btn-primary">Aceptar</button>
+                                    </div>
+  
+
+                                  </div>           
+                                  
+                                </div>      
+                                    </fieldset>
+                                </div>
+                                <div class="row">
+                                    <fieldset class="grupo">
+                                                                      	<legend>Listado de Contactos</legend>
+                <div style="float: left; width: 800; margin-right: 20px;">
+                    
+		<table border=1>
+  		 <tr>
+     		  <th width=400>Nombre</td>
+     		  <th width=400>Apellido</td>
+      		  <th width=300>Telefono</td>
+      		  <th width=600>Email</td>
+  	          </tr>
+    	          <tr>
+      	  	    <td>      </td>
+		    <td>      </td>
+		    <td>      </td>
+ 		    <td>      </td>
+		  </tr>
+      	  	  
+    	         <tr>
+      	  	  <td>      </td>
+		  <td>      </td>
+		  <td>      </td>
+		  <td>      </td>
+     	      </tr>
+		
+		<tr>
+      	  	  <td>      </td>
+		  <td>      </td>
+		  <td>      </td>
+ 		 <td>      </td>
+
+    		</tr>
+		
+<tr>
+      	  	  <td>      </td>
+		  <td>      </td>
+		  <td>      </td>
+ 		 <td>      </td>
+
+    		</tr>
+		</table>                 
+
+                </div>
+                  
+                                    </fieldset>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- Fin Sección Registros Contacto -->
+        
+ <!-- Inicio Graficar Ritmo cardiaco -->
+        <div class="section-modal modal fade contact" id="RitmoCardiaco-modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title text-center">
+                            <h3>Ritmo Cardiaco</h3>
+                           <!-- <p>Seleccione tipo de usuario</p>-->
+                            <div class="form-group caja">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form id="ConsultarContactosForm" novalidate>
+                                <div class="row" style="margin-bottom: 15px;">
+                                    <fieldset class="grupo">
+                                        <legend>Buscar</legend>
+                                        <div class="form-group fila">
+                                                                                					<div class="col-md-6">
+						<label class="etiquetas">Buscar por Apellidos: </label>                                                
+ 						<input type="text" class="form-control" placeholder="Apellidos *" id="txtApellidoPac" required data-validation-required-message="Por favor ingresa tu apellido.">
+                                                <p class="help-block text-danger"></p>
+                                          
+
+ 					</div>
+
+				      <div class="col-md-6">
+        	                       <div class="col-lg-12 text-right">
+                                          <div id="success"></div>
+                                        <button type="submit" class="btn btn-primary">Aceptar</button>
+                                     </div>
+        			    </div>  
+
+  
+				<div class="col-md-6">
+					<label class="etiquetas">Edad: </label>                                                
+ 					<input type="text" class="form-control" placeholder="Edad *" id="txtEdadPac" required data-validation-required-message=".">
+                                                <p class="help-block text-danger"></p>
+                                          
+
+  				    </div>
+
+         			</div>  
+
+                                <div class="row">
+
+				</div>
+<!---Adicionar tabla --->
+
+                                  
+                                <div class="row">
+     <!---                               <fieldset class="grupo">-->
+
+                                <fieldset >
+                                         	
+                			<div style="float: left; padding:20px; ">
+                    
+					<table border=1>
+  		 			<tr>
+     		  			<th width=350>Apellido</td>
+		  			<th width=300>Nombre</td>
+		  			<th width=500>Contacto</td>
+  	          			</tr>
+    	          			<tr>
+      	  	    			<td>      </td>
+		   			 <td>      </td>
+		    			<td>      </td>
+		 			 </tr>
+      	  	  
+    	         			<tr>
+      	  	 			 <td>      </td>
+		 			 <td>      </td>
+		 			 <td>      </td>
+     	      				</tr>
+		
+					<tr>
+      	  				  <td>      </td>
+					  <td>      </td>
+ 					 <td>      </td>
+
+    					</tr>
+		
+					<tr>
+      	  				  <td>      </td>
+					  <td>      </td>
+ 					 <td>      </td>
+	
+    					</tr>
+				</table>                 
+	
+                		</div>
+                  
+                                    </fieldset>
+                                </div>
+
+  </fieldset>
+                                </div>   <!-- Fin Busqueda Contacto -->
+ 
+
+        		 <div class="row" style="margin-bottom: 15px;">
+	                       <fieldset class="grupo">
+                                <legend>Ritmo Cardiaco</legend>
+                                 <div class="form-group fila">
+                                                                                
+                                  <div class="col-md-6">
+                	            <div class="latest-post">
+                	                <img src="img/cardiograma60.png" class="img-responsive" alt="">
+                                <h4><a href="#"> </a></h4>
+                                
+                                
+                	            </div>
+	                        </div>
+
+                        
+			  <div class="col-md-6">
+                            <div class="latest-post">
+       
+      				<div style="float: padding:20px">
+	
+	   		 <table border=1 style="width: 100%;">
+	  		   <tr>
+	     		   <th>Fecha</td>
+	     		   <th>Presion</td>
+	                   </tr>
+	    	           <tr>
+	      	  	    <td>      </td>
+			    <td>      </td>
+			   </tr>
+      	  	  
+	    	           <tr>
+	      	  	   <td>      </td>
+			   <td>      </td>
+		           </tr>
+		
+			  <tr>
+	      	  	   <td>      </td>
+			   <td>      </td>
+		          </tr>
+		
+			  <tr>
+      	  		    <td>      </td>
+		 	     <td>      </td>
+			     </tr>
+			     </table>                 
+
+                            </div>
+                                
+                                
+                            </div>
+                        </div>
+                        
+                              </div>      
+                               </fieldset>
+                          </div>      <!-- Graficar Ritmo Cardiaco -->
+
+             
+	               </form>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- Fin Sección Graficar Ritmo Cardiaco -->
+
+ <!-- Inicio Graficar Ritmo cardiaco -->
+        <div class="section-modal modal fade contact" id="RitmoCardiacoI-modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title text-center">
+                            <h3>Ritmo Cardiaco</h3>
+                           <!-- <p>Seleccione tipo de usuario</p>-->
+                            <div class="form-group caja">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form id="ConsultarContactosForm" novalidate>
+                                <div class="row" style="margin-bottom: 15px;">
+                                    <fieldset class="grupo">
+                                        <legend>Datos Personales</legend>
+                                        <div class="form-group fila">
+                                                                                	<div class="col-md-6">
+		<label class="etiquetas">Apellidos: </label>                                                
+ 		<input type="text" class="form-control" placeholder="Apellidos *" id="txtApellidoPac" required data-validation-required-message="Por favor ingresa tu apellido.">
+                                                <p class="help-block text-danger"></p>
+                                          
+
+  	</div>
+
+		<div class="col-md-6">
+		<label class="etiquetas">Edad: </label>                                                
+ 		<input type="text" class="form-control" placeholder="Edad *" id="txtEdadPac" required data-validation-required-message=".">
+                                                <p class="help-block text-danger"></p>
+                                          
+
+  	</div>
+
+         </div>  
+
+    
+                                  
+                                <div class="row">
+
+</div>
+<!---Adicionar tabla --->
+
+                                  
+                                <div class="row">
+     <!---                               <fieldset class="grupo">-->
+
+                  </fieldset>
+                                </div>   <!-- Fin Busqueda Contacto -->
+ 
+
+        		 <div class="row" style="margin-bottom: 15px;">
+	                       <fieldset class="grupo">
+                                <legend>Ritmo Cardiaco</legend>
+                                 <div class="form-group fila">
+                                                                                
+                                  <div class="col-md-6">
+                            <div class="latest-post">
+                                <img src="img/cardiograma60.png" class="img-responsive" alt="">
+                                <h4><a href="#"> </a></h4>
+                                
+                                
+                            </div>
+                        </div>
+</br>
+                        
+  <div class="col-md-6">
+                            <div class="latest-post">
+       
+      <div style="float: width: 800; padding:20px">
+
+   		 <table border=1>
+  		 <tr>
+     		  <th width=400>Fecha</td>
+     		  <th width=400>Presion</td>
+                 </tr>
+    	          <tr>
+      	  	    <td>      </td>
+		    <td>      </td>
+		  </tr>
+      	  	  
+    	         <tr>
+      	  	  <td>      </td>
+		  <td>      </td>
+	      </tr>
+		
+		<tr>
+      	  	  <td>      </td>
+		  <td>      </td>
+	       </tr>
+		
+<tr>
+      	  	  <td>      </td>
+		  <td>      </td>
+		</tr>
+		</table>                 
+
+                            </div>
+                                
+                                
+                            </div>
+                        </div>
+                        
+          
+                                </div>      
+                               </fieldset>
+                          </div>
+             
+	               </form>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- Fin Sección Registros Contacto -->    
+            
     </body>
     
 </html>

@@ -1,3 +1,0 @@
-<?
- echo "HECTOR CHIMBO PINARGOTE      0999435375";
-?>

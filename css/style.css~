@@ -837,7 +837,7 @@ and (max-width : 991px) {
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     -o-border-radius: 2px;
-    border-radius: 2px;
+    border-radius: 2px;6
     border: 1px solid #FF432E;
     
 }
@@ -879,15 +879,16 @@ and (max-width : 991px) {
 
 .contact .form-group input,
 .contact .form-group textarea {
-    padding: 20px;
+    padding: 0px;
 }
-
+//control de las propiedades de los formularios
 .contact .form-group input.form-control {
-    height: 35px;
+    height: 30px;
 }
 
 .contact .form-group textarea.form-control {
     height: 236px;
+     
 }
 
 .contact::-webkit-input-placeholder {
@@ -978,7 +979,7 @@ tr
 
 th
 {
- background-color: #FF4000;
+ background-color: #FF432E;
  color: white;
     text-align: center;
 }

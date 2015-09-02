@@ -1,0 +1,621 @@
+/*===========================================================================================================*/
+
+/*================================================ PRINCIPAL ================================================*/
+
+/*===========================================================================================================*/
+
+#divPrincipal {
+
+    margin: 0px auto;
+
+    width: 1280px;
+
+}
+
+
+
+body {
+
+    font-family: "Times New Roman";
+
+}
+
+
+
+#divContenedor {
+
+    margin: 5px 0px;
+
+    float: left;
+
+    padding: 0px;
+
+}
+
+
+
+#divFormulario {
+
+    margin: 0px;
+
+    width: 1280px;
+
+    height: 480px;
+
+    float: left;
+
+    border-radius: 100px 0px 10px 0px;
+    background: url("../img/fondo2.jpg") no-repeat scroll 0 0px transparent;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+
+    -o-background-size: cover;
+
+    background-size: cover;
+
+}
+
+
+
+#divTransparente {
+    width: 1100px;
+
+    height: 450px;
+    margin: 15px 30px 15px 90px;
+    opacity: 0.8;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    float: left;
+
+}
+
+
+
+footer {
+
+    border-style: double;
+    border-radius: 8px;
+
+    border-color: #226eb1;
+
+    padding: 2px 0px;
+
+    height: 30px;
+    margin: 5px 0px 0px 0px;
+
+}
+
+
+
+footer p {
+    text-align: center;
+    color: #778899;
+
+}
+
+
+
+/*===========================================================================================================*/
+
+/*================================================= CABECERA ================================================*/
+
+/*===========================================================================================================*/
+
+
+#divnavegacionsup{
+     margin: 0px auto;
+
+     float: left;
+     width: 100%;
+     height: 130px;
+     border: 0px;
+     text-align: center;
+     padding: 15px 0px 0px 0px;
+
+}
+
+
+
+.logo-st{
+      width: 25%;
+      height: 130px;
+      float: left;
+      margin: 5px 260px 0px 0px;
+      padding: 0px 0px 0px 5px;
+
+}
+
+
+
+nav {
+      margin: 0px 0px 0px 70px;
+
+}
+
+
+
+nav ul li {
+      font-family: "Times new Roman";
+      font-size: 12px;
+      text-align: center;
+
+      height: 62px;
+      width: 102px;
+      border: none;
+      float: left;
+      outline:0px;/*quita el resplandor del focus*/
+
+      background: url("../img/nuevo2.jpg") no-repeat scroll 0 0px transparent;
+
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+
+      background-size: cover;
+      margin: 5px 2px 0px 2px;
+      padding: 5px 0px 0px 0px;
+      list-style:none;/*quita las viñetas*/
+      list-style-type:none;/*quita las viñetas*/
+
+}
+
+
+
+nav ul li a {
+      color: #778899;
+      text-align: center;
+
+}
+
+
+
+i.iconoBotonesconf {
+      font-size: 16px;
+      color: #226eb1;
+      margin: 0px 0px 0px 5px;
+      float: left;
+      padding: 0px 0px 0px 40px;
+
+}
+
+
+
+nav ul li:hover{
+      background: url("../img/boton1.jpg") no-repeat scroll 0 0px transparent;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      -webkit-transform: scale(1.05);
+      -moz-transform: scale(1.05);
+      -o-transform: scale(1.05);
+
+      -ms-transform: scale(1.05);
+      transform: scale(1.05);
+
+}
+
+
+
+nav ul li:hover a{
+      color: #FF6347;
+      font-weight: bold;
+
+}
+
+
+
+nav ul li:hover a i{
+      color: #FF6347;
+      font-weight: bold;
+
+}
+
+
+
+hr {
+      border-color: #778899;
+      border-size: 0px;
+      display: block;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      margin-left: auto;
+      margin-right: auto;
+      border-style: inset;
+      border-width: 1px;
+
+}
+
+
+
+/*===========================================================================================================*/
+
+/*================================================ Formulario ===============================================*/
+
+/*===========================================================================================================*/
+
+
+.blue-text {
+      color: #1E90FF;
+      font-weight: bold;
+
+}
+
+
+
+.bloqHorizontal {
+
+      width: 100%;
+      height: 30px;
+      margin: 5px 0px;
+
+}
+
+
+
+.bloqHorizontal2 {
+      width: 73%;
+      margin: 5px 0px 5px 12px;
+      float: left;
+
+}
+
+
+
+.bloqVertical {
+
+      width: 343px;
+      height: 20%;
+      margin: 0px 5px;
+      float: left;
+
+}
+
+
+
+.bloqVertical2 {
+      height: 20%;
+      width: 255px;
+      margin: 0px 5px;
+      float: left;
+
+}
+
+
+
+.colTitulos {
+      float: left;
+      width: 100px;
+      margin: 0px 30px 0px 365px;
+
+}
+
+
+
+.colControles {
+      width: 200px;
+      margin: 0px 0px 0px 30px;
+      float: left;
+
+}
+
+
+
+.filTitulos {
+      width: 99%;
+      text-align: center;
+      margin: 0px 2px;
+      border-color: #778899;
+      color: white;
+      border-style: solid;
+      background-color: #1E90FF;
+      border-radius: 8px 8px 0px 0px;
+      font-weight: bold;
+
+}
+
+
+
+.contenido {
+      height: 370px;
+      width: 100%;
+      float: left;
+
+}
+
+
+
+.pie {
+      height:40px;
+      text-align: center;
+
+}
+
+
+
+button {
+      background-color: #1E90FF;
+      color: white;
+      margin: 0px;
+      border-radius: 20px;
+      outline:0px;
+
+}
+
+
+
+i.iconoBoton {
+      color: white;
+
+}
+
+
+
+.lista {
+      border-radius: 0px 0px 8px 8px;
+      border-style: solid;
+      width: 99%;
+      margin:0px 2px;
+
+}
+
+
+
+input {
+      height: 20px;
+
+}
+
+
+
+#txtImagen {
+      height: 50px;
+
+}
+
+
+
+/***********************************************************************************************************/
+
+/*********************************************** MENU CONTEXTUAL *******************************************/
+
+/***********************************************************************************************************/
+
+
+#menu_producto_item {
+      display: none;
+      width: 165px;
+      padding: 6px;
+  
+    background: #1E90FF;
+  
+    border: 1px solid #4682B4;
+  
+    border-radius: 5px;
+  
+    -moz-border-radius: 5px;
+
+      -webkit-border-radius: 5px;
+  
+    -khtml-border-radius: 5px;
+  
+    position: absolute;
+
+}
+
+
+#menu_producto_item ul{
+  
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+  
+    color: #6d6d6d;
+  
+    background: #fff;
+  
+    border: 1px solid #171717;
+  
+    border-radius: 5px;
+  
+    -moz-border-radius: 5px;
+  
+    -webkit-border-radius: 5px;
+  
+    -khtml-border-radius: 5px;
+}
+
+
+#menu_producto_item ul li{
+  
+    line-height: 1.5em;
+  
+    padding: 5px 5px 5px 25px;
+  
+    font-size: 11px;
+  
+    border-bottom: 1px solid #fff;
+  
+    border-radius: 5px;
+  
+    -moz-border-radius: 5px;
+  
+    -webkit-border-radius: 5px;
+  
+    -khtml-border-radius: 5px;
+
+}
+
+
+#menu_producto_item ul li:hover{
+  
+    background-color: #F8F8FF;
+  
+    border-bottom: 1px solid #F8F8FF;
+  
+    color: #000;
+  
+    cursor: pointer;
+}
+
+
+#menu_producto_item ul li a{
+  
+    color: #6d6d6d;
+  
+    display: block;
+
+}
+
+
+#menu_producto_item ul li.disabled, #menu ul li.disabled a{
+  
+    color: #bbbbbb;
+  
+    cursor: default;
+
+}
+
+
+#menu_producto_item ul li.disabled:hover{
+  
+    background: #fff;
+  
+    border-bottom: 1px solid #fff;
+}
+
+
+#menu_producto_item ul li{
+  
+    background-position: 3px 6px;
+  
+    background-repeat: no-repeat;
+}
+
+
+
+/***********************************************************************************************************/
+
+/************************************************* POPUPS **************************************************/
+
+/***********************************************************************************************************/
+
+
+.colTitulosPopup {
+
+      float: left;
+
+      width: 100px;
+
+      margin: 0px;
+
+}
+
+
+
+.colControlesPopup {
+
+      width: 200px;
+      margin: 0px;
+      float: left;
+
+}
+
+
+
+.formularioPoput {
+      padding: 10px 20px 0px 20px;
+
+}
+
+
+
+/***********************************************************************************************************/
+
+/************************************************ TABLAS ***************************************************/
+
+/***********************************************************************************************************/
+
+
+.datagrid table {
+
+      border-collapse: collapse;
+      text-align: center;
+      width: 100%;
+
+}
+
+
+
+.datagrid {
+      font: normal 10px Times New Roman, Times, serif;
+
+      background: #fff;
+
+      overflow: hidden;
+      border: 1px solid #1E90FF;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 8px;
+
+}
+
+
+
+.datagrid table td, .datagrid table th {
+      padding: 1px 10px;
+
+}
+
+
+
+.datagrid table thead th {
+      background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #6495ED), color-stop(1, #1E90FF) );
+      background:-moz-linear-gradient( center top, #6495ED 5%, #1E90FF 100% );
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#6495ED', endColorstr='#1E90FF');
+      background-color:#1E90FF;
+      color:#FFFFFF;
+      font-size: 12px;
+      font-weight: bold;
+      text-align: center;
+      border-left: 1px solid #1E90FF;
+
+}
+
+
+
+.datagrid table thead th:first-child {
+      border: none;
+
+}
+
+
+
+.datagrid table tbody td {
+      color: #00557F;
+      border-left: 1px solid #F7CDCD;
+      font-size: 12px;
+      font-weight: normal;
+
+}
+
+
+
+.datagrid table tbody .alt td {
+      background: #E1EEf4;
+      color: #00557F;
+
+}
+
+
+
+.datagrid table tbody td:first-child {
+      border-left: none;
+
+}
+
+
+
+.datagrid table tbody tr:last-child td {
+      border-bottom: none;
+
+}

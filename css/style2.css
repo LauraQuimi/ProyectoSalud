@@ -45,7 +45,7 @@ body {
     float: left;
 
     border-radius: 100px 0px 10px 0px;
-    background: url("../img/fondo2.jpg") no-repeat scroll 0 0px transparent;
+    background: url("../img/login-img.png") no-repeat scroll 0 0px transparent;
     -webkit-background-size: cover;
     -moz-background-size: cover;
 
@@ -68,6 +68,11 @@ body {
     padding: 20px;
     float: left;
 
+}
+
+#divfooter {
+    width:100%;
+    float:left;
 }
 
 
@@ -143,7 +148,7 @@ nav ul li {
       height: 62px;
       width: 102px;
       border: none;
-      float: left;
+      float: right;
       outline:0px;/*quita el resplandor del focus*/
 
       background: url("../img/nuevo2.jpg") no-repeat scroll 0 0px transparent;
@@ -330,6 +335,22 @@ hr {
       height:40px;
       text-align: center;
 
+}
+
+
+.pieGlobal {
+      float: left;
+      height:40px;
+      text-align: center;
+
+      width:100%;
+      margin-top: 20px;
+}
+
+.pieGlobal hr {
+      width: 100%;
+      margin: 2px 0px;
+      border-color:#1E90FF;
 }
 
 

@@ -37,7 +37,7 @@ foreach ($usuarioCollectorObj->showUsuarios() as $c){
      <td><?php echo $c->getGenero() ?></td>
      <td><?php echo $c->getUser() ?></td>
      <td><?php echo $c->getPassword() ?></td>
-     <td><a href="editar_usuario.php?id=<?php echo $c->getIdusuario() ?>">Editar</a></td>
+     <td><a href="usuario_edit.php?id=<?php echo $c->getIdusuario() ?>">Editar</a></td>
      <td><a href="eliminar_usuario.php?id=<?php echo $c->getIdusuario() ?>">Eliminar</a></td>
   </tr>
 <?php  

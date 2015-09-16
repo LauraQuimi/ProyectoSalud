@@ -1,7 +1,7 @@
 <?php
- include_once('DemoCollector.php');
- $id = $_GET['id']; 
- $DemoCollectorObj = new DemoCollector();
- $DemoCollectorObj->deleteDemo($id);
+ include_once('usuarioCollector.php');
+ $id_usuario = $_GET['Idusuario']; 
+ $usuarioCollectorObj = new usuarioCollector();
+ $usuarioCollectorObj->deleteUsuario($id_usuario);
 
 ?>

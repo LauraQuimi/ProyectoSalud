@@ -30,7 +30,7 @@ foreach ($usuarioCollectorObj->showUsuarios() as $c){
      <td><?php echo $c->getTipoidentificacion() ?></td>
      <td><?php echo $c->getNumidentificacion() ?></td>
      <td><?php echo $c->getNombres() ?></td>
-     <td><?php echo $c->getTApellidos() ?></td>
+     <td><?php echo $c->getApellidos() ?></td>
      <td><?php echo $c->getFechanac() ?></td>
      <td><?php echo $c->getCelular() ?></td>
      <td><?php echo $c->getEmail() ?></td>

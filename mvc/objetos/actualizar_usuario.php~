@@ -1,6 +1,6 @@
 <?php
  include_once('usuarioCollector.php');
- //$id = $_POST['ID'];
+ $id = $_POST['ID'];
  $tipo_usuario = $_POST['tipo_usuario'];
  $tipo_identificacion = $_POST['tipo_identificacion'];
  $num_identificacion = $_POST['num_identificacion'];
@@ -13,6 +13,6 @@
  $user = $_POST['user'];
  $password = $_POST['password'];
  $usuarioCollectorObj = new usuarioCollector();
- $usuarioCollectorObj->insertUsuario($tipo_usuario, $tipo_identificacion, $num_identificacion, $nombres, $apellidos, $fecha_nac, $celular,$email, $genero, $user, $password);
+ $usuarioCollectorObj->updateUsuario($id, $tipo_usuario, $tipo_identificacion, $num_identificacion, $nombres, $apellidos, $fecha_nac, $celular, $email, $genero, $user, $password);
 
 ?>

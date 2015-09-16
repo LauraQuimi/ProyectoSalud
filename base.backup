@@ -4,7 +4,7 @@
 
 -- Dumped from database version 9.4.4
 -- Dumped by pg_dump version 9.4.4
--- Started on 2015-09-14 21:36:43 ECT
+-- Started on 2015-09-16 08:35:00 ECT
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -22,7 +22,7 @@ CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
 
 
 --
--- TOC entry 2225 (class 0 OID 0)
+-- TOC entry 2226 (class 0 OID 0)
 -- Dependencies: 198
 -- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
 --
@@ -42,8 +42,8 @@ SET default_with_oids = false;
 --
 
 CREATE TABLE actividad_cardiaca (
-    id_actividad_cardica integer NOT NULL,
-    fecha_hora date,
+    id_actividad_cardiaca integer NOT NULL,
+    fecha_hora timestamp without time zone DEFAULT now() NOT NULL,
     pulso smallint,
     id_usuario integer
 );
@@ -67,12 +67,12 @@ CREATE SEQUENCE actividad_cardiaca_id_actividad_cardica_seq
 ALTER TABLE actividad_cardiaca_id_actividad_cardica_seq OWNER TO postgres;
 
 --
--- TOC entry 2226 (class 0 OID 0)
+-- TOC entry 2227 (class 0 OID 0)
 -- Dependencies: 192
 -- Name: actividad_cardiaca_id_actividad_cardica_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
-ALTER SEQUENCE actividad_cardiaca_id_actividad_cardica_seq OWNED BY actividad_cardiaca.id_actividad_cardica;
+ALTER SEQUENCE actividad_cardiaca_id_actividad_cardica_seq OWNED BY actividad_cardiaca.id_actividad_cardiaca;
 
 
 --
@@ -104,7 +104,7 @@ CREATE SEQUENCE area_trabajo_id_area_trabajo_seq
 ALTER TABLE area_trabajo_id_area_trabajo_seq OWNER TO postgres;
 
 --
--- TOC entry 2227 (class 0 OID 0)
+-- TOC entry 2228 (class 0 OID 0)
 -- Dependencies: 186
 -- Name: area_trabajo_id_area_trabajo_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -145,7 +145,7 @@ CREATE SEQUENCE datos_laborales_id_datos_laborales_seq
 ALTER TABLE datos_laborales_id_datos_laborales_seq OWNER TO postgres;
 
 --
--- TOC entry 2228 (class 0 OID 0)
+-- TOC entry 2229 (class 0 OID 0)
 -- Dependencies: 188
 -- Name: datos_laborales_id_datos_laborales_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -185,7 +185,7 @@ CREATE SEQUENCE datos_profesionales_id_datos_profesionales_seq
 ALTER TABLE datos_profesionales_id_datos_profesionales_seq OWNER TO postgres;
 
 --
--- TOC entry 2229 (class 0 OID 0)
+-- TOC entry 2230 (class 0 OID 0)
 -- Dependencies: 190
 -- Name: datos_profesionales_id_datos_profesionales_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -227,7 +227,7 @@ CREATE SEQUENCE directorio_id_directorio_seq
 ALTER TABLE directorio_id_directorio_seq OWNER TO postgres;
 
 --
--- TOC entry 2230 (class 0 OID 0)
+-- TOC entry 2231 (class 0 OID 0)
 -- Dependencies: 182
 -- Name: directorio_id_directorio_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -242,8 +242,8 @@ ALTER SEQUENCE directorio_id_directorio_seq OWNED BY directorio.id_directorio;
 
 CREATE TABLE notificacion (
     id_notificacion integer NOT NULL,
-    fecha_hora date,
-    observacion character varying[],
+    fecha_hora timestamp without time zone DEFAULT now(),
+    observacion character varying(50),
     id_directorio integer,
     id_tipo_notificacion integer
 );
@@ -267,7 +267,7 @@ CREATE SEQUENCE notificacion_id_notificacion_seq
 ALTER TABLE notificacion_id_notificacion_seq OWNER TO postgres;
 
 --
--- TOC entry 2231 (class 0 OID 0)
+-- TOC entry 2232 (class 0 OID 0)
 -- Dependencies: 194
 -- Name: notificacion_id_notificacion_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -307,7 +307,7 @@ CREATE SEQUENCE pulso_ideal_id_pulso_ideal_seq
 ALTER TABLE pulso_ideal_id_pulso_ideal_seq OWNER TO postgres;
 
 --
--- TOC entry 2232 (class 0 OID 0)
+-- TOC entry 2233 (class 0 OID 0)
 -- Dependencies: 196
 -- Name: pulso_ideal_id_pulso_ideal_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -344,7 +344,7 @@ CREATE SEQUENCE tipo_identificacion_id_tipo_identificacion_seq
 ALTER TABLE tipo_identificacion_id_tipo_identificacion_seq OWNER TO postgres;
 
 --
--- TOC entry 2233 (class 0 OID 0)
+-- TOC entry 2234 (class 0 OID 0)
 -- Dependencies: 174
 -- Name: tipo_identificacion_id_tipo_identificacion_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -381,7 +381,7 @@ CREATE SEQUENCE tipo_institucion_id_tipo_institucion_seq
 ALTER TABLE tipo_institucion_id_tipo_institucion_seq OWNER TO postgres;
 
 --
--- TOC entry 2234 (class 0 OID 0)
+-- TOC entry 2235 (class 0 OID 0)
 -- Dependencies: 184
 -- Name: tipo_institucion_id_tipo_institucion_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -418,7 +418,7 @@ CREATE SEQUENCE tipo_notificacion_id_tipo_notificacion_seq
 ALTER TABLE tipo_notificacion_id_tipo_notificacion_seq OWNER TO postgres;
 
 --
--- TOC entry 2235 (class 0 OID 0)
+-- TOC entry 2236 (class 0 OID 0)
 -- Dependencies: 180
 -- Name: tipo_notificacion_id_tipo_notificacion_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -455,7 +455,7 @@ CREATE SEQUENCE tipo_relacion_id_tipo_relacion_seq
 ALTER TABLE tipo_relacion_id_tipo_relacion_seq OWNER TO postgres;
 
 --
--- TOC entry 2236 (class 0 OID 0)
+-- TOC entry 2237 (class 0 OID 0)
 -- Dependencies: 178
 -- Name: tipo_relacion_id_tipo_relacion_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -492,7 +492,7 @@ CREATE SEQUENCE tipo_usuario_id_tipo_usuario_seq
 ALTER TABLE tipo_usuario_id_tipo_usuario_seq OWNER TO postgres;
 
 --
--- TOC entry 2237 (class 0 OID 0)
+-- TOC entry 2238 (class 0 OID 0)
 -- Dependencies: 172
 -- Name: tipo_usuario_id_tipo_usuario_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -514,7 +514,7 @@ CREATE TABLE usuario (
     celular bigint,
     email character varying(100),
     genero smallint,
-    "user" character varying(10),
+    username character varying(10),
     password character varying(20),
     id_tipo_usuario integer,
     id_tipo_identificacion integer
@@ -539,7 +539,7 @@ CREATE SEQUENCE usuario_id_usuario_seq
 ALTER TABLE usuario_id_usuario_seq OWNER TO postgres;
 
 --
--- TOC entry 2238 (class 0 OID 0)
+-- TOC entry 2239 (class 0 OID 0)
 -- Dependencies: 176
 -- Name: usuario_id_usuario_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -548,15 +548,15 @@ ALTER SEQUENCE usuario_id_usuario_seq OWNED BY usuario.id_usuario;
 
 
 --
--- TOC entry 2043 (class 2604 OID 16558)
--- Name: id_actividad_cardica; Type: DEFAULT; Schema: public; Owner: postgres
+-- TOC entry 2042 (class 2604 OID 16558)
+-- Name: id_actividad_cardiaca; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY actividad_cardiaca ALTER COLUMN id_actividad_cardica SET DEFAULT nextval('actividad_cardiaca_id_actividad_cardica_seq'::regclass);
+ALTER TABLE ONLY actividad_cardiaca ALTER COLUMN id_actividad_cardiaca SET DEFAULT nextval('actividad_cardiaca_id_actividad_cardica_seq'::regclass);
 
 
 --
--- TOC entry 2040 (class 2604 OID 16504)
+-- TOC entry 2039 (class 2604 OID 16504)
 -- Name: id_area_trabajo; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -564,7 +564,7 @@ ALTER TABLE ONLY area_trabajo ALTER COLUMN id_area_trabajo SET DEFAULT nextval('
 
 
 --
--- TOC entry 2041 (class 2604 OID 16515)
+-- TOC entry 2040 (class 2604 OID 16515)
 -- Name: id_datos_laborales; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -572,7 +572,7 @@ ALTER TABLE ONLY datos_laborales ALTER COLUMN id_datos_laborales SET DEFAULT nex
 
 
 --
--- TOC entry 2042 (class 2604 OID 16542)
+-- TOC entry 2041 (class 2604 OID 16542)
 -- Name: id_datos_profesionales; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -580,7 +580,7 @@ ALTER TABLE ONLY datos_profesionales ALTER COLUMN id_datos_profesionales SET DEF
 
 
 --
--- TOC entry 2038 (class 2604 OID 16472)
+-- TOC entry 2037 (class 2604 OID 16472)
 -- Name: id_directorio; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -596,7 +596,7 @@ ALTER TABLE ONLY notificacion ALTER COLUMN id_notificacion SET DEFAULT nextval('
 
 
 --
--- TOC entry 2045 (class 2604 OID 16592)
+-- TOC entry 2046 (class 2604 OID 16592)
 -- Name: id_pulso_ideal; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -604,7 +604,7 @@ ALTER TABLE ONLY pulso_ideal ALTER COLUMN id_pulso_ideal SET DEFAULT nextval('pu
 
 
 --
--- TOC entry 2034 (class 2604 OID 16422)
+-- TOC entry 2033 (class 2604 OID 16422)
 -- Name: id_tipo_identificacion; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -612,7 +612,7 @@ ALTER TABLE ONLY tipo_identificacion ALTER COLUMN id_tipo_identificacion SET DEF
 
 
 --
--- TOC entry 2039 (class 2604 OID 16493)
+-- TOC entry 2038 (class 2604 OID 16493)
 -- Name: id_tipo_institucion; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -620,7 +620,7 @@ ALTER TABLE ONLY tipo_institucion ALTER COLUMN id_tipo_institucion SET DEFAULT n
 
 
 --
--- TOC entry 2037 (class 2604 OID 16464)
+-- TOC entry 2036 (class 2604 OID 16464)
 -- Name: id_tipo_notificacion; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -628,7 +628,7 @@ ALTER TABLE ONLY tipo_notificacion ALTER COLUMN id_tipo_notificacion SET DEFAULT
 
 
 --
--- TOC entry 2036 (class 2604 OID 16456)
+-- TOC entry 2035 (class 2604 OID 16456)
 -- Name: id_tipo_relacion; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -636,7 +636,7 @@ ALTER TABLE ONLY tipo_relacion ALTER COLUMN id_tipo_relacion SET DEFAULT nextval
 
 
 --
--- TOC entry 2033 (class 2604 OID 16414)
+-- TOC entry 2032 (class 2604 OID 16414)
 -- Name: id_tipo_usuario; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -644,7 +644,7 @@ ALTER TABLE ONLY tipo_usuario ALTER COLUMN id_tipo_usuario SET DEFAULT nextval('
 
 
 --
--- TOC entry 2035 (class 2604 OID 16430)
+-- TOC entry 2034 (class 2604 OID 16430)
 -- Name: id_usuario; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -652,26 +652,348 @@ ALTER TABLE ONLY usuario ALTER COLUMN id_usuario SET DEFAULT nextval('usuario_id
 
 
 --
--- TOC entry 2213 (class 0 OID 16555)
+-- TOC entry 2214 (class 0 OID 16555)
 -- Dependencies: 193
 -- Data for Name: actividad_cardiaca; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY actividad_cardiaca (id_actividad_cardica, fecha_hora, pulso, id_usuario) FROM stdin;
+COPY actividad_cardiaca (id_actividad_cardiaca, fecha_hora, pulso, id_usuario) FROM stdin;
+29	2015-09-15 19:53:49.489574	1	2
+30	2015-09-15 19:56:43.418124	0	2
+31	2015-09-15 19:56:56.851604	1	2
+32	2015-09-15 19:59:19.224806	0	2
+33	2015-09-15 20:01:24.691948	0	2
+34	2015-09-15 20:01:48.164244	0	2
+35	2015-09-15 20:01:50.942907	0	2
+36	2015-09-15 20:01:52.769973	0	2
+37	2015-09-15 20:01:57.949378	0	2
+38	2015-09-15 20:02:03.332775	1	2
+39	2015-09-15 20:02:05.623226	0	2
+40	2015-09-15 20:02:08.274457	1	2
+41	2015-09-15 20:03:33.677105	1	2
+42	2015-09-15 20:03:40.78368	0	2
+43	2015-09-15 20:03:43.471395	0	2
+44	2015-09-15 20:03:45.25963	0	2
+45	2015-09-15 20:03:46.846627	0	2
+46	2015-09-15 20:03:48.488247	0	2
+47	2015-09-15 20:05:55.254093	1	2
+48	2015-09-15 20:06:05.909449	1	2
+49	2015-09-15 20:08:22.324889	1	2
+50	2015-09-15 20:12:44.345991	0	2
+51	2015-09-15 20:12:46.049242	1	2
+52	2015-09-15 20:12:47.459875	1	2
+53	2015-09-15 20:12:48.886958	0	2
+54	2015-09-15 20:12:50.276604	0	2
+55	2015-09-15 20:12:51.688472	0	2
+56	2015-09-15 20:12:53.292203	1	2
+57	2015-09-15 20:12:54.671591	0	2
+58	2015-09-15 20:12:56.127184	0	2
+59	2015-09-15 20:12:57.540127	0	2
+60	2015-09-15 20:12:58.954328	1	2
+61	2015-09-15 20:13:00.383472	0	2
+62	2015-09-15 20:13:01.815708	0	2
+63	2015-09-15 20:13:03.233141	0	2
+64	2015-09-15 20:13:04.741103	0	2
+65	2015-09-15 20:13:06.241169	0	2
+66	2015-09-15 20:13:07.725069	1	2
+67	2015-09-15 20:13:09.174836	0	2
+68	2015-09-15 20:13:10.541969	0	2
+69	2015-09-15 20:13:11.918231	0	2
+70	2015-09-15 20:13:13.289131	1	2
+71	2015-09-15 20:13:14.707431	0	2
+72	2015-09-15 20:13:16.092375	0	2
+73	2015-09-15 20:13:17.564603	1	2
+74	2015-09-15 20:13:18.970213	0	2
+75	2015-09-15 20:13:20.425305	0	2
+76	2015-09-15 20:13:21.835162	0	2
+77	2015-09-15 20:13:23.304417	0	2
+78	2015-09-15 20:13:24.68219	0	2
+79	2015-09-15 20:13:26.120113	0	2
+80	2015-09-15 20:13:27.659076	0	2
+81	2015-09-15 20:13:29.141364	1	2
+82	2015-09-15 20:13:30.527459	0	2
+83	2015-09-15 20:13:31.977496	1	2
+84	2015-09-15 20:13:33.364057	1	2
+85	2015-09-15 20:13:34.904755	1	2
+86	2015-09-15 20:13:36.398124	0	2
+87	2015-09-15 20:13:37.868886	0	2
+88	2015-09-15 20:13:39.351688	0	2
+89	2015-09-15 20:13:40.872771	0	2
+90	2015-09-15 20:13:42.409229	1	2
+91	2015-09-15 20:13:43.892873	1	2
+92	2015-09-15 20:13:45.414811	1	2
+93	2015-09-15 20:13:46.89978	0	2
+94	2015-09-15 20:13:48.440523	0	2
+95	2015-09-15 20:13:49.859713	1	2
+96	2015-09-15 20:13:51.316168	1	2
+97	2015-09-15 20:13:53.180152	0	2
+98	2015-09-15 20:13:54.66319	1	2
+99	2015-09-15 20:13:56.136564	1	2
+100	2015-09-15 20:13:57.546179	1	2
+101	2015-09-15 20:13:58.951529	1	2
+102	2015-09-15 20:14:00.376628	1	2
+103	2015-09-15 20:14:01.90169	1	2
+104	2015-09-16 00:11:50.506796	0	2
+105	2015-09-16 00:11:51.835738	1	2
+106	2015-09-16 00:11:53.239993	0	2
+107	2015-09-16 00:11:54.75375	0	2
+108	2015-09-16 00:11:56.136745	0	2
+109	2015-09-16 00:11:57.567347	1	2
+110	2015-09-16 00:11:58.992523	0	2
+111	2015-09-16 00:12:00.37491	0	2
+112	2015-09-16 00:12:01.784512	1	2
+113	2015-09-16 00:12:03.221538	0	2
+114	2015-09-16 00:12:04.626486	1	2
+115	2015-09-16 00:12:06.076648	0	2
+116	2015-09-16 00:12:07.481217	0	2
+117	2015-09-16 00:12:08.846905	1	2
+118	2015-09-16 00:12:10.364379	1	2
+119	2015-09-16 00:12:11.764929	0	2
+120	2015-09-16 00:12:13.241894	0	2
+121	2015-09-16 00:12:14.634483	1	2
+122	2015-09-16 00:12:16.106624	0	2
+123	2015-09-16 00:13:28.483	0	2
+124	2015-09-16 00:13:29.831232	0	2
+125	2015-09-16 00:13:31.219778	1	2
+126	2015-09-16 00:13:32.65383	1	2
+127	2015-09-16 00:13:34.030358	0	2
+128	2015-09-16 00:13:36.176453	1	2
+129	2015-09-16 00:13:38.105871	0	2
+130	2015-09-16 00:13:39.536343	1	2
+131	2015-09-16 00:13:40.925684	0	2
+132	2015-09-16 00:13:42.326799	0	2
+133	2015-09-16 00:13:43.728725	0	2
+134	2015-09-16 00:13:45.135467	0	2
+135	2015-09-16 00:13:46.570003	1	2
+136	2015-09-16 00:13:47.945193	1	2
+137	2015-09-16 00:13:49.416658	1	2
+138	2015-09-16 00:13:50.861258	0	2
+139	2015-09-16 00:13:52.254513	1	2
+140	2015-09-16 00:13:53.662576	1	2
+141	2015-09-16 00:13:55.08959	1	2
+142	2015-09-16 00:13:56.526373	0	2
+143	2015-09-16 00:13:57.979757	0	2
+144	2015-09-16 00:13:59.367318	0	2
+145	2015-09-16 00:14:00.840709	1	2
+146	2015-09-16 00:14:02.278641	1	2
+147	2015-09-16 00:14:03.727814	0	2
+148	2015-09-16 00:14:05.276034	1	2
+149	2015-09-16 00:14:06.647788	0	2
+150	2015-09-16 00:14:08.196446	1	2
+151	2015-09-16 00:14:09.619024	0	2
+152	2015-09-16 00:14:11.039931	0	2
+153	2015-09-16 00:14:12.414506	0	2
+154	2015-09-16 00:14:13.837775	1	2
+155	2015-09-16 00:14:15.250102	1	2
+156	2015-09-16 00:14:16.636085	0	2
+157	2015-09-16 00:14:18.040234	0	2
+158	2015-09-16 00:14:19.411871	1	2
+159	2015-09-16 00:14:21.049742	1	2
+160	2015-09-16 00:14:22.450695	0	2
+161	2015-09-16 00:14:23.826362	1	2
+162	2015-09-16 00:14:25.351611	1	2
+163	2015-09-16 00:14:26.71945	1	2
+164	2015-09-16 00:36:19.076586	1	2
+165	2015-09-16 00:36:22.733828	0	2
+166	2015-09-16 00:36:26.121788	1	2
+167	2015-09-16 00:36:29.532867	0	2
+168	2015-09-16 00:36:32.989073	1	2
+169	2015-09-16 00:36:36.409341	1	2
+170	2015-09-16 00:36:39.809135	1	2
+171	2015-09-16 00:36:43.217595	1	2
+172	2015-09-16 00:36:46.628822	0	2
+173	2015-09-16 00:36:50.049424	1	2
+174	2015-09-16 00:36:53.46199	1	2
+175	2015-09-16 00:36:56.876665	0	2
+176	2015-09-16 00:37:00.313033	1	2
+177	2015-09-16 00:37:03.775085	0	2
+178	2015-09-16 00:37:07.256285	1	2
+179	2015-09-16 00:38:20.505696	1	2
+180	2015-09-16 00:38:23.849237	0	2
+181	2015-09-16 00:38:27.28518	0	2
+182	2015-09-16 00:38:30.693113	1	2
+183	2015-09-16 00:38:34.12008	1	2
+184	2015-09-16 00:38:37.582367	0	2
+185	2015-09-16 00:38:40.980336	0	2
+186	2015-09-16 00:38:44.369657	0	2
+187	2015-09-16 00:38:47.786446	1	2
+188	2015-09-16 00:38:51.208296	1	2
+189	2015-09-16 00:38:54.722861	1	2
+190	2015-09-16 00:38:58.311563	1	2
+191	2015-09-16 00:39:01.791654	0	2
+192	2015-09-16 00:39:05.187643	0	2
+193	2015-09-16 00:39:08.846337	0	2
+194	2015-09-16 00:39:12.27318	0	2
+195	2015-09-16 00:39:15.69958	0	2
+196	2015-09-16 00:39:19.144277	0	2
+197	2015-09-16 00:39:22.62177	0	2
+198	2015-09-16 00:39:26.226841	0	2
+199	2015-09-16 00:39:29.730993	0	2
+200	2015-09-16 00:39:33.147465	0	2
+201	2015-09-16 00:39:36.621477	1	2
+202	2015-09-16 00:39:40.034308	1	2
+203	2015-09-16 00:39:43.536645	0	2
+204	2015-09-16 00:39:46.943165	1	2
+205	2015-09-16 00:39:50.459989	1	2
+206	2015-09-16 00:39:53.916084	1	2
+207	2015-09-16 00:39:57.395192	0	2
+208	2015-09-16 00:40:00.872579	1	2
+209	2015-09-16 00:40:04.301318	0	2
+210	2015-09-16 00:40:07.743616	1	2
+211	2015-09-16 00:40:11.231301	0	2
+212	2015-09-16 00:40:14.6339	1	2
+213	2015-09-16 00:40:18.099037	1	2
+214	2015-09-16 00:40:21.52133	1	2
+215	2015-09-16 00:40:25.030826	0	2
+216	2015-09-16 00:40:28.452453	1	2
+217	2015-09-16 00:40:31.863407	1	2
+218	2015-09-16 00:40:35.300938	1	2
+219	2015-09-16 00:40:38.714693	1	2
+220	2015-09-16 00:40:42.120105	1	2
+221	2015-09-16 00:40:45.582743	1	2
+222	2015-09-16 00:40:49.012522	1	2
+223	2015-09-16 00:40:52.487084	0	2
+224	2015-09-16 00:40:55.901954	1	2
+225	2015-09-16 00:40:59.393583	0	2
+226	2015-09-16 00:41:34.046486	0	2
+227	2015-09-16 00:41:37.430305	0	2
+228	2015-09-16 00:41:40.959427	0	2
+229	2015-09-16 00:41:44.367716	0	2
+230	2015-09-16 00:41:47.79736	0	2
+231	2015-09-16 00:41:51.214097	1	2
+232	2015-09-16 00:41:54.668362	1	2
+233	2015-09-16 00:41:58.171708	0	2
+234	2015-09-16 00:42:01.573119	0	2
+235	2015-09-16 00:42:04.981393	1	2
+236	2015-09-16 00:42:08.352159	1	2
+237	2015-09-16 00:42:11.788521	1	2
+238	2015-09-16 00:42:15.345597	0	2
+239	2015-09-16 00:42:18.765339	1	2
+240	2015-09-16 00:42:22.224075	0	2
+241	2015-09-16 00:42:39.938679	0	2
+242	2015-09-16 00:42:43.242339	0	2
+243	2015-09-16 00:42:46.845504	0	2
+244	2015-09-16 00:42:50.269812	0	2
+245	2015-09-16 00:42:53.689699	0	2
+246	2015-09-16 00:42:57.135959	1	2
+247	2015-09-16 00:43:00.705427	0	2
+248	2015-09-16 00:43:04.127047	1	2
+249	2015-09-16 00:43:07.607189	0	2
+250	2015-09-16 00:54:22.886088	1	2
+251	2015-09-16 00:54:26.222596	0	2
+252	2015-09-16 01:04:51.27666	0	2
+253	2015-09-16 01:04:55.003545	1	2
+254	2015-09-16 01:04:58.39397	1	2
+255	2015-09-16 01:09:14.205145	0	2
+256	2015-09-16 01:09:17.53269	0	2
+257	2015-09-16 01:09:21.149419	0	2
+258	2015-09-16 01:09:24.669017	1	2
+259	2015-09-16 01:09:28.102154	1	2
+260	2015-09-16 01:09:31.580301	0	2
+261	2015-09-16 01:09:35.048527	1	2
+262	2015-09-16 01:09:38.499635	1	2
+263	2015-09-16 01:09:42.05224	0	2
+264	2015-09-16 01:09:45.627623	0	2
+265	2015-09-16 01:09:49.136415	1	2
+266	2015-09-16 01:09:52.747076	1	2
+267	2015-09-16 01:09:56.439503	1	2
+268	2015-09-16 01:09:59.920488	0	2
+269	2015-09-16 01:10:03.370586	0	2
+270	2015-09-16 01:10:07.033661	1	2
+271	2015-09-16 01:10:10.442438	1	2
+272	2015-09-16 01:10:13.908977	0	2
+273	2015-09-16 01:10:17.40103	1	2
+274	2015-09-16 01:10:20.815585	0	2
+275	2015-09-16 01:10:24.402655	1	2
+276	2015-09-16 01:10:27.869462	1	2
+277	2015-09-16 01:10:31.391733	0	2
+278	2015-09-16 01:10:34.861178	1	2
+279	2015-09-16 01:10:38.351368	1	2
+280	2015-09-16 01:10:41.792886	1	2
+281	2015-09-16 01:10:45.234042	0	2
+282	2015-09-16 01:10:48.690533	1	2
+283	2015-09-16 01:10:52.264764	1	2
+284	2015-09-16 01:16:02.457763	1	2
+285	2015-09-16 01:16:05.807343	0	2
+286	2015-09-16 01:16:09.498988	0	2
+287	2015-09-16 01:20:20.27164	1	2
+288	2015-09-16 01:20:23.665511	1	2
+289	2015-09-16 01:20:27.343865	0	2
+290	2015-09-16 01:26:10.812367	0	2
+291	2015-09-16 01:26:13.953632	1	2
+292	2015-09-16 01:26:17.357141	1	2
+293	2015-09-16 01:26:20.515837	0	2
+294	2015-09-16 01:26:23.639994	1	2
+295	2015-09-16 01:26:26.767982	0	2
+296	2015-09-16 01:26:29.919776	0	2
+297	2015-09-16 01:26:33.052361	1	2
+298	2015-09-16 01:26:36.194424	0	2
+299	2015-09-16 01:26:39.481881	1	2
+300	2015-09-16 01:26:42.612437	1	2
+301	2015-09-16 01:26:45.750738	1	2
+302	2015-09-16 01:27:38.885774	0	2
+303	2015-09-16 01:27:42.242206	1	2
+304	2015-09-16 01:27:45.638909	0	2
+305	2015-09-16 01:27:49.08149	0	2
+306	2015-09-16 02:40:50.734209	0	2
+307	2015-09-16 02:40:54.446456	1	2
+308	2015-09-16 02:40:57.996865	0	2
+309	2015-09-16 02:41:01.551879	0	2
+310	2015-09-16 03:43:51.582444	0	2
+311	2015-09-16 03:43:55.551522	1	2
+312	2015-09-16 03:43:59.284404	0	2
+313	2015-09-16 03:44:02.915073	1	2
+314	2015-09-16 03:44:06.687545	0	2
+315	2015-09-16 03:44:10.27488	1	2
+316	2015-09-16 03:44:14.071539	1	2
+317	2015-09-16 03:44:17.641095	0	2
+318	2015-09-16 03:44:21.214722	0	2
+319	2015-09-16 03:44:24.840242	0	2
+320	2015-09-16 03:44:28.60605	0	2
+321	2015-09-16 03:44:32.303707	0	2
+322	2015-09-16 03:44:35.742476	1	2
+323	2015-09-16 03:44:39.174203	0	2
+324	2015-09-16 03:44:42.799488	1	2
+325	2015-09-16 03:44:46.222058	1	2
+326	2015-09-16 03:44:49.729728	1	2
+327	2015-09-16 08:28:07.267534	1	2
+328	2015-09-16 08:28:18.551774	1	2
+329	2015-09-16 08:28:31.42976	0	2
+330	2015-09-16 08:28:34.913272	0	2
+331	2015-09-16 08:28:38.805917	1	2
+332	2015-09-16 08:28:42.444861	0	2
+333	2015-09-16 08:28:46.313542	1	2
+334	2015-09-16 08:28:49.740082	0	2
+335	2015-09-16 08:28:53.132814	0	2
+336	2015-09-16 08:28:57.009065	1	2
+337	2015-09-16 08:29:00.430702	1	2
+338	2015-09-16 08:29:04.366878	0	2
+339	2015-09-16 08:29:07.846642	1	2
+340	2015-09-16 08:29:11.929769	0	2
+341	2015-09-16 08:29:15.530297	0	2
+342	2015-09-16 08:29:19.444488	0	2
+343	2015-09-16 08:29:23.041665	0	2
+344	2015-09-16 08:31:55.404177	1	2
+345	2015-09-16 08:31:58.778664	0	2
+346	2015-09-16 08:32:02.169762	0	2
+347	2015-09-16 08:32:06.099987	0	2
+348	2015-09-16 08:32:15.494909	1	2
+349	2015-09-16 08:32:19.430517	1	2
+350	2015-09-16 08:32:22.818802	0	2
 \.
 
 
 --
--- TOC entry 2239 (class 0 OID 0)
+-- TOC entry 2240 (class 0 OID 0)
 -- Dependencies: 192
 -- Name: actividad_cardiaca_id_actividad_cardica_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('actividad_cardiaca_id_actividad_cardica_seq', 1, false);
+SELECT pg_catalog.setval('actividad_cardiaca_id_actividad_cardica_seq', 350, true);
 
 
 --
--- TOC entry 2207 (class 0 OID 16501)
+-- TOC entry 2208 (class 0 OID 16501)
 -- Dependencies: 187
 -- Data for Name: area_trabajo; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -684,7 +1006,7 @@ COPY area_trabajo (id_area_trabajo, descripcion) FROM stdin;
 
 
 --
--- TOC entry 2240 (class 0 OID 0)
+-- TOC entry 2241 (class 0 OID 0)
 -- Dependencies: 186
 -- Name: area_trabajo_id_area_trabajo_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -693,7 +1015,7 @@ SELECT pg_catalog.setval('area_trabajo_id_area_trabajo_seq', 3, true);
 
 
 --
--- TOC entry 2209 (class 0 OID 16512)
+-- TOC entry 2210 (class 0 OID 16512)
 -- Dependencies: 189
 -- Data for Name: datos_laborales; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -704,7 +1026,7 @@ COPY datos_laborales (id_datos_laborales, nombre_institucion, fecha_inicio, id_t
 
 
 --
--- TOC entry 2241 (class 0 OID 0)
+-- TOC entry 2242 (class 0 OID 0)
 -- Dependencies: 188
 -- Name: datos_laborales_id_datos_laborales_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -713,7 +1035,7 @@ SELECT pg_catalog.setval('datos_laborales_id_datos_laborales_seq', 1, true);
 
 
 --
--- TOC entry 2211 (class 0 OID 16539)
+-- TOC entry 2212 (class 0 OID 16539)
 -- Dependencies: 191
 -- Data for Name: datos_profesionales; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -724,7 +1046,7 @@ COPY datos_profesionales (id_datos_profesionales, universidad, titulo, fecha_gra
 
 
 --
--- TOC entry 2242 (class 0 OID 0)
+-- TOC entry 2243 (class 0 OID 0)
 -- Dependencies: 190
 -- Name: datos_profesionales_id_datos_profesionales_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -733,7 +1055,7 @@ SELECT pg_catalog.setval('datos_profesionales_id_datos_profesionales_seq', 1, tr
 
 
 --
--- TOC entry 2203 (class 0 OID 16469)
+-- TOC entry 2204 (class 0 OID 16469)
 -- Dependencies: 183
 -- Data for Name: directorio; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -745,7 +1067,7 @@ COPY directorio (id_directorio, nombre_contacto, apellido_contacto, celular_cont
 
 
 --
--- TOC entry 2243 (class 0 OID 0)
+-- TOC entry 2244 (class 0 OID 0)
 -- Dependencies: 182
 -- Name: directorio_id_directorio_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -754,26 +1076,62 @@ SELECT pg_catalog.setval('directorio_id_directorio_seq', 2, true);
 
 
 --
--- TOC entry 2215 (class 0 OID 16568)
+-- TOC entry 2216 (class 0 OID 16568)
 -- Dependencies: 195
 -- Data for Name: notificacion; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY notificacion (id_notificacion, fecha_hora, observacion, id_directorio, id_tipo_notificacion) FROM stdin;
+1	2015-09-16 02:40:50.825195	PULSO ACELERADO	1	1
+2	2015-09-16 02:40:50.964216	PULSO ACELERADO	2	1
+3	2015-09-16 02:40:54.517343	PULSO ACELERADO	1	1
+4	2015-09-16 02:40:54.56228	PULSO ACELERADO	2	1
+5	2015-09-16 02:40:58.077788	PULSO ACELERADO	1	1
+6	2015-09-16 02:40:58.146125	PULSO ACELERADO	2	1
+7	2015-09-16 02:41:01.621362	PULSO ACELERADO	1	1
+8	2015-09-16 02:41:01.687578	PULSO ACELERADO	2	1
+9	2015-09-16 03:43:51.665371	PULSO ACELERADO	1	1
+10	2015-09-16 03:43:51.7317	PULSO ACELERADO	2	1
+11	2015-09-16 03:43:55.637418	PULSO ACELERADO	1	1
+12	2015-09-16 03:43:55.688193	PULSO ACELERADO	2	1
+13	2015-09-16 03:43:59.370197	PULSO ACELERADO	1	1
+14	2015-09-16 03:43:59.514495	PULSO ACELERADO	2	1
+15	2015-09-16 03:44:02.987138	PULSO ACELERADO	1	1
+16	2015-09-16 03:44:03.040286	PULSO ACELERADO	2	1
+17	2015-09-16 03:44:06.77399	PULSO ACELERADO	1	1
+18	2015-09-16 03:44:06.832112	PULSO ACELERADO	2	1
+19	2015-09-16 03:44:10.360291	PULSO ACELERADO	1	1
+20	2015-09-16 03:44:10.433322	PULSO ACELERADO	2	1
+21	2015-09-16 03:44:14.126187	PULSO ACELERADO	1	1
+22	2015-09-16 03:44:14.186537	PULSO ACELERADO	2	1
+23	2015-09-16 03:44:17.717719	PULSO ACELERADO	1	1
+24	2015-09-16 03:44:17.792397	PULSO ACELERADO	2	1
+25	2015-09-16 03:44:21.27377	PULSO ACELERADO	1	1
+26	2015-09-16 03:44:21.327776	PULSO ACELERADO	2	1
+27	2015-09-16 03:44:24.951567	PULSO ACELERADO	1	1
+28	2015-09-16 03:44:25.026404	PULSO ACELERADO	2	1
+29	2015-09-16 08:28:07.376546	PULSO ACELERADO	1	1
+30	2015-09-16 08:28:07.436249	PULSO ACELERADO	2	1
+31	2015-09-16 08:28:18.633912	PULSO ACELERADO	1	1
+32	2015-09-16 08:28:18.69034	PULSO ACELERADO	2	1
+33	2015-09-16 08:32:06.166043	PULSO DECAYENDO	1	2
+34	2015-09-16 08:32:06.243877	PULSO DECAYENDO	2	2
+35	2015-09-16 08:32:22.878544	PULSO DECAYENDO	1	2
+36	2015-09-16 08:32:22.94393	PULSO DECAYENDO	2	2
 \.
 
 
 --
--- TOC entry 2244 (class 0 OID 0)
+-- TOC entry 2245 (class 0 OID 0)
 -- Dependencies: 194
 -- Name: notificacion_id_notificacion_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('notificacion_id_notificacion_seq', 1, false);
+SELECT pg_catalog.setval('notificacion_id_notificacion_seq', 36, true);
 
 
 --
--- TOC entry 2217 (class 0 OID 16589)
+-- TOC entry 2218 (class 0 OID 16589)
 -- Dependencies: 197
 -- Data for Name: pulso_ideal; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -786,7 +1144,7 @@ COPY pulso_ideal (id_pulso_ideal, minimo, maximo, observacion, edad) FROM stdin;
 
 
 --
--- TOC entry 2245 (class 0 OID 0)
+-- TOC entry 2246 (class 0 OID 0)
 -- Dependencies: 196
 -- Name: pulso_ideal_id_pulso_ideal_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -795,7 +1153,7 @@ SELECT pg_catalog.setval('pulso_ideal_id_pulso_ideal_seq', 3, true);
 
 
 --
--- TOC entry 2195 (class 0 OID 16419)
+-- TOC entry 2196 (class 0 OID 16419)
 -- Dependencies: 175
 -- Data for Name: tipo_identificacion; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -808,7 +1166,7 @@ COPY tipo_identificacion (id_tipo_identificacion, descripcion) FROM stdin;
 
 
 --
--- TOC entry 2246 (class 0 OID 0)
+-- TOC entry 2247 (class 0 OID 0)
 -- Dependencies: 174
 -- Name: tipo_identificacion_id_tipo_identificacion_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -817,7 +1175,7 @@ SELECT pg_catalog.setval('tipo_identificacion_id_tipo_identificacion_seq', 3, tr
 
 
 --
--- TOC entry 2205 (class 0 OID 16490)
+-- TOC entry 2206 (class 0 OID 16490)
 -- Dependencies: 185
 -- Data for Name: tipo_institucion; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -829,7 +1187,7 @@ COPY tipo_institucion (id_tipo_institucion, descripcion) FROM stdin;
 
 
 --
--- TOC entry 2247 (class 0 OID 0)
+-- TOC entry 2248 (class 0 OID 0)
 -- Dependencies: 184
 -- Name: tipo_institucion_id_tipo_institucion_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -838,7 +1196,7 @@ SELECT pg_catalog.setval('tipo_institucion_id_tipo_institucion_seq', 2, true);
 
 
 --
--- TOC entry 2201 (class 0 OID 16461)
+-- TOC entry 2202 (class 0 OID 16461)
 -- Dependencies: 181
 -- Data for Name: tipo_notificacion; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -850,7 +1208,7 @@ COPY tipo_notificacion (id_tipo_notificacion, descripcion) FROM stdin;
 
 
 --
--- TOC entry 2248 (class 0 OID 0)
+-- TOC entry 2249 (class 0 OID 0)
 -- Dependencies: 180
 -- Name: tipo_notificacion_id_tipo_notificacion_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -859,7 +1217,7 @@ SELECT pg_catalog.setval('tipo_notificacion_id_tipo_notificacion_seq', 2, true);
 
 
 --
--- TOC entry 2199 (class 0 OID 16453)
+-- TOC entry 2200 (class 0 OID 16453)
 -- Dependencies: 179
 -- Data for Name: tipo_relacion; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -871,7 +1229,7 @@ COPY tipo_relacion (id_tipo_relacion, descripcion) FROM stdin;
 
 
 --
--- TOC entry 2249 (class 0 OID 0)
+-- TOC entry 2250 (class 0 OID 0)
 -- Dependencies: 178
 -- Name: tipo_relacion_id_tipo_relacion_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -880,7 +1238,7 @@ SELECT pg_catalog.setval('tipo_relacion_id_tipo_relacion_seq', 2, true);
 
 
 --
--- TOC entry 2193 (class 0 OID 16411)
+-- TOC entry 2194 (class 0 OID 16411)
 -- Dependencies: 173
 -- Data for Name: tipo_usuario; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -892,7 +1250,7 @@ COPY tipo_usuario (id_tipo_usuario, descripcion) FROM stdin;
 
 
 --
--- TOC entry 2250 (class 0 OID 0)
+-- TOC entry 2251 (class 0 OID 0)
 -- Dependencies: 172
 -- Name: tipo_usuario_id_tipo_usuario_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -901,37 +1259,38 @@ SELECT pg_catalog.setval('tipo_usuario_id_tipo_usuario_seq', 2, true);
 
 
 --
--- TOC entry 2197 (class 0 OID 16427)
+-- TOC entry 2198 (class 0 OID 16427)
 -- Dependencies: 177
 -- Data for Name: usuario; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY usuario (id_usuario, num_identificacion, nombres, apellidos, fecha_nacimiento, celular, email, genero, "user", password, id_tipo_usuario, id_tipo_identificacion) FROM stdin;
+COPY usuario (id_usuario, num_identificacion, nombres, apellidos, fecha_nacimiento, celular, email, genero, username, password, id_tipo_usuario, id_tipo_identificacion) FROM stdin;
 1	926661893	FELIX DAVID	LOOR BARRAGAN	1988-06-15	999999999	fedaloor@espol.edu.ec	1	felix	fedaloor	1	1
 2	926476169	HECTOR LUIS	CHIMBO PINARGOTE	1990-03-12	9979124745	hchimbo@espol.edu.ec	1	hchimbo	hchimbo	2	1
+4	1234567890	CLAUDIA MARUJA	FERNANDEZ PANTOJA	1945-08-12	999999999	xxxxxxxxxxx@example.comm	2	clafer	password	2	2
 \.
 
 
 --
--- TOC entry 2251 (class 0 OID 0)
+-- TOC entry 2252 (class 0 OID 0)
 -- Dependencies: 176
 -- Name: usuario_id_usuario_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('usuario_id_usuario_seq', 2, true);
+SELECT pg_catalog.setval('usuario_id_usuario_seq', 4, true);
 
 
 --
--- TOC entry 2067 (class 2606 OID 16560)
+-- TOC entry 2068 (class 2606 OID 16560)
 -- Name: id_actividadcardiacaPK; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
 ALTER TABLE ONLY actividad_cardiaca
-    ADD CONSTRAINT "id_actividadcardiacaPK" PRIMARY KEY (id_actividad_cardica);
+    ADD CONSTRAINT "id_actividadcardiacaPK" PRIMARY KEY (id_actividad_cardiaca);
 
 
 --
--- TOC entry 2061 (class 2606 OID 16509)
+-- TOC entry 2062 (class 2606 OID 16509)
 -- Name: id_areatrabajoPK; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -940,7 +1299,7 @@ ALTER TABLE ONLY area_trabajo
 
 
 --
--- TOC entry 2063 (class 2606 OID 16520)
+-- TOC entry 2064 (class 2606 OID 16520)
 -- Name: id_datoslaboralesPK; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -949,7 +1308,7 @@ ALTER TABLE ONLY datos_laborales
 
 
 --
--- TOC entry 2065 (class 2606 OID 16547)
+-- TOC entry 2066 (class 2606 OID 16547)
 -- Name: id_datosprofesionalesPK; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -958,7 +1317,7 @@ ALTER TABLE ONLY datos_profesionales
 
 
 --
--- TOC entry 2057 (class 2606 OID 16477)
+-- TOC entry 2058 (class 2606 OID 16477)
 -- Name: id_directorioPK; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -967,7 +1326,7 @@ ALTER TABLE ONLY directorio
 
 
 --
--- TOC entry 2069 (class 2606 OID 16576)
+-- TOC entry 2070 (class 2606 OID 16576)
 -- Name: id_notificacionPK; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -976,7 +1335,7 @@ ALTER TABLE ONLY notificacion
 
 
 --
--- TOC entry 2071 (class 2606 OID 16597)
+-- TOC entry 2072 (class 2606 OID 16597)
 -- Name: id_pulsoidealPK; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -985,7 +1344,7 @@ ALTER TABLE ONLY pulso_ideal
 
 
 --
--- TOC entry 2059 (class 2606 OID 16498)
+-- TOC entry 2060 (class 2606 OID 16498)
 -- Name: id_tipoinstitucionPK; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -994,7 +1353,7 @@ ALTER TABLE ONLY tipo_institucion
 
 
 --
--- TOC entry 2055 (class 2606 OID 16466)
+-- TOC entry 2056 (class 2606 OID 16466)
 -- Name: id_tiponotificacionPK; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -1003,7 +1362,7 @@ ALTER TABLE ONLY tipo_notificacion
 
 
 --
--- TOC entry 2053 (class 2606 OID 16458)
+-- TOC entry 2054 (class 2606 OID 16458)
 -- Name: id_tiporelacionPK; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -1012,7 +1371,7 @@ ALTER TABLE ONLY tipo_relacion
 
 
 --
--- TOC entry 2051 (class 2606 OID 16432)
+-- TOC entry 2052 (class 2606 OID 16432)
 -- Name: id_userPK; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -1021,7 +1380,7 @@ ALTER TABLE ONLY usuario
 
 
 --
--- TOC entry 2049 (class 2606 OID 16424)
+-- TOC entry 2050 (class 2606 OID 16424)
 -- Name: tipo_identificacionPK; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -1030,7 +1389,7 @@ ALTER TABLE ONLY tipo_identificacion
 
 
 --
--- TOC entry 2047 (class 2606 OID 16416)
+-- TOC entry 2048 (class 2606 OID 16416)
 -- Name: tipo_usuarioPK; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -1039,7 +1398,7 @@ ALTER TABLE ONLY tipo_usuario
 
 
 --
--- TOC entry 2077 (class 2606 OID 16526)
+-- TOC entry 2078 (class 2606 OID 16526)
 -- Name: id_areatrabajoFK; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1048,7 +1407,7 @@ ALTER TABLE ONLY datos_laborales
 
 
 --
--- TOC entry 2081 (class 2606 OID 16577)
+-- TOC entry 2082 (class 2606 OID 16577)
 -- Name: id_directorioFK; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1057,7 +1416,7 @@ ALTER TABLE ONLY notificacion
 
 
 --
--- TOC entry 2076 (class 2606 OID 16521)
+-- TOC entry 2077 (class 2606 OID 16521)
 -- Name: id_tipoinstitucionFK; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1066,7 +1425,7 @@ ALTER TABLE ONLY datos_laborales
 
 
 --
--- TOC entry 2082 (class 2606 OID 16582)
+-- TOC entry 2083 (class 2606 OID 16582)
 -- Name: id_tiponotificacionFK; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1075,7 +1434,7 @@ ALTER TABLE ONLY notificacion
 
 
 --
--- TOC entry 2075 (class 2606 OID 16483)
+-- TOC entry 2076 (class 2606 OID 16483)
 -- Name: id_tiporelacionFK; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1084,7 +1443,7 @@ ALTER TABLE ONLY directorio
 
 
 --
--- TOC entry 2074 (class 2606 OID 16478)
+-- TOC entry 2075 (class 2606 OID 16478)
 -- Name: id_usuarioFK; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1093,7 +1452,7 @@ ALTER TABLE ONLY directorio
 
 
 --
--- TOC entry 2078 (class 2606 OID 16531)
+-- TOC entry 2079 (class 2606 OID 16531)
 -- Name: id_usuarioFK; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1102,7 +1461,7 @@ ALTER TABLE ONLY datos_laborales
 
 
 --
--- TOC entry 2079 (class 2606 OID 16548)
+-- TOC entry 2080 (class 2606 OID 16548)
 -- Name: id_usuarioFK; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1111,7 +1470,7 @@ ALTER TABLE ONLY datos_profesionales
 
 
 --
--- TOC entry 2080 (class 2606 OID 16561)
+-- TOC entry 2081 (class 2606 OID 16561)
 -- Name: id_usuarioFK; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1120,7 +1479,7 @@ ALTER TABLE ONLY actividad_cardiaca
 
 
 --
--- TOC entry 2073 (class 2606 OID 16438)
+-- TOC entry 2074 (class 2606 OID 16438)
 -- Name: tipo_identificacion; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1129,7 +1488,7 @@ ALTER TABLE ONLY usuario
 
 
 --
--- TOC entry 2072 (class 2606 OID 16433)
+-- TOC entry 2073 (class 2606 OID 16433)
 -- Name: tipo_usuarioFK; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1138,7 +1497,7 @@ ALTER TABLE ONLY usuario
 
 
 --
--- TOC entry 2224 (class 0 OID 0)
+-- TOC entry 2225 (class 0 OID 0)
 -- Dependencies: 5
 -- Name: public; Type: ACL; Schema: -; Owner: postgres
 --
@@ -1149,7 +1508,7 @@ GRANT ALL ON SCHEMA public TO postgres;
 GRANT ALL ON SCHEMA public TO PUBLIC;
 
 
--- Completed on 2015-09-14 21:36:43 ECT
+-- Completed on 2015-09-16 08:35:00 ECT
 
 --
 -- PostgreSQL database dump complete

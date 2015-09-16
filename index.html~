@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -55,136 +58,203 @@
             </div>
         </section>
         <!-- End Logo Section -->
-        
-        <!-- Start Main Body Section -->
-        <div class="mainbody-section text-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="form-group" id="btnLogin" style="display:inline;">
-                            <div class="menu-item blue">
-                                <a href="#login-modal" data-toggle="modal">
-                                    <i class="fa fa-sign-in"></i>
-                                    <p id="pLog">Iniciar Sesión</p>
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group" id="btnLogout" style="display:none;">
-                            <div class="menu-item blue">
-                                <a onclick="javascript:logout()">
-                                    <i class="fa fa-sign-out"></i>
-                                    <p id="pLog">Cerrar Sesión</p>
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group" id="btnPacientes" style="display:none">    
-                            <div class="menu-item light-red">
-                                <a href="#historial-modal" data-toggle="modal">
-                                    <i class="fa fa-user"></i>
-                                    <p>Pacientes</p>
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group" id="btnControl" style="display:none">
-                            <div class="menu-item color responsive">
-                                <a href="#RitmoCardiaco-modal" data-toggle="modal">
-                                    <i class="fa fa-heart-o"></i>
-                                    <p>Control</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-6">
-                        
-                        <!-- Start Carousel Section -->
-                        <div class="home-slider">
-                            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="padding-bottom: 30px;">
-                                <!-- Indicators -->
-                                <ol class="carousel-indicators">
-                                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                                </ol>
-
-                                <!-- Wrapper for slides -->
-                                <div class="carousel-inner">
-                                    <div class="item active">
-                                        <img src="img/about-03.png" class="img-responsive" alt="">
-                                    </div>
-                                    <div class="item">
-                                        <img src="img/about-02.png" class="img-responsive" alt="">
-                                    </div>
-                                    <div class="item">
-                                        <img src="img/about-01.jpg" class="img-responsive" alt="">
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-                        <!-- Start Carousel Section -->
-                        
+        <?php
+            if(!isset($_SESSION["sesionIniciada"])){
+        ?>
+                <!-- Start Main Body Section -->
+                <div class="mainbody-section text-center">
+                    <div class="container">
                         <div class="row">
-                            <div class="col-md-6" id="btnConsulta" style="display:none">
-                                <div class="menu-item green">
-                                    <a href="#consulta-modal" data-toggle="modal">
-                                        <i class="fa fa-search"></i>
-                                        <p>Consulta</p>
-                                    </a>
+                            <div class="col-md-3">
+                                <div class="form-group" id="btnLogin">
+                                    <div class="menu-item blue">
+                                        <a href="#login-modal" data-toggle="modal">
+                                            <i class="fa fa-sign-in"></i>
+                                            <p id="pLog">Iniciar Sesión</p>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                            
-                            <div class="col-md-6" id="btnTips" style="display:none">
-                                <div class="menu-item light-orange responsive-2">
-                                    <a href="#tips-modal" data-toggle="modal">
-                                        <i class="fa fa-medkit"></i>
-                                        <p>Tips de Salud</p>
-                                    </a>
+
+                            <div class="col-md-6">
+                                <!-- Start Carousel Section -->
+                                <div class="home-slider">
+                                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="padding-bottom: 30px;">
+                                        <!-- Indicators -->
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                                        </ol>
+
+                                        <!-- Wrapper for slides -->
+                                        <div class="carousel-inner">
+                                            <div class="item active">
+                                                <img src="img/about-03.png" class="img-responsive" alt="">
+                                            </div>
+                                            <div class="item">
+                                                <img src="img/about-02.png" class="img-responsive" alt="">
+                                            </div>
+                                            <div class="item">
+                                                <img src="img/about-01.jpg" class="img-responsive" alt="">
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- Start Carousel Section -->
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="form-group" id="btnRegistrate">
+                                    <div class="menu-item light-red">
+                                        <a href="#registro-modal" data-toggle="modal">
+                                            <i class="fa fa-book"></i>
+                                            <p>Regístrate</p>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                            
                         </div>
-                        
-                    </div>
-                    
-                    <div class="col-md-3">
-                        
-                        <div class="form-group" id="btnRegistrate" style="display:inline">
-                            <div class="menu-item light-red">
-                                <a href="#registro-modal" data-toggle="modal">
-                                    <i class="fa fa-book"></i>
-                                    <p>Regístrate</p>
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group" id="btnContactanos" style="display:none">
-                            <div class="menu-item color">
-                                <a href="#contactanos-modal" data-toggle="modal">
-                                    <i class="fa fa-envelope-o"></i>
-                                    <p>Contáctenos</p>
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group" id="btnAcerca" style="display:none">
-                            <div class="menu-item blue">
-                                <a href="#acerca-modal" data-toggle="modal">
-                                    <i class="fa fa-users"></i>
-                                    <p>Acerca de...</p>
-                                </a>
-                            </div>
-                        </div>
-                            
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- End Main Body Section -->
+                <!-- End Main Body Section -->
+        <?php
+            }else{
+        ?>
+                <!-- Start Main Body Section -->
+                <div class="mainbody-section text-center">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group" id="btnLogin">
+                                    <div class="menu-item blue">
+                                        <a href="#login-modal" data-toggle="modal">
+                                            <i class="fa fa-sign-in"></i>
+                                            <p id="pLog">Iniciar Sesión</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="form-group" id="btnLogout">
+                                    <div class="menu-item blue">
+                                        <a onclick="javascript:logout()">
+                                            <i class="fa fa-sign-out"></i>
+                                            <p id="pLog">Cerrar Sesión</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="form-group" id="btnPacientes">    
+                                    <div class="menu-item light-red">
+                                        <a href="#historial-modal" data-toggle="modal">
+                                            <i class="fa fa-user"></i>
+                                            <p>Pacientes</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="form-group" id="btnControl">
+                                    <div class="menu-item color responsive">
+                                        <a href="#RitmoCardiaco-modal" data-toggle="modal">
+                                            <i class="fa fa-heart-o"></i>
+                                            <p>Control</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <!-- Start Carousel Section -->
+                                <div class="home-slider">
+                                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="padding-bottom: 30px;">
+                                        <!-- Indicators -->
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                                        </ol>
+
+                                        <!-- Wrapper for slides -->
+                                        <div class="carousel-inner">
+                                            <div class="item active">
+                                                <img src="img/about-03.png" class="img-responsive" alt="">
+                                            </div>
+                                            <div class="item">
+                                                <img src="img/about-02.png" class="img-responsive" alt="">
+                                            </div>
+                                            <div class="item">
+                                                <img src="img/about-01.jpg" class="img-responsive" alt="">
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- Start Carousel Section -->
+
+                                <div class="row">
+                                    <div class="col-md-6" id="btnConsulta">
+                                        <div class="menu-item green">
+                                            <a href="#consulta-modal" data-toggle="modal">
+                                                <i class="fa fa-search"></i>
+                                                <p>Consulta</p>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6" id="btnTips">
+                                        <div class="menu-item light-orange responsive-2">
+                                            <a href="#tips-modal" data-toggle="modal">
+                                                <i class="fa fa-medkit"></i>
+                                                <p>Tips de Salud</p>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-3">
+
+                                <div class="form-group" id="btnRegistrate">
+                                    <div class="menu-item light-red">
+                                        <a href="#registro-modal" data-toggle="modal">
+                                            <i class="fa fa-book"></i>
+                                            <p>Regístrate</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="form-group" id="btnContactanos">
+                                    <div class="menu-item color">
+                                        <a href="#contactanos-modal" data-toggle="modal">
+                                            <i class="fa fa-envelope-o"></i>
+                                            <p>Contáctenos</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="form-group" id="btnAcerca">
+                                    <div class="menu-item blue">
+                                        <a href="#acerca-modal" data-toggle="modal">
+                                            <i class="fa fa-users"></i>
+                                            <p>Acerca de...</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Main Body Section -->
+        <?php
+            }
+        ?>
         
         <!-- Start Copyright Section -->
         <div class="copyright text-center">
@@ -207,34 +277,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="container"><!--
-<<<<<<< HEAD
-                    <div class="row" id="divLogin">
-                        <div class="col-md-12">
-                            <form id="Login" novalidate>
-                                <div class="row" style="margin-bottom: 15px;">
-                                    <!--fieldset class="grupo">
-                                        <legend>INICIO SESIÓN</legend
-                                        <div class="form-group fila">
-                                            <div class="col-md-12 text-center">
-						<label>USUARIO:                                                
-						<input type="text" class="form-control" placeholder="Users *" id="txtUser" required data-validation-required-message="Inserte el Usuario"></label></br>
-						<label>PASSWORD:                                                
-						<input type="password" class="form-control" placeholder="Password *" id="txtPassword" required data-validation-required-message="Inserte la Contraseña"></label>                                                 
-                                            </div>
-					    <div class="col-lg-12 text-center">
-                                            <div id="success"></div>
-                                                <button type="submit" class="btn btn-primary">CANCELAR</button>
-						<button type="submit" class="btn btn-primary">LOGIN</button>
-                                            </div> 
-					</div>                                      
-                                    <!--/fieldset
-                                </div>
-                            </form>    
-                        </div>
-                    </div>                    
-                </div>                
-=======-->
+                <div class="container">
                     <div class="row">
                         <div class="section-title text-center">
                             <h3>BIENVENIDO</h3>
@@ -244,15 +287,16 @@
                     
                     <div class="row" style="padding-top: 80px;">
                         <div class="col-md-12">
-                            <form name="sentMessage" id="contactForm" novalidate>
+			    <!--<form name="sentMessage" id="contactForm" novalidate -->
+                            <form name="sentMessage" id="login" action="login.php" method="POST">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Usuario *" id="txtUsuario" required data-validation-required-message="Por favor ingresa tu nombre.">
+                                            <input type="text" class="form-control" placeholder="Usuario *" id="txtUsuario" required data-validation-required-message="Por favor ingrese su nombre.">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control" placeholder="contraseña *" id="txtPassword" required data-validation-required-message="Por favor ingresa tu email.">
+                                            <input type="password" class="form-control" placeholder="contraseña *" id="txtPassword" required data-validation-required-message="Por favor ingrese su contraseña.">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                         <div class="col-lg-12 text-center">
@@ -681,7 +725,7 @@
                                     <div class="plan-list">
                                         <ul>
                                             <li>40 GB Storage</li>
-                                            <li>40GB Transfer</li>
+                                            <li>40 GB Transfer</li>
                                             <li>10 Domains</li>
                                             <li>20 Projects</li>
                                             <li>Free installation</li>
@@ -705,7 +749,7 @@
                                     <div class="plan-list">
                                         <ul>
                                             <li>40 GB Storage</li>
-                                            <li>40GB Transfer</li>
+                                            <li>40 GB Transfer</li>
                                             <li>10 Domains</li>
                                             <li>20 Projects</li>
                                             <li>Free installation</li>
@@ -728,7 +772,7 @@
                                     <div class="plan-list">
                                         <ul>
                                             <li>40 GB Storage</li>
-                                            <li>40GB Transfer</li>
+                                            <li>40 GB Transfer</li>
                                             <li>10 Domains</li>
                                             <li>20 Projects</li>
                                             <li>Free installation</li>
@@ -752,7 +796,7 @@
                                     <div class="plan-list">
                                         <ul>
                                             <li>40 GB Storage</li>
-                                            <li>40GB Transfer</li>
+                                            <li>40 GB Transfer</li>
                                             <li>10 Domains</li>
                                             <li>20 Projects</li>
                                             <li>Free installation</li>
@@ -1588,7 +1632,7 @@
 				    </fieldset>				    
 				</div>
 	                    </form>
-			</div>
+			</div></br>
 			<div class="col-md-12">
 			    <table border=1>
   		 		<tr>

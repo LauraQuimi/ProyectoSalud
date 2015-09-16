@@ -27,7 +27,7 @@ class usuario{
         $this->user=$user;
         $this->password=$password;
     }
-    
+//29    
     function setIdusuario($id_usuario){
         $this->id_usuario=$id_usuario;
     }
@@ -59,7 +59,7 @@ class usuario{
     function getNumidentificacion(){
         return $this->num_identificacion;
     }
-
+//62
     function setNombres($nombres){
         $this->nombres=$nombres;
     }
@@ -107,7 +107,7 @@ class usuario{
     function getGenero(){
         return $this->genero;
     }
-
+//100
     function setUser($user){
         $this->user=$user;
     }
@@ -123,4 +123,5 @@ class usuario{
     function getPassword(){
         return $this->password;
     }
+}
 ?>

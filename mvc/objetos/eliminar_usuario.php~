@@ -1,0 +1,7 @@
+<?php
+ include_once('DemoCollector.php');
+ $id = $_GET['id']; 
+ $DemoCollectorObj = new DemoCollector();
+ $DemoCollectorObj->deleteDemo($id);
+
+?>

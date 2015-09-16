@@ -43,7 +43,7 @@
                                                     <th colspan="12" style='font-weight: bolder;font-size: 14px;'>VARIABLES GENERALES</th>
                                                 </tr>
                                                 <tr>
-                                                    <th style="font-weight: bolder;"><a href="../mvc/objetos/usuario_list.php"><image src="images/usuario.png"></a></th>
+                                                    <th style="font-weight: bolder;"><a href="../mvc/objetos/usuario_list"><image src="images/usuario.png"></a></th>
                                                     <th style="font-weight: bolder;"><image src="images/directorio.png"></th>
                                                     <th style="font-weight: bolder;"><image src="images/registro.png"></th>
                                                     <th style="font-weight: bolder;"><image src="images/notificaciones.png"></th>

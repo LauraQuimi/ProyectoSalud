@@ -1,0 +1,37 @@
+<?php
+
+include_once('usuario.php');
+include_once('Collector.php');
+
+class usuarioCollector extends Collector
+{
+  
+  function showUsuarios() {
+    $rows = self::$db->getRows("SELECT * FROM usuario");        
+    $arrayUsuario= array();        
+    foreach ($rows as $u){
+      $aux = new usuario($u{'id_usuario'},$u{'id_tipo_usuario'},$u{'id_tipo_identificacion'},$u{'num_identificacion'},$u{'nombres'},$u{'apellidos'},$u{'fecha_nacimiento'},$u{'celular'},$u{'email'},$u{'genero'},$u{'user'},$u{'password'});
+      array_push($arrayUsuario, $aux);
+    }
+    return $arrayUsuario;        
+  }
+  
+  function showUsuarioxUser($user) {
+    $u = self::$db->getRow("SELECT * FROM usuario where user='$user'");   
+    $usuario = new usuario($u{'id_usuario'},$u{'id_tipo_usuario'},$u{'id_tipo_identificacion'},$u{'num_identificacion'},$u{'nombres'},$u{'apellidos'},$u{'fecha_nacimiento'},$u{'celular'},$u{'email'},$u{'genero'},$u{'user'},$u{'password'});
+    return $usuario;        
+  }
+
+  function deteteUsuario($user) {
+    $delete = self::$db->deleteRow("Delete from usuario where user='$user'");             
+  }
+
+  function updateUsuario($id_usuario, $tipo_usuario, $tipo_identificacion, $num_identificacion, $nombres, $apellidos, $fecha_nac, $celular, $email, $genero) {
+    $update = self::$db->updateRow("Update usuario set id_tipo_usuario=$tipo_usuario, id_tipo_identificacion=$tipo_identificacion, num_identificacion=$num_identificacion, nombres='$nombres', apellidos='$apellidos', fecha_nacimiento='$fecha_nac', celular=$celular, email='$email', genero=$genero where id_usuario=$id_usuario");             
+  }
+
+  function insertUsuario($tipo_usuario, $tipo_identificacion, $num_identificacion, $nombres, $apellidos, $fecha_nac, $celular, $email, $genero, $user, $password) {
+    $new_row = self::$db->insertRow("Insert into usuario (id_tipo_usuario, id_tipo_identificacion, num_identificacion, nombres, apellidos, fecha_nacimiento, celular, email, genero, user, password) values ($tipo_usuario, $tipo_identificacion, $num_identificacion, '$nombres', '$apellidos', '$fecha_nac', $celular, '$email', $genero, '$user', '$password')");             
+  }
+}
+?>

@@ -11,6 +11,7 @@ $DirectorioCollectorObj = new DirectorioCollector();
 <table border=1>
   <th>
     <tr>
+    <td>ID</td>
     <td>NOMBBRE</td>
     <td>APELLIDOS</td>
     <td>CELULAR</td>

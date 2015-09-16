@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -55,136 +58,203 @@
             </div>
         </section>
         <!-- End Logo Section -->
-        
-        <!-- Start Main Body Section -->
-        <div class="mainbody-section text-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="form-group" id="btnLogin" style="display:inline;">
-                            <div class="menu-item blue">
-                                <a href="#login-modal" data-toggle="modal">
-                                    <i class="fa fa-sign-in"></i>
-                                    <p id="pLog">Iniciar Sesión</p>
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group" id="btnLogout" style="display:none;">
-                            <div class="menu-item blue">
-                                <a onclick="javascript:logout()">
-                                    <i class="fa fa-sign-out"></i>
-                                    <p id="pLog">Cerrar Sesión</p>
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group" id="btnPacientes" style="display:none">    
-                            <div class="menu-item light-red">
-                                <a href="#historial-modal" data-toggle="modal">
-                                    <i class="fa fa-user"></i>
-                                    <p>Pacientes</p>
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group" id="btnControl" style="display:none">
-                            <div class="menu-item color responsive">
-                                <a href="#RitmoCardiaco-modal" data-toggle="modal">
-                                    <i class="fa fa-heart-o"></i>
-                                    <p>Control</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-6">
-                        
-                        <!-- Start Carousel Section -->
-                        <div class="home-slider">
-                            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="padding-bottom: 30px;">
-                                <!-- Indicators -->
-                                <ol class="carousel-indicators">
-                                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                                </ol>
-
-                                <!-- Wrapper for slides -->
-                                <div class="carousel-inner">
-                                    <div class="item active">
-                                        <img src="img/about-03.png" class="img-responsive" alt="">
-                                    </div>
-                                    <div class="item">
-                                        <img src="img/about-02.png" class="img-responsive" alt="">
-                                    </div>
-                                    <div class="item">
-                                        <img src="img/about-01.jpg" class="img-responsive" alt="">
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-                        <!-- Start Carousel Section -->
-                        
+        <?php
+            if(!isset($_SESSION["sesionIniciada"])){
+        ?>
+                <!-- Start Main Body Section -->
+                <div class="mainbody-section text-center">
+                    <div class="container">
                         <div class="row">
-                            <div class="col-md-6" id="btnConsulta" style="display:none">
-                                <div class="menu-item green">
-                                    <a href="#consulta-modal" data-toggle="modal">
-                                        <i class="fa fa-search"></i>
-                                        <p>Consulta</p>
-                                    </a>
+                            <div class="col-md-3">
+                                <div class="form-group" id="btnLogin">
+                                    <div class="menu-item blue">
+                                        <a href="#login-modal" data-toggle="modal">
+                                            <i class="fa fa-sign-in"></i>
+                                            <p id="pLog">Iniciar Sesión</p>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                            
-                            <div class="col-md-6" id="btnTips" style="display:none">
-                                <div class="menu-item light-orange responsive-2">
-                                    <a href="#tips-modal" data-toggle="modal">
-                                        <i class="fa fa-medkit"></i>
-                                        <p>Tips de Salud</p>
-                                    </a>
+
+                            <div class="col-md-6">
+                                <!-- Start Carousel Section -->
+                                <div class="home-slider">
+                                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="padding-bottom: 30px;">
+                                        <!-- Indicators -->
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                                        </ol>
+
+                                        <!-- Wrapper for slides -->
+                                        <div class="carousel-inner">
+                                            <div class="item active">
+                                                <img src="img/about-03.png" class="img-responsive" alt="">
+                                            </div>
+                                            <div class="item">
+                                                <img src="img/about-02.png" class="img-responsive" alt="">
+                                            </div>
+                                            <div class="item">
+                                                <img src="img/about-01.jpg" class="img-responsive" alt="">
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- Start Carousel Section -->
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="form-group" id="btnRegistrate">
+                                    <div class="menu-item light-red">
+                                        <a href="#registro-modal" data-toggle="modal">
+                                            <i class="fa fa-book"></i>
+                                            <p>Regístrate</p>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                            
                         </div>
-                        
-                    </div>
-                    
-                    <div class="col-md-3">
-                        
-                        <div class="form-group" id="btnRegistrate" style="display:inline">
-                            <div class="menu-item light-red">
-                                <a href="#registro-modal" data-toggle="modal">
-                                    <i class="fa fa-book"></i>
-                                    <p>Regístrate</p>
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group" id="btnContactanos" style="display:none">
-                            <div class="menu-item color">
-                                <a href="#contactanos-modal" data-toggle="modal">
-                                    <i class="fa fa-envelope-o"></i>
-                                    <p>Contáctenos</p>
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group" id="btnAcerca" style="display:none">
-                            <div class="menu-item blue">
-                                <a href="#acerca-modal" data-toggle="modal">
-                                    <i class="fa fa-users"></i>
-                                    <p>Acerca de...</p>
-                                </a>
-                            </div>
-                        </div>
-                            
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- End Main Body Section -->
+                <!-- End Main Body Section -->
+        <?php
+            }else{
+        ?>
+                <!-- Start Main Body Section -->
+                <div class="mainbody-section text-center">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group" id="btnLogin">
+                                    <div class="menu-item blue">
+                                        <a href="#login-modal" data-toggle="modal">
+                                            <i class="fa fa-sign-in"></i>
+                                            <p id="pLog">Iniciar Sesión</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="form-group" id="btnLogout">
+                                    <div class="menu-item blue">
+                                        <a onclick="javascript:logout()">
+                                            <i class="fa fa-sign-out"></i>
+                                            <p id="pLog">Cerrar Sesión</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="form-group" id="btnPacientes">    
+                                    <div class="menu-item light-red">
+                                        <a href="#historial-modal" data-toggle="modal">
+                                            <i class="fa fa-user"></i>
+                                            <p>Pacientes</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="form-group" id="btnControl">
+                                    <div class="menu-item color responsive">
+                                        <a href="#RitmoCardiaco-modal" data-toggle="modal">
+                                            <i class="fa fa-heart-o"></i>
+                                            <p>Control</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <!-- Start Carousel Section -->
+                                <div class="home-slider">
+                                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="padding-bottom: 30px;">
+                                        <!-- Indicators -->
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                                        </ol>
+
+                                        <!-- Wrapper for slides -->
+                                        <div class="carousel-inner">
+                                            <div class="item active">
+                                                <img src="img/about-03.png" class="img-responsive" alt="">
+                                            </div>
+                                            <div class="item">
+                                                <img src="img/about-02.png" class="img-responsive" alt="">
+                                            </div>
+                                            <div class="item">
+                                                <img src="img/about-01.jpg" class="img-responsive" alt="">
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- Start Carousel Section -->
+
+                                <div class="row">
+                                    <div class="col-md-6" id="btnConsulta">
+                                        <div class="menu-item green">
+                                            <a href="#consulta-modal" data-toggle="modal">
+                                                <i class="fa fa-search"></i>
+                                                <p>Consulta</p>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6" id="btnTips">
+                                        <div class="menu-item light-orange responsive-2">
+                                            <a href="#tips-modal" data-toggle="modal">
+                                                <i class="fa fa-medkit"></i>
+                                                <p>Tips de Salud</p>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-3">
+
+                                <div class="form-group" id="btnRegistrate">
+                                    <div class="menu-item light-red">
+                                        <a href="#registro-modal" data-toggle="modal">
+                                            <i class="fa fa-book"></i>
+                                            <p>Regístrate</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="form-group" id="btnContactanos">
+                                    <div class="menu-item color">
+                                        <a href="#contactanos-modal" data-toggle="modal">
+                                            <i class="fa fa-envelope-o"></i>
+                                            <p>Contáctenos</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="form-group" id="btnAcerca">
+                                    <div class="menu-item blue">
+                                        <a href="#acerca-modal" data-toggle="modal">
+                                            <i class="fa fa-users"></i>
+                                            <p>Acerca de...</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Main Body Section -->
+        <?php
+            }
+        ?>
         
         <!-- Start Copyright Section -->
         <div class="copyright text-center">
@@ -207,34 +277,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="container"><!--
-<<<<<<< HEAD
-                    <div class="row" id="divLogin">
-                        <div class="col-md-12">
-                            <form id="Login" novalidate>
-                                <div class="row" style="margin-bottom: 15px;">
-                                    <!--fieldset class="grupo">
-                                        <legend>INICIO SESIÓN</legend
-                                        <div class="form-group fila">
-                                            <div class="col-md-12 text-center">
-						<label>USUARIO:                                                
-						<input type="text" class="form-control" placeholder="Users *" id="txtUser" required data-validation-required-message="Inserte el Usuario"></label></br>
-						<label>PASSWORD:                                                
-						<input type="password" class="form-control" placeholder="Password *" id="txtPassword" required data-validation-required-message="Inserte la Contraseña"></label>                                                 
-                                            </div>
-					    <div class="col-lg-12 text-center">
-                                            <div id="success"></div>
-                                                <button type="submit" class="btn btn-primary">CANCELAR</button>
-						<button type="submit" class="btn btn-primary">LOGIN</button>
-                                            </div> 
-					</div>                                      
-                                    <!--/fieldset
-                                </div>
-                            </form>    
-                        </div>
-                    </div>                    
-                </div>                
-=======-->
+                <div class="container">
                     <div class="row">
                         <div class="section-title text-center">
                             <h3>BIENVENIDO</h3>
@@ -244,15 +287,16 @@
                     
                     <div class="row" style="padding-top: 80px;">
                         <div class="col-md-12">
-                            <form name="sentMessage" id="contactForm" novalidate>
+			    <!--<form name="sentMessage" id="contactForm" novalidate -->
+                            <form name="sentMessage" id="login" action="login.php" method="POST">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Usuario *" id="txtUsuario" required data-validation-required-message="Por favor ingresa tu nombre.">
+                                            <input type="text" class="form-control" placeholder="Usuario *" id="txtUsuario" required data-validation-required-message="Por favor ingrese su nombre.">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control" placeholder="contraseña *" id="txtPassword" required data-validation-required-message="Por favor ingresa tu email.">
+                                            <input type="password" class="form-control" placeholder="contraseña *" id="txtPassword" required data-validation-required-message="Por favor ingrese su contraseña.">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                         <div class="col-lg-12 text-center">
@@ -681,7 +725,7 @@
                                     <div class="plan-list">
                                         <ul>
                                             <li>40 GB Storage</li>
-                                            <li>40GB Transfer</li>
+                                            <li>40 GB Transfer</li>
                                             <li>10 Domains</li>
                                             <li>20 Projects</li>
                                             <li>Free installation</li>
@@ -705,7 +749,7 @@
                                     <div class="plan-list">
                                         <ul>
                                             <li>40 GB Storage</li>
-                                            <li>40GB Transfer</li>
+                                            <li>40 GB Transfer</li>
                                             <li>10 Domains</li>
                                             <li>20 Projects</li>
                                             <li>Free installation</li>
@@ -728,7 +772,7 @@
                                     <div class="plan-list">
                                         <ul>
                                             <li>40 GB Storage</li>
-                                            <li>40GB Transfer</li>
+                                            <li>40 GB Transfer</li>
                                             <li>10 Domains</li>
                                             <li>20 Projects</li>
                                             <li>Free installation</li>
@@ -752,7 +796,7 @@
                                     <div class="plan-list">
                                         <ul>
                                             <li>40 GB Storage</li>
-                                            <li>40GB Transfer</li>
+                                            <li>40 GB Transfer</li>
                                             <li>10 Domains</li>
                                             <li>20 Projects</li>
                                             <li>Free installation</li>
@@ -1153,11 +1197,11 @@
                                         <legend>Datos Personales</legend>
                                         <div class="form-group fila">
                                             <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Nombres *" id="txtNombrePac" required data-validation-required-message="Por favor ingresa tu nombre.">
+                                                <input type="text" class="form-control" placeholder="Nombres *" id="txtNombrePac" required data-validation-required-message="Por favor ingrese su nombre.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Apellidos *" id="txtApellidoPac" required data-validation-required-message="Por favor ingresa tu apellido.">
+                                                <input type="text" class="form-control" placeholder="Apellidos *" id="txtApellidoPac" required data-validation-required-message="Por favor ingrese su apellido.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                         </div>
@@ -1172,18 +1216,18 @@
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Número de identificación *" id="txtIdentificacionPac" required data-validation-required-message="Por favor ingresa tu apellido.">
+                                                <input type="text" class="form-control" placeholder="Número de identificación *" id="txtIdentificacionPac" required data-validation-required-message="Inserte el # de Identificación.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                         </div>
                                         <div class="form-group fila" style="height: 109px;">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <input type="date" class="form-control" id="dtpFecNacPac" required data-validation-required-message="Por favor ingresa tu fecha de nacimiento.">
+                                                    <input type="date" class="form-control" id="dtpFecNacPac" required data-validation-required-message="Por favor ingrese su fecha de nacimiento.">
                                                     <p class="help-block text-danger"></p>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input type="email" class="form-control" placeholder="Email *" id="txtEmailPac" required data-validation-required-message="Por favor ingresa tu email.">
+                                                    <input type="email" class="form-control" placeholder="Email *" id="txtEmailPac" required data-validation-required-message="Por favor ingrese su e-mail.">
                                                     <p class="help-block text-danger"></p>
                                                 </div>
                                             </div>
@@ -1211,11 +1255,11 @@
                                         </div>
                                         <div class="form-group fila">
                                             <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Usuario *" id="txtUserPac" required data-validation-required-message="Por favor ingresa tu usuario.">
+                                                <input type="text" class="form-control" placeholder="Usuario *" id="txtUserPac" required data-validation-required-message="Por favor ingrese su usuario.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div class="col-md-6">
-                                                <input type="password" class="form-control" placeholder="Contraseña *" id="txtPasswordPac" required data-validation-required-message="Por favor ingresa tu contraseña.">
+                                                <input type="password" class="form-control" placeholder="Contraseña *" id="txtPasswordPac" required data-validation-required-message="Por favor ingrese su contraseña.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                         </div>
@@ -1227,21 +1271,21 @@
                                         <legend>Datos de Contacto</legend>
                                         <div class="form-group fila">
                                             <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Nombres *" id="txtNombreCon" required data-validation-required-message="Por favor ingresa el nombre de tu contacto.">
+                                                <input type="text" class="form-control" placeholder="Nombres *" id="txtNombreCon" required data-validation-required-message="Por favor ingrese el nombre de su contacto.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Apellidos *" id="txtApellidoCon" required data-validation-required-message="Por favor ingresa el apellido de tu contacto.">
+                                                <input type="text" class="form-control" placeholder="Apellidos *" id="txtApellidoCon" required data-validation-required-message="Por favor ingrese el apellido de su contacto.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                         </div>
                                         <div class="form-group fila">
                                             <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Celular *" id="txtCelularCon" required data-validation-required-message="Por favor ingresa el celular de tu contacto.">
+                                                <input type="text" class="form-control" placeholder="Celular *" id="txtCelularCon" required data-validation-required-message="Por favor ingrese el celular de su contacto.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Email *" id="txtEmailCon" required data-validation-required-message="Por favor ingresa el email de tu contacto.">
+                                                <input type="text" class="form-control" placeholder="Email *" id="txtEmailCon" required data-validation-required-message="Por favor ingrese el e-mail de su contacto.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                         </div>
@@ -1264,11 +1308,11 @@
                                         <legend>Datos Personales</legend>
                                         <div class="form-group fila">
                                             <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Nombres *" id="txtNombreMed" required data-validation-required-message="Por favor ingresa tu nombre.">
+                                                <input type="text" class="form-control" placeholder="Nombres *" id="txtNombreMed" required data-validation-required-message="Por favor ingrese su nombre.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Apellidos *" id="txtApellidoMed" required data-validation-required-message="Por favor ingresa tu apellido.">
+                                                <input type="text" class="form-control" placeholder="Apellidos *" id="txtApellidoMed" required data-validation-required-message="Por favor ingrese su apellido.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                         </div>
@@ -1282,18 +1326,18 @@
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Número de identificación *" id="txtIdentificacionMed" required data-validation-required-message="Por favor ingresa tu apellido.">
+                                                <input type="text" class="form-control" placeholder="Número de identificación *" id="txtIdentificacionMed" required data-validation-required-message="Ingrese el # de su Identificación.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                         </div>
                                         <div class="form-group fila" style="height: 109px;">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <input type="date" class="form-control" id="dtpFecNacMed" required data-validation-required-message="Por favor ingresa tu fecha de nacimiento.">
+                                                    <input type="date" class="form-control" id="dtpFecNacMed" required data-validation-required-message="Por favor ingrese su fecha de nacimiento.">
                                                     <p class="help-block text-danger"></p>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input type="email" class="form-control" placeholder="Email *" id="txtEmailMed" required data-validation-required-message="Por favor ingresa tu email.">
+                                                    <input type="email" class="form-control" placeholder="Email *" id="txtEmailMed" required data-validation-required-message="Por favor ingrese su email.">
                                                     <p class="help-block text-danger"></p>
                                                 </div>
                                             </div>
@@ -1321,11 +1365,11 @@
                                         </div>
                                         <div class="form-group fila">
                                             <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Usuario *" id="txtUserMed" required data-validation-required-message="Por favor ingresa tu usuario.">
+                                                <input type="text" class="form-control" placeholder="Usuario *" id="txtUserMed" required data-validation-required-message="Por favor ingrese su usuario.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div class="col-md-6">
-                                                <input type="password" class="form-control" placeholder="Contraseña *" id="txtPasswordMed" required data-validation-required-message="Por favor ingresa tu contraseña.">
+                                                <input type="password" class="form-control" placeholder="Contraseña *" id="txtPasswordMed" required data-validation-required-message="Por favor ingrese su contraseña.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                         </div>
@@ -1337,17 +1381,17 @@
                                         <legend>Datos Profesionales</legend>
                                         <div class="form-group fila">
                                             <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Universidad *" id="txtUniversidadMed" required data-validation-required-message="Por favor ingresa el nombre de tu contacto.">
+                                                <input type="text" class="form-control" placeholder="Universidad *" id="txtUniversidadMed" required data-validation-required-message="Por favor ingrese el nombre de la Universidad.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Título obtenido *" id="txtTituloMed" required data-validation-required-message="Por favor ingresa el apellido de tu contacto.">
+                                                <input type="text" class="form-control" placeholder="Título obtenido *" id="txtTituloMed" required data-validation-required-message="Ingrese la descripción del título obtenido.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                         </div>
                                         <div class="form-group fila">
                                             <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Año de graduación *" id="txtAnioGraduacion" required data-validation-required-message="Por favor ingresa el celular de tu contacto.">
+                                                <input type="text" class="form-control" placeholder="Año de graduación *" id="txtAnioGraduacion" required data-validation-required-message="Ingrese el año de graduación.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                         </div>
@@ -1585,17 +1629,41 @@
                                                 61 - ?? años
                                             </label>                                                
                                         </div>
-                                        <div class="col-lg-12 text-center">
-                                            <div id="success"></div>
-                                            <button type="submit" class="btn btn-primary">CONSULTAR</button>
-                                        </div>
-				    </fieldset>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+				    </fieldset>				    
+				</div>
+	                    </form>
+			</div></br>
+			<div class="col-md-12">
+			    <table border=1>
+  		 		<tr>
+     		  		    <th width=350>Apellido</td>
+		  		    <th width=300>Nombre</td>
+		  		    <th width=500>Contacto</td>
+  	          		</tr>
+    	          		<tr>
+      	  	    		    <td>      </td>
+		   		    <td>      </td>
+		    		    <td>      </td>
+				</tr>
+      	  	           	<tr>
+      	  	 		    <td>      </td>
+		 		    <td>      </td>
+		 		    <td>      </td>
+     	      			</tr>
+				<tr>
+      	  			    <td>      </td>
+				    <td>      </td>
+ 				    <td>      </td>
+	    			</tr>
+				<tr>
+       	  			    <td>      </td>
+				    <td>      </td>
+ 				    <td>      </td>
+	    			</tr>
+		  	     </table>                 
+                	</div>
+                   </div>
                 </div>
-                
             </div>
         </div>
         <!-- Fin Sección Consultas -->
@@ -1815,8 +1883,10 @@
 	                       <fieldset class="grupo">
                                 <legend>Ritmo Cardiaco</legend>
                                  <div class="form-group fila">
-                                                                                
-                                  <div class="col-md-6">
+<meta charset="utf-8"> 
+<META HTTP-EQUIV="REFRESH" CONTENT="60;URL=mvc/objetos/drawchart.php">
+                                  <?php                                                
+                                  /*<div class="col-md-6">
                 	            <div class="latest-post">
                 	                <img src="img/cardiograma60.png" class="img-responsive" alt="">
                                 <h4><a href="#"> </a></h4>
@@ -1861,8 +1931,105 @@
                                 
                                 
                             </div>
-                        </div>
-                        
+                        </div>*/
+
+
+require_once("/mvc/objetos/actividadCollector.php");
+require_once("/mvc/objetos/notificacionCollector.php");
+require_once("/mvc/objetos/contactoCollector.php");
+$id_usuario=2;
+$actividadCollectorObj = new actividadCollector();
+//insertamos un valor aleatorio
+$pulso = rand(0, 1);
+$fecha = '2015-09-15';
+$actividadCollectorObj->insertActividad($pulso, $id_usuario);
+
+$valoresArray;
+$timeArray;
+
+$i=0;
+foreach ($actividadCollectorObj->showActividadxUsuario($id_usuario) as $c){
+
+     
+     $valoresArray[$i]= $c->getPulso();
+     $time= $rawdata[$i]= $c->getFecha_hora();
+     //echo $time;
+     $date = new DateTime($time);
+    //ALMACENAMOS EL TIMESTAMP EN EL ARRAY
+     $timeArray[$i] = $date->getTimestamp()*1000;
+     $i++;
+}
+
+if($actividadCollectorObj->scanearActividad($id_usuario) > 25){
+    echo " PULSO ACELERADO";
+    $contactoCollectorObj = new contactoCollector();
+    foreach ($contactoCollectorObj->showContactosxUsuario($id_usuario) as $c){
+        $notificacionCollectorObj = new notificacionCollector();
+        $notificacionCollectorObj->InsertNotificacion("PULSO ACELERADO", $c->getIddirectorio(), 1);
+    
+}
+        
+}else{
+}
+
+?>
+<div id="contenedor"></div>
+
+<script src="https://code.jquery.com/jquery.js"></script>   
+<script src="http://code.highcharts.com/stock/highstock.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+<script>
+
+chartCPU = new Highcharts.StockChart({
+    chart: {
+        renderTo: 'contenedor'
+        //defaultSeriesType: 'spline'
+        
+    },
+    rangeSelector : {
+        enabled: false
+    },
+    title: {
+        text: 'RITMO CARDIACO'
+    },
+    xAxis: {
+        type: 'datetime'
+        //tickPixelInterval: 150,
+        //maxZoom: 20 * 1000
+    },
+    yAxis: {
+        minPadding: 0.2,
+        maxPadding: 0.2,
+        title: {
+            text: 'Pulsaciones',
+            margin: 10
+        }
+    },
+    series: [{
+        name: 'Valor',
+        data: (function() {
+                // generate an array of random data
+                var data = [];
+                <?php
+                    for($i = 0 ;$i<count($rawdata);$i++){
+                ?>
+                data.push([<?php echo $timeArray[$i];?>,<?php echo $valoresArray[$i];?>]);
+                <?php } ?>
+                return data;
+            })()
+    }],
+    credits: {
+            enabled: false
+    }
+});
+
+</script>   
+
+
+
+
+
+                        ?>
                               </div>      
                                </fieldset>
                           </div>      <!-- Graficar Ritmo Cardiaco -->

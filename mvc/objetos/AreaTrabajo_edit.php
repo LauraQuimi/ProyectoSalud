@@ -19,7 +19,7 @@
       <label> ID </label>
       <input type="text" name= "id" value = "<?php echo $ObjAreaTrabajo->getIdAreaTrabajo(); ?>" /> </br>
       <label> Descripcion</label>
-      <input type="text" name= "Descripcion" value = "<?php echo $ObjAreaTrabajo->getDescripcion(); ?>"/></br>
+      <input type="text" name= "descripcion" value = "<?php echo $ObjAreaTrabajo->getDescripcion(); ?>"/></br>
 
       <button type = "submit"> ACEPTAR </button>
       <button><a href = "AreaTrabajo_list.php">CANCELAR</a> </button>

@@ -5,23 +5,32 @@ include_once("DirectorioCollector.php");
 $DirectorioCollectorObj = new DirectorioCollector();
 ?>
 <header>
-    <h1>Mantenimiento de Directorio</h1>
+    <h1><center>Mantenimiento de Contacto</center></h1>
 </header>
-<a href="Directorio_new_insert.php">Ingresar Directorio</a>
-<table border=1>
-  <th>
-    <tr>
-    <td>NOMBBRE</td>
-    <td>APELLIDOS</td>
-    <td>CELULAR</td>
-    <td>EMAIL</td>
-    <td>USUARIO</td>
-    <td>NOMBRE-USUARIO</td>
-    <td>APELLIDO-USUARIO</td>
+<a href="Directorio_new_insert.php">Ingresar nuevo Contacto</a>
+<br/>
+<br/>
 
-   <td colspan = 2>OPCIONES</td>
-    </tr>  
-</th>
+<table border=1>
+    <tr>
+     <th colspan=11>LISTADO DE CONTACTOS</th>
+
+    </tr>
+    
+    <tr>
+     <th>ID</th>
+     <th>NOMBBRE</th>
+     <th>APELLIDOS</th>
+     <th>CELULAR</th>
+     <th>EMAIL</th>
+     <th>USUARIO</th>
+     <th>NOMBRE-USUARIO</th>
+     <th>APELLIDO-USUARIO</th>
+     <th>TIPO-RELACION</th>
+     <th colspan = 2>OPCIONES</td>
+   </tr>  
+ 
+
 <?php
 foreach ($DirectorioCollectorObj->showDirectorios() as $c){
 ?>
@@ -33,7 +42,9 @@ foreach ($DirectorioCollectorObj->showDirectorios() as $c){
      <td><?php echo $c->getEmail_contacto() ?></td>
      <td><?php echo $c->getIdUsuario() ?></td>
      <td><?php echo $c->getNombre() ?></td>
-      <td><?php echo $c->getApellido() ?></td>
+     <td><?php echo $c->getApellido() ?></td>
+     <td><?php echo $c->getIdTipoRelacion() ?></td>
+
 
      <td><a href="Directorio_edit.php?id=<?php echo $c->getIdDirectorio() ?>">Editar</a></td>
      <td><a href="Directorio_delete.php?id=<?php echo $c->getIdDirectorio() ?>">Eliminar</a></td>

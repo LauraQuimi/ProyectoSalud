@@ -32,7 +32,7 @@ print_r($max);
         </div>
         <div>
 	      <label> Celular</label>
-           <input type="text" pattern="[0-9]{10}" name= "celular_contacto" value = ""/></br>
+           <input type="text" name= "celular_contacto" value = ""/></br>
         </div>
 
 	   <div>
@@ -42,11 +42,11 @@ print_r($max);
 
 	   <div>
 	     <label> Usuario</label>
-          <input type="number" name= "id_usuario" required value = ""/> </br>
+          <input type="text" name= "id_usuario" required value = ""/> </br>
         </div>
           <div>
 	     <label> Tipo Relacion</label>
-          <input type="number" name= "id_tipo_relacion" required value = ""/> </br>
+          <input type="text" name= "id_tipo_relacion" required value = ""/> </br>
         </div>
 
 

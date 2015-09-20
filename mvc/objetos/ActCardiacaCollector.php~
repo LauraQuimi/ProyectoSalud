@@ -7,7 +7,7 @@ class ActCardiacaCollector extends Collector
 {
   
   function showActCardiacas() {
-    $rows = self::$db->getRows("select id_actividad_cardiaca, a.id_usuario, a.fecha_hora, a.pulso, b.apellidos, b.nombres  from actividad_cardiaca a, usuario b
+    $rows = self::$db->getRows("select id_actividad_cardiaca, a.id_usuario,b.apellidos, b.nombres, a.fecha_hora, a.pulso  from actividad_cardiaca a, usuario b
 where a.id_usuario=b.id_usuario ");        
     $arrayActCardiaca= array();        
     foreach ($rows as $c){

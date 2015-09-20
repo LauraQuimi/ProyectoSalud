@@ -7,9 +7,8 @@ class DirectorioCollector extends Collector
 {
   
   function showDirectorios() {
-    $rows = self::$db->getRows("SELECT id_directorio, nombre_contacto, apellido_contacto, celular_contacto, 
-email_contacto, a.id_usuario, b.nombres, b.apellidos  FROM directorio a, usuario b
-where a.id_usuario=b.id_usuario
+    $rows = self::$db->getRows("SELECT id_directorio, nombre_contacto, apellido_contacto, celular_contacto, email_contacto, a.id_usuario, a.id_tipo_relacion, b.nombres, b.apellidos  
+FROM directorio a, usuario b where a.id_usuario=b.id_usuario
 ");        
     $arrayDirectorio= array();        
     foreach ($rows as $c){
@@ -28,7 +27,7 @@ where a.id_usuario=b.id_usuario and id_directorio = $id");
     return $directorio;        
   }
 
-  function updateDirectorio($id,  $nombre_contacto, $apellido_contacto,$celular_contacto,$email_contacto_contacto,$id_usuario,$id_tipo_relacion) {
+  function updateDirectorio($id,  $nombre_contacto, $apellido_contacto,$celular_contacto,$email_contacto,$id_usuario,$id_tipo_relacion) {
 echo $id;
 echo $id_usuario;
     $update = self::$db->getRow("Update directorio set   nombre_contacto='$nombre_contacto', 

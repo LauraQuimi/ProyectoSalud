@@ -9,7 +9,7 @@ $ActCardiacaCollectorObj = new ActCardiacaCollector();
 <a href="ActCardiaca_new_insert.php">Ingresar Actividad Cardiaca</a>
 <table border=1>
   <tr>
-   <th colspan=8>LISTADO DE ACTIVIDAD CARDIACA</th>
+   <th colspan=6>LISTADO DE ACTIVIDAD CARDIACA</th>
   </tr>
 
     <tr>

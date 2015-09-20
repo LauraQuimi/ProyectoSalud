@@ -28,7 +28,7 @@ print_r($max);
         </div>
         <div>
 	  <label> Fecha</label>
-          <input type="date" name= "fecha_hora" value = "<?php echo date("Y-m-d");?>"/> </br>
+          <input type="date" name= "fecha_hora" value = ""/> </br>
         </div>
          <div>
 	  <label> Pulso</label>

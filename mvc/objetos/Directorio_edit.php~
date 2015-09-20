@@ -36,7 +36,7 @@
         <div>
 	  <label> Celular      :</label>
 
-           <input type="text"  pattern="[0-9]{10}" name= "celular_contacto" value = "<?php echo $ObjDirectorio->getcelular_contacto(); ?>"/></br>
+           <input type="text" pattern="d{0123456789}$ name= "celular_contacto" value = "<?php echo $ObjDirectorio->getcelular_contacto(); ?>"/></br>
         </div>
 
 	<div>

@@ -23,7 +23,7 @@
       <label> Id Usuario</label>
       <input type="text" name= "id_usuario" value = "<?php echo $ObjActCardiaca->getIdUsuario(); ?>"/> </br>
       <label> Fecha Hora</label>
-      <input type="date" name= "fecha_hora" value = "<?php echo $ObjActCardiaca->getFecha(); ?>"/></br>
+      <input type="text" name= "fecha_hora" value = "<?php echo $ObjActCardiaca->getFecha(); ?>"/></br>
 <label> Pulso</label>
       <input type="text" name= "pulso" value = "<?php echo $ObjActCardiaca->getPulso(); ?>"/></br>
             

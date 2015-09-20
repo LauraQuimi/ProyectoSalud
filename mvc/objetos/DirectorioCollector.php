@@ -7,9 +7,8 @@ class DirectorioCollector extends Collector
 {
   
   function showDirectorios() {
-    $rows = self::$db->getRows("SELECT id_directorio, nombre_contacto, apellido_contacto, celular_contacto, 
-email_contacto, a.id_usuario, b.nombres, b.apellidos  FROM directorio a, usuario b
-where a.id_usuario=b.id_usuario
+    $rows = self::$db->getRows("SELECT id_directorio, nombre_contacto, apellido_contacto, celular_contacto, email_contacto, a.id_usuario, a.id_tipo_relacion, b.nombres, b.apellidos  
+FROM directorio a, usuario b where a.id_usuario=b.id_usuario
 ");        
     $arrayDirectorio= array();        
     foreach ($rows as $c){
@@ -21,10 +20,10 @@ where a.id_usuario=b.id_usuario
           
  function showDirectorio($id) {
     $row = self::$db->getRow("SELECT id_directorio, nombre_contacto, apellido_contacto, celular_contacto, 
-email_contacto, a.id_usuario, id_tipo_relacion,b.nombres, b.apellidos  FROM directorio a, usuario b
+email_contacto, a.id_usuario, id_tipo_relacion, b.nombres, b.apellidos  FROM directorio a, usuario b
 where a.id_usuario=b.id_usuario and id_directorio = $id");   
     //print_r ($row);     
-    $directorio = new Directorio($row{'id_directorio'},$row{'nombre_contacto'},$row{'apellido_contacto'},$row{'celular_contacto'},$row{'email_contacto'},$row{'id_usuario'},$row{'id_tipo_relacion'},$row{'nombres'},$row{'apellidos'});
+    $directorio = new Directorio($row{'id_directorio'},$row{'nombre_contacto'},$row{'apellido_contacto'},$row{'celular_contacto'},$row{'email_contacto'},$row{'id_usuario'},$row{'nombres'},$row{'apellidos'},$row{'id_tipo_relacion'});
     return $directorio;        
   }
 

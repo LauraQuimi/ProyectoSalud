@@ -14,7 +14,7 @@ class ActCardiaca
         $this->id_actividad_cardiaca = $id_actividad_cardiaca;
         $this->id_usuario = $id_usuario;
 	$this->nombres = $nombres;
-	$this->apellidos=$apellidos;       
+	$this->$apellidos=$apellidos;       
         $this->fecha_hora = $fecha_hora;
         $this->pulso = $pulso;
      }

@@ -6,10 +6,10 @@ session_start();
  $id_usuario = $_POST['id_usuario'];
 $fecha_hora = $_POST['fecha_hora'];
  $pulso = $_POST['pulso'];
-//echo $id;
-//echo $id_usuario;
-//echo $fecha_hora;
-//echo ('kk');
+echo $id;
+echo $id_usuario;
+echo $fecha_hora;
+echo ('kk');
  $ActCardiacaCollectorObj = new ActCardiacaCollector();
  $ActCardiacaCollectorObj->updateActCardiaca($id, $id_usuario,$fecha_hora, $pulso);
 

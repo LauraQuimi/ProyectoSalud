@@ -13,7 +13,7 @@ class Directorio
     private $apellidos;
 
 
-    function __construct($id_directorio, $nombre_contacto, $apellido_contacto, $celular_contacto, $email_contacto,$id_usuario,$id_tipo_relacion,$nombres,$apellidos)
+    function __construct($id_directorio, $nombre_contacto, $apellido_contacto, $celular_contacto, $email_contacto,$id_usuario,$nombres,$apellidos,$id_tipo_relacion)
     {
        $this->id_directorio = $id_directorio;
        $this->nombre_contacto = $nombre_contacto;
@@ -21,9 +21,9 @@ class Directorio
        $this->celular_contacto=$celular_contacto;
        $this->email_contacto=$email_contacto;
        $this->id_usuario = $id_usuario;
-       $this->id_tipo_relacion = $id_tipo_relacion;
-	$this->nombres = $nombres;
+       $this->nombres = $nombres;
        $this->apellidos = $apellidos;
+       $this->id_tipo_relacion = $id_tipo_relacion;
        
      }
     

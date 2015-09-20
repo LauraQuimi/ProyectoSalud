@@ -1,5 +1,10 @@
 <?php
     session_start();
+    $idusuario=1;
+    include_once('mvc/objetos/usuario.php');
+    include_once('mvc/objetos/usuarioCollector.php');
+    $usuarioCollectorObj = new usuarioCollector();
+    $usuario=$usuarioCollectorObj->showUsuario($idusuario);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -59,7 +64,7 @@
         </section>
         <!-- End Logo Section -->
         <?php
-            if(!isset($_SESSION["sesionIniciada"])){
+            //if(!isset($_SESSION["sesionIniciada"])){
         ?>
                 <!-- Start Main Body Section -->
                 <div class="mainbody-section text-center">
@@ -121,7 +126,7 @@
                 </div>
                 <!-- End Main Body Section -->
         <?php
-            }else{
+            //}else{
         ?>
                 <!-- Start Main Body Section -->
                 <div class="mainbody-section text-center">
@@ -253,7 +258,7 @@
                 </div>
                 <!-- End Main Body Section -->
         <?php
-            }
+           // }
         ?>
         
         <!-- Start Copyright Section -->
@@ -1475,12 +1480,12 @@
                                             <div class="col-md-6">
                                                <label class="etiquetas">Nombres: </label> 
      
-                                                <input type="text" class="form-control" placeholder="Nombres *" id="txtNombrePac" required data-validation-required-message="Por favor ingresa tu nombre.">
+                                                <input type="text" class="form-control" placeholder="<?php echo $usuario->getNombres(); ?>" id="txtNombrePac" required data-validation-required-message="Por favor ingresa tu nombre.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div class="col-md-6">
 <label class="etiquetas">Apellidos: </label>                                                
- <input type="text" class="form-control" placeholder="Apellidos *" id="txtApellidoPac" required data-validation-required-message="Por favor ingresa tu apellido.">
+ <input type="text" class="form-control" placeholder="<?php echo $usuario->getApellidos(); ?>" id="txtApellidoPac" required data-validation-required-message="Por favor ingresa tu apellido.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
 
@@ -1883,153 +1888,109 @@
 	                       <fieldset class="grupo">
                                 <legend>Ritmo Cardiaco</legend>
                                  <div class="form-group fila">
-<meta charset="utf-8"> 
-<META HTTP-EQUIV="REFRESH" CONTENT="60;URL=mvc/objetos/drawchart.php">
-                                  <?php                                                
-                                  /*<div class="col-md-6">
-                	            <div class="latest-post">
-                	                <img src="img/cardiograma60.png" class="img-responsive" alt="">
-                                <h4><a href="#"> </a></h4>
-                                
-                                
-                	            </div>
-	                        </div>
 
+                                                                                
+                                  <div class="col-md-6">
+                	        	    <div class="latest-post">
+                	        <meta charset="utf-8"> 
+				<META HTTP-EQUIV="REFRESH" CONTENT="60;URL=mvc/objetos/drawchart.php">
+				<?php 	
+				ini_set('include_path', '/usr/share/pear');
+				//ini_set('include_path', '/usr/share/pera');        
+				//require_once("/mvc/objetos/drawchart.php");                                
+				require_once("/mvc/objetos/actividadCollector.php");
+				require_once("/mvc/objetos/notificacionCollector.php");
+				require_once("/mvc/objetos/contactoCollector.php");
+				$id_usuario=2;
+				$actividadCollectorObj = new actividadCollector();
+				//insertamos un valor aleatorio
+				$pulso = rand(0, 1);
+				$fecha = '2015-09-15';
+				$actividadCollectorObj->insertActividad($pulso, $id_usuario);
+
+				$valoresArray;
+				$timeArray;
+
+				$i=0;
+				foreach ($actividadCollectorObj->showActividadxUsuario($id_usuario) as $c){
+
+				     
+				     $valoresArray[$i]= $c->getPulso();
+				     $time= $rawdata[$i]= $c->getFecha_hora();
+				     //echo $time;
+				     $date = new DateTime($time);
+				    //ALMACENAMOS EL TIMESTAMP EN EL ARRAY
+				     $timeArray[$i] = $date->getTimestamp()*1000;
+				     $i++;
+				}
+
+				if($actividadCollectorObj->scanearActividad($id_usuario) > 25){
+				    echo " PULSO ACELERADO";
+				    $contactoCollectorObj = new contactoCollector();
+				    foreach ($contactoCollectorObj->showContactosxUsuario($id_usuario) as $c){
+					$notificacionCollectorObj = new notificacionCollector();
+					$notificacionCollectorObj->InsertNotificacion("PULSO ACELERADO", $c->getIddirectorio(), 1);
+				    
+				}
+		
+				}else{
+				}
+
+				?>
+				<div id="contenedor"></div>
+
+				<script src="https://code.jquery.com/jquery.js"></script>   
+				<script src="http://code.highcharts.com/stock/highstock.js"></script>
+				<script src="http://code.highcharts.com/modules/exporting.js"></script>
+				<script>
+
+				chartCPU = new Highcharts.StockChart({
+				    chart: {
+					renderTo: 'contenedor'
+					//defaultSeriesType: 'spline'
+		
+				    },
+				    rangeSelector : {
+					enabled: false
+				    },
+				    title: {
+					text: 'RITMO CARDIACO'
+				    },
+				    xAxis: {
+					type: 'datetime'
+					//tickPixelInterval: 150,
+					//maxZoom: 20 * 1000
+				    },
+				    yAxis: {
+					minPadding: 0.2,
+					maxPadding: 0.2,
+					title: {
+					    text: 'Pulsaciones',
+					    margin: 10
+					}
+				    },
+				    series: [{
+					name: 'Valor',
+					data: (function() {
+						// generate an array of random data
+						var data = [];
+						<?php
+						    for($i = 0 ;$i<count($rawdata);$i++){
+						?>
+						data.push([<?php echo $timeArray[$i];?>,<?php echo $valoresArray[$i];?>]);
+						<?php } ?>
+						return data;
+					    })()
+				    }],
+				    credits: {
+					    enabled: false
+				    }
+				});
+
+				</script>   
+				</div>
+	                            </div>
                         
-			  <div class="col-md-6">
-                            <div class="latest-post">
-       
-      				<div style="float: padding:20px">
-	
-	   		 <table border=1 style="width: 100%;">
-	  		   <tr>
-	     		   <th>Fecha</td>
-	     		   <th>Presion</td>
-	                   </tr>
-	    	           <tr>
-	      	  	    <td>      </td>
-			    <td>      </td>
-			   </tr>
-      	  	  
-	    	           <tr>
-	      	  	   <td>      </td>
-			   <td>      </td>
-		           </tr>
-		
-			  <tr>
-	      	  	   <td>      </td>
-			   <td>      </td>
-		          </tr>
-		
-			  <tr>
-      	  		    <td>      </td>
-		 	     <td>      </td>
-			     </tr>
-			     </table>                 
-
-                            </div>
-                                
-                                
-                            </div>
-                        </div>*/
-
-
-require_once("/mvc/objetos/actividadCollector.php");
-require_once("/mvc/objetos/notificacionCollector.php");
-require_once("/mvc/objetos/contactoCollector.php");
-$id_usuario=2;
-$actividadCollectorObj = new actividadCollector();
-//insertamos un valor aleatorio
-$pulso = rand(0, 1);
-$fecha = '2015-09-15';
-$actividadCollectorObj->insertActividad($pulso, $id_usuario);
-
-$valoresArray;
-$timeArray;
-
-$i=0;
-foreach ($actividadCollectorObj->showActividadxUsuario($id_usuario) as $c){
-
-     
-     $valoresArray[$i]= $c->getPulso();
-     $time= $rawdata[$i]= $c->getFecha_hora();
-     //echo $time;
-     $date = new DateTime($time);
-    //ALMACENAMOS EL TIMESTAMP EN EL ARRAY
-     $timeArray[$i] = $date->getTimestamp()*1000;
-     $i++;
-}
-
-if($actividadCollectorObj->scanearActividad($id_usuario) > 25){
-    echo " PULSO ACELERADO";
-    $contactoCollectorObj = new contactoCollector();
-    foreach ($contactoCollectorObj->showContactosxUsuario($id_usuario) as $c){
-        $notificacionCollectorObj = new notificacionCollector();
-        $notificacionCollectorObj->InsertNotificacion("PULSO ACELERADO", $c->getIddirectorio(), 1);
-    
-}
-        
-}else{
-}
-
-?>
-<div id="contenedor"></div>
-
-<script src="https://code.jquery.com/jquery.js"></script>   
-<script src="http://code.highcharts.com/stock/highstock.js"></script>
-<script src="http://code.highcharts.com/modules/exporting.js"></script>
-<script>
-
-chartCPU = new Highcharts.StockChart({
-    chart: {
-        renderTo: 'contenedor'
-        //defaultSeriesType: 'spline'
-        
-    },
-    rangeSelector : {
-        enabled: false
-    },
-    title: {
-        text: 'RITMO CARDIACO'
-    },
-    xAxis: {
-        type: 'datetime'
-        //tickPixelInterval: 150,
-        //maxZoom: 20 * 1000
-    },
-    yAxis: {
-        minPadding: 0.2,
-        maxPadding: 0.2,
-        title: {
-            text: 'Pulsaciones',
-            margin: 10
-        }
-    },
-    series: [{
-        name: 'Valor',
-        data: (function() {
-                // generate an array of random data
-                var data = [];
-                <?php
-                    for($i = 0 ;$i<count($rawdata);$i++){
-                ?>
-                data.push([<?php echo $timeArray[$i];?>,<?php echo $valoresArray[$i];?>]);
-                <?php } ?>
-                return data;
-            })()
-    }],
-    credits: {
-            enabled: false
-    }
-});
-
-</script>   
-
-
-
-
-
-                        ?>
                               </div>      
                                </fieldset>
                           </div>      <!-- Graficar Ritmo Cardiaco -->

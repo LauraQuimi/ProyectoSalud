@@ -1,3 +1,1162 @@
+<<<<<<< HEAD:base1.backup
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 9.4.4
+-- Dumped by pg_dump version 9.4.4
+-- Started on 2015-09-14 21:36:43 ECT
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'LATIN1';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+--
+-- TOC entry 198 (class 3079 OID 11935)
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- TOC entry 2225 (class 0 OID 0)
+-- Dependencies: 198
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+SET search_path = public, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- TOC entry 193 (class 1259 OID 16555)
+-- Name: actividad_cardiaca; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE actividad_cardiaca (
+    id_actividad_cardica integer NOT NULL,
+    fecha_hora date,
+    pulso smallint,
+    id_usuario integer
+);
+
+
+ALTER TABLE actividad_cardiaca OWNER TO postgres;
+
+--
+-- TOC entry 192 (class 1259 OID 16553)
+-- Name: actividad_cardiaca_id_actividad_cardica_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE actividad_cardiaca_id_actividad_cardica_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE actividad_cardiaca_id_actividad_cardica_seq OWNER TO postgres;
+
+--
+-- TOC entry 2226 (class 0 OID 0)
+-- Dependencies: 192
+-- Name: actividad_cardiaca_id_actividad_cardica_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE actividad_cardiaca_id_actividad_cardica_seq OWNED BY actividad_cardiaca.id_actividad_cardica;
+
+
+--
+-- TOC entry 187 (class 1259 OID 16501)
+-- Name: area_trabajo; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE area_trabajo (
+    id_area_trabajo integer NOT NULL,
+    descripcion character varying(100)
+);
+
+
+ALTER TABLE area_trabajo OWNER TO postgres;
+
+--
+-- TOC entry 186 (class 1259 OID 16499)
+-- Name: area_trabajo_id_area_trabajo_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE area_trabajo_id_area_trabajo_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE area_trabajo_id_area_trabajo_seq OWNER TO postgres;
+
+--
+-- TOC entry 2227 (class 0 OID 0)
+-- Dependencies: 186
+-- Name: area_trabajo_id_area_trabajo_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE area_trabajo_id_area_trabajo_seq OWNED BY area_trabajo.id_area_trabajo;
+
+
+--
+-- TOC entry 189 (class 1259 OID 16512)
+-- Name: datos_laborales; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE datos_laborales (
+    id_datos_laborales integer NOT NULL,
+    nombre_institucion character varying(100),
+    fecha_inicio date,
+    id_tipo_institucion integer,
+    id_area_trabajo integer,
+    id_usuario integer
+);
+
+
+ALTER TABLE datos_laborales OWNER TO postgres;
+
+--
+-- TOC entry 188 (class 1259 OID 16510)
+-- Name: datos_laborales_id_datos_laborales_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE datos_laborales_id_datos_laborales_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE datos_laborales_id_datos_laborales_seq OWNER TO postgres;
+
+--
+-- TOC entry 2228 (class 0 OID 0)
+-- Dependencies: 188
+-- Name: datos_laborales_id_datos_laborales_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE datos_laborales_id_datos_laborales_seq OWNED BY datos_laborales.id_datos_laborales;
+
+
+--
+-- TOC entry 191 (class 1259 OID 16539)
+-- Name: datos_profesionales; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE datos_profesionales (
+    id_datos_profesionales integer NOT NULL,
+    universidad character varying(100),
+    titulo character varying(100),
+    fecha_graduacion date,
+    id_usuario integer
+);
+
+
+ALTER TABLE datos_profesionales OWNER TO postgres;
+
+--
+-- TOC entry 190 (class 1259 OID 16537)
+-- Name: datos_profesionales_id_datos_profesionales_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE datos_profesionales_id_datos_profesionales_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE datos_profesionales_id_datos_profesionales_seq OWNER TO postgres;
+
+--
+-- TOC entry 2229 (class 0 OID 0)
+-- Dependencies: 190
+-- Name: datos_profesionales_id_datos_profesionales_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE datos_profesionales_id_datos_profesionales_seq OWNED BY datos_profesionales.id_datos_profesionales;
+
+
+--
+-- TOC entry 183 (class 1259 OID 16469)
+-- Name: directorio; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE directorio (
+    id_directorio integer NOT NULL,
+    nombre_contacto character varying(50),
+    apellido_contacto character varying(50),
+    celular_contacto character varying(10),
+    email_contacto character varying(100),
+    id_usuario integer,
+    id_tipo_relacion integer
+);
+
+
+ALTER TABLE directorio OWNER TO postgres;
+
+--
+-- TOC entry 182 (class 1259 OID 16467)
+-- Name: directorio_id_directorio_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE directorio_id_directorio_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE directorio_id_directorio_seq OWNER TO postgres;
+
+--
+-- TOC entry 2230 (class 0 OID 0)
+-- Dependencies: 182
+-- Name: directorio_id_directorio_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE directorio_id_directorio_seq OWNED BY directorio.id_directorio;
+
+
+--
+-- TOC entry 195 (class 1259 OID 16568)
+-- Name: notificacion; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE notificacion (
+    id_notificacion integer NOT NULL,
+    fecha_hora date,
+    observacion character varying[],
+    id_directorio integer,
+    id_tipo_notificacion integer
+);
+
+
+ALTER TABLE notificacion OWNER TO postgres;
+
+--
+-- TOC entry 194 (class 1259 OID 16566)
+-- Name: notificacion_id_notificacion_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE notificacion_id_notificacion_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE notificacion_id_notificacion_seq OWNER TO postgres;
+
+--
+-- TOC entry 2231 (class 0 OID 0)
+-- Dependencies: 194
+-- Name: notificacion_id_notificacion_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE notificacion_id_notificacion_seq OWNED BY notificacion.id_notificacion;
+
+
+--
+-- TOC entry 197 (class 1259 OID 16589)
+-- Name: pulso_ideal; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE pulso_ideal (
+    id_pulso_ideal integer NOT NULL,
+    minimo integer,
+    maximo integer,
+    observacion character varying(50),
+    edad integer
+);
+
+
+ALTER TABLE pulso_ideal OWNER TO postgres;
+
+--
+-- TOC entry 196 (class 1259 OID 16587)
+-- Name: pulso_ideal_id_pulso_ideal_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE pulso_ideal_id_pulso_ideal_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE pulso_ideal_id_pulso_ideal_seq OWNER TO postgres;
+
+--
+-- TOC entry 2232 (class 0 OID 0)
+-- Dependencies: 196
+-- Name: pulso_ideal_id_pulso_ideal_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE pulso_ideal_id_pulso_ideal_seq OWNED BY pulso_ideal.id_pulso_ideal;
+
+
+--
+-- TOC entry 175 (class 1259 OID 16419)
+-- Name: tipo_identificacion; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE tipo_identificacion (
+    id_tipo_identificacion integer NOT NULL,
+    descripcion character varying(50)
+);
+
+
+ALTER TABLE tipo_identificacion OWNER TO postgres;
+
+--
+-- TOC entry 174 (class 1259 OID 16417)
+-- Name: tipo_identificacion_id_tipo_identificacion_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE tipo_identificacion_id_tipo_identificacion_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE tipo_identificacion_id_tipo_identificacion_seq OWNER TO postgres;
+
+--
+-- TOC entry 2233 (class 0 OID 0)
+-- Dependencies: 174
+-- Name: tipo_identificacion_id_tipo_identificacion_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE tipo_identificacion_id_tipo_identificacion_seq OWNED BY tipo_identificacion.id_tipo_identificacion;
+
+
+--
+-- TOC entry 185 (class 1259 OID 16490)
+-- Name: tipo_institucion; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE tipo_institucion (
+    id_tipo_institucion integer NOT NULL,
+    descripcion character varying(50)
+);
+
+
+ALTER TABLE tipo_institucion OWNER TO postgres;
+
+--
+-- TOC entry 184 (class 1259 OID 16488)
+-- Name: tipo_institucion_id_tipo_institucion_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE tipo_institucion_id_tipo_institucion_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE tipo_institucion_id_tipo_institucion_seq OWNER TO postgres;
+
+--
+-- TOC entry 2234 (class 0 OID 0)
+-- Dependencies: 184
+-- Name: tipo_institucion_id_tipo_institucion_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE tipo_institucion_id_tipo_institucion_seq OWNED BY tipo_institucion.id_tipo_institucion;
+
+
+--
+-- TOC entry 181 (class 1259 OID 16461)
+-- Name: tipo_notificacion; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE tipo_notificacion (
+    id_tipo_notificacion integer NOT NULL,
+    descripcion character varying(50)
+);
+
+
+ALTER TABLE tipo_notificacion OWNER TO postgres;
+
+--
+-- TOC entry 180 (class 1259 OID 16459)
+-- Name: tipo_notificacion_id_tipo_notificacion_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE tipo_notificacion_id_tipo_notificacion_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE tipo_notificacion_id_tipo_notificacion_seq OWNER TO postgres;
+
+--
+-- TOC entry 2235 (class 0 OID 0)
+-- Dependencies: 180
+-- Name: tipo_notificacion_id_tipo_notificacion_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE tipo_notificacion_id_tipo_notificacion_seq OWNED BY tipo_notificacion.id_tipo_notificacion;
+
+
+--
+-- TOC entry 179 (class 1259 OID 16453)
+-- Name: tipo_relacion; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE tipo_relacion (
+    id_tipo_relacion integer NOT NULL,
+    descripcion character varying(50)
+);
+
+
+ALTER TABLE tipo_relacion OWNER TO postgres;
+
+--
+-- TOC entry 178 (class 1259 OID 16451)
+-- Name: tipo_relacion_id_tipo_relacion_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE tipo_relacion_id_tipo_relacion_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE tipo_relacion_id_tipo_relacion_seq OWNER TO postgres;
+
+--
+-- TOC entry 2236 (class 0 OID 0)
+-- Dependencies: 178
+-- Name: tipo_relacion_id_tipo_relacion_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE tipo_relacion_id_tipo_relacion_seq OWNED BY tipo_relacion.id_tipo_relacion;
+
+
+--
+-- TOC entry 173 (class 1259 OID 16411)
+-- Name: tipo_usuario; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE tipo_usuario (
+    id_tipo_usuario integer NOT NULL,
+    descripcion character varying(50)
+);
+
+
+ALTER TABLE tipo_usuario OWNER TO postgres;
+
+--
+-- TOC entry 172 (class 1259 OID 16409)
+-- Name: tipo_usuario_id_tipo_usuario_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE tipo_usuario_id_tipo_usuario_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE tipo_usuario_id_tipo_usuario_seq OWNER TO postgres;
+
+--
+-- TOC entry 2237 (class 0 OID 0)
+-- Dependencies: 172
+-- Name: tipo_usuario_id_tipo_usuario_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE tipo_usuario_id_tipo_usuario_seq OWNED BY tipo_usuario.id_tipo_usuario;
+
+
+--
+-- TOC entry 177 (class 1259 OID 16427)
+-- Name: usuario; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE usuario (
+    id_usuario integer NOT NULL,
+    num_identificacion bigint,
+    nombres character varying(50),
+    apellidos character varying(50),
+    fecha_nacimiento date,
+    celular bigint,
+    email character varying(100),
+    genero smallint,
+    "user" character varying(10),
+    password character varying(20),
+    id_tipo_usuario integer,
+    id_tipo_identificacion integer
+);
+
+
+ALTER TABLE usuario OWNER TO postgres;
+
+--
+-- TOC entry 176 (class 1259 OID 16425)
+-- Name: usuario_id_usuario_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE usuario_id_usuario_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE usuario_id_usuario_seq OWNER TO postgres;
+
+--
+-- TOC entry 2238 (class 0 OID 0)
+-- Dependencies: 176
+-- Name: usuario_id_usuario_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE usuario_id_usuario_seq OWNED BY usuario.id_usuario;
+
+
+--
+-- TOC entry 2043 (class 2604 OID 16558)
+-- Name: id_actividad_cardica; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY actividad_cardiaca ALTER COLUMN id_actividad_cardica SET DEFAULT nextval('actividad_cardiaca_id_actividad_cardica_seq'::regclass);
+
+
+--
+-- TOC entry 2040 (class 2604 OID 16504)
+-- Name: id_area_trabajo; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY area_trabajo ALTER COLUMN id_area_trabajo SET DEFAULT nextval('area_trabajo_id_area_trabajo_seq'::regclass);
+
+
+--
+-- TOC entry 2041 (class 2604 OID 16515)
+-- Name: id_datos_laborales; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY datos_laborales ALTER COLUMN id_datos_laborales SET DEFAULT nextval('datos_laborales_id_datos_laborales_seq'::regclass);
+
+
+--
+-- TOC entry 2042 (class 2604 OID 16542)
+-- Name: id_datos_profesionales; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY datos_profesionales ALTER COLUMN id_datos_profesionales SET DEFAULT nextval('datos_profesionales_id_datos_profesionales_seq'::regclass);
+
+
+--
+-- TOC entry 2038 (class 2604 OID 16472)
+-- Name: id_directorio; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY directorio ALTER COLUMN id_directorio SET DEFAULT nextval('directorio_id_directorio_seq'::regclass);
+
+
+--
+-- TOC entry 2044 (class 2604 OID 16571)
+-- Name: id_notificacion; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY notificacion ALTER COLUMN id_notificacion SET DEFAULT nextval('notificacion_id_notificacion_seq'::regclass);
+
+
+--
+-- TOC entry 2045 (class 2604 OID 16592)
+-- Name: id_pulso_ideal; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY pulso_ideal ALTER COLUMN id_pulso_ideal SET DEFAULT nextval('pulso_ideal_id_pulso_ideal_seq'::regclass);
+
+
+--
+-- TOC entry 2034 (class 2604 OID 16422)
+-- Name: id_tipo_identificacion; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY tipo_identificacion ALTER COLUMN id_tipo_identificacion SET DEFAULT nextval('tipo_identificacion_id_tipo_identificacion_seq'::regclass);
+
+
+--
+-- TOC entry 2039 (class 2604 OID 16493)
+-- Name: id_tipo_institucion; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY tipo_institucion ALTER COLUMN id_tipo_institucion SET DEFAULT nextval('tipo_institucion_id_tipo_institucion_seq'::regclass);
+
+
+--
+-- TOC entry 2037 (class 2604 OID 16464)
+-- Name: id_tipo_notificacion; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY tipo_notificacion ALTER COLUMN id_tipo_notificacion SET DEFAULT nextval('tipo_notificacion_id_tipo_notificacion_seq'::regclass);
+
+
+--
+-- TOC entry 2036 (class 2604 OID 16456)
+-- Name: id_tipo_relacion; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY tipo_relacion ALTER COLUMN id_tipo_relacion SET DEFAULT nextval('tipo_relacion_id_tipo_relacion_seq'::regclass);
+
+
+--
+-- TOC entry 2033 (class 2604 OID 16414)
+-- Name: id_tipo_usuario; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY tipo_usuario ALTER COLUMN id_tipo_usuario SET DEFAULT nextval('tipo_usuario_id_tipo_usuario_seq'::regclass);
+
+
+--
+-- TOC entry 2035 (class 2604 OID 16430)
+-- Name: id_usuario; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY usuario ALTER COLUMN id_usuario SET DEFAULT nextval('usuario_id_usuario_seq'::regclass);
+
+
+--
+-- TOC entry 2213 (class 0 OID 16555)
+-- Dependencies: 193
+-- Data for Name: actividad_cardiaca; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY actividad_cardiaca (id_actividad_cardica, fecha_hora, pulso, id_usuario) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2239 (class 0 OID 0)
+-- Dependencies: 192
+-- Name: actividad_cardiaca_id_actividad_cardica_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('actividad_cardiaca_id_actividad_cardica_seq', 1, false);
+
+
+--
+-- TOC entry 2207 (class 0 OID 16501)
+-- Dependencies: 187
+-- Data for Name: area_trabajo; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY area_trabajo (id_area_trabajo, descripcion) FROM stdin;
+1	CONSULTA EXTERNA
+2	NEONATOLOGIA
+3	CUIDADOS INTENSIVOS
+\.
+
+
+--
+-- TOC entry 2240 (class 0 OID 0)
+-- Dependencies: 186
+-- Name: area_trabajo_id_area_trabajo_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('area_trabajo_id_area_trabajo_seq', 3, true);
+
+
+--
+-- TOC entry 2209 (class 0 OID 16512)
+-- Dependencies: 189
+-- Data for Name: datos_laborales; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY datos_laborales (id_datos_laborales, nombre_institucion, fecha_inicio, id_tipo_institucion, id_area_trabajo, id_usuario) FROM stdin;
+1	HOSPITAL LUIS VERNAZA	2014-06-01	2	3	1
+\.
+
+
+--
+-- TOC entry 2241 (class 0 OID 0)
+-- Dependencies: 188
+-- Name: datos_laborales_id_datos_laborales_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('datos_laborales_id_datos_laborales_seq', 1, true);
+
+
+--
+-- TOC entry 2211 (class 0 OID 16539)
+-- Dependencies: 191
+-- Data for Name: datos_profesionales; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY datos_profesionales (id_datos_profesionales, universidad, titulo, fecha_graduacion, id_usuario) FROM stdin;
+1	UNIVERSIDAD DE GUAYAQUIL	CARDIOLOGO	2013-05-27	1
+\.
+
+
+--
+-- TOC entry 2242 (class 0 OID 0)
+-- Dependencies: 190
+-- Name: datos_profesionales_id_datos_profesionales_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('datos_profesionales_id_datos_profesionales_seq', 1, true);
+
+
+--
+-- TOC entry 2203 (class 0 OID 16469)
+-- Dependencies: 183
+-- Data for Name: directorio; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY directorio (id_directorio, nombre_contacto, apellido_contacto, celular_contacto, email_contacto, id_usuario, id_tipo_relacion) FROM stdin;
+1	MARGARITA	PINARGOTE	0981043063	hluischimbo@gmail.com	2	2
+2	FELIX DAVID	LOOR BARRAGAN	9999999999	fedaloor@espol.edu.ec	2	1
+\.
+
+
+--
+-- TOC entry 2243 (class 0 OID 0)
+-- Dependencies: 182
+-- Name: directorio_id_directorio_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('directorio_id_directorio_seq', 2, true);
+
+
+--
+-- TOC entry 2215 (class 0 OID 16568)
+-- Dependencies: 195
+-- Data for Name: notificacion; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY notificacion (id_notificacion, fecha_hora, observacion, id_directorio, id_tipo_notificacion) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2244 (class 0 OID 0)
+-- Dependencies: 194
+-- Name: notificacion_id_notificacion_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('notificacion_id_notificacion_seq', 1, false);
+
+
+--
+-- TOC entry 2217 (class 0 OID 16589)
+-- Dependencies: 197
+-- Data for Name: pulso_ideal; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY pulso_ideal (id_pulso_ideal, minimo, maximo, observacion, edad) FROM stdin;
+1	80	160	REPOSO	1
+2	80	130	REPOSO	2
+3	80	120	REPOSO	3
+\.
+
+
+--
+-- TOC entry 2245 (class 0 OID 0)
+-- Dependencies: 196
+-- Name: pulso_ideal_id_pulso_ideal_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('pulso_ideal_id_pulso_ideal_seq', 3, true);
+
+
+--
+-- TOC entry 2195 (class 0 OID 16419)
+-- Dependencies: 175
+-- Data for Name: tipo_identificacion; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY tipo_identificacion (id_tipo_identificacion, descripcion) FROM stdin;
+1	CEDULA
+2	PASAPORTE
+3	HISTORIA CLINICA
+\.
+
+
+--
+-- TOC entry 2246 (class 0 OID 0)
+-- Dependencies: 174
+-- Name: tipo_identificacion_id_tipo_identificacion_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('tipo_identificacion_id_tipo_identificacion_seq', 3, true);
+
+
+--
+-- TOC entry 2205 (class 0 OID 16490)
+-- Dependencies: 185
+-- Data for Name: tipo_institucion; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY tipo_institucion (id_tipo_institucion, descripcion) FROM stdin;
+1	PUBLICA
+2	PRIVADA
+\.
+
+
+--
+-- TOC entry 2247 (class 0 OID 0)
+-- Dependencies: 184
+-- Name: tipo_institucion_id_tipo_institucion_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('tipo_institucion_id_tipo_institucion_seq', 2, true);
+
+
+--
+-- TOC entry 2201 (class 0 OID 16461)
+-- Dependencies: 181
+-- Data for Name: tipo_notificacion; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY tipo_notificacion (id_tipo_notificacion, descripcion) FROM stdin;
+1	PREVENCION
+2	ALERTA
+\.
+
+
+--
+-- TOC entry 2248 (class 0 OID 0)
+-- Dependencies: 180
+-- Name: tipo_notificacion_id_tipo_notificacion_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('tipo_notificacion_id_tipo_notificacion_seq', 2, true);
+
+
+--
+-- TOC entry 2199 (class 0 OID 16453)
+-- Dependencies: 179
+-- Data for Name: tipo_relacion; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY tipo_relacion (id_tipo_relacion, descripcion) FROM stdin;
+1	MEDICO  - PACIENTE
+2	CONTACTO
+\.
+
+
+--
+-- TOC entry 2249 (class 0 OID 0)
+-- Dependencies: 178
+-- Name: tipo_relacion_id_tipo_relacion_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('tipo_relacion_id_tipo_relacion_seq', 2, true);
+
+
+--
+-- TOC entry 2193 (class 0 OID 16411)
+-- Dependencies: 173
+-- Data for Name: tipo_usuario; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY tipo_usuario (id_tipo_usuario, descripcion) FROM stdin;
+1	MEDICO
+2	PACIENTE
+\.
+
+
+--
+-- TOC entry 2250 (class 0 OID 0)
+-- Dependencies: 172
+-- Name: tipo_usuario_id_tipo_usuario_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('tipo_usuario_id_tipo_usuario_seq', 2, true);
+
+
+--
+-- TOC entry 2197 (class 0 OID 16427)
+-- Dependencies: 177
+-- Data for Name: usuario; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY usuario (id_usuario, num_identificacion, nombres, apellidos, fecha_nacimiento, celular, email, genero, "user", password, id_tipo_usuario, id_tipo_identificacion) FROM stdin;
+1	926661893	FELIX DAVID	LOOR BARRAGAN	1988-06-15	999999999	fedaloor@espol.edu.ec	1	felix	fedaloor	1	1
+2	926476169	HECTOR LUIS	CHIMBO PINARGOTE	1990-03-12	9979124745	hchimbo@espol.edu.ec	1	hchimbo	hchimbo	2	1
+\.
+
+
+--
+-- TOC entry 2251 (class 0 OID 0)
+-- Dependencies: 176
+-- Name: usuario_id_usuario_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('usuario_id_usuario_seq', 2, true);
+
+
+--
+-- TOC entry 2067 (class 2606 OID 16560)
+-- Name: id_actividadcardiacaPK; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY actividad_cardiaca
+    ADD CONSTRAINT "id_actividadcardiacaPK" PRIMARY KEY (id_actividad_cardica);
+
+
+--
+-- TOC entry 2061 (class 2606 OID 16509)
+-- Name: id_areatrabajoPK; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY area_trabajo
+    ADD CONSTRAINT "id_areatrabajoPK" PRIMARY KEY (id_area_trabajo);
+
+
+--
+-- TOC entry 2063 (class 2606 OID 16520)
+-- Name: id_datoslaboralesPK; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY datos_laborales
+    ADD CONSTRAINT "id_datoslaboralesPK" PRIMARY KEY (id_datos_laborales);
+
+
+--
+-- TOC entry 2065 (class 2606 OID 16547)
+-- Name: id_datosprofesionalesPK; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY datos_profesionales
+    ADD CONSTRAINT "id_datosprofesionalesPK" PRIMARY KEY (id_datos_profesionales);
+
+
+--
+-- TOC entry 2057 (class 2606 OID 16477)
+-- Name: id_directorioPK; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY directorio
+    ADD CONSTRAINT "id_directorioPK" PRIMARY KEY (id_directorio);
+
+
+--
+-- TOC entry 2069 (class 2606 OID 16576)
+-- Name: id_notificacionPK; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY notificacion
+    ADD CONSTRAINT "id_notificacionPK" PRIMARY KEY (id_notificacion);
+
+
+--
+-- TOC entry 2071 (class 2606 OID 16597)
+-- Name: id_pulsoidealPK; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY pulso_ideal
+    ADD CONSTRAINT "id_pulsoidealPK" PRIMARY KEY (id_pulso_ideal);
+
+
+--
+-- TOC entry 2059 (class 2606 OID 16498)
+-- Name: id_tipoinstitucionPK; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY tipo_institucion
+    ADD CONSTRAINT "id_tipoinstitucionPK" PRIMARY KEY (id_tipo_institucion);
+
+
+--
+-- TOC entry 2055 (class 2606 OID 16466)
+-- Name: id_tiponotificacionPK; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY tipo_notificacion
+    ADD CONSTRAINT "id_tiponotificacionPK" PRIMARY KEY (id_tipo_notificacion);
+
+
+--
+-- TOC entry 2053 (class 2606 OID 16458)
+-- Name: id_tiporelacionPK; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY tipo_relacion
+    ADD CONSTRAINT "id_tiporelacionPK" PRIMARY KEY (id_tipo_relacion);
+
+
+--
+-- TOC entry 2051 (class 2606 OID 16432)
+-- Name: id_userPK; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY usuario
+    ADD CONSTRAINT "id_userPK" PRIMARY KEY (id_usuario);
+
+
+--
+-- TOC entry 2049 (class 2606 OID 16424)
+-- Name: tipo_identificacionPK; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY tipo_identificacion
+    ADD CONSTRAINT "tipo_identificacionPK" PRIMARY KEY (id_tipo_identificacion);
+
+
+--
+-- TOC entry 2047 (class 2606 OID 16416)
+-- Name: tipo_usuarioPK; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY tipo_usuario
+    ADD CONSTRAINT "tipo_usuarioPK" PRIMARY KEY (id_tipo_usuario);
+
+
+--
+-- TOC entry 2077 (class 2606 OID 16526)
+-- Name: id_areatrabajoFK; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY datos_laborales
+    ADD CONSTRAINT "id_areatrabajoFK" FOREIGN KEY (id_area_trabajo) REFERENCES area_trabajo(id_area_trabajo);
+
+
+--
+-- TOC entry 2081 (class 2606 OID 16577)
+-- Name: id_directorioFK; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY notificacion
+    ADD CONSTRAINT "id_directorioFK" FOREIGN KEY (id_directorio) REFERENCES directorio(id_directorio);
+
+
+--
+-- TOC entry 2076 (class 2606 OID 16521)
+-- Name: id_tipoinstitucionFK; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY datos_laborales
+    ADD CONSTRAINT "id_tipoinstitucionFK" FOREIGN KEY (id_tipo_institucion) REFERENCES tipo_institucion(id_tipo_institucion);
+
+
+--
+-- TOC entry 2082 (class 2606 OID 16582)
+-- Name: id_tiponotificacionFK; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY notificacion
+    ADD CONSTRAINT "id_tiponotificacionFK" FOREIGN KEY (id_tipo_notificacion) REFERENCES tipo_notificacion(id_tipo_notificacion);
+
+
+--
+-- TOC entry 2075 (class 2606 OID 16483)
+-- Name: id_tiporelacionFK; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY directorio
+    ADD CONSTRAINT "id_tiporelacionFK" FOREIGN KEY (id_tipo_relacion) REFERENCES tipo_relacion(id_tipo_relacion);
+
+
+--
+-- TOC entry 2074 (class 2606 OID 16478)
+-- Name: id_usuarioFK; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY directorio
+    ADD CONSTRAINT "id_usuarioFK" FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario);
+
+
+--
+-- TOC entry 2078 (class 2606 OID 16531)
+-- Name: id_usuarioFK; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY datos_laborales
+    ADD CONSTRAINT "id_usuarioFK" FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario);
+
+
+--
+-- TOC entry 2079 (class 2606 OID 16548)
+-- Name: id_usuarioFK; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY datos_profesionales
+    ADD CONSTRAINT "id_usuarioFK" FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario);
+
+
+--
+-- TOC entry 2080 (class 2606 OID 16561)
+-- Name: id_usuarioFK; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY actividad_cardiaca
+    ADD CONSTRAINT "id_usuarioFK" FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario);
+
+
+--
+-- TOC entry 2073 (class 2606 OID 16438)
+-- Name: tipo_identificacion; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY usuario
+    ADD CONSTRAINT tipo_identificacion FOREIGN KEY (id_tipo_identificacion) REFERENCES tipo_identificacion(id_tipo_identificacion);
+
+
+--
+-- TOC entry 2072 (class 2606 OID 16433)
+-- Name: tipo_usuarioFK; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY usuario
+    ADD CONSTRAINT "tipo_usuarioFK" FOREIGN KEY (id_tipo_usuario) REFERENCES tipo_usuario(id_tipo_usuario);
+
+
+--
+-- TOC entry 2224 (class 0 OID 0)
+-- Dependencies: 5
+-- Name: public; Type: ACL; Schema: -; Owner: postgres
+--
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM postgres;
+GRANT ALL ON SCHEMA public TO postgres;
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+-- Completed on 2015-09-14 21:36:43 ECT
+
+--
+-- PostgreSQL database dump complete
+--
+
+=======
 --
 -- PostgreSQL database dump
 --
@@ -1514,3 +2673,4 @@ GRANT ALL ON SCHEMA public TO PUBLIC;
 -- PostgreSQL database dump complete
 --
 
+>>>>>>> 2b39d1c40ae8235f0bdf0b3059f406639abac55a:base.backup

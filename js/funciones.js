@@ -33,27 +33,35 @@ function cambiarDivTipoConsulta() {
 function login() {
     var user = $("#txtUsuario").val();
     var pass = $("#txtPassword").val();
-    if(user === "fedaloor"){
-        if(pass === "espol"){
-            $("#btnLogin").css("display", "none");
-            $("#btnLogout").css("display", "inline");
-            $("#btnPacientes").css("display", "inline");
-            $("#btnControl").css("display", "inline");
-            $("#btnConsulta").css("display", "inline");
-            $("#btnTips").css("display", "inline");
-            $("#btnRegistrate").css("display", "inline");
-            $("#btnContactanos").css("display", "inline");
-            $("#btnAcerca").css("display", "inline");
-            $("#txtUsuario").val("");
-            $("#txtPassword").val("");
-        }else{
-            alert("Contraseña incorrecta");
-            $("#txtUsuario").focus();
-        }
-    }else{
-        alert("Usuario incorrecto");
+    if(user === ""){
+        alert("Error, por favor ingrese su usuario");
         $("#txtUsuario").focus();
+    }else if(pass === ""){
+        alert("Error, por favor ingrese su contraseña");
+        $("#txtPassword").focus();
+    }else{
+        objeto = {user, pass};
+        $.ajax({
+            cache: false,
+            url: "../mvc/objetos/login.php",
+            type: "POST",
+            data: objeto,
+            dataType: 'json',
+            success: function(data){
+                var res = data;
+                iden = res['identificador'];
+                if(ident == 0){
+                    alert('Error, usuario o clave incorrectos');
+                }else{
+                    location.reload(true);
+                }
+            },
+            error : function(r, status){
+                alert('Error, no se puede conectar ahora');
+            }
+        });
     }
+        
 }
 
 function logout() {

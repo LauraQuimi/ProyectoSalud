@@ -1,5 +1,8 @@
 <?php
     session_start();
+    include_once('mvc/objetos/usuario.php');
+    include_once('mvc/objetos/usuarioCollector.php');
+    $usuarioCollectorObj = new usuarioCollector();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -247,6 +250,8 @@
         
             <?php
                 }else if($ident === 2){
+		$idusuario=2;
+		$usuario=$usuarioCollectorObj->showUsuario($idusuario);
             ?>
                 <!-- Start Main Body Section -->
                 <div class="mainbody-section text-center">
@@ -427,6 +432,161 @@
             </div>
         </div>
         <!-- Fin Sección Login -->
+
+  
+        <!-- Start Portfolio Section
+        
+        <!-- Start Portfolio Section -->
+
+        <div class="section-modal modal fade" id="portfolio-modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title text-center">
+                            <h3>Our Portfolio</h3>
+                            <p>Duis aute irure dolor in reprehenderit in voluptate</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        
+                        <div class="col-md-4">
+                            <div class="portfolio-item">
+                                <img src="img/1.png" class="img-responsive" alt="...">
+                                <div class="portfolio-details text-center">
+                                    <h4>Project Name</h4>
+				    <a href="#historial-modal" data-toggle="modal">
+                                	<i class="fa fa-book"></i>
+                                        <p>Historial de la Presion</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-md-4">
+                            <div class="portfolio-item">
+                                <img src="img/2.png" class="img-responsive" alt="...">
+                                <div class="portfolio-details text-center">
+                                    <h4>Project Name</h4>
+                                    <a href="#"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="portfolio-item">
+                                <img src="img/3.png" class="img-responsive" alt="...">
+                                <div class="portfolio-details text-center">
+                                    <h4>Project Name</h4>
+                                    <a href="#"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="portfolio-item">
+                                <img src="img/4.png" class="img-responsive" alt="...">
+                                <div class="portfolio-details text-center">
+                                    <h4>Project Name</h4>
+                                    <a href="#"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="portfolio-item">
+                                <img src="img/5.png" class="img-responsive" alt="...">
+                                <div class="portfolio-details text-center">
+                                    <h4>Project Name</h4>
+                                    <a href="#"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="portfolio-item">
+                                <img src="img/6.png" class="img-responsive" alt="...">
+                                <div class="portfolio-details text-center">
+                                    <h4>Project Name</h4>
+                                    <a href="#"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="portfolio-item">
+                                <img src="img/7.png" class="img-responsive" alt="...">
+                                <div class="portfolio-details text-center">
+                                    <h4>Project Name</h4>
+                                    <a href="#"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="portfolio-item">
+                                <img src="img/8.png" class="img-responsive" alt="...">
+                                <div class="portfolio-details text-center">
+                                    <h4>Project Name</h4>
+                                    <a href="#"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="portfolio-item">
+                                <img src="img/9.png" class="img-responsive" alt="...">
+                                <div class="portfolio-details text-center">
+                                    <h4>Project Name</h4>
+                                    <a href="#"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="portfolio-item">
+                                <img src="img/10.png" class="img-responsive" alt="...">
+                                <div class="portfolio-details text-center">
+                                    <h4>Project Name</h4>
+                                    <a href="#"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="portfolio-item">
+                                <img src="img/11.png" class="img-responsive" alt="...">
+                                <div class="portfolio-details text-center">
+                                    <h4>Project Name</h4>
+                                    <a href="#"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="portfolio-item">
+                                <img src="img/12.png" class="img-responsive" alt="...">
+                                <div class="portfolio-details text-center">
+                                    <h4>Project Name</h4>
+                                    <a href="#"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div><!-- /.row -->
+                </div>
+                
+            </div>
+        </div>
+        <!-- End Portfolio Section -->
+
         <!-- Inicio Sección Acerca De... -->
         <div class="section-modal modal fade" id="acerca-modal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-content">
@@ -453,6 +613,7 @@
                                 <p>Social Heart es una solución web distribuida por Smart Web Solutions Inc. Social Heart es una aplicación específica, cuya función es contribuir en el área médica de la cardiología. Permitiendo llevar un registro de las actividades cardiacas de una persona. Dicha actividad cardiaca puede ser supervisada por el mismo usuario o por su médico de confianza.</p>
                                 <p><b>ADVERTENCIA:</b> Esta aplicación está protegida por leyes de propiedad intelectual y tratados internacionales. La distribución o reproducción no autorizada de este programa o de cualquiera de sus partes, está penada con sanciones penales y civiles, serán objeto de todas las acciones judiciales que correspondan.</p>
 
+
                                <!-- <div class="row">
                                     <div class="col-md-4 col-sm-6">
                                         <ul>
@@ -478,11 +639,15 @@
                                             <li><i class="fa fa-check-square-o"></i>At vero eos et accusamus et iusto odio</li>
                                         </ul>
                                     </div>
+
                                 </div> /.row -->
+
+
+                                </div>
 
                             </div>
                         </div>
-                    </div><!-- /.row -->
+                    </div>
                     <div class="row">
 
                         <!-- <div class="col-md-6 col-sm-6">
@@ -546,6 +711,11 @@
                             </div>
                         </div> -->
 
+
+                        <div class="col-md-6 col-sm-6">
+                            <div class="skill-shortcode">
+                        
+
                         <div class="col-md-6" style="margin-left: 293px;">
                             <div class="custom-tab">
                         
@@ -572,7 +742,7 @@
                                         <p>Smart Web Solutions ha provisto de varias aplicaciones web a diferentes empresas a nivel nacional y en varios países de la región, alcanzando un buen posicionamiento de mercado en el país y en el exterior. Actualmente la empresa está creciendo gradualmente, creando nuevas sucursales en Quito y en Cuenca, generando empleo para más profesionales que se unen al equipo élite de nuestra corporación.</p>
                                     </div>
 
-                                </div><!-- /.tab-content -->
+                                </div>
 
                             </div>
                         </div>
@@ -584,361 +754,6 @@
         <!-- Fin Sección Acerca De... -->
         
 
-        <!-- Start Service Section -->
-        <div class="section-modal modal fade" id="service-modal" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title text-center">
-                            <h3>Our Services</h3>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="feature-2">
-                                <div class="media">
-                                    <i class="fa fa-magic pull-left"></i>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">Web Design</h4>
-                                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- /.col-md-4 -->
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="feature-2">
-                                <div class="media">
-                                    <i class="fa fa-css3 pull-left"></i>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">HTML5 & CSS3</h4>
-                                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- /.col-md-4 -->
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="feature-2">
-                                <div class="media">
-                                    <i class="fa fa-wordpress pull-left"></i>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">Wordpress Theme</h4>
-                                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- /.col-md-4 -->
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="feature-2">
-                                <div class="media">
-                                    <i class="fa fa-plug pull-left"></i>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">Wordpress Plugin</h4>
-                                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- /.col-md-4 -->
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="feature-2">
-                                <div class="media">
-                                    <i class="fa fa-joomla pull-left"></i>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">Joomla Template</h4>
-                                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- /.col-md-4 -->
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="feature-2">
-                                <div class="media">
-                                    <i class="fa fa-cube pull-left"></i>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">Joomla Extension</h4>
-                                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- /.col-md-4 -->
-                        
-                    </div><!-- /.row -->
-                </div>
-                
-                <div class="pricing-section">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-3 col-sm-6">
-                                <div class="pricing-table">
-                                    <div class="plan-name">
-                                        <h3>Free</h3>
-                                    </div>
-                                    <div class="plan-price">
-                                        <div class="price-value">$49<span>.00</span></div>
-                                        <div class="interval">per month</div>
-                                    </div>
-                                    <div class="plan-list">
-                                        <ul>
-                                            <li>40 GB Storage</li>
-                                            <li>40 GB Transfer</li>
-                                            <li>10 Domains</li>
-                                            <li>20 Projects</li>
-                                            <li>Free installation</li>
-                                        </ul>
-                                    </div>
-                                    <div class="plan-signup">
-                                        <a href="#" class="btn-system btn-small">Sign Up Now</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6">
-                                <div class="pricing-table">
-                                    <div class="plan-name">
-                                        <h3>Standard</h3>
-                                    </div>
-                                    <div class="plan-price">
-                                        <div class="price-value">$49<span>.00</span></div>
-                                        <div class="interval">per month</div>
-                                    </div>
-                                    <div class="plan-list">
-                                        <ul>
-                                            <li>40 GB Storage</li>
-                                            <li>40 GB Transfer</li>
-                                            <li>10 Domains</li>
-                                            <li>20 Projects</li>
-                                            <li>Free installation</li>
-                                        </ul>
-                                    </div>
-                                    <div class="plan-signup">
-                                        <a href="#" class="btn-system btn-small">Sign Up Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6">
-                                <div class="pricing-table">
-                                    <div class="plan-name">
-                                        <h3>Premium</h3>
-                                    </div>
-                                    <div class="plan-price">
-                                        <div class="price-value">$49<span>.00</span></div>
-                                        <div class="interval">per month</div>
-                                    </div>
-                                    <div class="plan-list">
-                                        <ul>
-                                            <li>40 GB Storage</li>
-                                            <li>40 GB Transfer</li>
-                                            <li>10 Domains</li>
-                                            <li>20 Projects</li>
-                                            <li>Free installation</li>
-                                        </ul>
-                                    </div>
-                                    <div class="plan-signup">
-                                        <a href="#" class="btn-system btn-small">Sign Up Now</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6">
-                                <div class="pricing-table">
-                                    <div class="plan-name">
-                                        <h3>Professional</h3>
-                                    </div>
-                                    <div class="plan-price">
-                                        <div class="price-value">$49<span>.00</span></div>
-                                        <div class="interval">per month</div>
-                                    </div>
-                                    <div class="plan-list">
-                                        <ul>
-                                            <li>40 GB Storage</li>
-                                            <li>40 GB Transfer</li>
-                                            <li>10 Domains</li>
-                                            <li>20 Projects</li>
-                                            <li>Free installation</li>
-                                        </ul>
-                                    </div>
-                                    <div class="plan-signup">
-                                        <a href="#" class="btn-system btn-small">Sign Up Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        <!-- End Service Section -->
-        
-        <!-- Start Team Member Section -->
-        <div class="section-modal modal fade" id="team-modal" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title text-center">
-                            <h3>Our Expert Team</h3>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img src="img/manage-1.png" class="img-responsive" alt="">
-                                <div class="team-details">
-                                    <h4>John Doe</h4>
-                                    <div class="designation">Senior Web Developer</div>
-                                    <ul style="text-align: center;">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img src="img/manage-2.png" class="img-responsive" alt="">
-                                <div class="team-details">
-                                    <h4>John Doe</h4>
-                                    <div class="designation">Senior Web Developer</div>
-                                    <ul style="text-align: center;">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img src="img/manage-3.png" class="img-responsive" alt="">
-                                <div class="team-details">
-                                    <h4>John Doe</h4>
-                                    <div class="designation">Senior Web Developer</div>
-                                    <ul style="text-align: center;">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img src="img/manage-4.png" class="img-responsive" alt="">
-                                <div class="team-details">
-                                    <h4>John Doe</h4>
-                                    <div class="designation">Senior Web Developer</div>
-                                    <ul style="text-align: center;">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img src="img/team-1.jpg" class="img-responsive" alt="">
-                                <div class="team-details">
-                                    <h4>John Doe</h4>
-                                    <div class="designation">Senior Web Developer</div>
-                                    <ul style="text-align: center;">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img src="img/team-2.jpg" class="img-responsive" alt="">
-                                <div class="team-details">
-                                    <h4>John Doe</h4>
-                                    <div class="designation">Senior Web Developer</div>
-                                    <ul style="text-align: center;">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img src="img/team-3.jpg" class="img-responsive" alt="">
-                                <div class="team-details">
-                                    <h4>John Doe</h4>
-                                    <div class="designation">Senior Web Developer</div>
-                                    <ul style="text-align: center;">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img src="img/team-4.jpg" class="img-responsive" alt="">
-                                <div class="team-details">
-                                    <h4>John Doe</h4>
-                                    <div class="designation">Senior Web Developer</div>
-                                    <ul style="text-align: center;">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div><!-- /.row -->
-                </div>
-                
-            </div>
-        </div>
-        <!-- End Team Member Section -->
         
 
         <!-- Inicio Sección Tips -->
@@ -963,13 +778,6 @@
                             <div class="latest-post">
                                 <img src="img/about-02.png" class="img-responsive" alt="">
                                 <h4><a href="#">Alimentación saludable</a></h4>
-                                <!--<div class="post-details">
-                                    <ul>
-                                        <li><i class="fa fa-user"></i> Auther : iThemesLab</li>
-                                        <li><i class="fa fa-calendar"></i> 07 Aug, 2014</li>
-                                        <li><i class="fa fa-tag"></i> Music</li>
-                                    </ul>
-                                </div>-->
                                 <p><b>Consume frutas y verduras:</b> Se recomienda la ingesta de alimentos como espinacas, zanahorias, duraznos o fresas, debido a que tiene mayor contenido de micronutrientes. Por otro lado, la AHA insiste en que un jugo no es equivalente a una fruta respecto a su contenido de fibra ni en su capacidad de saciedad; también advierte sobre la importancia de la preparación de los alimentos para preservar sus propiedades.
                                 <br><b>Limita la ingesta de grasas trans y saturadas:</b> Los alimentos de origen animal (carne roja y leche de vaca) son los que contienen el mayor número de grasas saturadas; mientras que las trans están presentes en alimentos fritos, preparados y en biscochos industriales. La AHA sugiere que el consumo de estos productos esté por debajo del 7% y que el consumo de colesterol no llegue a los 300 mg.
                                 <br><b>Incluye pescado y cereales integrales a tu dieta:</b> La fibra reduce modestamente los niveles de colesterol malo y fomenta la saciedad al producir un vaciado lento del estómago. Se recomienda que al menos la mitad de los cereales sean integrales. El pescado como el salmón, las sardinas o el atún, tiene un alto contenido en ácidos grasos oleico y linoleico, asociados con un menor riesgo de enfermedades cardiovasculares.</p>
@@ -980,13 +788,6 @@
                             <div class="latest-post">
                                 <img src="img/about-03.png" class="img-responsive" alt="">
                                 <h4><a href="#">Actividad física</a></h4>
-                               <!-- <div class="post-details">
-                                    <ul>
-                                        <li><i class="fa fa-user"></i> Auther : iThemesLab</li>
-                                        <li><i clss="fa fa-calendar"></i> 07 Aug, 2014</li>
-                                        <li><i class="fa fa-tag"></i> Music</li>
-                                    </ul>
-                                </div>-->
                                 <p><b>Lleva una vida activa:</b> Se recomienda que todos los adultos realicen 30 o más minutos de actividad física, todos los días de la semana. Si el objetivo es perder peso, deben practicar 60 minutos diarios de ejercicio.
                                 <br><b>La práctica deportiva es la mejor herramienta para mantener un corazón saludable:</b> Los expertos señalan que la respuesta al ejercicio en la mujer es diferente respecto al hombre, debido a las peculiaridades cardiovasculares femeninas como el tamaño del corazón, un menor desarrollo de la caja torácica y una menor cantidad de sangre, entre otras.
                                 <br><b>Una vida sexual sana:</b> La Asociación Americana del Corazón asegura que no existe ninguna razón por la que los pacientes cardiacos o sobrevivientes a un infarto no puedan reanudar una actividad sexual plena en cuanto se sientan listos para hacerlo. Los especialistas enfatizan que la actividad física en los pacientes cardiacos es importante para lograr una rehabilitación sexual sin mayores problemas.</p>
@@ -997,13 +798,6 @@
                             <div class="latest-post">
                                 <img src="img/about-04.jpg" class="img-responsive" alt="">
                                 <h4><a href="#">Evitar consumo de alcohol y tabaco</a></h4>
-                                <!--<div class="post-details">
-                                    <ul>
-                                        <li><i class="fa fa-user"></i> Auther : iThemesLab</li>
-                                        <li><i class="fa fa-calendar"></i> 07 Aug, 2014</li>
-                                        <li><i class="fa fa-tag"></i> Music</li>
-                                    </ul>
-                                </div>-->
                                 <p><b>Evita el consumo o la exposición al tabaco:</b> Fumar está relacionado al cáncer y a trastornos cardiovasculares, cuida tu ambiente y sobre todo tu salud.
                                 <br><b>Disminuye el consumo de bebidas azucaradas y alcohol:</b> Al reducir la ingesta de estos productos se reduce la cantidad de calorías que entran al organismo.
                                 <br><b>Mantén una presión arterial normal, por debajo de 120/80 mm/Hg:</b> Los niveles de ésta pueden modificarse con la dieta, actividad física y factores psicosociales. Baja la ingesta de sal (ideal por debajo de 1.5 g/día), aumenta el consumo de potasio, reduce las calorías y consume alcohol de forma moderada.</p>
@@ -1015,13 +809,6 @@
                             <div class="latest-post">
                                 <img src="img/about-05.jpg" class="img-responsive" alt="">
                                 <h4><a href="#">Sé sociable</a></h4>
-                                <!--<div class="post-details">
-                                    <ul>
-                                        <li><i class="fa fa-user"></i> Auther : iThemesLab</li>
-                                        <li><i class="fa fa-calendar"></i> 07 Aug, 2014</li>
-                                        <li><i class="fa fa-tag"></i> Music</li>
-                                    </ul>
-                                </div>-->
                                 <p><b>Enfoca tu atención a grupos especiales:</b> Cada vez hay más obesidad entre los pequeños. Por este motivo, se aconseja iniciar una dieta sana y actividad física desde los primeros años de vida. En cuanto a los adultos mayores, debido a la frecuencia con la que presentan trastornos cardiovasculares, se les pide acudir a un médico para que los asesore sobre el tipo de nutrientes que deben ingerir. Las personas con enfermedades como el síndrome metabólico o insuficiencia renal crónica deben seguir recomendaciones específicas como: una dieta muy baja en grasas y calorías, aumentar su actividad física para bajar de peso, y consumir poca sal.</p>
                                 
                             </div>
@@ -1534,271 +1321,6 @@
                 ?>
 
                 
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title text-center">
-                            <h3>Registro de Usuario</h3>
-                           <!-- <p>Seleccione tipo de usuario</p>-->
-                            <div class="form-group caja">
-                                <select class="form-control combo" id="cbxTipoUsuario" onchange="javascript:cambiarDiv()">
-                                    <option value="">-- Seleccione su tipo de usuario --</option>
-                                    <option value="0">Paciente</option>
-                                    <option value="1">Médico</option>
-                                </select>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row" id="divPaciente" style="display: none;">
-                        <div class="col-md-12">
-                            <form id="PacienteForm" action ="mvc/objetos/insertar_paciente.php" method ="post">
-                                <div class="row" style="margin-bottom: 15px;">
-                                    <fieldset class="grupo">
-                                        <legend>Datos Personales</legend>
-                                        <div class="form-group fila">
-                                            <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Nombres *" name="txtNombrePac" required data-validation-required-message="Por favor ingrese su nombre.">
-                                                <p class="help-block text-danger"></p>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Apellidos *" name="txtApellidoPac" required data-validation-required-message="Por favor ingrese su apellido.">
-                                                <p class="help-block text-danger"></p>
-                                            </div>
-                                        </div>
-                                        <div class="form-group fila">
-                                            <div class="col-md-6">
-                                                <select class="form-control combo" name="cbxIdentificacionPac" required data-validation-required-message="Seleccione el tipo de identificación.">
-                                                    <option value=0>-- Seleccione su tipo de identificación --</option>
-                                                    <option value=1>Cédula</option>
-                                                    <option value=2>Pasaporte</option>
-                                                    <option value=3>Nro. de historia clínica</option>
-                                                </select>
-                                                <p class="help-block text-danger"></p>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Número de identificación *" name="txtIdentificacionPac" required data-validation-required-message="Inserte el # de Identificación.">
-                                                <p class="help-block text-danger"></p>
-                                            </div>
-                                        </div>
-                                        <div class="form-group fila" style="height: 109px;">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <input type="date" class="form-control" name="dtpFecNacPac" required data-validation-required-message="Por favor ingrese su fecha de nacimiento." placeholder="Fecha de Nacimiento (yyyy/mm/dd)">
-                                                    <p class="help-block text-danger"></p>
-                                                </div>
-                                                <div class="form-group">
-                                                    <input type="email" class="form-control" placeholder="Email *" name="txtEmailPac" required data-validation-required-message="Por favor ingrese su e-mail.">
-                                                    <p class="help-block text-danger"></p>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <fieldset class="grupo">
-                                                    <legend style="margin-bottom:2px;">Género sexual</legend>
-                                                    <input type="radio" name="genero" id="rdbMasculinoPac" value=1>
-                                                    <label for="rdbMasculinoPac">
-                                                        <span class="fa-stack">
-                                                            <i class="fa fa-circle-o fa-stack-1x"></i>
-                                                            <i class="fa fa-circle fa-stack-1x"></i>
-                                                        </span>
-                                                        Masculino
-                                                    </label><br>
-                                                    <input type="radio" name="genero" id="rdbFemeninoPac" value=2>
-                                                    <label for="rdbFemeninoPac">
-                                                        <span class="fa-stack">
-                                                            <i class="fa fa-circle-o fa-stack-1x"></i>
-                                                            <i class="fa fa-circle fa-stack-1x"></i>
-                                                        </span>
-                                                        Femenino
-                                                    </label>
-                                                </fieldset>
-                                            </div>
-                                        </div>
-                                        <div class="form-group fila">
-                                            <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Usuario *" name="txtUserPac" required data-validation-required-message="Por favor ingrese su usuario.">
-                                                <p class="help-block text-danger"></p>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <input type="password" class="form-control" placeholder="Contraseña *" name="txtPasswordPac" required data-validation-required-message="Por favor ingrese su contraseña.">
-                                                <p class="help-block text-danger"></p>
-                                            </div>
-                                        </div>
-                                        
-                                    </fieldset>
-                                </div>
-                                <div class="row">
-                                    <fieldset class="grupo">
-                                        <legend>Datos de Contacto</legend>
-                                        <div class="form-group fila">
-                                            <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Nombres *" name="txtNombreCon" required data-validation-required-message="Por favor ingrese el nombre de su contacto.">
-                                                <p class="help-block text-danger"></p>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Apellidos *" name="txtApellidoCon" required data-validation-required-message="Por favor ingrese el apellido de su contacto.">
-                                                <p class="help-block text-danger"></p>
-                                            </div>
-                                        </div>
-                                        <div class="form-group fila">
-                                            <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Celular *" name="txtCelularCon" required data-validation-required-message="Por favor ingrese el celular de su contacto.">
-                                                <p class="help-block text-danger"></p>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Email *" name="txtEmailCon" required data-validation-required-message="Por favor ingrese el e-mail de su contacto.">
-                                                <p class="help-block text-danger"></p>
-                                            </div>
-                                        </div>
-                                        
-                                    </fieldset>
-                                    <div class="clearfix"></div>
-                                    <div class="col-lg-12 text-center">
-                                        <div id="success"></div>
-                                        <button type="submit" class="btn btn-primary">REGISTRAR</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="row" id="divMediko" style="display: none;">
-                        <div class="col-md-12">
-                            <form id="PacienteForm" novalidate>
-                                <div class="row" style="margin-bottom: 15px;">
-                                    <fieldset class="grupo">
-                                        <legend>Datos Personales</legend>
-                                        <div class="form-group fila">
-                                            <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Nombres *" id="txtNombreMed" required data-validation-required-message="Por favor ingrese su nombre.">
-                                                <p class="help-block text-danger"></p>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Apellidos *" id="txtApellidoMed" required data-validation-required-message="Por favor ingrese su apellido.">
-                                                <p class="help-block text-danger"></p>
-                                            </div>
-                                        </div>
-                                        <div class="form-group fila">
-                                            <div class="col-md-6">
-                                                <select class="form-control combo" id="cbxIdentificacionMed" required data-validation-required-message="Seleccione el tipo de identificación.">
-                                                    <option value="">-- Seleccione su tipo de identificación --</option>
-                                                    <option value="0">Cédula</option>
-                                                    <option value="1">Pasaporte</option>
-                                                </select>
-                                                <p class="help-block text-danger"></p>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Número de identificación *" id="txtIdentificacionMed" required data-validation-required-message="Ingrese el # de su Identificación.">
-                                                <p class="help-block text-danger"></p>
-                                            </div>
-                                        </div>
-                                        <div class="form-group fila" style="height: 109px;">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <input type="date" class="form-control" id="dtpFecNacMed" required data-validation-required-message="Por favor ingrese su fecha de nacimiento.">
-                                                    <p class="help-block text-danger"></p>
-                                                </div>
-                                                <div class="form-group">
-                                                    <input type="email" class="form-control" placeholder="Email *" id="txtEmailMed" required data-validation-required-message="Por favor ingrese su email.">
-                                                    <p class="help-block text-danger"></p>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <fieldset class="grupo">
-                                                    <legend style="margin-bottom:2px;">Género sexual</legend>
-                                                    <input type="radio" name="genero" id="rdbMasculinoMed" value="Masculino">
-                                                    <label for="rdbMasculinoMed">
-                                                        <span class="fa-stack">
-                                                            <i class="fa fa-circle-o fa-stack-1x"></i>
-                                                            <i class="fa fa-circle fa-stack-1x"></i>
-                                                        </span>
-                                                        Masculino
-                                                    </label><br>
-                                                    <input type="radio" name="genero" id="rdbFemeninoMed" value="Femenino">
-                                                    <label for="rdbFemeninoMed">
-                                                        <span class="fa-stack">
-                                                            <i class="fa fa-circle-o fa-stack-1x"></i>
-                                                            <i class="fa fa-circle fa-stack-1x"></i>
-                                                        </span>
-                                                        Femenino
-                                                    </label>
-                                                </fieldset>
-                                            </div>
-                                        </div>
-                                        <div class="form-group fila">
-                                            <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Usuario *" id="txtUserMed" required data-validation-required-message="Por favor ingrese su usuario.">
-                                                <p class="help-block text-danger"></p>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <input type="password" class="form-control" placeholder="Contraseña *" id="txtPasswordMed" required data-validation-required-message="Por favor ingrese su contraseña.">
-                                                <p class="help-block text-danger"></p>
-                                            </div>
-                                        </div>
-                                        
-                                    </fieldset>
-                                </div>
-                                <div class="row" style="margin-bottom: 15px;">
-                                    <fieldset class="grupo">
-                                        <legend>Datos Profesionales</legend>
-                                        <div class="form-group fila">
-                                            <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Universidad *" id="txtUniversidadMed" required data-validation-required-message="Por favor ingrese el nombre de la Universidad.">
-                                                <p class="help-block text-danger"></p>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Título obtenido *" id="txtTituloMed" required data-validation-required-message="Ingrese la descripción del título obtenido.">
-                                                <p class="help-block text-danger"></p>
-                                            </div>
-                                        </div>
-                                        <div class="form-group fila">
-                                            <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Año de graduación *" id="txtAnioGraduacion" required data-validation-required-message="Ingrese el año de graduación.">
-                                                <p class="help-block text-danger"></p>
-                                            </div>
-                                        </div>
-                                        
-                                    </fieldset>
-                                </div>
-                                <div class="row">
-                                    <fieldset class="grupo">
-                                        <legend>Datos Laborales</legend>
-                                        <div class="form-group fila">
-                                            <div class="col-md-6">
-                                                <select class="form-control combo" id="cbxInstitucionMed" required data-validation-required-message="Seleccione el tipo de institución.">
-                                                    <option value="">-- Seleccione tipo de institución --</option>
-                                                    <option value="0">Institución pública</option>
-                                                    <option value="1">Institución privada</option>
-                                                    <option value="2">Clínica</option>
-                                                </select>
-                                                <p class="help-block text-danger"></p>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Nombre de institución *" id="txtInstitucionMed" required data-validation-required-message="Por favor ingresa el nombre de la institución.">
-                                                <p class="help-block text-danger"></p>
-                                            </div>
-                                        </div>
-                                        <div class="form-group fila">
-                                            <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Área de trabajo *" id="txtAreaMed" required data-validation-required-message="Por favor ingresa el área de trabajo.">
-                                                <p class="help-block text-danger"></p>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Año de ingreso *" id="txtAnioIngresoMed" required data-validation-required-message="Por favor registra el año de ingreso.">
-                                                <p class="help-block text-danger"></p>
-                                            </div>
-                                        </div>
-                                        
-                                    </fieldset>
-                                    <div class="clearfix"></div>
-                                    <div class="col-lg-12 text-center">
-                                        <div id="success"></div>
-                                        <button type="submit" class="btn btn-primary">REGISTRAR</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                
 
             </div>
         </div>
@@ -1835,7 +1357,6 @@
   
                                             <div class="col-md-6">
                                                <label class="etiquetas">Nombres: </label> 
-     
 
                                                 <input type="text" class="form-control" placeholder="Nombres *" id="txtNombrePac" required data-validation-required-message="Por favor ingresa tu nombre.">
 
@@ -1854,8 +1375,8 @@
                                             </div>
 
                                             <div class="col-md-6">
-<label class="etiquetas">Edad: </label>                                      
-           <input type="text" class="form-control" placeholder="Edad" id="txtEdadPac" required data-validation-required-message=" ">
+<label class="etiquetas">Fecha de Nacimiento: </label>                                      
+           <input type="text" class="form-control" placeholder="<?php echo $usuario->getFechanac(); ?>" id="txtEdadPac" required data-validation-required-message=" ">
                                                 <p class="help-block text-danger"></p>
                                             </div>
 
@@ -1883,30 +1404,18 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody style="border: 1px solid #FF432E;">
-                                                    <tr>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                    </tr>
+                                                   <?php
+							for ($i = 1; $i <= 10; $i++) {
+						   ?> 
+							   <tr>
+		                                                <td>2015-04-25</td>
+		                                                <td>1</td>
+		                                                <td>Ninguna</td>
+		                                                <td></td>
+		                                            </tr> 
+						    <?php
+							}
+						   ?>                                                  
                                                 </tbody>
                                             </table>
                                         </div>
@@ -2252,7 +1761,7 @@
 	                       <fieldset class="grupo">
                                 <legend>Ritmo Cardiaco</legend>
                                  <div class="form-group fila">
-<<<<<<< HEAD
+
                                                                                 
                                   <div class="col-md-6">
                 	            <div class="latest-post">
@@ -2300,11 +1809,12 @@
                                 
                             </div>
                         </div>
+
                                                                                 
                                   <div class="col-md-6">
                 	        	    <div class="latest-post">
                 	        
-				<!--iframe width="500" height="400" src="mvc/objetos/drawchart.php" frameborder="0" allowfullscreen></iframe-->
+				<iframe width="500" height="400" src="mvc/objetos/drawchart.php" frameborder="0" allowfullscreen></iframe>
 
 				</div>
 	                            </div>
@@ -2447,7 +1957,7 @@
                 
             </div>
         </div>
-<
+
         <!-- Fin Sección Registros Contacto -->    
             
     </body>

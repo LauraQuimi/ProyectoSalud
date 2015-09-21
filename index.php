@@ -427,6 +427,161 @@
             </div>
         </div>
         <!-- Fin Sección Login -->
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        
+        <!-- Start Portfolio Section -->
+        <div class="section-modal modal fade" id="portfolio-modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title text-center">
+                            <h3>Our Portfolio</h3>
+                            <p>Duis aute irure dolor in reprehenderit in voluptate</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        
+                        <div class="col-md-4">
+                            <div class="portfolio-item">
+                                <img src="img/1.png" class="img-responsive" alt="...">
+                                <div class="portfolio-details text-center">
+                                    <h4>Project Name</h4>
+				    <a href="#historial-modal" data-toggle="modal">
+                                	<i class="fa fa-book"></i>
+                                        <p>Historial de la Presion</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-md-4">
+                            <div class="portfolio-item">
+                                <img src="img/2.png" class="img-responsive" alt="...">
+                                <div class="portfolio-details text-center">
+                                    <h4>Project Name</h4>
+                                    <a href="#"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="portfolio-item">
+                                <img src="img/3.png" class="img-responsive" alt="...">
+                                <div class="portfolio-details text-center">
+                                    <h4>Project Name</h4>
+                                    <a href="#"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="portfolio-item">
+                                <img src="img/4.png" class="img-responsive" alt="...">
+                                <div class="portfolio-details text-center">
+                                    <h4>Project Name</h4>
+                                    <a href="#"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="portfolio-item">
+                                <img src="img/5.png" class="img-responsive" alt="...">
+                                <div class="portfolio-details text-center">
+                                    <h4>Project Name</h4>
+                                    <a href="#"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="portfolio-item">
+                                <img src="img/6.png" class="img-responsive" alt="...">
+                                <div class="portfolio-details text-center">
+                                    <h4>Project Name</h4>
+                                    <a href="#"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="portfolio-item">
+                                <img src="img/7.png" class="img-responsive" alt="...">
+                                <div class="portfolio-details text-center">
+                                    <h4>Project Name</h4>
+                                    <a href="#"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="portfolio-item">
+                                <img src="img/8.png" class="img-responsive" alt="...">
+                                <div class="portfolio-details text-center">
+                                    <h4>Project Name</h4>
+                                    <a href="#"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="portfolio-item">
+                                <img src="img/9.png" class="img-responsive" alt="...">
+                                <div class="portfolio-details text-center">
+                                    <h4>Project Name</h4>
+                                    <a href="#"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="portfolio-item">
+                                <img src="img/10.png" class="img-responsive" alt="...">
+                                <div class="portfolio-details text-center">
+                                    <h4>Project Name</h4>
+                                    <a href="#"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="portfolio-item">
+                                <img src="img/11.png" class="img-responsive" alt="...">
+                                <div class="portfolio-details text-center">
+                                    <h4>Project Name</h4>
+                                    <a href="#"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="portfolio-item">
+                                <img src="img/12.png" class="img-responsive" alt="...">
+                                <div class="portfolio-details text-center">
+                                    <h4>Project Name</h4>
+                                    <a href="#"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div><!-- /.row -->
+                </div>
+                
+            </div>
+        </div>
+        <!-- End Portfolio Section -->
+
+>>>>>>> b11637a0731f463467558cec3081f1a46a26ef32
         <!-- Inicio Sección Acerca De... -->
         <div class="section-modal modal fade" id="acerca-modal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-content">
@@ -478,12 +633,17 @@
                                             <li><i class="fa fa-check-square-o"></i>At vero eos et accusamus et iusto odio</li>
                                         </ul>
                                     </div>
+<<<<<<< HEAD
                                 </div> /.row -->
 
+=======
+                                </div>
+>>>>>>> b11637a0731f463467558cec3081f1a46a26ef32
                             </div>
                         </div>
                     </div><!-- /.row -->
                     <div class="row">
+<<<<<<< HEAD
 
                         <!-- <div class="col-md-6 col-sm-6">
                             <div class="skill-shortcode">
@@ -546,6 +706,12 @@
                             </div>
                         </div> -->
 
+=======
+
+                        <div class="col-md-6 col-sm-6">
+                            <div class="skill-shortcode">
+                        
+>>>>>>> b11637a0731f463467558cec3081f1a46a26ef32
                         <div class="col-md-6" style="margin-left: 293px;">
                             <div class="custom-tab">
                         
@@ -572,7 +738,7 @@
                                         <p>Smart Web Solutions ha provisto de varias aplicaciones web a diferentes empresas a nivel nacional y en varios países de la región, alcanzando un buen posicionamiento de mercado en el país y en el exterior. Actualmente la empresa está creciendo gradualmente, creando nuevas sucursales en Quito y en Cuenca, generando empleo para más profesionales que se unen al equipo élite de nuestra corporación.</p>
                                     </div>
 
-                                </div><!-- /.tab-content -->
+                                </div>
 
                             </div>
                         </div>
@@ -624,7 +790,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div><!-- /.col-md-4 -->
+                        </div>
                         <div class="col-md-4 col-sm-6 col-xs-12">
                             <div class="feature-2">
                                 <div class="media">
@@ -635,7 +801,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div><!-- /.col-md-4 -->
+                        </div>
                         <div class="col-md-4 col-sm-6 col-xs-12">
                             <div class="feature-2">
                                 <div class="media">
@@ -646,7 +812,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div><!-- /.col-md-4 -->
+                        </div>
                         <div class="col-md-4 col-sm-6 col-xs-12">
                             <div class="feature-2">
                                 <div class="media">
@@ -657,7 +823,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div><!-- /.col-md-4 -->
+                        </div>
                         <div class="col-md-4 col-sm-6 col-xs-12">
                             <div class="feature-2">
                                 <div class="media">
@@ -668,9 +834,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div><!-- /.col-md-4 -->
+                        </div>
                         
-                    </div><!-- /.row -->
+                    </div>
                 </div>
                 
                 <div class="pricing-section">
@@ -933,7 +1099,7 @@
                             </div>
                         </div>
                         
-                    </div><!-- /.row -->
+                    </div>
                 </div>
                 
             </div>
@@ -963,13 +1129,6 @@
                             <div class="latest-post">
                                 <img src="img/about-02.png" class="img-responsive" alt="">
                                 <h4><a href="#">Alimentación saludable</a></h4>
-                                <!--<div class="post-details">
-                                    <ul>
-                                        <li><i class="fa fa-user"></i> Auther : iThemesLab</li>
-                                        <li><i class="fa fa-calendar"></i> 07 Aug, 2014</li>
-                                        <li><i class="fa fa-tag"></i> Music</li>
-                                    </ul>
-                                </div>-->
                                 <p><b>Consume frutas y verduras:</b> Se recomienda la ingesta de alimentos como espinacas, zanahorias, duraznos o fresas, debido a que tiene mayor contenido de micronutrientes. Por otro lado, la AHA insiste en que un jugo no es equivalente a una fruta respecto a su contenido de fibra ni en su capacidad de saciedad; también advierte sobre la importancia de la preparación de los alimentos para preservar sus propiedades.
                                 <br><b>Limita la ingesta de grasas trans y saturadas:</b> Los alimentos de origen animal (carne roja y leche de vaca) son los que contienen el mayor número de grasas saturadas; mientras que las trans están presentes en alimentos fritos, preparados y en biscochos industriales. La AHA sugiere que el consumo de estos productos esté por debajo del 7% y que el consumo de colesterol no llegue a los 300 mg.
                                 <br><b>Incluye pescado y cereales integrales a tu dieta:</b> La fibra reduce modestamente los niveles de colesterol malo y fomenta la saciedad al producir un vaciado lento del estómago. Se recomienda que al menos la mitad de los cereales sean integrales. El pescado como el salmón, las sardinas o el atún, tiene un alto contenido en ácidos grasos oleico y linoleico, asociados con un menor riesgo de enfermedades cardiovasculares.</p>
@@ -980,13 +1139,6 @@
                             <div class="latest-post">
                                 <img src="img/about-03.png" class="img-responsive" alt="">
                                 <h4><a href="#">Actividad física</a></h4>
-                               <!-- <div class="post-details">
-                                    <ul>
-                                        <li><i class="fa fa-user"></i> Auther : iThemesLab</li>
-                                        <li><i clss="fa fa-calendar"></i> 07 Aug, 2014</li>
-                                        <li><i class="fa fa-tag"></i> Music</li>
-                                    </ul>
-                                </div>-->
                                 <p><b>Lleva una vida activa:</b> Se recomienda que todos los adultos realicen 30 o más minutos de actividad física, todos los días de la semana. Si el objetivo es perder peso, deben practicar 60 minutos diarios de ejercicio.
                                 <br><b>La práctica deportiva es la mejor herramienta para mantener un corazón saludable:</b> Los expertos señalan que la respuesta al ejercicio en la mujer es diferente respecto al hombre, debido a las peculiaridades cardiovasculares femeninas como el tamaño del corazón, un menor desarrollo de la caja torácica y una menor cantidad de sangre, entre otras.
                                 <br><b>Una vida sexual sana:</b> La Asociación Americana del Corazón asegura que no existe ninguna razón por la que los pacientes cardiacos o sobrevivientes a un infarto no puedan reanudar una actividad sexual plena en cuanto se sientan listos para hacerlo. Los especialistas enfatizan que la actividad física en los pacientes cardiacos es importante para lograr una rehabilitación sexual sin mayores problemas.</p>
@@ -997,13 +1149,6 @@
                             <div class="latest-post">
                                 <img src="img/about-04.jpg" class="img-responsive" alt="">
                                 <h4><a href="#">Evitar consumo de alcohol y tabaco</a></h4>
-                                <!--<div class="post-details">
-                                    <ul>
-                                        <li><i class="fa fa-user"></i> Auther : iThemesLab</li>
-                                        <li><i class="fa fa-calendar"></i> 07 Aug, 2014</li>
-                                        <li><i class="fa fa-tag"></i> Music</li>
-                                    </ul>
-                                </div>-->
                                 <p><b>Evita el consumo o la exposición al tabaco:</b> Fumar está relacionado al cáncer y a trastornos cardiovasculares, cuida tu ambiente y sobre todo tu salud.
                                 <br><b>Disminuye el consumo de bebidas azucaradas y alcohol:</b> Al reducir la ingesta de estos productos se reduce la cantidad de calorías que entran al organismo.
                                 <br><b>Mantén una presión arterial normal, por debajo de 120/80 mm/Hg:</b> Los niveles de ésta pueden modificarse con la dieta, actividad física y factores psicosociales. Baja la ingesta de sal (ideal por debajo de 1.5 g/día), aumenta el consumo de potasio, reduce las calorías y consume alcohol de forma moderada.</p>
@@ -1015,13 +1160,6 @@
                             <div class="latest-post">
                                 <img src="img/about-05.jpg" class="img-responsive" alt="">
                                 <h4><a href="#">Sé sociable</a></h4>
-                                <!--<div class="post-details">
-                                    <ul>
-                                        <li><i class="fa fa-user"></i> Auther : iThemesLab</li>
-                                        <li><i class="fa fa-calendar"></i> 07 Aug, 2014</li>
-                                        <li><i class="fa fa-tag"></i> Music</li>
-                                    </ul>
-                                </div>-->
                                 <p><b>Enfoca tu atención a grupos especiales:</b> Cada vez hay más obesidad entre los pequeños. Por este motivo, se aconseja iniciar una dieta sana y actividad física desde los primeros años de vida. En cuanto a los adultos mayores, debido a la frecuencia con la que presentan trastornos cardiovasculares, se les pide acudir a un médico para que los asesore sobre el tipo de nutrientes que deben ingerir. Las personas con enfermedades como el síndrome metabólico o insuficiencia renal crónica deben seguir recomendaciones específicas como: una dieta muy baja en grasas y calorías, aumentar su actividad física para bajar de peso, y consumir poca sal.</p>
                                 
                             </div>
@@ -1532,7 +1670,10 @@
                         }
                     }
                 ?>
+<<<<<<< HEAD
 
+=======
+>>>>>>> b11637a0731f463467558cec3081f1a46a26ef32
                 
                 <div class="container">
                     <div class="row">
@@ -1799,7 +1940,10 @@
                     </div>
                 </div>
                 
+<<<<<<< HEAD
 
+=======
+>>>>>>> b11637a0731f463467558cec3081f1a46a26ef32
             </div>
         </div>
         <!-- Fin Sección Registros -->
@@ -1835,7 +1979,10 @@
   
                                             <div class="col-md-6">
                                                <label class="etiquetas">Nombres: </label> 
+<<<<<<< HEAD
      
+=======
+>>>>>>> b11637a0731f463467558cec3081f1a46a26ef32
 
                                                 <input type="text" class="form-control" placeholder="Nombres *" id="txtNombrePac" required data-validation-required-message="Por favor ingresa tu nombre.">
 
@@ -2252,7 +2399,7 @@
 	                       <fieldset class="grupo">
                                 <legend>Ritmo Cardiaco</legend>
                                  <div class="form-group fila">
-<<<<<<< HEAD
+
                                                                                 
                                   <div class="col-md-6">
                 	            <div class="latest-post">
@@ -2300,6 +2447,11 @@
                                 
                             </div>
                         </div>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> b11637a0731f463467558cec3081f1a46a26ef32
                                                                                 
                                   <div class="col-md-6">
                 	        	    <div class="latest-post">
@@ -2447,7 +2599,11 @@
                 
             </div>
         </div>
+<<<<<<< HEAD
 <
+=======
+
+>>>>>>> b11637a0731f463467558cec3081f1a46a26ef32
         <!-- Fin Sección Registros Contacto -->    
             
     </body>
@@ -2457,4 +2613,7 @@
         <!-- Fin Sección Registros Contacto --> 
     </body>
 </html>
+<<<<<<< HEAD
 
+=======
+>>>>>>> b11637a0731f463467558cec3081f1a46a26ef32

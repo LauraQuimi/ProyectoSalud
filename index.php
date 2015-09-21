@@ -1303,50 +1303,50 @@
                     </div>
                     <div class="row" id="divPaciente" style="display: none;">
                         <div class="col-md-12">
-                            <form id="PacienteForm" novalidate>
+                            <form id="PacienteForm" action ="mvc/objetos/insertar_paciente.php" method ="post">
                                 <div class="row" style="margin-bottom: 15px;">
                                     <fieldset class="grupo">
                                         <legend>Datos Personales</legend>
                                         <div class="form-group fila">
                                             <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Nombres *" id="txtNombrePac" required data-validation-required-message="Por favor ingrese su nombre.">
+                                                <input type="text" class="form-control" placeholder="Nombres *" name="txtNombrePac" required data-validation-required-message="Por favor ingrese su nombre.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Apellidos *" id="txtApellidoPac" required data-validation-required-message="Por favor ingrese su apellido.">
+                                                <input type="text" class="form-control" placeholder="Apellidos *" name="txtApellidoPac" required data-validation-required-message="Por favor ingrese su apellido.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                         </div>
                                         <div class="form-group fila">
                                             <div class="col-md-6">
-                                                <select class="form-control combo" id="cbxIdentificacionPac" required data-validation-required-message="Seleccione el tipo de identificación.">
-                                                    <option value="">-- Seleccione su tipo de identificación --</option>
-                                                    <option value="0">Cédula</option>
-                                                    <option value="1">Pasaporte</option>
-                                                    <option value="2">Nro. de historia clínica</option>
+                                                <select class="form-control combo" name="cbxIdentificacionPac" required data-validation-required-message="Seleccione el tipo de identificación.">
+                                                    <option value=0>-- Seleccione su tipo de identificación --</option>
+                                                    <option value=1>Cédula</option>
+                                                    <option value=2>Pasaporte</option>
+                                                    <option value=3>Nro. de historia clínica</option>
                                                 </select>
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Número de identificación *" id="txtIdentificacionPac" required data-validation-required-message="Inserte el # de Identificación.">
+                                                <input type="text" class="form-control" placeholder="Número de identificación *" name="txtIdentificacionPac" required data-validation-required-message="Inserte el # de Identificación.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                         </div>
                                         <div class="form-group fila" style="height: 109px;">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <input type="date" class="form-control" id="dtpFecNacPac" required data-validation-required-message="Por favor ingrese su fecha de nacimiento.">
+                                                    <input type="date" class="form-control" name="dtpFecNacPac" required data-validation-required-message="Por favor ingrese su fecha de nacimiento." placeholder="Fecha de Nacimiento (yyyy/mm/dd)">
                                                     <p class="help-block text-danger"></p>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input type="email" class="form-control" placeholder="Email *" id="txtEmailPac" required data-validation-required-message="Por favor ingrese su e-mail.">
+                                                    <input type="email" class="form-control" placeholder="Email *" name="txtEmailPac" required data-validation-required-message="Por favor ingrese su e-mail.">
                                                     <p class="help-block text-danger"></p>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <fieldset class="grupo">
                                                     <legend style="margin-bottom:2px;">Género sexual</legend>
-                                                    <input type="radio" name="genero" id="rdbMasculinoPac" value="Masculino">
+                                                    <input type="radio" name="genero" id="rdbMasculinoPac" value=1>
                                                     <label for="rdbMasculinoPac">
                                                         <span class="fa-stack">
                                                             <i class="fa fa-circle-o fa-stack-1x"></i>
@@ -1354,7 +1354,7 @@
                                                         </span>
                                                         Masculino
                                                     </label><br>
-                                                    <input type="radio" name="genero" id="rdbFemeninoPac" value="Femenino">
+                                                    <input type="radio" name="genero" id="rdbFemeninoPac" value=2>
                                                     <label for="rdbFemeninoPac">
                                                         <span class="fa-stack">
                                                             <i class="fa fa-circle-o fa-stack-1x"></i>
@@ -1367,11 +1367,11 @@
                                         </div>
                                         <div class="form-group fila">
                                             <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Usuario *" id="txtUserPac" required data-validation-required-message="Por favor ingrese su usuario.">
+                                                <input type="text" class="form-control" placeholder="Usuario *" name="txtUserPac" required data-validation-required-message="Por favor ingrese su usuario.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div class="col-md-6">
-                                                <input type="password" class="form-control" placeholder="Contraseña *" id="txtPasswordPac" required data-validation-required-message="Por favor ingrese su contraseña.">
+                                                <input type="password" class="form-control" placeholder="Contraseña *" name="txtPasswordPac" required data-validation-required-message="Por favor ingrese su contraseña.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                         </div>
@@ -1383,21 +1383,21 @@
                                         <legend>Datos de Contacto</legend>
                                         <div class="form-group fila">
                                             <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Nombres *" id="txtNombreCon" required data-validation-required-message="Por favor ingrese el nombre de su contacto.">
+                                                <input type="text" class="form-control" placeholder="Nombres *" name="txtNombreCon" required data-validation-required-message="Por favor ingrese el nombre de su contacto.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Apellidos *" id="txtApellidoCon" required data-validation-required-message="Por favor ingrese el apellido de su contacto.">
+                                                <input type="text" class="form-control" placeholder="Apellidos *" name="txtApellidoCon" required data-validation-required-message="Por favor ingrese el apellido de su contacto.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                         </div>
                                         <div class="form-group fila">
                                             <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Celular *" id="txtCelularCon" required data-validation-required-message="Por favor ingrese el celular de su contacto.">
+                                                <input type="text" class="form-control" placeholder="Celular *" name="txtCelularCon" required data-validation-required-message="Por favor ingrese el celular de su contacto.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Email *" id="txtEmailCon" required data-validation-required-message="Por favor ingrese el e-mail de su contacto.">
+                                                <input type="text" class="form-control" placeholder="Email *" name="txtEmailCon" required data-validation-required-message="Por favor ingrese el e-mail de su contacto.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                         </div>
@@ -2000,12 +2000,14 @@
                                   <div class="col-md-6">
                 	        	    <div class="latest-post">
                 	        <meta charset="utf-8"> 
-				<META HTTP-EQUIV="REFRESH" CONTENT="60;URL=mvc/objetos/drawchart.php">
+				<!--META HTTP-EQUIV="REFRESH" CONTENT="60;URL=mvc/objetos/drawchart.php"-->
+				<iframe width="300" height="300" src="//www.youtube.com/embed/1YcIJU5sTL0" frameborder="0" allowfullscreen></iframe>
+
 				<?php 	
-				ini_set('include_path', '/usr/share/pear');
+				//ini_set('include_path', '/usr/share/pear');
 				//ini_set('include_path', '/usr/share/pera');        
 				//require_once("/mvc/objetos/drawchart.php");                                
-				require_once("/mvc/objetos/actividadCollector.php");
+				/*require_once("/mvc/objetos/actividadCollector.php");
 				require_once("/mvc/objetos/notificacionCollector.php");
 				require_once("/mvc/objetos/contactoCollector.php");
 				$id_usuario=2;
@@ -2094,7 +2096,7 @@
 				    }
 				});
 
-				</script>   
+				</script>  */?> 
 				</div>
 	                            </div>
                         

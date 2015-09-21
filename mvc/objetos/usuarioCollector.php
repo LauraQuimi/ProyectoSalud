@@ -39,5 +39,11 @@ class usuarioCollector extends Collector
     $max = $row{'max'};
     return $max;        
   }
+
+  function obtenerId($username) {
+    $row = self::$db->getRow("SELECT id_usuario from usuario where username = '$username'");  
+    $id = $row{'id_usuario'};
+    return $id;        
+  }
 }
 ?>

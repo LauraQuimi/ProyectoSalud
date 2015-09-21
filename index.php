@@ -1,11 +1,5 @@
 <?php
     session_start();
-<<<<<<< HEAD
-
-=======
->>>>>>> 2b39d1c40ae8235f0bdf0b3059f406639abac55a
-   /* include_once('mvc/objetos/usuario.php');
-    include_once('mvc/objetos/Collector.php');*/
 ?>
 <!DOCTYPE html>
 <html lang="en">

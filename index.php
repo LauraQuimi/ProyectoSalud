@@ -1,8 +1,8 @@
 <?php
     session_start();
     $idusuario=1;
-    //include_once('mvc/objetos/usuario.php');
-    //include_once('mvc/objetos/usuarioCollector.php');
+    include_once('mvc/objetos/usuario.php');
+    include_once('mvc/objetos/usuarioCollector.php');
     $usuarioCollectorObj = new usuarioCollector();
     $usuario=$usuarioCollectorObj->showUsuario($idusuario);
 ?>

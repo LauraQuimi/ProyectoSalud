@@ -20,7 +20,7 @@
 			<div id='divnavegacionsup'>
 				<header>
 					<div class="logo-st" target="blank">
-                        <i class="icon-heart iconoBotonesconf" style="color:red; font-size:80px;"></i>
+						<img src="../img/logo.png">
 					</div>
 				</header>
 				<nav>
@@ -36,19 +36,18 @@
                             
                             <section class="contenido" id="secExpConfiguracion">
                                 <article>
-                                    <div class="datagrid" style=" border: 1px solid #A0A0A0; height: 250px; width: 100%; margin-left: auto; margin-right: auto; display: inline-block;">
+                                    <div class="datagrid" style=" border: 1px solid #A0A0A0; height: 250px; width: 100%; margin-left: auto; margin-right: auto; display: inline-block; overflow: scroll;">
                                         <table id="tblGenerales" style="width: 100%; text-align:center; font-family: Times New Roman; font-size: 10px" class="bordered">
                                             <thead id="headers">
                                                 <tr align="center" valign="middle">
-                                                    <th colspan="12" style='font-weight: bolder;font-size: 20px;'>OPCIONES ADMINISTRATIVAS</th>
+                                                    <th colspan="12" style='font-weight: bolder;font-size: 14px;'>VARIABLES GENERALES</th>
                                                 </tr>
                                                 <tr>
-                                                    <th style="font-weight: bolder;"><a href="../mvc/objetos/usuario_list.php"><i class="icon-user iconoBotonesconf"></i></a></th>
-                                                    <th style="font-weight: bolder;"><a href="../mvc/objetos/Directorio_list.php"><i class="icon-group iconoBotonesconf"></i></a></th>
-                                                    <th style="font-weight: bolder;"><a href="../mvc/objetos/drawchart.php"><i class="icon-picture iconoBotonesconf"></i></a></th>
-                                                    <th style="font-weight: bolder;"><a href="../mvc/objetos/notificacion_list.php"><i class="icon-comment iconoBotonesconf"></i></a></th>
-                                                    <th style="font-weight: bolder;"><a href="../mvc/objetos/AreaTrabajo_list.php"><i class="icon-map-marker iconoBotonesconf"></i></a></th>
-                                                    <th style="font-weight: bolder;"><a href="../mvc/objetos/TipoIdentificacion_list.php"><i class="icon-credit-card iconoBotonesconf"></i></a></th>
+                                                    <th style="font-weight: bolder;"><a href="../mvc/objetos/usuario_list.php"><image src="images/usuario.png"></a></th>
+                                                    <th style="font-weight: bolder;"><a href="../mvc/objetos/Directorio_list.php"><image src="images/directorio.png"></a></th>
+                                                    <th style="font-weight: bolder;"><a href="../mvc/objetos/drawchart.php"><image src="images/registro.png"></a></th>
+                                                    <th style="font-weight: bolder;"><a href="../mvc/objetos/notificacion_list.php"><image src="images/notificaciones.png"></a></th>
+                                                    
                                                 </tr>
                                             </thead>
                                         </table>                                      

@@ -15,19 +15,19 @@ class usuario{
     
     function __construct($id_usuario, $tipo_usuario, $tipo_identificacion, $num_identificacion, $nombres, $apellidos, $fecha_nac, $celular, $email, $genero, $user, $password){
         $this->id_usuario=$id_usuario;
-	$this->tipo_usuario=$tipo_usuario;
+	    $this->tipo_usuario=$tipo_usuario;
         $this->tipo_identificacion=$tipo_identificacion;
         $this->num_identificacion=$num_identificacion;
         $this->nombres=$nombres;
-	$this->apellidos=$apellidos;
+	    $this->apellidos=$apellidos;
         $this->fecha_nac=$fecha_nac;
-	$this->celular=$celular;
-	$this->email=$email;
-	$this->genero=$genero;
+	    $this->celular=$celular;
+	    $this->email=$email;
+	    $this->genero=$genero;
         $this->user=$user;
         $this->password=$password;
     }
-//29    
+    
     function setIdusuario($id_usuario){
         $this->id_usuario=$id_usuario;
     }
@@ -59,7 +59,7 @@ class usuario{
     function getNumidentificacion(){
         return $this->num_identificacion;
     }
-//62
+
     function setNombres($nombres){
         $this->nombres=$nombres;
     }
@@ -107,7 +107,7 @@ class usuario{
     function getGenero(){
         return $this->genero;
     }
-//100
+
     function setUser($user){
         $this->user=$user;
     }

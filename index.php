@@ -1,10 +1,7 @@
 <?php
     session_start();
-    $idusuario=1;
-    include_once('mvc/objetos/usuario.php');
-    include_once('mvc/objetos/usuarioCollector.php');
-    $usuarioCollectorObj = new usuarioCollector();
-    $usuario=$usuarioCollectorObj->showUsuario($idusuario);
+   /* include_once('mvc/objetos/usuario.php');
+    include_once('mvc/objetos/Collector.php');*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,6 +22,7 @@
         <!-- Custom CSS -->
         <link href="css/style.css" rel="stylesheet">
         <!-- Custom Fonts -->
+        <link href="css/colorbox.css" rel="stylesheet">
         <link href="css/family-lobster.css" rel="stylesheet">
         <link href="css/estilo.css" rel="stylesheet">
         <link href="css/font-awesome-4.3.0/css/font-awesome.css" rel="stylesheet">
@@ -39,16 +37,14 @@
         <script src="js/modernizr.custom.js"></script>
         <script src="js/script.js"></script>
         <script src="js/funciones.js"></script>
-
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
+        <script src="js/jquery.colorbox.js"></script>
+        <script src="js/jquery.blockUI.js"></script>
+        <script src="js/jquery.min.js"></script>
+        
 
     </head>
     
     <body>
-        
         <!-- Start Logo Section -->
         <section id="logo-section" class="text-center">
             <div class="container">
@@ -64,7 +60,7 @@
         </section>
         <!-- End Logo Section -->
         <?php
-            if(!isset($_SESSION['txtUsuario'])){
+            if(!isset($_SESSION["newsession"])){
         ?>
                 <!-- Start Main Body Section -->
                 <div class="mainbody-section text-center">
@@ -250,9 +246,11 @@
                     </div>
                 </div>
                 <!-- End Main Body Section -->
+        
             <?php
-               }else if($ident === 2){
+                }else if($ident === 2){
             ?>
+                <!-- Start Main Body Section -->
                 <div class="mainbody-section text-center">
                     <div class="container">
                         <div class="row">
@@ -363,9 +361,10 @@
                         </div>
                     </div>
                 </div>
+                <!-- End Main Body Section -->
         <?php
-               }
-          }
+                }
+            }
         ?>
         
         <!-- Start Copyright Section -->
@@ -430,7 +429,6 @@
             </div>
         </div>
         <!-- Fin Sección Login -->
-        
                      
         <!-- Inicio Sección Acerca De... -->
         <div class="section-modal modal fade" id="acerca-modal" tabindex="-1" role="dialog" aria-hidden="true">
@@ -1554,8 +1552,6 @@
                 
             </div>
         </div>
-        <!-- Fin Sección Registros Contacto -->    
-            
+        <!-- Fin Sección Registros Contacto --> 
     </body>
-    
 </html>

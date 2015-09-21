@@ -3,7 +3,7 @@
 <BODY>
 
 <meta charset="utf-8"> 
-<META HTTP-EQUIV="REFRESH" CONTENT=1;URL=drawchart.php">
+<META HTTP-EQUIV="REFRESH" CONTENT="1;URL=drawchart.php">
 <?php
 require_once("actividadCollector.php");
 require_once("notificacionCollector.php");

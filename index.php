@@ -64,7 +64,8 @@
         </section>
         <!-- End Logo Section -->
         <?php
-            //if(!isset($_SESSION["newsession"])){
+            if(!isset($_SESSION['txtUsuario'])){
+            echo "no hay sesion iniciada";
         ?>
                 <!-- Start Main Body Section -->
                 <div class="mainbody-section text-center">
@@ -126,9 +127,12 @@
                 </div>
                 <!-- End Main Body Section -->
         <?php
-            /*}else{
-                $ident = $_SESSION["newsession"];
-                if($ident === 1){*/
+            }else{
+                //$ident = $_SESSION["newsession"];
+                echo "sesion iniciada";
+		$idusuario=$usuarioCollectorObj->obtenerId($txtUsuario);
+                $usuario=$usuarioCollectorObj->showUsuario($idusuario); 	
+                if($usuario->getTipousuario() === 1){
         ?>
                 <!-- Start Main Body Section -->
                 <div class="mainbody-section text-center">
@@ -251,7 +255,7 @@
                 </div>
                 <!-- End Main Body Section -->
             <?php
-                //}else if($ident === 2){
+                }else if($usuario->getTipousuario()){
             ?>
                 <div class="mainbody-section text-center">
                     <div class="container">
@@ -364,8 +368,8 @@
                     </div>
                 </div>
         <?php
-         //       }
-           // }
+               }
+          }
         ?>
         
         <!-- Start Copyright Section -->
@@ -400,7 +404,7 @@
                     <div class="row" style="padding-top: 80px;">
                         <div class="col-md-12">
 			    <!--<form name="sentMessage" id="contactForm" novalidate -->
-                            <form name="sentMessage" id="login" action="login.php" method="post">
+                            <form name="login" id="login" action="login.php" method="post">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
@@ -431,156 +435,7 @@
         </div>
         <!-- Fin Sección Login -->
         
-        <!-- Start Portfolio Section -->
-        <div class="section-modal modal fade" id="portfolio-modal" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title text-center">
-                            <h3>Our Portfolio</h3>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        
-                        <div class="col-md-4">
-                            <div class="portfolio-item">
-                                <img src="img/1.png" class="img-responsive" alt="...">
-                                <div class="portfolio-details text-center">
-                                    <h4>Project Name</h4>
-				    <a href="#historial-modal" data-toggle="modal">
-                                	<i class="fa fa-book"></i>
-                                        <p>Historial de la Presion</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        
-
-                        <div class="col-md-4">
-                            <div class="portfolio-item">
-                                <img src="img/2.png" class="img-responsive" alt="...">
-                                <div class="portfolio-details text-center">
-                                    <h4>Project Name</h4>
-                                    <a href="#"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-4">
-                            <div class="portfolio-item">
-                                <img src="img/3.png" class="img-responsive" alt="...">
-                                <div class="portfolio-details text-center">
-                                    <h4>Project Name</h4>
-                                    <a href="#"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-4">
-                            <div class="portfolio-item">
-                                <img src="img/4.png" class="img-responsive" alt="...">
-                                <div class="portfolio-details text-center">
-                                    <h4>Project Name</h4>
-                                    <a href="#"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-4">
-                            <div class="portfolio-item">
-                                <img src="img/5.png" class="img-responsive" alt="...">
-                                <div class="portfolio-details text-center">
-                                    <h4>Project Name</h4>
-                                    <a href="#"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-4">
-                            <div class="portfolio-item">
-                                <img src="img/6.png" class="img-responsive" alt="...">
-                                <div class="portfolio-details text-center">
-                                    <h4>Project Name</h4>
-                                    <a href="#"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-4">
-                            <div class="portfolio-item">
-                                <img src="img/7.png" class="img-responsive" alt="...">
-                                <div class="portfolio-details text-center">
-                                    <h4>Project Name</h4>
-                                    <a href="#"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-4">
-                            <div class="portfolio-item">
-                                <img src="img/8.png" class="img-responsive" alt="...">
-                                <div class="portfolio-details text-center">
-                                    <h4>Project Name</h4>
-                                    <a href="#"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-4">
-                            <div class="portfolio-item">
-                                <img src="img/9.png" class="img-responsive" alt="...">
-                                <div class="portfolio-details text-center">
-                                    <h4>Project Name</h4>
-                                    <a href="#"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-4">
-                            <div class="portfolio-item">
-                                <img src="img/10.png" class="img-responsive" alt="...">
-                                <div class="portfolio-details text-center">
-                                    <h4>Project Name</h4>
-                                    <a href="#"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-4">
-                            <div class="portfolio-item">
-                                <img src="img/11.png" class="img-responsive" alt="...">
-                                <div class="portfolio-details text-center">
-                                    <h4>Project Name</h4>
-                                    <a href="#"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-4">
-                            <div class="portfolio-item">
-                                <img src="img/12.png" class="img-responsive" alt="...">
-                                <div class="portfolio-details text-center">
-                                    <h4>Project Name</h4>
-                                    <a href="#"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div><!-- /.row -->
-                </div>
-                
-            </div>
-        </div>
-        <!-- End Portfolio Section -->
-        
+                     
         <!-- Inicio Sección Acerca De... -->
         <div class="section-modal modal fade" id="acerca-modal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-content">
@@ -606,96 +461,12 @@
                             <div class="about-text">
                                 <p>Social Heart es una solución web distribuida por Smart Web Solutions Inc. Social Heart es una aplicación específica, cuya función es contribuir en el área médica de la cardiología. Permitiendo llevar un registro de las actividades cardiacas de una persona. Dicha actividad cardiaca puede ser supervisada por el mismo usuario o por su médico de confianza.</p>
                                 <p><b>ADVERTENCIA:</b> Esta aplicación está protegida por leyes de propiedad intelectual y tratados internacionales. La distribución o reproducción no autorizada de este programa o de cualquiera de sus partes, está penada con sanciones penales y civiles, serán objeto de todas las acciones judiciales que correspondan.</p>
-                               <!-- <div class="row">
-                                    <div class="col-md-4 col-sm-6">
-                                        <ul>
-                                            <li><i class="fa fa-check-square"></i>Sed ut perspiciatis unde omnis iste natus</li>
-                                            <li><i class="fa fa-check-square"></i>Nor again is there anyone who loves</li>
-                                            <li><i class="fa fa-check-square-o"></i>At vero eos et accusamus et iusto odio</li>
-                                            <li><i class="fa fa-check-square-o"></i>Et harum quidem rerum facilis</li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6">
-                                        <ul>
-                                            <li><i class="fa fa-check-square"></i>Nor again is there anyone who loves</li>
-                                            <li><i class="fa fa-check-square"></i>Nor again is there anyone who loves</li>
-                                            <li><i class="fa fa-check-square-o"></i>Et harum quidem rerum facilis</li>
-                                            <li><i class="fa fa-check-square-o"></i>At vero eos et accusamus et iusto odio</li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6">
-                                        <ul>
-                                            <li><i class="fa fa-check-square"></i>Nor again is there anyone who loves</li>
-                                            <li><i class="fa fa-check-square"></i>Nor again is there anyone who loves</li>
-                                            <li><i class="fa fa-check-square-o"></i>Et harum quidem rerum facilis</li>
-                                            <li><i class="fa fa-check-square-o"></i>At vero eos et accusamus et iusto odio</li>
-                                        </ul>
-                                    </div>
-                                </div> /.row -->
+                               
                             </div>
                         </div>
                     </div><!-- /.row -->
                     <div class="row">
-                        <!-- <div class="col-md-6 col-sm-6">
-                            <div class="skill-shortcode">
                         
-                                <!-- Progress Bar
-                                <div class="skill">
-                                    <p>Web Design</p>          
-                                    <div class="progress">         
-                                        <div class="progress-bar" role="progressbar"  data-percentage="60">
-                                            <span class="progress-bar-span" >60%</span>
-                                            <span class="sr-only">60% Complete</span>
-                                        </div>
-                                    </div>  
-                                </div>
-
-                                <!-- Progress Bar 
-                                <div class="skill">
-                                    <p>HTML & CSS</p>          
-                                    <div class="progress">         
-                                        <div class="progress-bar" role="progressbar"  data-percentage="95">
-                                            <span class="progress-bar-span" >95%</span>
-                                            <span class="sr-only">95% Complete</span>
-                                        </div>
-                                    </div>  
-                                </div>
-
-                                <!-- Progress Bar 
-                                <div class="skill">
-                                    <p>Wordpress</p>          
-                                    <div class="progress">         
-                                        <div class="progress-bar" role="progressbar"  data-percentage="80">
-                                            <span class="progress-bar-span" >80%</span>
-                                            <span class="sr-only">80% Complete</span>
-                                        </div>
-                                    </div>  
-                                </div>
-
-                                <!-- Progress Bar 
-                                <div class="skill">
-                                    <p>Joomla</p>          
-                                    <div class="progress">         
-                                        <div class="progress-bar" role="progressbar"  data-percentage="100">
-                                            <span class="progress-bar-span" >100%</span>
-                                            <span class="sr-only">100% Complete</span>
-                                        </div>
-                                    </div>  
-                                </div>
-
-                                <!-- Progress Bar
-                                <div class="skill">
-                                    <p>Extension</p>          
-                                    <div class="progress">         
-                                        <div class="progress-bar" role="progressbar"  data-percentage="70">
-                                            <span class="progress-bar-span" >70%</span>
-                                            <span class="sr-only">70% Complete</span>
-                                        </div>
-                                    </div>  
-                                </div>
-
-                            </div>
-                        </div> -->
                         <div class="col-md-6" style="margin-left: 293px;">
                             <div class="custom-tab">
                         
@@ -732,362 +503,6 @@
             </div>
         </div>
         <!-- Fin Sección Acerca De... -->
-        
-        <!-- Start Service Section -->
-        <div class="section-modal modal fade" id="service-modal" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title text-center">
-                            <h3>Our Services</h3>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="feature-2">
-                                <div class="media">
-                                    <i class="fa fa-magic pull-left"></i>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">Web Design</h4>
-                                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- /.col-md-4 -->
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="feature-2">
-                                <div class="media">
-                                    <i class="fa fa-css3 pull-left"></i>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">HTML5 & CSS3</h4>
-                                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- /.col-md-4 -->
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="feature-2">
-                                <div class="media">
-                                    <i class="fa fa-wordpress pull-left"></i>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">Wordpress Theme</h4>
-                                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- /.col-md-4 -->
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="feature-2">
-                                <div class="media">
-                                    <i class="fa fa-plug pull-left"></i>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">Wordpress Plugin</h4>
-                                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- /.col-md-4 -->
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="feature-2">
-                                <div class="media">
-                                    <i class="fa fa-joomla pull-left"></i>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">Joomla Template</h4>
-                                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- /.col-md-4 -->
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="feature-2">
-                                <div class="media">
-                                    <i class="fa fa-cube pull-left"></i>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">Joomla Extension</h4>
-                                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- /.col-md-4 -->
-                        
-                    </div><!-- /.row -->
-                </div>
-                
-                <div class="pricing-section">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-3 col-sm-6">
-                                <div class="pricing-table">
-                                    <div class="plan-name">
-                                        <h3>Free</h3>
-                                    </div>
-                                    <div class="plan-price">
-                                        <div class="price-value">$49<span>.00</span></div>
-                                        <div class="interval">per month</div>
-                                    </div>
-                                    <div class="plan-list">
-                                        <ul>
-                                            <li>40 GB Storage</li>
-                                            <li>40 GB Transfer</li>
-                                            <li>10 Domains</li>
-                                            <li>20 Projects</li>
-                                            <li>Free installation</li>
-                                        </ul>
-                                    </div>
-                                    <div class="plan-signup">
-                                        <a href="#" class="btn-system btn-small">Sign Up Now</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6">
-                                <div class="pricing-table">
-                                    <div class="plan-name">
-                                        <h3>Standard</h3>
-                                    </div>
-                                    <div class="plan-price">
-                                        <div class="price-value">$49<span>.00</span></div>
-                                        <div class="interval">per month</div>
-                                    </div>
-                                    <div class="plan-list">
-                                        <ul>
-                                            <li>40 GB Storage</li>
-                                            <li>40 GB Transfer</li>
-                                            <li>10 Domains</li>
-                                            <li>20 Projects</li>
-                                            <li>Free installation</li>
-                                        </ul>
-                                    </div>
-                                    <div class="plan-signup">
-                                        <a href="#" class="btn-system btn-small">Sign Up Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6">
-                                <div class="pricing-table">
-                                    <div class="plan-name">
-                                        <h3>Premium</h3>
-                                    </div>
-                                    <div class="plan-price">
-                                        <div class="price-value">$49<span>.00</span></div>
-                                        <div class="interval">per month</div>
-                                    </div>
-                                    <div class="plan-list">
-                                        <ul>
-                                            <li>40 GB Storage</li>
-                                            <li>40 GB Transfer</li>
-                                            <li>10 Domains</li>
-                                            <li>20 Projects</li>
-                                            <li>Free installation</li>
-                                        </ul>
-                                    </div>
-                                    <div class="plan-signup">
-                                        <a href="#" class="btn-system btn-small">Sign Up Now</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6">
-                                <div class="pricing-table">
-                                    <div class="plan-name">
-                                        <h3>Professional</h3>
-                                    </div>
-                                    <div class="plan-price">
-                                        <div class="price-value">$49<span>.00</span></div>
-                                        <div class="interval">per month</div>
-                                    </div>
-                                    <div class="plan-list">
-                                        <ul>
-                                            <li>40 GB Storage</li>
-                                            <li>40 GB Transfer</li>
-                                            <li>10 Domains</li>
-                                            <li>20 Projects</li>
-                                            <li>Free installation</li>
-                                        </ul>
-                                    </div>
-                                    <div class="plan-signup">
-                                        <a href="#" class="btn-system btn-small">Sign Up Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        <!-- End Service Section -->
-        
-        <!-- Start Team Member Section -->
-        <div class="section-modal modal fade" id="team-modal" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title text-center">
-                            <h3>Our Expert Team</h3>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img src="img/manage-1.png" class="img-responsive" alt="">
-                                <div class="team-details">
-                                    <h4>John Doe</h4>
-                                    <div class="designation">Senior Web Developer</div>
-                                    <ul style="text-align: center;">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img src="img/manage-2.png" class="img-responsive" alt="">
-                                <div class="team-details">
-                                    <h4>John Doe</h4>
-                                    <div class="designation">Senior Web Developer</div>
-                                    <ul style="text-align: center;">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img src="img/manage-3.png" class="img-responsive" alt="">
-                                <div class="team-details">
-                                    <h4>John Doe</h4>
-                                    <div class="designation">Senior Web Developer</div>
-                                    <ul style="text-align: center;">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img src="img/manage-4.png" class="img-responsive" alt="">
-                                <div class="team-details">
-                                    <h4>John Doe</h4>
-                                    <div class="designation">Senior Web Developer</div>
-                                    <ul style="text-align: center;">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img src="img/team-1.jpg" class="img-responsive" alt="">
-                                <div class="team-details">
-                                    <h4>John Doe</h4>
-                                    <div class="designation">Senior Web Developer</div>
-                                    <ul style="text-align: center;">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img src="img/team-2.jpg" class="img-responsive" alt="">
-                                <div class="team-details">
-                                    <h4>John Doe</h4>
-                                    <div class="designation">Senior Web Developer</div>
-                                    <ul style="text-align: center;">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img src="img/team-3.jpg" class="img-responsive" alt="">
-                                <div class="team-details">
-                                    <h4>John Doe</h4>
-                                    <div class="designation">Senior Web Developer</div>
-                                    <ul style="text-align: center;">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-3 col-sm-6">
-                            <div class="team-member">
-                                <img src="img/team-4.jpg" class="img-responsive" alt="">
-                                <div class="team-details">
-                                    <h4>John Doe</h4>
-                                    <div class="designation">Senior Web Developer</div>
-                                    <ul style="text-align: center;">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div><!-- /.row -->
-                </div>
-                
-            </div>
-        </div>
-        <!-- End Team Member Section -->
         
         <!-- Inicio Sección Tips -->
         <div class="section-modal modal fade" id="tips-modal" tabindex="-1" role="dialog" aria-hidden="true">
@@ -1999,104 +1414,9 @@
                                                                                 
                                   <div class="col-md-6">
                 	        	    <div class="latest-post">
-                	        <meta charset="utf-8"> 
-				<!--META HTTP-EQUIV="REFRESH" CONTENT="60;URL=mvc/objetos/drawchart.php"-->
-				<iframe width="500" height="400" src="mvc/objetos/drawchart.php" frameborder="0" allowfullscreen></iframe>
+                	        
+				<!--iframe width="500" height="400" src="mvc/objetos/drawchart.php" frameborder="0" allowfullscreen></iframe-->
 
-				<?php 	
-				//ini_set('include_path', '/usr/share/pear');
-				//ini_set('include_path', '/usr/share/pera');        
-				//require_once("/mvc/objetos/drawchart.php");                                
-				/*require_once("/mvc/objetos/actividadCollector.php");
-				require_once("/mvc/objetos/notificacionCollector.php");
-				require_once("/mvc/objetos/contactoCollector.php");
-				$id_usuario=2;
-				$actividadCollectorObj = new actividadCollector();
-				//insertamos un valor aleatorio
-				$pulso = rand(0, 1);
-				$fecha = '2015-09-15';
-				$actividadCollectorObj->insertActividad($pulso, $id_usuario);
-
-				$valoresArray;
-				$timeArray;
-
-				$i=0;
-				foreach ($actividadCollectorObj->showActividadxUsuario($id_usuario) as $c){
-
-				     
-				     $valoresArray[$i]= $c->getPulso();
-				     $time= $rawdata[$i]= $c->getFecha_hora();
-				     //echo $time;
-				     $date = new DateTime($time);
-				    //ALMACENAMOS EL TIMESTAMP EN EL ARRAY
-				     $timeArray[$i] = $date->getTimestamp()*1000;
-				     $i++;
-				}
-
-				if($actividadCollectorObj->scanearActividad($id_usuario) > 25){
-				    echo " PULSO ACELERADO";
-				    $contactoCollectorObj = new contactoCollector();
-				    foreach ($contactoCollectorObj->showContactosxUsuario($id_usuario) as $c){
-					$notificacionCollectorObj = new notificacionCollector();
-					$notificacionCollectorObj->InsertNotificacion("PULSO ACELERADO", $c->getIddirectorio(), 1);
-				    
-				}
-		
-				}else{
-				}
-
-				?>
-				<div id="contenedor"></div>
-
-				<script src="https://code.jquery.com/jquery.js"></script>   
-				<script src="http://code.highcharts.com/stock/highstock.js"></script>
-				<script src="http://code.highcharts.com/modules/exporting.js"></script>
-				<script>
-
-				chartCPU = new Highcharts.StockChart({
-				    chart: {
-					renderTo: 'contenedor'
-					//defaultSeriesType: 'spline'
-		
-				    },
-				    rangeSelector : {
-					enabled: false
-				    },
-				    title: {
-					text: 'RITMO CARDIACO'
-				    },
-				    xAxis: {
-					type: 'datetime'
-					//tickPixelInterval: 150,
-					//maxZoom: 20 * 1000
-				    },
-				    yAxis: {
-					minPadding: 0.2,
-					maxPadding: 0.2,
-					title: {
-					    text: 'Pulsaciones',
-					    margin: 10
-					}
-				    },
-				    series: [{
-					name: 'Valor',
-					data: (function() {
-						// generate an array of random data
-						var data = [];
-						<?php
-						    for($i = 0 ;$i<count($rawdata);$i++){
-						?>
-						data.push([<?php echo $timeArray[$i];?>,<?php echo $valoresArray[$i];?>]);
-						<?php } ?>
-						return data;
-					    })()
-				    }],
-				    credits: {
-					    enabled: false
-				    }
-				});
-
-				</script>  */?> 
 				</div>
 	                            </div>
                         

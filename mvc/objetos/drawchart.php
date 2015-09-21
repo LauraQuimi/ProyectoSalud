@@ -31,7 +31,7 @@ foreach ($actividadCollectorObj->showActividadxUsuario($id_usuario) as $c){
      $i++;
 }
 
-if($actividadCollectorObj->scanearActividad($id_usuario) > 25){
+if($actividadCollectorObj->scanearActividad($id_usuario) > 40){
     //echo " PULSO ACELERADO";
     $contactoCollectorObj = new contactoCollector();
     foreach ($contactoCollectorObj->showContactosxUsuario($id_usuario) as $c){
@@ -41,7 +41,7 @@ if($actividadCollectorObj->scanearActividad($id_usuario) > 25){
         echo "<script type='text/javascript'>alert('$message');</script>";
     }
         
-}else{if($actividadCollectorObj->scanearActividad($id_usuario) < 20){
+}else{if($actividadCollectorObj->scanearActividad($id_usuario) < 15){
     //echo " PULSO DECAYENDO";
     $contactoCollectorObj = new contactoCollector();
     foreach ($contactoCollectorObj->showContactosxUsuario($id_usuario) as $c){

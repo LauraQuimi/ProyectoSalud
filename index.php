@@ -427,161 +427,6 @@
             </div>
         </div>
         <!-- Fin Sección Login -->
-<<<<<<< HEAD
-        
-        <!-- Start Portfolio Section -->
-        <div class="section-modal modal fade" id="portfolio-modal" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title text-center">
-                            <h3>Our Portfolio</h3>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        
-                        <div class="col-md-4">
-                            <div class="portfolio-item">
-                                <img src="img/1.png" class="img-responsive" alt="...">
-                                <div class="portfolio-details text-center">
-                                    <h4>Project Name</h4>
-				    <a href="#historial-modal" data-toggle="modal">
-                                	<i class="fa fa-book"></i>
-                                        <p>Historial de la Presion</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        
-
-                        <div class="col-md-4">
-                            <div class="portfolio-item">
-                                <img src="img/2.png" class="img-responsive" alt="...">
-                                <div class="portfolio-details text-center">
-                                    <h4>Project Name</h4>
-                                    <a href="#"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-4">
-                            <div class="portfolio-item">
-                                <img src="img/3.png" class="img-responsive" alt="...">
-                                <div class="portfolio-details text-center">
-                                    <h4>Project Name</h4>
-                                    <a href="#"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-4">
-                            <div class="portfolio-item">
-                                <img src="img/4.png" class="img-responsive" alt="...">
-                                <div class="portfolio-details text-center">
-                                    <h4>Project Name</h4>
-                                    <a href="#"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-4">
-                            <div class="portfolio-item">
-                                <img src="img/5.png" class="img-responsive" alt="...">
-                                <div class="portfolio-details text-center">
-                                    <h4>Project Name</h4>
-                                    <a href="#"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-4">
-                            <div class="portfolio-item">
-                                <img src="img/6.png" class="img-responsive" alt="...">
-                                <div class="portfolio-details text-center">
-                                    <h4>Project Name</h4>
-                                    <a href="#"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-4">
-                            <div class="portfolio-item">
-                                <img src="img/7.png" class="img-responsive" alt="...">
-                                <div class="portfolio-details text-center">
-                                    <h4>Project Name</h4>
-                                    <a href="#"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-4">
-                            <div class="portfolio-item">
-                                <img src="img/8.png" class="img-responsive" alt="...">
-                                <div class="portfolio-details text-center">
-                                    <h4>Project Name</h4>
-                                    <a href="#"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-4">
-                            <div class="portfolio-item">
-                                <img src="img/9.png" class="img-responsive" alt="...">
-                                <div class="portfolio-details text-center">
-                                    <h4>Project Name</h4>
-                                    <a href="#"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-4">
-                            <div class="portfolio-item">
-                                <img src="img/10.png" class="img-responsive" alt="...">
-                                <div class="portfolio-details text-center">
-                                    <h4>Project Name</h4>
-                                    <a href="#"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-4">
-                            <div class="portfolio-item">
-                                <img src="img/11.png" class="img-responsive" alt="...">
-                                <div class="portfolio-details text-center">
-                                    <h4>Project Name</h4>
-                                    <a href="#"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-4">
-                            <div class="portfolio-item">
-                                <img src="img/12.png" class="img-responsive" alt="...">
-                                <div class="portfolio-details text-center">
-                                    <h4>Project Name</h4>
-                                    <a href="#"><i class="fa fa-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div><!-- /.row -->
-                </div>
-                
-            </div>
-        </div>
-        <!-- End Portfolio Section -->
-        
-=======
-                     
->>>>>>> 2b39d1c40ae8235f0bdf0b3059f406639abac55a
         <!-- Inicio Sección Acerca De... -->
         <div class="section-modal modal fade" id="acerca-modal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-content">
@@ -607,7 +452,7 @@
                             <div class="about-text">
                                 <p>Social Heart es una solución web distribuida por Smart Web Solutions Inc. Social Heart es una aplicación específica, cuya función es contribuir en el área médica de la cardiología. Permitiendo llevar un registro de las actividades cardiacas de una persona. Dicha actividad cardiaca puede ser supervisada por el mismo usuario o por su médico de confianza.</p>
                                 <p><b>ADVERTENCIA:</b> Esta aplicación está protegida por leyes de propiedad intelectual y tratados internacionales. La distribución o reproducción no autorizada de este programa o de cualquiera de sus partes, está penada con sanciones penales y civiles, serán objeto de todas las acciones judiciales que correspondan.</p>
-<<<<<<< HEAD
+
                                <!-- <div class="row">
                                     <div class="col-md-4 col-sm-6">
                                         <ul>
@@ -634,14 +479,12 @@
                                         </ul>
                                     </div>
                                 </div> /.row -->
-=======
-                               
->>>>>>> 2b39d1c40ae8235f0bdf0b3059f406639abac55a
+
                             </div>
                         </div>
                     </div><!-- /.row -->
                     <div class="row">
-<<<<<<< HEAD
+
                         <!-- <div class="col-md-6 col-sm-6">
                             <div class="skill-shortcode">
                         
@@ -702,9 +545,7 @@
 
                             </div>
                         </div> -->
-=======
-                        
->>>>>>> 2b39d1c40ae8235f0bdf0b3059f406639abac55a
+
                         <div class="col-md-6" style="margin-left: 293px;">
                             <div class="custom-tab">
                         
@@ -742,7 +583,7 @@
         </div>
         <!-- Fin Sección Acerca De... -->
         
-<<<<<<< HEAD
+
         <!-- Start Service Section -->
         <div class="section-modal modal fade" id="service-modal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-content">
@@ -1099,8 +940,7 @@
         </div>
         <!-- End Team Member Section -->
         
-=======
->>>>>>> 2b39d1c40ae8235f0bdf0b3059f406639abac55a
+
         <!-- Inicio Sección Tips -->
         <div class="section-modal modal fade" id="tips-modal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-content">
@@ -1297,7 +1137,7 @@
                         </div>
                     </div>
                 </div>
-<<<<<<< HEAD
+
                 <?php
                     if(!isset($_SESSION["newsession"])){
                 ?>
@@ -1318,113 +1158,113 @@
                         </div>
                         <div class="row" id="divPaciente" style="display: none;">
                             <div class="col-md-12">
-                                <form id="PacienteForm" novalidate>
-                                    <div class="row" style="margin-bottom: 15px;">
-                                        <fieldset class="grupo">
-                                            <legend>Datos Personales</legend>
-                                            <div class="form-group fila">
-                                                <div class="col-md-6">
-                                                    <input type="text" class="form-control" placeholder="Nombres *" id="txtNombrePac" required data-validation-required-message="Por favor ingrese su nombre.">
-                                                    <p class="help-block text-danger"></p>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <input type="text" class="form-control" placeholder="Apellidos *" id="txtApellidoPac" required data-validation-required-message="Por favor ingrese su apellido.">
-                                                    <p class="help-block text-danger"></p>
-                                                </div>
+                                <form id="PacienteForm" action ="mvc/objetos/insertar_paciente.php" method ="post">
+                                <div class="row" style="margin-bottom: 15px;">
+                                    <fieldset class="grupo">
+                                        <legend>Datos Personales</legend>
+                                        <div class="form-group fila">
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Nombres *" name="txtNombrePac" required data-validation-required-message="Por favor ingrese su nombre.">
+                                                <p class="help-block text-danger"></p>
                                             </div>
-                                            <div class="form-group fila">
-                                                <div class="col-md-6">
-                                                    <select class="form-control combo" id="cbxIdentificacionPac" required data-validation-required-message="Seleccione el tipo de identificación.">
-                                                        <option value="">-- Seleccione su tipo de identificación --</option>
-                                                        <option value="0">Cédula</option>
-                                                        <option value="1">Pasaporte</option>
-                                                        <option value="2">Nro. de historia clínica</option>
-                                                    </select>
-                                                    <p class="help-block text-danger"></p>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <input type="text" class="form-control" placeholder="Número de identificación *" id="txtIdentificacionPac" required data-validation-required-message="Inserte el # de Identificación.">
-                                                    <p class="help-block text-danger"></p>
-                                                </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Apellidos *" name="txtApellidoPac" required data-validation-required-message="Por favor ingrese su apellido.">
+                                                <p class="help-block text-danger"></p>
                                             </div>
-                                            <div class="form-group fila" style="height: 109px;">
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <input type="date" class="form-control" id="dtpFecNacPac" required data-validation-required-message="Por favor ingrese su fecha de nacimiento.">
-                                                        <p class="help-block text-danger"></p>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <input type="email" class="form-control" placeholder="Email *" id="txtEmailPac" required data-validation-required-message="Por favor ingrese su e-mail.">
-                                                        <p class="help-block text-danger"></p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <fieldset class="grupo">
-                                                        <legend style="margin-bottom:2px;">Género sexual</legend>
-                                                        <input type="radio" name="genero" id="rdbMasculinoPac" value="Masculino">
-                                                        <label for="rdbMasculinoPac">
-                                                            <span class="fa-stack">
-                                                                <i class="fa fa-circle-o fa-stack-1x"></i>
-                                                                <i class="fa fa-circle fa-stack-1x"></i>
-                                                            </span>
-                                                            Masculino
-                                                        </label><br>
-                                                        <input type="radio" name="genero" id="rdbFemeninoPac" value="Femenino">
-                                                        <label for="rdbFemeninoPac">
-                                                            <span class="fa-stack">
-                                                                <i class="fa fa-circle-o fa-stack-1x"></i>
-                                                                <i class="fa fa-circle fa-stack-1x"></i>
-                                                            </span>
-                                                            Femenino
-                                                        </label>
-                                                    </fieldset>
-                                                </div>
-                                            </div>
-                                            <div class="form-group fila">
-                                                <div class="col-md-6">
-                                                    <input type="text" class="form-control" placeholder="Usuario *" id="txtUserPac" required data-validation-required-message="Por favor ingrese su usuario.">
-                                                    <p class="help-block text-danger"></p>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <input type="password" class="form-control" placeholder="Contraseña *" id="txtPasswordPac" required data-validation-required-message="Por favor ingrese su contraseña.">
-                                                    <p class="help-block text-danger"></p>
-                                                </div>
-                                            </div>
-
-                                        </fieldset>
-                                    </div>
-                                    <div class="row">
-                                        <fieldset class="grupo">
-                                            <legend>Datos de Contacto</legend>
-                                            <div class="form-group fila">
-                                                <div class="col-md-6">
-                                                    <input type="text" class="form-control" placeholder="Nombres *" id="txtNombreCon" required data-validation-required-message="Por favor ingrese el nombre de su contacto.">
-                                                    <p class="help-block text-danger"></p>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <input type="text" class="form-control" placeholder="Apellidos *" id="txtApellidoCon" required data-validation-required-message="Por favor ingrese el apellido de su contacto.">
-                                                    <p class="help-block text-danger"></p>
-                                                </div>
-                                            </div>
-                                            <div class="form-group fila">
-                                                <div class="col-md-6">
-                                                    <input type="text" class="form-control" placeholder="Celular *" id="txtCelularCon" required data-validation-required-message="Por favor ingrese el celular de su contacto.">
-                                                    <p class="help-block text-danger"></p>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <input type="text" class="form-control" placeholder="Email *" id="txtEmailCon" required data-validation-required-message="Por favor ingrese el e-mail de su contacto.">
-                                                    <p class="help-block text-danger"></p>
-                                                </div>
-                                            </div>
-
-                                        </fieldset>
-                                        <div class="clearfix"></div>
-                                        <div class="col-lg-12 text-center">
-                                            <div id="success"></div>
-                                            <button type="submit" class="btn btn-primary">REGISTRAR</button>
                                         </div>
+                                        <div class="form-group fila">
+                                            <div class="col-md-6">
+                                                <select class="form-control combo" name="cbxIdentificacionPac" required data-validation-required-message="Seleccione el tipo de identificación.">
+                                                    <option value=0>-- Seleccione su tipo de identificación --</option>
+                                                    <option value=1>Cédula</option>
+                                                    <option value=2>Pasaporte</option>
+                                                    <option value=3>Nro. de historia clínica</option>
+                                                </select>
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Número de identificación *" name="txtIdentificacionPac" required data-validation-required-message="Inserte el # de Identificación.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group fila" style="height: 109px;">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input type="date" class="form-control" name="dtpFecNacPac" required data-validation-required-message="Por favor ingrese su fecha de nacimiento." placeholder="Fecha de Nacimiento (yyyy/mm/dd)">
+                                                    <p class="help-block text-danger"></p>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="email" class="form-control" placeholder="Email *" name="txtEmailPac" required data-validation-required-message="Por favor ingrese su e-mail.">
+                                                    <p class="help-block text-danger"></p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <fieldset class="grupo">
+                                                    <legend style="margin-bottom:2px;">Género sexual</legend>
+                                                    <input type="radio" name="genero" id="rdbMasculinoPac" value=1>
+                                                    <label for="rdbMasculinoPac">
+                                                        <span class="fa-stack">
+                                                            <i class="fa fa-circle-o fa-stack-1x"></i>
+                                                            <i class="fa fa-circle fa-stack-1x"></i>
+                                                        </span>
+                                                        Masculino
+                                                    </label><br>
+                                                    <input type="radio" name="genero" id="rdbFemeninoPac" value=2>
+                                                    <label for="rdbFemeninoPac">
+                                                        <span class="fa-stack">
+                                                            <i class="fa fa-circle-o fa-stack-1x"></i>
+                                                            <i class="fa fa-circle fa-stack-1x"></i>
+                                                        </span>
+                                                        Femenino
+                                                    </label>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                        <div class="form-group fila">
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Usuario *" name="txtUserPac" required data-validation-required-message="Por favor ingrese su usuario.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="password" class="form-control" placeholder="Contraseña *" name="txtPasswordPac" required data-validation-required-message="Por favor ingrese su contraseña.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </div>
+                                        
+                                    </fieldset>
+                                </div>
+                                <div class="row">
+                                    <fieldset class="grupo">
+                                        <legend>Datos de Contacto</legend>
+                                        <div class="form-group fila">
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Nombres *" name="txtNombreCon" required data-validation-required-message="Por favor ingrese el nombre de su contacto.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Apellidos *" name="txtApellidoCon" required data-validation-required-message="Por favor ingrese el apellido de su contacto.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group fila">
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Celular *" name="txtCelularCon" required data-validation-required-message="Por favor ingrese el celular de su contacto.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Email *" name="txtEmailCon" required data-validation-required-message="Por favor ingrese el e-mail de su contacto.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </div>
+                                        
+                                    </fieldset>
+                                    <div class="clearfix"></div>
+                                    <div class="col-lg-12 text-center">
+                                        <div id="success"></div>
+                                        <button type="submit" class="btn btn-primary">REGISTRAR</button>
                                     </div>
-                                </form>
+                                </div>
+                            </form>
                             </div>
                         </div>
                         <div class="row" id="divMediko" style="display: none;">
@@ -1692,7 +1532,7 @@
                         }
                     }
                 ?>
-=======
+
                 
                 <div class="container">
                     <div class="row">
@@ -1959,7 +1799,7 @@
                     </div>
                 </div>
                 
->>>>>>> 2b39d1c40ae8235f0bdf0b3059f406639abac55a
+
             </div>
         </div>
         <!-- Fin Sección Registros -->
@@ -1996,20 +1836,20 @@
                                             <div class="col-md-6">
                                                <label class="etiquetas">Nombres: </label> 
      
-<<<<<<< HEAD
+
                                                 <input type="text" class="form-control" placeholder="Nombres *" id="txtNombrePac" required data-validation-required-message="Por favor ingresa tu nombre.">
-=======
+
                                                 <input type="text" class="form-control" placeholder="<?php echo $usuario->getNombres(); ?>" id="txtNombrePac" required data-validation-required-message="Por favor ingresa tu nombre.">
->>>>>>> 2b39d1c40ae8235f0bdf0b3059f406639abac55a
+
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div class="col-md-6">
 <label class="etiquetas">Apellidos: </label>                                                
-<<<<<<< HEAD
+
  <input type="text" class="form-control" placeholder="Apellidos *" id="txtApellidoPac" required data-validation-required-message="Por favor ingresa tu apellido.">
-=======
+
  <input type="text" class="form-control" placeholder="<?php echo $usuario->getApellidos(); ?>" id="txtApellidoPac" required data-validation-required-message="Por favor ingresa tu apellido.">
->>>>>>> 2b39d1c40ae8235f0bdf0b3059f406639abac55a
+
                                                 <p class="help-block text-danger"></p>
                                             </div>
 
@@ -2460,8 +2300,6 @@
                                 
                             </div>
                         </div>
-=======
-
                                                                                 
                                   <div class="col-md-6">
                 	        	    <div class="latest-post">
@@ -2470,7 +2308,6 @@
 
 				</div>
 	                            </div>
->>>>>>> 2b39d1c40ae8235f0bdf0b3059f406639abac55a
                         
                               </div>      
                                </fieldset>
@@ -2610,14 +2447,14 @@
                 
             </div>
         </div>
-<<<<<<< HEAD
+<
         <!-- Fin Sección Registros Contacto -->    
             
     </body>
     
 </html>
-=======
+
         <!-- Fin Sección Registros Contacto --> 
     </body>
 </html>
->>>>>>> 2b39d1c40ae8235f0bdf0b3059f406639abac55a
+

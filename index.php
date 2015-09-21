@@ -64,7 +64,7 @@
         </section>
         <!-- End Logo Section -->
         <?php
-            if(!isset($_SESSION["newsession"])){
+            //if(!isset($_SESSION["newsession"])){
         ?>
                 <!-- Start Main Body Section -->
                 <div class="mainbody-section text-center">
@@ -126,9 +126,9 @@
                 </div>
                 <!-- End Main Body Section -->
         <?php
-            }else{
+            /*}else{
                 $ident = $_SESSION["newsession"];
-                if($ident === 1){
+                if($ident === 1){*/
         ?>
                 <!-- Start Main Body Section -->
                 <div class="mainbody-section text-center">
@@ -251,7 +251,7 @@
                 </div>
                 <!-- End Main Body Section -->
             <?php
-                }else if($ident === 2){
+                //}else if($ident === 2){
             ?>
                 <div class="mainbody-section text-center">
                     <div class="container">
@@ -364,8 +364,8 @@
                     </div>
                 </div>
         <?php
-                }
-            }
+         //       }
+           // }
         ?>
         
         <!-- Start Copyright Section -->
@@ -2001,7 +2001,7 @@
                 	        	    <div class="latest-post">
                 	        <meta charset="utf-8"> 
 				<!--META HTTP-EQUIV="REFRESH" CONTENT="60;URL=mvc/objetos/drawchart.php"-->
-				<iframe width="300" height="300" src="//www.youtube.com/embed/1YcIJU5sTL0" frameborder="0" allowfullscreen></iframe>
+				<iframe width="500" height="400" src="mvc/objetos/drawchart.php" frameborder="0" allowfullscreen></iframe>
 
 				<?php 	
 				//ini_set('include_path', '/usr/share/pear');

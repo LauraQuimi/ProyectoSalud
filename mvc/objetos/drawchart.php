@@ -3,7 +3,7 @@
 <BODY>
 
 <meta charset="utf-8"> 
-<META HTTP-EQUIV="REFRESH" CONTENT="3;URL=drawchart.php">
+<META HTTP-EQUIV="REFRESH" CONTENT="1;URL=drawchart.php">
 <?php
 require_once("actividadCollector.php");
 require_once("notificacionCollector.php");
@@ -41,7 +41,7 @@ if($actividadCollectorObj->scanearActividad($id_usuario) > 25){
         echo "<script type='text/javascript'>alert('$message');</script>";
     }
         
-}else{if($actividadCollectorObj->scanearActividad($id_usuario) < 22){
+}else{if($actividadCollectorObj->scanearActividad($id_usuario) < 20){
     //echo " PULSO DECAYENDO";
     $contactoCollectorObj = new contactoCollector();
     foreach ($contactoCollectorObj->showContactosxUsuario($id_usuario) as $c){

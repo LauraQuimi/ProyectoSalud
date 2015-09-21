@@ -400,21 +400,21 @@
                     <div class="row" style="padding-top: 80px;">
                         <div class="col-md-12">
 			    <!--<form name="sentMessage" id="contactForm" novalidate -->
-                            <form name="sentMessage" id="login" action="login.php" method="POST">
+                            <form name="sentMessage" id="login" action="login.php" method="post">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Usuario *" id="txtUsuario" required data-validation-required-message="Por favor ingrese su nombre.">
+                                            <input type="text" class="form-control" placeholder="Usuario *" name="txtUsuario" id="txtUsuario" required data-validation-required-message="Por favor ingrese su nombre.">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control" placeholder="contraseña *" id="txtPassword" required data-validation-required-message="Por favor ingrese su contraseña.">
+                                            <input type="password" class="form-control" placeholder="contraseña *" name="txtPassword" id="txtPassword" required data-validation-required-message="Por favor ingrese su contraseña.">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                         <div class="col-lg-12 text-center">
                                             <button type="button" class="btn btn-primary" style="float:left; margin: 0px 10px 0px 120px; width: 120px;" data-dismiss="modal">Cancelar</button>
                                             <!--<div id="success"></div>-->
-                                            <button type="submit" class="btn btn-primary" style="margin: 0px; float:left" onclick="javascript:login()" data-dismiss="modal">Iniciar Sesión</button>
+                                            <button type="submit" class="btn btn-primary" style="margin: 0px; float:left">Iniciar Sesión</button>
                                         </div>
                                     </div>
                                     <div class="col-md-6" style="margin-top: -100px;">

@@ -1,28 +1,28 @@
 <?php
- session_start();
+session_start();
+$usuario = $_POST["txtUsuario"];
+$password = $_POST["txtPassword"];
+include_once("mvc/objetos/loginCollector.php");
+$loginCollectorObj = new loginCollector();
+
+$objeto = $loginCollectorObj->ingreso($usuario, $password);
+$res = $objeto['comprobador'];
+$identificador = $objeto['identificador'];
+/*var_dump($usuario);
+var_dump($password);
+$res = true;
+$identificador = 1;*/
+
+if($res === true){
+    $_SESSION["newsession"] = $identificador;
+    echo $_SESSION["newsession"];
+    header('Location: index.php');
+    //return $identificador;
+}else{
+    print '<script language="JavaScript">'; 
+    print 'alert("Error, usuario o contraseña incorrectos");'; 
+    print '</script>';
+    header('Location: index.php');
+    //return $identificador;
+}
 ?>
-<!DOCTYPE html>
-<html>
-<head>
- <meta charset="UTF-8"/>
- <title>LOGIN</title>
-</head>
-<body>
-<?php
- if(isset($_POST['txtUsuario'])){
-  $_SESSION['txtUsuario'] = $_POST['txtUsuario'];
-  echo "Bienvenido! Has iniciado sesion: ".$_POST['txtUsuario'];
- }else{
-  if(isset($_SESSION['txtUsuario'])){
-  echo "Has iniciado Sesion: ".$_SESSION['txtUsuario'];
- }else{
-  echo "Acceso Restringido";
- }
- }
-?>
-<br /><a href="index.php">[REGRESAR]</a>
-</body>
-</html>
-
-
-

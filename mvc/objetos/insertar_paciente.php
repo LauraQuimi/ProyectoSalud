@@ -23,5 +23,5 @@
  $DirectorioCollectorObj = new DirectorioCollector();
  $DirectorioCollectorObj->insertDirectorio($nombre_contacto, $apellido_contacto, $celular_contacto, $email_contacto, 
  $id_usuario, $id_tipo_relacion);
- include_once('../../index.php');
+ header('../../index.php');
 ?>

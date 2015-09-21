@@ -427,8 +427,16 @@
             </div>
         </div>
         <!-- Fin Sección Login -->
+<<<<<<< HEAD
   
         <!-- Start Portfolio Section
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        
+        <!-- Start Portfolio Section -->
+>>>>>>> a59c7711dde6e07853c68f774be782564742a62c
         <div class="section-modal modal fade" id="portfolio-modal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal">
@@ -578,6 +586,7 @@
         </div>
         <!-- End Portfolio Section -->
 
+>>>>>>> b11637a0731f463467558cec3081f1a46a26ef32
         <!-- Inicio Sección Acerca De... -->
         <div class="section-modal modal fade" id="acerca-modal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-content">
@@ -603,14 +612,114 @@
                             <div class="about-text">
                                 <p>Social Heart es una solución web distribuida por Smart Web Solutions Inc. Social Heart es una aplicación específica, cuya función es contribuir en el área médica de la cardiología. Permitiendo llevar un registro de las actividades cardiacas de una persona. Dicha actividad cardiaca puede ser supervisada por el mismo usuario o por su médico de confianza.</p>
                                 <p><b>ADVERTENCIA:</b> Esta aplicación está protegida por leyes de propiedad intelectual y tratados internacionales. La distribución o reproducción no autorizada de este programa o de cualquiera de sus partes, está penada con sanciones penales y civiles, serán objeto de todas las acciones judiciales que correspondan.</p>
+<<<<<<< HEAD
+=======
+
+                               <!-- <div class="row">
+                                    <div class="col-md-4 col-sm-6">
+                                        <ul>
+                                            <li><i class="fa fa-check-square"></i>Sed ut perspiciatis unde omnis iste natus</li>
+                                            <li><i class="fa fa-check-square"></i>Nor again is there anyone who loves</li>
+                                            <li><i class="fa fa-check-square-o"></i>At vero eos et accusamus et iusto odio</li>
+                                            <li><i class="fa fa-check-square-o"></i>Et harum quidem rerum facilis</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <ul>
+                                            <li><i class="fa fa-check-square"></i>Nor again is there anyone who loves</li>
+                                            <li><i class="fa fa-check-square"></i>Nor again is there anyone who loves</li>
+                                            <li><i class="fa fa-check-square-o"></i>Et harum quidem rerum facilis</li>
+                                            <li><i class="fa fa-check-square-o"></i>At vero eos et accusamus et iusto odio</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <ul>
+                                            <li><i class="fa fa-check-square"></i>Nor again is there anyone who loves</li>
+                                            <li><i class="fa fa-check-square"></i>Nor again is there anyone who loves</li>
+                                            <li><i class="fa fa-check-square-o"></i>Et harum quidem rerum facilis</li>
+                                            <li><i class="fa fa-check-square-o"></i>At vero eos et accusamus et iusto odio</li>
+                                        </ul>
+                                    </div>
+<<<<<<< HEAD
+                                </div> /.row -->
+
+=======
+                                </div>
+>>>>>>> b11637a0731f463467558cec3081f1a46a26ef32
+>>>>>>> a59c7711dde6e07853c68f774be782564742a62c
                             </div>
                         </div>
                     </div>
                     <div class="row">
+<<<<<<< HEAD
+
+                        <!-- <div class="col-md-6 col-sm-6">
+                            <div class="skill-shortcode">
+                        
+                                <!-- Progress Bar
+                                <div class="skill">
+                                    <p>Web Design</p>          
+                                    <div class="progress">         
+                                        <div class="progress-bar" role="progressbar"  data-percentage="60">
+                                            <span class="progress-bar-span" >60%</span>
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>  
+                                </div>
+
+                                <!-- Progress Bar 
+                                <div class="skill">
+                                    <p>HTML & CSS</p>          
+                                    <div class="progress">         
+                                        <div class="progress-bar" role="progressbar"  data-percentage="95">
+                                            <span class="progress-bar-span" >95%</span>
+                                            <span class="sr-only">95% Complete</span>
+                                        </div>
+                                    </div>  
+                                </div>
+
+                                <!-- Progress Bar 
+                                <div class="skill">
+                                    <p>Wordpress</p>          
+                                    <div class="progress">         
+                                        <div class="progress-bar" role="progressbar"  data-percentage="80">
+                                            <span class="progress-bar-span" >80%</span>
+                                            <span class="sr-only">80% Complete</span>
+                                        </div>
+                                    </div>  
+                                </div>
+
+                                <!-- Progress Bar 
+                                <div class="skill">
+                                    <p>Joomla</p>          
+                                    <div class="progress">         
+                                        <div class="progress-bar" role="progressbar"  data-percentage="100">
+                                            <span class="progress-bar-span" >100%</span>
+                                            <span class="sr-only">100% Complete</span>
+                                        </div>
+                                    </div>  
+                                </div>
+
+                                <!-- Progress Bar
+                                <div class="skill">
+                                    <p>Extension</p>          
+                                    <div class="progress">         
+                                        <div class="progress-bar" role="progressbar"  data-percentage="70">
+                                            <span class="progress-bar-span" >70%</span>
+                                            <span class="sr-only">70% Complete</span>
+                                        </div>
+                                    </div>  
+                                </div>
+
+                            </div>
+                        </div> -->
+
+=======
 
                         <div class="col-md-6 col-sm-6">
                             <div class="skill-shortcode">
                         
+>>>>>>> b11637a0731f463467558cec3081f1a46a26ef32
                         <div class="col-md-6" style="margin-left: 293px;">
                             <div class="custom-tab">
                         
@@ -1195,113 +1304,113 @@
                         </div>
                         <div class="row" id="divPaciente" style="display: none;">
                             <div class="col-md-12">
-                                <form id="PacienteForm" novalidate>
-                                    <div class="row" style="margin-bottom: 15px;">
-                                        <fieldset class="grupo">
-                                            <legend>Datos Personales</legend>
-                                            <div class="form-group fila">
-                                                <div class="col-md-6">
-                                                    <input type="text" class="form-control" placeholder="Nombres *" id="txtNombrePac" required data-validation-required-message="Por favor ingrese su nombre.">
-                                                    <p class="help-block text-danger"></p>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <input type="text" class="form-control" placeholder="Apellidos *" id="txtApellidoPac" required data-validation-required-message="Por favor ingrese su apellido.">
-                                                    <p class="help-block text-danger"></p>
-                                                </div>
+                                <form id="PacienteForm" action ="mvc/objetos/insertar_paciente.php" method ="post">
+                                <div class="row" style="margin-bottom: 15px;">
+                                    <fieldset class="grupo">
+                                        <legend>Datos Personales</legend>
+                                        <div class="form-group fila">
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Nombres *" name="txtNombrePac" required data-validation-required-message="Por favor ingrese su nombre.">
+                                                <p class="help-block text-danger"></p>
                                             </div>
-                                            <div class="form-group fila">
-                                                <div class="col-md-6">
-                                                    <select class="form-control combo" id="cbxIdentificacionPac" required data-validation-required-message="Seleccione el tipo de identificación.">
-                                                        <option value="">-- Seleccione su tipo de identificación --</option>
-                                                        <option value="0">Cédula</option>
-                                                        <option value="1">Pasaporte</option>
-                                                        <option value="2">Nro. de historia clínica</option>
-                                                    </select>
-                                                    <p class="help-block text-danger"></p>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <input type="text" class="form-control" placeholder="Número de identificación *" id="txtIdentificacionPac" required data-validation-required-message="Inserte el # de Identificación.">
-                                                    <p class="help-block text-danger"></p>
-                                                </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Apellidos *" name="txtApellidoPac" required data-validation-required-message="Por favor ingrese su apellido.">
+                                                <p class="help-block text-danger"></p>
                                             </div>
-                                            <div class="form-group fila" style="height: 109px;">
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <input type="date" class="form-control" id="dtpFecNacPac" required data-validation-required-message="Por favor ingrese su fecha de nacimiento.">
-                                                        <p class="help-block text-danger"></p>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <input type="email" class="form-control" placeholder="Email *" id="txtEmailPac" required data-validation-required-message="Por favor ingrese su e-mail.">
-                                                        <p class="help-block text-danger"></p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <fieldset class="grupo">
-                                                        <legend style="margin-bottom:2px;">Género sexual</legend>
-                                                        <input type="radio" name="genero" id="rdbMasculinoPac" value="Masculino">
-                                                        <label for="rdbMasculinoPac">
-                                                            <span class="fa-stack">
-                                                                <i class="fa fa-circle-o fa-stack-1x"></i>
-                                                                <i class="fa fa-circle fa-stack-1x"></i>
-                                                            </span>
-                                                            Masculino
-                                                        </label><br>
-                                                        <input type="radio" name="genero" id="rdbFemeninoPac" value="Femenino">
-                                                        <label for="rdbFemeninoPac">
-                                                            <span class="fa-stack">
-                                                                <i class="fa fa-circle-o fa-stack-1x"></i>
-                                                                <i class="fa fa-circle fa-stack-1x"></i>
-                                                            </span>
-                                                            Femenino
-                                                        </label>
-                                                    </fieldset>
-                                                </div>
-                                            </div>
-                                            <div class="form-group fila">
-                                                <div class="col-md-6">
-                                                    <input type="text" class="form-control" placeholder="Usuario *" id="txtUserPac" required data-validation-required-message="Por favor ingrese su usuario.">
-                                                    <p class="help-block text-danger"></p>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <input type="password" class="form-control" placeholder="Contraseña *" id="txtPasswordPac" required data-validation-required-message="Por favor ingrese su contraseña.">
-                                                    <p class="help-block text-danger"></p>
-                                                </div>
-                                            </div>
-
-                                        </fieldset>
-                                    </div>
-                                    <div class="row">
-                                        <fieldset class="grupo">
-                                            <legend>Datos de Contacto</legend>
-                                            <div class="form-group fila">
-                                                <div class="col-md-6">
-                                                    <input type="text" class="form-control" placeholder="Nombres *" id="txtNombreCon" required data-validation-required-message="Por favor ingrese el nombre de su contacto.">
-                                                    <p class="help-block text-danger"></p>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <input type="text" class="form-control" placeholder="Apellidos *" id="txtApellidoCon" required data-validation-required-message="Por favor ingrese el apellido de su contacto.">
-                                                    <p class="help-block text-danger"></p>
-                                                </div>
-                                            </div>
-                                            <div class="form-group fila">
-                                                <div class="col-md-6">
-                                                    <input type="text" class="form-control" placeholder="Celular *" id="txtCelularCon" required data-validation-required-message="Por favor ingrese el celular de su contacto.">
-                                                    <p class="help-block text-danger"></p>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <input type="text" class="form-control" placeholder="Email *" id="txtEmailCon" required data-validation-required-message="Por favor ingrese el e-mail de su contacto.">
-                                                    <p class="help-block text-danger"></p>
-                                                </div>
-                                            </div>
-
-                                        </fieldset>
-                                        <div class="clearfix"></div>
-                                        <div class="col-lg-12 text-center">
-                                            <div id="success"></div>
-                                            <button type="submit" class="btn btn-primary">REGISTRAR</button>
                                         </div>
+                                        <div class="form-group fila">
+                                            <div class="col-md-6">
+                                                <select class="form-control combo" name="cbxIdentificacionPac" required data-validation-required-message="Seleccione el tipo de identificación.">
+                                                    <option value=0>-- Seleccione su tipo de identificación --</option>
+                                                    <option value=1>Cédula</option>
+                                                    <option value=2>Pasaporte</option>
+                                                    <option value=3>Nro. de historia clínica</option>
+                                                </select>
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Número de identificación *" name="txtIdentificacionPac" required data-validation-required-message="Inserte el # de Identificación.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group fila" style="height: 109px;">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input type="date" class="form-control" name="dtpFecNacPac" required data-validation-required-message="Por favor ingrese su fecha de nacimiento." placeholder="Fecha de Nacimiento (yyyy/mm/dd)">
+                                                    <p class="help-block text-danger"></p>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="email" class="form-control" placeholder="Email *" name="txtEmailPac" required data-validation-required-message="Por favor ingrese su e-mail.">
+                                                    <p class="help-block text-danger"></p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <fieldset class="grupo">
+                                                    <legend style="margin-bottom:2px;">Género sexual</legend>
+                                                    <input type="radio" name="genero" id="rdbMasculinoPac" value=1>
+                                                    <label for="rdbMasculinoPac">
+                                                        <span class="fa-stack">
+                                                            <i class="fa fa-circle-o fa-stack-1x"></i>
+                                                            <i class="fa fa-circle fa-stack-1x"></i>
+                                                        </span>
+                                                        Masculino
+                                                    </label><br>
+                                                    <input type="radio" name="genero" id="rdbFemeninoPac" value=2>
+                                                    <label for="rdbFemeninoPac">
+                                                        <span class="fa-stack">
+                                                            <i class="fa fa-circle-o fa-stack-1x"></i>
+                                                            <i class="fa fa-circle fa-stack-1x"></i>
+                                                        </span>
+                                                        Femenino
+                                                    </label>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                        <div class="form-group fila">
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Usuario *" name="txtUserPac" required data-validation-required-message="Por favor ingrese su usuario.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="password" class="form-control" placeholder="Contraseña *" name="txtPasswordPac" required data-validation-required-message="Por favor ingrese su contraseña.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </div>
+                                        
+                                    </fieldset>
+                                </div>
+                                <div class="row">
+                                    <fieldset class="grupo">
+                                        <legend>Datos de Contacto</legend>
+                                        <div class="form-group fila">
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Nombres *" name="txtNombreCon" required data-validation-required-message="Por favor ingrese el nombre de su contacto.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Apellidos *" name="txtApellidoCon" required data-validation-required-message="Por favor ingrese el apellido de su contacto.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group fila">
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Celular *" name="txtCelularCon" required data-validation-required-message="Por favor ingrese el celular de su contacto.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Email *" name="txtEmailCon" required data-validation-required-message="Por favor ingrese el e-mail de su contacto.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </div>
+                                        
+                                    </fieldset>
+                                    <div class="clearfix"></div>
+                                    <div class="col-lg-12 text-center">
+                                        <div id="success"></div>
+                                        <button type="submit" class="btn btn-primary">REGISTRAR</button>
                                     </div>
-                                </form>
+                                </div>
+                            </form>
                             </div>
                         </div>
                         <div class="row" id="divMediko" style="display: none;">
@@ -1569,7 +1678,283 @@
                         }
                     }
                 ?>
+<<<<<<< HEAD
+
+=======
+>>>>>>> b11637a0731f463467558cec3081f1a46a26ef32
                 
+<<<<<<< HEAD
+=======
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title text-center">
+                            <h3>Registro de Usuario</h3>
+                           <!-- <p>Seleccione tipo de usuario</p>-->
+                            <div class="form-group caja">
+                                <select class="form-control combo" id="cbxTipoUsuario" onchange="javascript:cambiarDiv()">
+                                    <option value="">-- Seleccione su tipo de usuario --</option>
+                                    <option value="0">Paciente</option>
+                                    <option value="1">Médico</option>
+                                </select>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" id="divPaciente" style="display: none;">
+                        <div class="col-md-12">
+                            <form id="PacienteForm" action ="mvc/objetos/insertar_paciente.php" method ="post">
+                                <div class="row" style="margin-bottom: 15px;">
+                                    <fieldset class="grupo">
+                                        <legend>Datos Personales</legend>
+                                        <div class="form-group fila">
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Nombres *" name="txtNombrePac" required data-validation-required-message="Por favor ingrese su nombre.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Apellidos *" name="txtApellidoPac" required data-validation-required-message="Por favor ingrese su apellido.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group fila">
+                                            <div class="col-md-6">
+                                                <select class="form-control combo" name="cbxIdentificacionPac" required data-validation-required-message="Seleccione el tipo de identificación.">
+                                                    <option value=0>-- Seleccione su tipo de identificación --</option>
+                                                    <option value=1>Cédula</option>
+                                                    <option value=2>Pasaporte</option>
+                                                    <option value=3>Nro. de historia clínica</option>
+                                                </select>
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Número de identificación *" name="txtIdentificacionPac" required data-validation-required-message="Inserte el # de Identificación.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group fila" style="height: 109px;">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input type="date" class="form-control" name="dtpFecNacPac" required data-validation-required-message="Por favor ingrese su fecha de nacimiento." placeholder="Fecha de Nacimiento (yyyy/mm/dd)">
+                                                    <p class="help-block text-danger"></p>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="email" class="form-control" placeholder="Email *" name="txtEmailPac" required data-validation-required-message="Por favor ingrese su e-mail.">
+                                                    <p class="help-block text-danger"></p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <fieldset class="grupo">
+                                                    <legend style="margin-bottom:2px;">Género sexual</legend>
+                                                    <input type="radio" name="genero" id="rdbMasculinoPac" value=1>
+                                                    <label for="rdbMasculinoPac">
+                                                        <span class="fa-stack">
+                                                            <i class="fa fa-circle-o fa-stack-1x"></i>
+                                                            <i class="fa fa-circle fa-stack-1x"></i>
+                                                        </span>
+                                                        Masculino
+                                                    </label><br>
+                                                    <input type="radio" name="genero" id="rdbFemeninoPac" value=2>
+                                                    <label for="rdbFemeninoPac">
+                                                        <span class="fa-stack">
+                                                            <i class="fa fa-circle-o fa-stack-1x"></i>
+                                                            <i class="fa fa-circle fa-stack-1x"></i>
+                                                        </span>
+                                                        Femenino
+                                                    </label>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                        <div class="form-group fila">
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Usuario *" name="txtUserPac" required data-validation-required-message="Por favor ingrese su usuario.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="password" class="form-control" placeholder="Contraseña *" name="txtPasswordPac" required data-validation-required-message="Por favor ingrese su contraseña.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </div>
+                                        
+                                    </fieldset>
+                                </div>
+                                <div class="row">
+                                    <fieldset class="grupo">
+                                        <legend>Datos de Contacto</legend>
+                                        <div class="form-group fila">
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Nombres *" name="txtNombreCon" required data-validation-required-message="Por favor ingrese el nombre de su contacto.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Apellidos *" name="txtApellidoCon" required data-validation-required-message="Por favor ingrese el apellido de su contacto.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group fila">
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Celular *" name="txtCelularCon" required data-validation-required-message="Por favor ingrese el celular de su contacto.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Email *" name="txtEmailCon" required data-validation-required-message="Por favor ingrese el e-mail de su contacto.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </div>
+                                        
+                                    </fieldset>
+                                    <div class="clearfix"></div>
+                                    <div class="col-lg-12 text-center">
+                                        <div id="success"></div>
+                                        <button type="submit" class="btn btn-primary">REGISTRAR</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row" id="divMediko" style="display: none;">
+                        <div class="col-md-12">
+                            <form id="PacienteForm" novalidate>
+                                <div class="row" style="margin-bottom: 15px;">
+                                    <fieldset class="grupo">
+                                        <legend>Datos Personales</legend>
+                                        <div class="form-group fila">
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Nombres *" id="txtNombreMed" required data-validation-required-message="Por favor ingrese su nombre.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Apellidos *" id="txtApellidoMed" required data-validation-required-message="Por favor ingrese su apellido.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group fila">
+                                            <div class="col-md-6">
+                                                <select class="form-control combo" id="cbxIdentificacionMed" required data-validation-required-message="Seleccione el tipo de identificación.">
+                                                    <option value="">-- Seleccione su tipo de identificación --</option>
+                                                    <option value="0">Cédula</option>
+                                                    <option value="1">Pasaporte</option>
+                                                </select>
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Número de identificación *" id="txtIdentificacionMed" required data-validation-required-message="Ingrese el # de su Identificación.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group fila" style="height: 109px;">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input type="date" class="form-control" id="dtpFecNacMed" required data-validation-required-message="Por favor ingrese su fecha de nacimiento.">
+                                                    <p class="help-block text-danger"></p>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="email" class="form-control" placeholder="Email *" id="txtEmailMed" required data-validation-required-message="Por favor ingrese su email.">
+                                                    <p class="help-block text-danger"></p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <fieldset class="grupo">
+                                                    <legend style="margin-bottom:2px;">Género sexual</legend>
+                                                    <input type="radio" name="genero" id="rdbMasculinoMed" value="Masculino">
+                                                    <label for="rdbMasculinoMed">
+                                                        <span class="fa-stack">
+                                                            <i class="fa fa-circle-o fa-stack-1x"></i>
+                                                            <i class="fa fa-circle fa-stack-1x"></i>
+                                                        </span>
+                                                        Masculino
+                                                    </label><br>
+                                                    <input type="radio" name="genero" id="rdbFemeninoMed" value="Femenino">
+                                                    <label for="rdbFemeninoMed">
+                                                        <span class="fa-stack">
+                                                            <i class="fa fa-circle-o fa-stack-1x"></i>
+                                                            <i class="fa fa-circle fa-stack-1x"></i>
+                                                        </span>
+                                                        Femenino
+                                                    </label>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                        <div class="form-group fila">
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Usuario *" id="txtUserMed" required data-validation-required-message="Por favor ingrese su usuario.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="password" class="form-control" placeholder="Contraseña *" id="txtPasswordMed" required data-validation-required-message="Por favor ingrese su contraseña.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </div>
+                                        
+                                    </fieldset>
+                                </div>
+                                <div class="row" style="margin-bottom: 15px;">
+                                    <fieldset class="grupo">
+                                        <legend>Datos Profesionales</legend>
+                                        <div class="form-group fila">
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Universidad *" id="txtUniversidadMed" required data-validation-required-message="Por favor ingrese el nombre de la Universidad.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Título obtenido *" id="txtTituloMed" required data-validation-required-message="Ingrese la descripción del título obtenido.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group fila">
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Año de graduación *" id="txtAnioGraduacion" required data-validation-required-message="Ingrese el año de graduación.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </div>
+                                        
+                                    </fieldset>
+                                </div>
+                                <div class="row">
+                                    <fieldset class="grupo">
+                                        <legend>Datos Laborales</legend>
+                                        <div class="form-group fila">
+                                            <div class="col-md-6">
+                                                <select class="form-control combo" id="cbxInstitucionMed" required data-validation-required-message="Seleccione el tipo de institución.">
+                                                    <option value="">-- Seleccione tipo de institución --</option>
+                                                    <option value="0">Institución pública</option>
+                                                    <option value="1">Institución privada</option>
+                                                    <option value="2">Clínica</option>
+                                                </select>
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Nombre de institución *" id="txtInstitucionMed" required data-validation-required-message="Por favor ingresa el nombre de la institución.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group fila">
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Área de trabajo *" id="txtAreaMed" required data-validation-required-message="Por favor ingresa el área de trabajo.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Año de ingreso *" id="txtAnioIngresoMed" required data-validation-required-message="Por favor registra el año de ingreso.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </div>
+                                        
+                                    </fieldset>
+                                    <div class="clearfix"></div>
+                                    <div class="col-lg-12 text-center">
+                                        <div id="success"></div>
+                                        <button type="submit" class="btn btn-primary">REGISTRAR</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+<<<<<<< HEAD
+
+=======
+>>>>>>> b11637a0731f463467558cec3081f1a46a26ef32
+>>>>>>> a59c7711dde6e07853c68f774be782564742a62c
             </div>
         </div>
         <!-- Fin Sección Registros -->
@@ -1605,6 +1990,10 @@
   
                                             <div class="col-md-6">
                                                <label class="etiquetas">Nombres: </label> 
+<<<<<<< HEAD
+     
+=======
+>>>>>>> b11637a0731f463467558cec3081f1a46a26ef32
 
                                                 <input type="text" class="form-control" placeholder="Nombres *" id="txtNombrePac" required data-validation-required-message="Por favor ingresa tu nombre.">
 
@@ -2069,8 +2458,11 @@
                                 
                             </div>
                         </div>
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> b11637a0731f463467558cec3081f1a46a26ef32
                                                                                 
                                   <div class="col-md-6">
                 	        	    <div class="latest-post">
@@ -2218,7 +2610,11 @@
                 
             </div>
         </div>
+<<<<<<< HEAD
+<
+=======
 
+>>>>>>> b11637a0731f463467558cec3081f1a46a26ef32
         <!-- Fin Sección Registros Contacto -->    
             
     </body>
@@ -2228,3 +2624,7 @@
         <!-- Fin Sección Registros Contacto --> 
     </body>
 </html>
+<<<<<<< HEAD
+
+=======
+>>>>>>> b11637a0731f463467558cec3081f1a46a26ef32

@@ -65,7 +65,6 @@
         <!-- End Logo Section -->
         <?php
             if(!isset($_SESSION['txtUsuario'])){
-            echo "no hay sesion iniciada";
         ?>
                 <!-- Start Main Body Section -->
                 <div class="mainbody-section text-center">
@@ -128,11 +127,8 @@
                 <!-- End Main Body Section -->
         <?php
             }else{
-                //$ident = $_SESSION["newsession"];
-                echo "sesion iniciada";
-		$idusuario=$usuarioCollectorObj->obtenerId($txtUsuario);
-                $usuario=$usuarioCollectorObj->showUsuario($idusuario); 	
-                if($usuario->getTipousuario() === 1){
+                $ident = $_SESSION["newsession"];
+                if($ident === 1){
         ?>
                 <!-- Start Main Body Section -->
                 <div class="mainbody-section text-center">
@@ -255,7 +251,7 @@
                 </div>
                 <!-- End Main Body Section -->
             <?php
-                }else if($usuario->getTipousuario()){
+               }else if($ident === 2){
             ?>
                 <div class="mainbody-section text-center">
                     <div class="container">
@@ -404,7 +400,7 @@
                     <div class="row" style="padding-top: 80px;">
                         <div class="col-md-12">
 			    <!--<form name="sentMessage" id="contactForm" novalidate -->
-                            <form name="login" id="login" action="login.php" method="post">
+                            <form name="sentMessage" id="login" action="login.php" method="post">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
